@@ -4,8 +4,8 @@
 
 
 Equipe: 
-Amine 
-Baptiste
-Corentin 
-Aloïs
-Lino
+- Amine 
+- Baptiste
+- Corentin 
+- Aloïs
+- Lino
