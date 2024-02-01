@@ -1,1 +1,12 @@
-*.vs
+# Ignorer les fichiers de cache de Visual Studio
+.vs/
+
+# Ignorer les fichiers spécifiques générés lors de la compilation
+EasySave/EasySave/obj/
+EasySave/EasySave/bin/
+
+# Ignorer les fichiers de configuration utilisateur de Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
