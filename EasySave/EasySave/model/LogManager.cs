@@ -3,7 +3,7 @@ namespace EasySave.model
 {
     public class LogManager
     {
-        public void writeLog(BackupJob job, object )
+        public void writeLog(BackupJob job )
         {
             throw new NotImplementedException();
         }
