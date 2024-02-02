@@ -1,5 +1,7 @@
 ﻿
-namespace EasySave.model
+using EasySave.model;
+
+namespace EasySave.services
 {
     public class LogManager
     {
