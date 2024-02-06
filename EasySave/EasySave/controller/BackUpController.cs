@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EasySave.model;
+﻿using EasySave.model;
 using EasySave.services;
 
 namespace EasySave.controller
@@ -12,11 +7,11 @@ namespace EasySave.controller
     internal class BackUpController
     {
         private BackUpManager _backUpManager;
-        private LogManager    _logManager;
-        private StateManager  _stateManager;
+        private LogManager _logManager;
+        private StateManager _stateManager;
 
 
-        public BackUpController(BackUpManager backUpManager, LogManager logManager, StateManager stateManager )
+        public BackUpController(BackUpManager backUpManager, LogManager logManager, StateManager stateManager)
         {
             this._backUpManager = backUpManager;
             this._logManager = logManager;
@@ -26,10 +21,10 @@ namespace EasySave.controller
         {
             try
             {
-                BackupJob job = _backUpManager.findBackupJobById(sJobName);
+                BackUpJob job = _backUpManager.FindBackupJobById(sJobName);
                 if (job != null)
                 {
-                    _backUpManager.executeBackup(job);
+                    _backUpManager.ExecuteBackup(job);
                     // Mise à jour du log et de l'état
                     //logManager.writeLog(job, /* fileInfo */);
                     //stateManager.updateState(job, /* progressInfo */);
@@ -38,6 +33,7 @@ namespace EasySave.controller
             catch (Exception e)
             {
                 // Gérer les exceptions et éventuellement mettre à jour la vue avec un message d'erreur.
+                Console.WriteLine(e.Message);
             }
         }
 

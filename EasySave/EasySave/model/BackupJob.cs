@@ -1,24 +1,21 @@
 ﻿namespace EasySave.model
 {
-    public class BackupJob
+    public abstract class BackUpJob
     {
-        
-        private string _sourceDirectory { get; set; }
+        public string name { get; set; }
+        public string sourceDirectory { get; set; }
 
-        private string _targetDirectory { get; set; }
+        public string targetDirectory { get; set; }
 
-        private string _name { get; set; }
 
-        private char _type { get; set; }
-
-        public BackupJob(String sourceDirectory, String targetDirectory, string name, char type)
+        protected BackUpJob(string name, string sourceDirectory, string targetDirectory)
         {
-            this._sourceDirectory = sourceDirectory;
-            this._targetDirectory = targetDirectory;
-            this._name = name;
-            this._type = type;
+            this.name = name;
+            this.sourceDirectory = sourceDirectory;
+            this.targetDirectory = targetDirectory;
         }
 
+        public abstract void Excecute();
 
     }
 }
