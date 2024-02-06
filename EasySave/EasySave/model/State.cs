@@ -1,28 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EasySave.model
+﻿namespace EasySave.model
 {
-
-    
-    internal class State
+    public class State
     {
-        private string _name {  get; set; }
+        public string name { get; set; }
 
-        private string _totalFiles { get; set; }
+        public string totalFiles { get; set; }
 
-        private int _totalFileSize {get; set ; }
+        public int totalFileSize { get; set; }
 
-        private string _state { get; set; }
+        public string state { get; set; }
 
-        private int _nbFileRemaining { get; set; }
+        public int nbFileRemaining { get; set; }
 
-        private string _currentTime { get; set; }
+        public string currentTime { get; set; }
 
-        private int _sizeOfRemainingFiles { get; set; }
+        public int sizeOfRemainingFiles { get; set; }
 
 
     }

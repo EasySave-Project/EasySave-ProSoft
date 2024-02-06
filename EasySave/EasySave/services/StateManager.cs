@@ -5,7 +5,7 @@ namespace EasySave.services
 {
     public class StateManager
     {
-        public void updateState(BackupJob job )
+        public void updateState(BackUpJob job)
         {
             throw new NotImplementedException();
         }
