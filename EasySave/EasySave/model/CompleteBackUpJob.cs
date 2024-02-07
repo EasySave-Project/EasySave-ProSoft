@@ -15,7 +15,6 @@ namespace EasySave.model
             {
                 FileUtils.CompleteCopyDirectory(sourceDirectory, targetDirectory);
                 Console.WriteLine("Sauvegarde complète réussie.");
-
             }
             catch (Exception e)
             {
