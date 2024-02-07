@@ -21,7 +21,7 @@ namespace EasySave.controller
         {
             try
             {
-                BackUpJob job = _backUpManager.FindBackupJobById(sJobName);
+                BackUpJob job = _backUpManager.findBackupJobByName(sJobName);
                 if (job != null)
                 {
                     _backUpManager.ExecuteBackup(job);

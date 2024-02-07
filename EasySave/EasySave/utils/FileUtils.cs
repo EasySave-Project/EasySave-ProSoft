@@ -6,7 +6,9 @@
         {
             VerifyDirectoryEmpty(sourceDir);
             VerifyDriveAvailable(targetDir);
-            Directory.CreateDirectory(targetDir); 
+
+            // créer le répertoire target s'il n'existe pas déjà
+            Directory.CreateDirectory(targetDir);
             CopyFilesTo(sourceDir, targetDir);
             DeleteObsoleteFiles(sourceDir, targetDir);
             CopySubdirectoriesRecursively(sourceDir, targetDir);
