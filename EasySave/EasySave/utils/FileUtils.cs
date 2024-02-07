@@ -4,8 +4,7 @@
     {
         public static void CompleteCopyDirectory(string sourceDir, string targetDir)
         {
-
-            VerifyDirectoryExists(sourceDir);
+            VerifyDirectoryEmpty(sourceDir);
             VerifyDriveAvailable(targetDir);
             Directory.CreateDirectory(targetDir); 
             CopyFilesTo(sourceDir, targetDir);
@@ -19,6 +18,16 @@
             if (!Directory.Exists(sourceDir))
             {
                 throw new DirectoryNotFoundException($"Le répertoire source n'existe pas ou n'a pas pu être trouvé: {sourceDir}");
+            }
+        }
+
+        private static void VerifyDirectoryEmpty(string sourceDir)
+        {
+            VerifyDirectoryExists(sourceDir);
+
+            if (!Directory.EnumerateFileSystemEntries(sourceDir).Any())
+            {
+                throw new DirectoryNotFoundException($"Le répertoire source est vide: {sourceDir}");
             }
         }
 

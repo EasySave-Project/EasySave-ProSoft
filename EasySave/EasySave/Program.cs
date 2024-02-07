@@ -6,8 +6,8 @@ namespace EasySave
         public static void Main(string[] args)
         {
             String name = "backUpJob1";
-            String sourceDir = @"C:\mt103\";
-            String targetDir = @"C:\sauve\";
+            String sourceDir = @"/Users/teuletcorentin/Desktop/SourceDir";
+            String targetDir = @"/Users/teuletcorentin/Desktop/BackupLogTest";
             BackUpJob bj = BackUpJobFactory.CreateBackupJob(BackUpType.Complete,  name,  sourceDir, targetDir);
             bj.Excecute();
             Console.ReadKey();
