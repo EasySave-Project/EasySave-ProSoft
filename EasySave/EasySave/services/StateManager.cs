@@ -11,8 +11,8 @@ namespace EasySave.services
         public string SourcePath { get; set; }
         public string TargetPath { get; set; }
         public string State_Text { get; set; }
-        public int TotalFileToCopy { get; set; }
-        public int TotalFileSize { get; set; }
+        public long TotalFileToCopy { get; set; }
+        public long TotalFileSize { get; set; }
         public int NbFilesLeftToDo { get; set; }
         public int Progression { get; set; }
 
@@ -33,15 +33,22 @@ namespace EasySave.services
             SaveState();
         }
 
-        public void UpdateState_Complete()
+        public void UpdateState_Complete(long NbOctetFile)
         {
-            State_Text = "ACTIVE";
-
-            //Code => pour savoir le fichier sélectionné
-            //TotalFileToCopy = totalFileToCopy;
+            TotalFileToCopy = TotalFileToCopy + NbOctetFile;
 
             NbFilesLeftToDo = NbFilesLeftToDo - 1;
             Progression = (int)(((float)TotalFileToCopy / (float)TotalFileSize) * 100);
+
+            if (TotalFileSize == TotalFileToCopy)
+            {
+                State_Text = "END";
+            }
+            else
+            {
+                State_Text = "ACTIVE";
+            }
+            SaveState();
         }
 
         private int GetTotalFileSize_Complete(string sourcePath)
@@ -72,15 +79,65 @@ namespace EasySave.services
         //=======================================================================================================
         public void InitState_Differential(string nameJob, string sourcePath, string targetPath)
         {
+            long[] result = GetTotalFileSize_Differential(sourcePath, targetPath);
+
             NameJob = nameJob;
             SourcePath = sourcePath;
             TargetPath = targetPath;
             State_Text = "Initialisation";
             TotalFileToCopy = 0;
-            TotalFileSize = 0;
-            NbFilesLeftToDo = 0;
+            TotalFileSize = result[1];
+            NbFilesLeftToDo = (int)result[0];
             Progression = 0;
+
+            SaveState();
         }
+
+        private long[] GetTotalFileSize_Differential(string sourcePath, string targetPath)
+        {
+            long[] result = new long[2];
+            result[0] = 0;
+            result[1] = 0;
+
+            var sourceFiles = new DirectoryInfo(sourcePath).GetFiles("*", SearchOption.AllDirectories);
+            foreach (var sourceFile in sourceFiles)
+            {
+                var targetFilePath = Path.Combine(targetPath, sourceFile.FullName.Substring(sourcePath.Length + 1));
+                var targetFile = new FileInfo(targetFilePath);
+
+                if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
+                    // Incrémenter le nombre de fichiers différents
+                    result[0] = result[0] + 1;
+                    // Ajouter la taille du fichier source à la taille cumulée
+                    result[1] = result[1] + sourceFile.Length;
+                }
+            }
+            return result;
+        }
+
+        public void UpdateState_Differential(long NbOctetFile)
+        {
+            TotalFileToCopy = TotalFileToCopy + NbOctetFile;
+
+            NbFilesLeftToDo = NbFilesLeftToDo - 1;
+            Progression = (int)(((float)TotalFileToCopy / (float)TotalFileSize) * 100);
+
+            if (TotalFileSize == TotalFileToCopy)
+            {
+                State_Text = "END";
+            }
+            else
+            {
+                State_Text = "ACTIVE";
+            }
+
+            SaveState();
+        }
+
+
+
 
         //=======================================================================================================
         // Sauvegarde dans le fichier JSON
