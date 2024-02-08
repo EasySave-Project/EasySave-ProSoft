@@ -1,13 +1,15 @@
 ﻿using EasySave.model;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using EasySave.view;
+using EasySave.services;
 
 
 namespace EasySave.utils
 {
     public static class JsonUtils
     {
-
+        private static ConsoleView cv = new ConsoleView();
 
         public static string filePath;
         public static void Initialize(IConfiguration configuration)
@@ -29,7 +31,7 @@ namespace EasySave.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Erreur lors du chargement : {e.Message}");
+                Console.WriteLine(cv.GetLineLanguage(63) + e.Message);
                 return new List<BackUpJob>();
             }
         }
