@@ -8,8 +8,6 @@ namespace EasySave.model
 
         public static long Result { get; internal set; }
 
-        private static ConsoleView cv = new ConsoleView();
-
         public DifferentialBackUpJob(string name, string sourceDirectory, string targetDirectory) : base(name, sourceDirectory, targetDirectory)
         {
             this.name = name;
