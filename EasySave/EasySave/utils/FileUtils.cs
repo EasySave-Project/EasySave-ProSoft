@@ -1,7 +1,11 @@
-﻿namespace EasySave.utils
+﻿using EasySave.view;
+using EasySave.services;
+namespace EasySave.utils
 {
+    
     public static class FileUtils
     {
+        private static ConsoleView cv = new ConsoleView();
 
         public static void DifferentialCopyDirectory(string sourceDir, string targetDir)
         {
@@ -36,7 +40,7 @@
         {
             if (!Directory.Exists(dir))
             {
-                throw new DirectoryNotFoundException($"Le répertoire source n'existe pas ou n'a pas pu être trouvé: {dir}");
+                throw new DirectoryNotFoundException(cv.GetLineLanguage(59) + dir);
             }
         }
 
@@ -46,7 +50,7 @@
 
             if (!Directory.EnumerateFileSystemEntries(dir).Any())
             {
-                throw new DirectoryNotFoundException($"Le répertoire source est vide: {dir}");
+                throw new DirectoryNotFoundException(cv.GetLineLanguage(60) + dir);
             }
         }
 
@@ -54,7 +58,7 @@
         {
             if (!DriveInfo.GetDrives().Any(d => d.IsReady && dir.StartsWith(d.Name, StringComparison.OrdinalIgnoreCase)))
             {
-                throw new DriveNotFoundException($"Le lecteur spécifié dans le chemin cible '{dir}' n'est pas disponible.");
+                throw new DriveNotFoundException(cv.GetLineLanguage(61)+ dir+ cv.GetLineLanguage(62));
             }
         }
 

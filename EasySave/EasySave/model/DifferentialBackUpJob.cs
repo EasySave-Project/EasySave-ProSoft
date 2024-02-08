@@ -1,8 +1,11 @@
 using EasySave.utils;
+using EasySave.view;
+using EasySave.services;
 namespace EasySave.model
 {
     public class DifferentialBackUpJob : BackUpJob
     {
+        private static ConsoleView cv = new ConsoleView();
         public DifferentialBackUpJob(string name, string sourceDirectory, string targetDirectory) : base(name, sourceDirectory, targetDirectory)
         {
             this.name = name;
@@ -15,12 +18,12 @@ namespace EasySave.model
             try
             {
                 FileUtils.DifferentialCopyDirectory(sourceDirectory, targetDirectory);
-                Console.WriteLine("Sauvegarde différentiel réussie.");
+                Console.WriteLine(cv.GetLineLanguage(53));
 
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Erreur lors de la sauvegarde complète: {e.Message}");
+                Console.WriteLine(cv.GetLineLanguage(54) + e.Message);
             }
         }
     }

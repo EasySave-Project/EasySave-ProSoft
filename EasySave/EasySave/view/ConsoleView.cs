@@ -37,7 +37,7 @@ namespace EasySave.view
                         bSecurity = true;
                         break;
                     default:
-                        Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                        Console.WriteLine(GetLineLanguage(23));
                         break;
                 }
             }
@@ -45,7 +45,7 @@ namespace EasySave.view
         }
 
         // Renvoie la chaine de caractère de la langue sélectionnée à partir du fichier correspondant
-        private string GetLineLanguage(int iCodeLine)
+        public string GetLineLanguage(int iCodeLine)
         {
             string sReturnLang = "";
             string sCurrentDir = Environment.CurrentDirectory; // Obtenir le répertoire courant
@@ -120,7 +120,7 @@ namespace EasySave.view
                         ShowAddJob();
                         break;
                     case "all":
-                        Console.WriteLine("Ouvrir all");
+                        Console.WriteLine(GetLineLanguage(24));
                         break;
                     case "lang":
                         ShowSelectLanguage();
@@ -138,13 +138,13 @@ namespace EasySave.view
                         }
                         else
                         {
-                            Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                            Console.WriteLine(GetLineLanguage(24));
                         }
                         break;
                 }
                 Console.WriteLine("======================================================");
             }// fin de boucle
-            Console.WriteLine("Exit du programme");
+            Console.WriteLine(GetLineLanguage(25));
             Environment.Exit(0);
         }
 
@@ -161,27 +161,27 @@ namespace EasySave.view
                     switch (sAnswerSplit[0])
                     {
                         case "1":
-                            Console.WriteLine("Ouvrir job 1");
+                            Console.WriteLine(GetLineLanguage(26));
                             CommandAnalysis(sAnswerSplit[1], 0);
                             break;
                         case "2":
-                            Console.WriteLine("Ouvrir job 2");
+                            Console.WriteLine(GetLineLanguage(27));
                             CommandAnalysis(sAnswerSplit[1], 1);
                             break;
                         case "3":
-                            Console.WriteLine("Ouvrir job 3");
+                            Console.WriteLine(GetLineLanguage(28));
                             CommandAnalysis(sAnswerSplit[1], 2);
                             break;
                         case "4":
-                            Console.WriteLine("Ouvrir job 4");
+                            Console.WriteLine(GetLineLanguage(29));
                             CommandAnalysis(sAnswerSplit[1], 3);
                             break;
                         case "5":
-                            Console.WriteLine("Ouvrir job 5");
+                            Console.WriteLine(GetLineLanguage(30));
                             CommandAnalysis(sAnswerSplit[1], 4);
                             break;
                         default:
-                            Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                            Console.WriteLine(GetLineLanguage(23));
                             break;
                     }
                 }
@@ -191,10 +191,10 @@ namespace EasySave.view
                     string[] sAnswerSplit_List = sAnswerSplit[0].Split(',');
                     if (sAnswerSplit_List.Length > 1)
                     {
-                        Console.WriteLine("\nLa chaine a été split via des ','");
+                        Console.WriteLine(GetLineLanguage(31));
                         for (int i = 0; i < sAnswerSplit_List.Length; i++)
                         {
-                            Console.WriteLine("Ouvrir job " + sAnswerSplit_List[i]);
+                            Console.WriteLine(GetLineLanguage(32) + sAnswerSplit_List[i]);
                             CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
                         }
                     }
@@ -204,7 +204,7 @@ namespace EasySave.view
                         sAnswerSplit_List = sAnswerSplit[0].Split('-');
                         if (sAnswerSplit_List.Length > 1)
                         {
-                            Console.WriteLine("\nLa chaine a été split via des '-'");
+                            Console.WriteLine(GetLineLanguage(33));
                             // Vérifier si le tableau contient bien deux éléments
                             if (sAnswerSplit_List.Length == 2)
                             {
@@ -215,18 +215,18 @@ namespace EasySave.view
                                 {
                                     for (int i = iStartIndex; i <= iEndIndex; i++)
                                     {
-                                        Console.WriteLine("Ouvrir job " + i);
+                                        Console.WriteLine(GetLineLanguage(32) + i);
                                         CommandAnalysis(sAnswerSplit[1], i);
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine("\nError : The start index must be less than the end index.\n");
+                                    Console.WriteLine(GetLineLanguage(34));
                                 }
                             }
                             else
                             {
-                                Console.WriteLine("\nError : Illegal character, there must be only two subscripts separated by a \"-\".\n");
+                                Console.WriteLine(GetLineLanguage(35));
                             }
                         }
                     }
@@ -234,7 +234,7 @@ namespace EasySave.view
             }
             else
             {
-                Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                Console.WriteLine(GetLineLanguage(24));
             }
         }
 
@@ -243,19 +243,19 @@ namespace EasySave.view
             switch (sAnswerCmd)
             {
                 case "S":
-                    Console.WriteLine("Execution job nb : " + iNbJob);
+                    Console.WriteLine(GetLineLanguage(36) + iNbJob);
                     BackUpManager.listBackUps[iNbJob].Excecute();
                     break;
                 case "M":
-                    Console.WriteLine("Modifier job nb : " + iNbJob);
+                    Console.WriteLine(GetLineLanguage(37) + iNbJob);
                     ShowModifyJob(iNbJob);
                     break;
                 case "D":
-                    Console.WriteLine("Supprimer job nb : " + iNbJob);
+                    Console.WriteLine(GetLineLanguage(38) + iNbJob);
                     ShowDeleteJob(iNbJob);
                     break;
                 default:
-                    Console.WriteLine("\nError : Order not recognised.\n");
+                    Console.WriteLine(GetLineLanguage(39));
                     break;
             }
         }
@@ -283,7 +283,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -292,14 +292,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The job name is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(41));
                     Console.Write(GetLineLanguage(6));
                     sNameJob = Console.ReadLine();
                     isValid = sNameJob.Length > 0 && !sNameJob.Contains(" ");
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -312,7 +312,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -321,14 +321,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The source path is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(42));
                     Console.Write(GetLineLanguage(7));
                     sSourcePath = Console.ReadLine();
                     isValid = sSourcePath.Length > 0 && sSourcePath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -341,7 +341,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -350,14 +350,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The destination path is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(43));
                     Console.Write(GetLineLanguage(8));
                     sDestinationPath = Console.ReadLine();
                     isValid = sDestinationPath.Length > 0 && sDestinationPath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -371,20 +371,20 @@ namespace EasySave.view
             sBackupMode = Console.ReadLine();
             if (sBackupMode == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
             if (sBackupMode != "1" && sBackupMode != "2")
             {
                 while (sBackupMode != "1" && sBackupMode != "2")
                 {
-                    Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                    Console.WriteLine(GetLineLanguage(23));
                     Console.Write(GetLineLanguage(11));
                     sBackupMode = Console.ReadLine();
 
                     if (sBackupMode == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -398,7 +398,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -406,24 +406,24 @@ namespace EasySave.view
             {
                 while (sValidation != "Y" && sValidation != "N")
                 {
-                    Console.WriteLine("\nError : Illegal character. Just write \"Y\" for yes, or \"N\" for no.\n");
+                    Console.WriteLine(GetLineLanguage(44));
                     Console.Write(GetLineLanguage(15));
                     sValidation = Console.ReadLine();
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
             }
             if (sValidation == "Y")
             {
-                Console.WriteLine("Job added");
+                Console.WriteLine(GetLineLanguage(45));
             }
             else
             {
-                Console.WriteLine("Job not added");
+                Console.WriteLine(GetLineLanguage(46));
             }
         }
 
@@ -455,7 +455,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -464,14 +464,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The job name is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(42));
                     Console.Write(GetLineLanguage(6));
                     sNameJob = Console.ReadLine();
                     isValid = sNameJob.Length > 0 && !sNameJob.Contains(" ");
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -484,7 +484,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -493,14 +493,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The source path is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(42));
                     Console.Write(GetLineLanguage(7));
                     sSourcePath = Console.ReadLine();
                     isValid = sSourcePath.Length > 0 && sSourcePath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -513,7 +513,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -522,14 +522,14 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine("\nError : The destination path is not valid.\n");
+                    Console.WriteLine(GetLineLanguage(43));
                     Console.Write(GetLineLanguage(8));
                     sDestinationPath = Console.ReadLine();
                     isValid = sDestinationPath.Length > 0 && sDestinationPath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -543,20 +543,20 @@ namespace EasySave.view
             sBackupMode = Console.ReadLine();
             if (sBackupMode == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
             if (sBackupMode != "1" && sBackupMode != "2")
             {
                 while (sBackupMode != "1" && sBackupMode != "2")
                 {
-                    Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                    Console.WriteLine(GetLineLanguage(24));
                     Console.Write(GetLineLanguage(11));
                     sBackupMode = Console.ReadLine();
 
                     if (sBackupMode == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -570,7 +570,7 @@ namespace EasySave.view
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine("Exit du programme");
+                Console.WriteLine(GetLineLanguage(25));
                 return;
             }
 
@@ -578,13 +578,13 @@ namespace EasySave.view
             {
                 while (sValidation != "Y" && sValidation != "N")
                 {
-                    Console.WriteLine("\nError : Illegal character. Just write \"Y\" for yes, or \"N\" for no.\n");
+                    Console.WriteLine(GetLineLanguage(44));
                     Console.Write(GetLineLanguage(14));
                     sValidation = Console.ReadLine();
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine("Exit du programme");
+                        Console.WriteLine(GetLineLanguage(25));
                         return;
                     }
                 }
@@ -600,14 +600,14 @@ namespace EasySave.view
                         backUpController.backUpManager.AddBackUpJob(BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
                         break;
                     default:
-                        Console.WriteLine("Erreur");
+                        Console.WriteLine(GetLineLanguage(47));
                         break;
                 } 
-                Console.WriteLine("Job added");
+                Console.WriteLine(GetLineLanguage(45));
             }
             else
             {
-                Console.WriteLine("Job not added");
+                Console.WriteLine(GetLineLanguage(46));
             }
         }
 
@@ -626,11 +626,11 @@ namespace EasySave.view
 
             if (sAnswer == "Y")
             {
-                Console.WriteLine("Job deleted");
+                Console.WriteLine(GetLineLanguage(48));
             }
             else
             {
-                Console.WriteLine("Job not deleted");
+                Console.WriteLine(GetLineLanguage(49));
             }
         }
     }

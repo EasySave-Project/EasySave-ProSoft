@@ -1,10 +1,12 @@
-
+using EasySave.view;
 using EasySave.utils;
+using EasySave.services;
 
 namespace EasySave.model
 {
     public class CompleteBackUpJob : BackUpJob
     {
+        private static ConsoleView cv = new ConsoleView();
         public CompleteBackUpJob(string name, string sourceDirectory, string targetDirectory) : base(name, sourceDirectory, targetDirectory)
         {
         }
@@ -14,11 +16,12 @@ namespace EasySave.model
             try
             {
                 FileUtils.CompleteCopyDirectory(sourceDirectory, targetDirectory);
-                Console.WriteLine("Sauvegarde complète réussie.");
+                Console.WriteLine(cv.GetLineLanguage(50));
+                
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Erreur lors de la sauvegarde complète: {e.Message}");
+                Console.WriteLine(cv.GetLineLanguage(51) + e.Message);
             }
         }
     }
