@@ -5,13 +5,18 @@ using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Threading.Tasks.Dataflow;
+using EasySave.controller;
+using EasySave.model;
+using EasySave.services;
 namespace EasySave.view
 {
     public class ConsoleView
     {
         // Variables globales
         private static string sLanguage;
+
+        private BackUpController backUpController; 
 
         // Afficher l'écran de sélection de la langue
         public void ShowSelectLanguage()
@@ -80,12 +85,17 @@ namespace EasySave.view
                 Console.WriteLine("\n=======================EasySave=======================");
 
                 // Code=> remplir le tableau
-                string[] sNameJob = new string[5];
-                sNameJob[0] = "Compta";
-                sNameJob[1] = "Catalogue client";
+               
+                List<String> sNameJob = new List<string>();
+               
+                foreach (BackUpJob bj in BackUpManager.listBackUps)
+                {
+                    sNameJob.Add(bj.name);
+                }
+ 
 
                 // Code=> Boucle d'affichage des jobs
-                for (int i = 0; i < sNameJob.Length; i++)
+                for (int i = 0; i < sNameJob.Count; i++)
                 {
                     // S'il y a un nom de job alors on l'affiche
                     if (sNameJob[i] != null)
@@ -119,7 +129,7 @@ namespace EasySave.view
                         bSecurity = true;
                         break;
                     default:
-                        string[] sListOfJob = new string[sNameJob.Length];
+                        string[] sListOfJob = new string[sNameJob.Count];
 
                         // Vérifier si le premier caractère de la réponse est un chiffre
                         if (char.IsDigit(sAnswer[0]))
@@ -152,23 +162,23 @@ namespace EasySave.view
                     {
                         case "1":
                             Console.WriteLine("Ouvrir job 1");
-                            CommandAnalysis(sAnswerSplit[1], 1);
+                            CommandAnalysis(sAnswerSplit[1], 0);
                             break;
                         case "2":
                             Console.WriteLine("Ouvrir job 2");
-                            CommandAnalysis(sAnswerSplit[1], 2);
+                            CommandAnalysis(sAnswerSplit[1], 1);
                             break;
                         case "3":
                             Console.WriteLine("Ouvrir job 3");
-                            CommandAnalysis(sAnswerSplit[1], 3);
+                            CommandAnalysis(sAnswerSplit[1], 2);
                             break;
                         case "4":
                             Console.WriteLine("Ouvrir job 4");
-                            CommandAnalysis(sAnswerSplit[1], 4);
+                            CommandAnalysis(sAnswerSplit[1], 3);
                             break;
                         case "5":
                             Console.WriteLine("Ouvrir job 5");
-                            CommandAnalysis(sAnswerSplit[1], 5);
+                            CommandAnalysis(sAnswerSplit[1], 4);
                             break;
                         default:
                             Console.WriteLine("\nError : Illegal character or unknown number.\n");
@@ -234,6 +244,7 @@ namespace EasySave.view
             {
                 case "S":
                     Console.WriteLine("Execution job nb : " + iNbJob);
+                    BackUpManager.listBackUps[iNbJob].Excecute();
                     break;
                 case "M":
                     Console.WriteLine("Modifier job nb : " + iNbJob);
@@ -580,6 +591,18 @@ namespace EasySave.view
             }
             if (sValidation == "Y")
             {
+                switch (iBackupMode)
+                {
+                    case 1 :
+                        backUpController.backUpManager.AddBackUpJob(BackUpType.Complete, sNameJob, sSourcePath, sDestinationPath);
+                        break;
+                    case 2 :
+                        backUpController.backUpManager.AddBackUpJob(BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
+                        break;
+                    default:
+                        Console.WriteLine("Erreur");
+                        break;
+                } 
                 Console.WriteLine("Job added");
             }
             else
@@ -591,9 +614,9 @@ namespace EasySave.view
         private void ShowDeleteJob(int iIndexJob)
         {
             string sAnswer;
-            string sNameJob = "";
-            string sSourcePath = "";
-            string sDestinationPath = "";
+            string sNameJob = BackUpManager.listBackUps[iIndexJob - 1].name ;
+            string sSourcePath = BackUpManager.listBackUps[iIndexJob -1].sourceDirectory;
+            string sDestinationPath = BackUpManager.listBackUps[iIndexJob-1].targetDirectory;
             int iBackupMode = 1;
 
             Console.WriteLine("\n=======================EasySave=======================");
