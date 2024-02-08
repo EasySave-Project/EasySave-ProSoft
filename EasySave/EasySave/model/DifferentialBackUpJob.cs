@@ -1,3 +1,4 @@
+using EasySave.utils;
 namespace EasySave.model
 {
     public class DifferentialBackUpJob : BackUpJob
@@ -13,7 +14,7 @@ namespace EasySave.model
         {
             try
             {
-                //FileUtils.DifferentialCopyDirectory(sourceDirectory, targetDirectory);
+                FileUtils.DifferentialCopyDirectory(sourceDirectory, targetDirectory);
                 Console.WriteLine("Sauvegarde différentiel réussie.");
 
             }
