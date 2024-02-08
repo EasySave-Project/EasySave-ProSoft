@@ -22,23 +22,23 @@ Soyez toujours informé de l'état de vos sauvegardes avec notre système de log
 
 Pour mettre en route EasySave v1.0, suivez ces instructions :
 
-```bash
-# Clonez le dépôt sur votre machine locale
-git clone https://github.com/votreusername/EasySave-ProSoft.git
+```bash```
+### Clonez le dépôt sur votre machine locale
+```git clone https://github.com/votreusername/EasySave-ProSoft.git```
 
-# Allez dans le répertoire du projet
-cd EasySave
+### Allez dans le répertoire du projet
+```cd EasySave```
 
-# Démarrez l'application (assurez-vous que .NET Core est installé)
-dotnet run
+### Démarrez l'application (assurez-vous que .NET Core est installé)
+```dotnet run```
 
 
 ## 🤝 Équipe
-Voici l'équipeEasySave :
+Voici l'équipe en charge de EasySave :
 
-Amine DAAMOUCH 
-Baptiste BERRETTA 
-Corentin TEULET 
-Aloïs LEROY 
-Lino LAFORE 
+- Amine DAAMOUCH 
+- Baptiste BERRETTA 
+- Corentin TEULET 
+- Aloïs LEROY 
+- Lino LAFORE 
 
