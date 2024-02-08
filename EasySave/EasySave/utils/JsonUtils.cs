@@ -9,9 +9,12 @@ namespace EasySave.utils
 {
     public static class JsonUtils
     {
-        private static ConsoleView cv = new ConsoleView();
 
-        public static string filePath = @"C:\PERSONNEL\cesi\info\SaveBackUp.json";
+
+
+        public static string sCurrentDir = Environment.CurrentDirectory;
+
+        public static string filePath = sCurrentDir + "\\EasySave\\conf\\SaveBackUpJob.json";
 
         public static List<BackUpJob> LoadJobsFromJson(string filePath)
         {

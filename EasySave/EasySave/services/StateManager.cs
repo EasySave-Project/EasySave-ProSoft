@@ -146,7 +146,7 @@ namespace EasySave.services
         {
             string sCurrentDir = Environment.CurrentDirectory;
 
-            string destPath = sCurrentDir + "EasySave\\log";
+            string destPath = sCurrentDir + "\\EasySave\\log";
 
             // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
             //string json = JsonSerializer.Serialize<State>(this);

@@ -1,5 +1,6 @@
 ﻿using EasySave.view;
 using EasySave.services;
+using System.Xml.Linq;
 namespace EasySave.utils
 {
     
@@ -15,10 +16,8 @@ namespace EasySave.utils
             // on se permet de créer le dossier si il n'est pas déjà créer.
             Directory.CreateDirectory(targetDir);
 
-            // initilisation du stateManager
-            stateManager.InitState_Differential(name, sourceDir, targetDir);
 
-            CopyModifierOrAddedFile(sourceDir, targetDir);
+            CopyModifierOrAddedFile(sourceDir, targetDir, name);
             DeleteObsoleteFiles(sourceDir, targetDir);
             CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
         }
@@ -30,10 +29,7 @@ namespace EasySave.utils
             // on se permet de créer le dossier si il n'est pas déjà créer.
             Directory.CreateDirectory(targetDir);
 
-            // initilisation du stateManager
-            stateManager.InitState_Complete(name, sourceDir, targetDir);
-
-            CopyFilesTo(sourceDir, targetDir);
+            CopyFilesTo(sourceDir, targetDir,name);
             DeleteObsoleteFiles(sourceDir, targetDir);
             CopySubdirectoriesRecursively(name, sourceDir, targetDir);
 
@@ -41,7 +37,7 @@ namespace EasySave.utils
 
         public static void VerifyDirectoryAndDrive(string sourceDir, string targetDir)
         {
-            VerifyDirectoryEmpty(sourceDir);
+            VerifyDirectoryExists(sourceDir);
             VerifyDriveAvailable(sourceDir);
             VerifyDriveAvailable(targetDir);
         }
@@ -53,16 +49,6 @@ namespace EasySave.utils
             }
         }
 
-        private static void VerifyDirectoryEmpty(string dir)
-        {
-            VerifyDirectoryExists(dir);
-
-            if (!Directory.EnumerateFileSystemEntries(dir).Any())
-            {
-                throw new DirectoryNotFoundException(ConsoleView.GetLineLanguage(60) + dir);
-            }
-        }
-
         private static void VerifyDriveAvailable(string dir)
         {
             if (!DriveInfo.GetDrives().Any(d => d.IsReady && dir.StartsWith(d.Name, StringComparison.OrdinalIgnoreCase)))
@@ -71,8 +57,10 @@ namespace EasySave.utils
             }
         }
 
-        private static void CopyFilesTo(string sourceDir, string targetDir)
+        private static void CopyFilesTo(string sourceDir, string targetDir,string name)
         {
+            // initilisation du stateManager
+            stateManager.InitState_Complete(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 string tempPath = Path.Combine(targetDir, file.Name);
@@ -102,9 +90,11 @@ namespace EasySave.utils
 
             DeleteObsoleteDirectories(sourceDir, targetDir);
         }
-        public static void CopyModifierOrAddedFile(string sourceDir, string targetDir)
+        public static void CopyModifierOrAddedFile(string sourceDir, string targetDir,string name)
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
+            // initilisation du stateManager
+            stateManager.InitState_Differential(name, sourceDir, targetDir);
             foreach (var sourceFile in sourceFiles)
             {
                 var targetFilePath = Path.Combine(targetDir, sourceFile.FullName.Substring(sourceDir.Length + 1));

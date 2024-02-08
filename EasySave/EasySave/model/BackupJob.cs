@@ -18,7 +18,7 @@
 
         public abstract void Excecute();
 
-        public abstract BackUpJob CloneToType(Type type);
+        public abstract BackUpJob CloneToType(BackUpType type);
 
     }
 }
