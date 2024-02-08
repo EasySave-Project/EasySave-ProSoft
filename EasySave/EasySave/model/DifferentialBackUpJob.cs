@@ -14,9 +14,9 @@ namespace EasySave.model
             this.sourceDirectory = sourceDirectory;
             this.targetDirectory = targetDirectory;
         }
-        public override BackUpJob CloneToType(Type type)
+        public override BackUpJob CloneToType(BackUpType type)
         {
-            if (type == typeof(CompleteBackUpJob))
+            if (type.Equals(BackUpType.Complete))
             {
                 CompleteBackUpJob newJob = new CompleteBackUpJob(this.name, this.sourceDirectory, this.targetDirectory);
 

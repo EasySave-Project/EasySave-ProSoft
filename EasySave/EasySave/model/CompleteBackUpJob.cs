@@ -16,9 +16,9 @@ namespace EasySave.model
         {
         }
 
-        public override BackUpJob CloneToType(Type type)
+        public override BackUpJob CloneToType(BackUpType type)
         {
-            if(type == typeof(DifferentialBackUpJob))
+            if(type.Equals(BackUpType.Differential))
             {
                 DifferentialBackUpJob newJob = new DifferentialBackUpJob(name, sourceDirectory, targetDirectory);
                 

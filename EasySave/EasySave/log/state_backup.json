@@ -1,0 +1,180 @@
+{
+  "NameJob": "Travail",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 3,
+  "Progression": 0
+}
+{
+  "NameJob": "Travail",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 2,
+  "Progression": 33
+}
+{
+  "NameJob": "Travail",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 822,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 1,
+  "Progression": 66
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 3,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 2,
+  "Progression": 33
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 822,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 1,
+  "Progression": 66
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 3,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 2,
+  "Progression": 33
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 822,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 1,
+  "Progression": 66
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\Nouveau dossier",
+  "TargetPath": "C:\\sauve\\Nouveau dossier",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 0,
+  "NbFilesLeftToDo": 0,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\test",
+  "TargetPath": "C:\\sauve\\test",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 411,
+  "NbFilesLeftToDo": 1,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\test",
+  "TargetPath": "C:\\sauve\\test",
+  "State_Text": "END",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 411,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 3,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 2,
+  "Progression": 33
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 822,
+  "TotalFileSize": 1233,
+  "NbFilesLeftToDo": 1,
+  "Progression": 66
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\Nouveau dossier",
+  "TargetPath": "C:\\sauve\\Nouveau dossier",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 0,
+  "NbFilesLeftToDo": 0,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\test",
+  "TargetPath": "C:\\sauve\\test",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 411,
+  "NbFilesLeftToDo": 1,
+  "Progression": 0
+}
+{
+  "NameJob": "travail1",
+  "SourcePath": "C:\\mt103\\test",
+  "TargetPath": "C:\\sauve\\test",
+  "State_Text": "END",
+  "TotalFileToCopy": 411,
+  "TotalFileSize": 411,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}

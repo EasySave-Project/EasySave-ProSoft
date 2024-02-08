@@ -83,9 +83,9 @@ public class BackUpManager
         
     }
 
-    public void UpdateBackUpJobType(int index, Type type)
+    public void UpdateBackUpJobType(int index, BackUpType type)
     {
-        if(type != listBackUps[index].GetType())
+        if (!(listBackUps[index].GetType().Equals(type)))
         {
             listBackUps[index] = listBackUps[index].CloneToType(type);
             SaveJobsToJson();

@@ -21,7 +21,7 @@ Sélectionnez ce que vous vouliez modifier et entrez la nouvelle données :
 (4) Mode de sauvegarde (1-Complet / 2-Différentiel) :
 (apply) - Appliquer la modification
 (exit) - Retour au menu
-\n Erreur : Caractère illégal ou numéro inconnu.\n
+Erreur : Caractère illégal ou numéro inconnu.
 Tout ouvrir
 Quitter le programme
 Ouvrir un travail de sauvegarde 1
@@ -29,27 +29,27 @@ Ouvrir un travail de sauvegarde 2
 Ouvrir un travail de sauvegarde 3
 Ouvrir un travail de sauvegarde 4
 Ouvrir un travail de sauvegarde 5
-\nLa chaîne a été split via des ','
+La chaîne a été split via des ','
 Ouvrir un travail de sauvegarde
-\nLa chaine a été split via des '-'
-\nErreur : L’index de début doit être inférieur à l’index de fin.\n
-\nErreur : Caractère illégal, il ne doit y avoir que deux indices séparés par \"-\". \n
+La chaine a été split via des '-'
+Erreur : L’index de début doit être inférieur à l’index de fin.
+Erreur : Caractère illégal, il ne doit y avoir que deux indices séparés par \"-\". 
 Execution du travail numéro :
 Modification du travail numéro :
 Supprimer travail numéro :
-\nErreur : Commande inconnu\n 
-\nErreur : Valeur saisie non reconnu\n
-\nErreur : Le nom du travail n'est pas valide.\n
-\nErreur : La valeur de la source n'est pas valide\n
-\nErreur : La valeur de la destionation n'est pas valide\n
-\nError : Caractère illégal. Ecrire \"Y\" pour oui, ou \"N\" for no.\n
+Erreur : Commande inconnu 
+Erreur : Valeur saisie non reconnu
+Erreur : Le nom du travail n'est pas valide.
+Erreur : La valeur de la source n'est pas valide
+Erreur : La valeur de la destionation n'est pas valide
+Error : Caractère illégal. Ecrire \"Y\" pour oui, ou \"N\" for no.
 Travail Ajouter
 Travail Non Ajouter
-\nErreur code BackUpMode non reconnu\n
+Erreur code BackUpMode non reconnu
 Travail Supprimer
 Travail Non Supprimer
 Sauvegarde complète réussie.
-\nErreur lors de la sauvegarde complète : 
+Erreur lors de la sauvegarde complète : 
 Type de sauvegarde invalide
 Sauvegarde différentiel réussie.
 Erreur lors de la sauvegarde complète : 

@@ -16,7 +16,34 @@ namespace EasySave.view
         // Variables globales
         private static string sLanguage;
 
-        public BackUpController backUpController { get; set; } 
+        public BackUpController backUpController { get; set; }
+
+        public void InitConfFolder()
+        {
+            // Partie Save Job
+            // Vérifier la présence du dossier "conf"
+            string sCurrentDir = Environment.CurrentDirectory;
+            string destPath = sCurrentDir + "\\EasySave\\conf";
+            Console.WriteLine(destPath);
+            if (!System.IO.Directory.Exists(destPath))
+            {
+                System.IO.Directory.CreateDirectory(destPath);
+            }
+            // Vérifier la présence du fichier "SaveBackUpJob.json" puis écrire rien dedans
+            string filePath = destPath + "\\SaveBackUpJob.json";
+            if (!System.IO.File.Exists(filePath))
+            {
+                System.IO.File.WriteAllText(filePath, "");
+            }
+            // Partie Log
+            // Vérifier la présence du dossier "log"
+            destPath = sCurrentDir + "\\EasySave\\log";
+            if (!System.IO.Directory.Exists(destPath))
+            {
+                System.IO.Directory.CreateDirectory(destPath);
+            }
+        }
+
 
         // Afficher l'écran de sélection de la langue
         public void ShowSelectLanguage()
@@ -125,6 +152,7 @@ namespace EasySave.view
                         ShowAddJob();
                         break;
                     case "all":
+                        backUpController.backUpManager.ExcecuteAllBackUps();
                         Console.WriteLine(GetLineLanguage(24));
                         break;
                     case "lang":
@@ -201,6 +229,7 @@ namespace EasySave.view
                         {
                             Console.WriteLine(GetLineLanguage(32) + sAnswerSplit_List[i]);
                             CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
+                            
                         }
                     }
                     else
@@ -248,15 +277,15 @@ namespace EasySave.view
             switch (sAnswerCmd)
             {
                 case "S":
-                    Console.WriteLine(GetLineLanguage(36) + iNbJob);
+                    Console.WriteLine(GetLineLanguage(36) + iNbJob +1 );
                     BackUpManager.listBackUps[iNbJob].Excecute();
                     break;
                 case "M":
-                    Console.WriteLine(GetLineLanguage(37) + iNbJob);
+                    Console.WriteLine(GetLineLanguage(37) + iNbJob+ 1);
                     ShowModifyJob(iNbJob);
                     break;
                 case "D":
-                    Console.WriteLine(GetLineLanguage(38) + iNbJob);
+                    Console.WriteLine(GetLineLanguage(38) + iNbJob + 1);
                     ShowDeleteJob(iNbJob);
                     break;
                 default:
@@ -397,8 +426,8 @@ namespace EasySave.view
             iBackupMode = int.Parse(sBackupMode);
            
             // Partie 5 : Confirmation
-            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(13) : GetLineLanguage(14)));
-            Console.Write(GetLineLanguage(15));
+            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(12) : GetLineLanguage(13)));
+            Console.Write(GetLineLanguage(14));
             sValidation = Console.ReadLine();
 
             if (sNameJob == "exit")
@@ -412,7 +441,7 @@ namespace EasySave.view
                 while (sValidation != "Y" && sValidation != "N")
                 {
                     Console.WriteLine(GetLineLanguage(44));
-                    Console.Write(GetLineLanguage(15));
+                    Console.Write(GetLineLanguage(14));
                     sValidation = Console.ReadLine();
                     if (sNameJob == "exit")
                     {
@@ -439,14 +468,17 @@ namespace EasySave.view
             string sSourcePath_Old = BackUpManager.listBackUps[iIndexJob].sourceDirectory;
             string sDestinationPath_Old = BackUpManager.listBackUps[iIndexJob].targetDirectory;
             Type backUpType = BackUpManager.listBackUps[iIndexJob].GetType();
+            BackUpType type = BackUpType.Complete ; 
             string sbackUpMode; 
             string typeJob = backUpType.FullName;
             if (typeJob.Contains("Complete"))
             {
                 sbackUpMode = GetLineLanguage(12);
+                
             }
             else {
                 sbackUpMode = GetLineLanguage(13);
+               
             }
             while (true)
             {
@@ -480,9 +512,14 @@ namespace EasySave.view
                             sDestinationPath_Old = sAnswerSplit[1];
                             break;
                         case "4":
-                            if (sAnswerSplit[1] == "1" || sAnswerSplit[1] == "2")
+                            sbackUpMode = sAnswerSplit[1];
+                            if (sAnswerSplit[1] == "1")
                             {
-                                sbackUpMode = sAnswerSplit[1];
+                                
+                                type = BackUpType.Complete;
+                            }else if (sAnswerSplit[1] == "2")
+                            {
+                                type = BackUpType.Differential;
                             }
                             else
                             {
@@ -502,7 +539,7 @@ namespace EasySave.view
                             backUpController.backUpManager.UpdateBackUpJobName(iIndexJob, sNameJob_Old);
                             backUpController.backUpManager.UpdateBackUpJobSourceDir(iIndexJob, sSourcePath_Old);
                             backUpController.backUpManager.UpdateBackUpJobTargetDir(iIndexJob, sDestinationPath_Old);
-                            backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, backUpType);
+                            backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, type);
                             break;
                         case "exit":
                             return;
