@@ -11,7 +11,7 @@ using EasySave.controller;
 using System.Diagnostics;
 using EasySave.utils;
 
-namespace ProgSys_Menu_v1
+namespace EasySave
 {
     public class LogManager
     {

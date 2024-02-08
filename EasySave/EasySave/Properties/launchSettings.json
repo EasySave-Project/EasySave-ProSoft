@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EasySave": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\git\\EasySave-ProSoft\\EasySave"
+    }
+  }
+}

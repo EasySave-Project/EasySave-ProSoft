@@ -3,6 +3,8 @@ using EasySave.services;
 using EasySave.utils;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using EasySave.view;
+using EasySave.controller;
 namespace EasySave
 {
     public class Program
@@ -11,24 +13,14 @@ namespace EasySave
         public static void Main(string[] args)
         {
 
-            /* on configure */
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("conf/confSave.json", optional: true, reloadOnChange: true);
-
-            IConfiguration configuration = builder.Build();
-       
-            var filePath = configuration["BackUpSaveFile"];
-            // On initialise le chemin d'accès à l'enregistrement des 
-            JsonUtils.Initialize(configuration);
-            
-            String name = "backUpJob5";
-            String sourceDir = @"C:\mt103";
-            String targetDir = @"C:\sauve";
-            BackUpManager bm = new BackUpManager();
-            bm.AddBackUpJob(BackUpType.Differential, name, sourceDir, targetDir);
-
-
+            ConsoleView cv = new ConsoleView();
+            BackUpManager bmManager = new BackUpManager();
+            StateManager stateManager = new StateManager();
+            LogManager logManager = new LogManager();
+            BackUpController controller = new BackUpController(bmManager,logManager, stateManager);
+            cv.backUpController = controller;
+            cv.ShowSelectLanguage();
+            cv.ShowMainMenu();
 
             Console.ReadKey();
         

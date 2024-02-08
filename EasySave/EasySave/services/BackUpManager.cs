@@ -9,8 +9,6 @@ namespace EasySave.services;
 
 public class BackUpManager
 {
-    private static ConsoleView cv = new ConsoleView();
-
     public static List<BackUpJob> listBackUps;
 
     public BackUpManager() {
@@ -27,7 +25,7 @@ public class BackUpManager
         }
         catch (Exception ex)
         {
-            Console.WriteLine(cv.GetLineLanguage(55) + ex.Message);
+            Console.WriteLine(ConsoleView.GetLineLanguage(55) + ex.Message);
         }
     }
 
@@ -54,7 +52,7 @@ public class BackUpManager
     {
         if (indexJob > 4 && indexJob < 0)
         {
-            throw new ArgumentException(cv.GetLineLanguage(56));
+            throw new ArgumentException(ConsoleView.GetLineLanguage(56));
         }
         return listBackUps[indexJob];
     }
@@ -65,48 +63,58 @@ public class BackUpManager
         SaveJobsToJson();
     }
     
-    public void UpdateBackUpJobName(BackUpJob backupJob, string newName)
+    public void UpdateBackUpJobName(int index, string newName)
     {
-        backupJob.name = newName;
+        listBackUps[index].name = newName;
         SaveJobsToJson();
     }
     
-    public void UpdateBackUpJobSourceDir(BackUpJob backupJob, string sourceDir)
+    public void UpdateBackUpJobSourceDir(int index, string sourceDir)
     {
-        backupJob.sourceDirectory = sourceDir;
+        listBackUps[index].sourceDirectory = sourceDir;
+        SaveJobsToJson();
     }
 
-    public void UpdateBackUpJobTargetDir(BackUpJob backUpJob, string targetDir)
+    public void UpdateBackUpJobTargetDir(int index, string targetDir)
     {
-        foreach(BackUpJob job in listBackUps)
-        {
-            if( job.targetDirectory == targetDir)
-            {
-                job.targetDirectory = targetDir;
-                SaveJobsToJson() ;
-            }
-        }
+        listBackUps[index].targetDirectory = targetDir;
+        
+        SaveJobsToJson();
         
     }
-    
+
+    public void UpdateBackUpJobType(int index, Type type)
+    {
+        if(type != listBackUps[index].GetType())
+        {
+            listBackUps[index] = listBackUps[index].CloneToType(type);
+            SaveJobsToJson();
+        }
+        
+    }    
     public void AddBackUpJob(BackUpType type, String jobName, String sourceDir, String targetDir)
     {
         if (listBackUps.Count >= 5)
         {
-            throw new InvalidOperationException(cv.GetLineLanguage(57));
+            Console.WriteLine(ConsoleView.GetLineLanguage(57));
+            return; 
+            //throw new InvalidOperationException("Le nombre maximal de jobs est atteint.");
         }
         if (listBackUps.Any(j => j.name == jobName))
         {
-            throw new InvalidOperationException(cv.GetLineLanguage(58));
+            Console.WriteLine(ConsoleView.GetLineLanguage(59));
+            return;
+            //throw new InvalidOperationException("Un job avec le même nom existe déjà.");
+
         }
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
          
         listBackUps.Add(addBackUpJob);
         SaveJobsToJson();
-
-
     }
+
+
          
     public BackUpJob findBackupJobByName(string sJobName)
     {

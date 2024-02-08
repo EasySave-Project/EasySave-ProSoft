@@ -5,7 +5,6 @@ namespace EasySave.utils
     
     public static class FileUtils
     {
-        private static ConsoleView cv = new ConsoleView();
 
         public static void DifferentialCopyDirectory(string sourceDir, string targetDir)
         {
@@ -40,7 +39,7 @@ namespace EasySave.utils
         {
             if (!Directory.Exists(dir))
             {
-                throw new DirectoryNotFoundException(cv.GetLineLanguage(59) + dir);
+                throw new DirectoryNotFoundException(ConsoleView.GetLineLanguage(59) + dir);
             }
         }
 
@@ -50,7 +49,7 @@ namespace EasySave.utils
 
             if (!Directory.EnumerateFileSystemEntries(dir).Any())
             {
-                throw new DirectoryNotFoundException(cv.GetLineLanguage(60) + dir);
+                throw new DirectoryNotFoundException(ConsoleView.GetLineLanguage(60) + dir);
             }
         }
 
@@ -58,7 +57,7 @@ namespace EasySave.utils
         {
             if (!DriveInfo.GetDrives().Any(d => d.IsReady && dir.StartsWith(d.Name, StringComparison.OrdinalIgnoreCase)))
             {
-                throw new DriveNotFoundException(cv.GetLineLanguage(61)+ dir+ cv.GetLineLanguage(62));
+                throw new DriveNotFoundException(ConsoleView.GetLineLanguage(61)+ dir+ ConsoleView.GetLineLanguage(62));
             }
         }
 
