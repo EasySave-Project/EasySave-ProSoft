@@ -17,25 +17,6 @@ namespace EasySave.controller
             this.logManager = logManager;
             this.stateManager = stateManager;
         }
-        public void initiateBackup(String sJobName)
-        {
-            try
-            {
-                BackUpJob job = backUpManager.findBackupJobByName(sJobName);
-                if (job != null)
-                {
-                    backUpManager.ExecuteBackup(job);
-                    // Mise à jour du log et de l'état
-                    //logManager.writeLog(job, /* fileInfo */);
-                    //stateManager.updateState(job, /* progressInfo */);
-                }
-            }
-            catch (Exception e)
-            {
-                // Gérer les exceptions et éventuellement mettre à jour la vue avec un message d'erreur.
-                Console.WriteLine(e.Message);
-            }
-        }
 
     }
 }

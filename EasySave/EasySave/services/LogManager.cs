@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,47 +12,49 @@ using EasySave.utils;
 
 namespace EasySave
 {
+
     public class LogManager
     {
         // Déclaration des variables objet
-        public string? SourcePath { get; set; }
-        public string? TargetPath { get; set; }
-        public string? NameJob { get; set; }
-        public string? BackupDate { get; set; }
-        public long TransactionTime { get; set; }
-        public long TotalSize { get; set; }
-
+        public string Name { get; set; }
+        public string FileSource { get; set; }
+        public string FileTarget { get; set; }
+        public long FileSize { get; set; }
+        public long FileTransferTime { get; set; }
+        public string Time { get; set; }
 
 
         //=======================================================================================================
-        // Complete Version
+        // Log 
         //=======================================================================================================
 
-
+        DateTime dateHeure = DateTime.Now;
 
         public void InitLog(string nameJob, string sourcePath, string targetPath)
         {
+            Name = nameJob;
+            FileSource = sourcePath;
+            FileTarget = targetPath;
+            FileSize = 0;
+            //Time before the transfer
+            FileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            Time = "";
 
-            NameJob = nameJob;
-            SourcePath = sourcePath;
-            TargetPath = targetPath;
-            BackupDate = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            TransactionTime = CompleteBackUpJob.Result;
-            TotalSize = GetTotalFileSize_Complete(sourcePath);
-            SaveLog();
+            //long TimeBeforeSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            //long TimeAfterSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
         }
 
 
-        private int GetTotalFileSize_Complete(string sourcePath)
+        public void PushLog(long NbOctetFile)
         {
-            int totalFileSize = 0;
-            string[] files = System.IO.Directory.GetFiles(sourcePath, "*.*", System.IO.SearchOption.AllDirectories);
-            foreach (string file in files)
-            {
-                System.IO.FileInfo fi = new System.IO.FileInfo(file);
-                totalFileSize += (int)fi.Length;
-            }
-            return totalFileSize;
+            FileSize = NbOctetFile;
+
+            //Time after the transfer
+            FileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - FileTransferTime;
+
+            Time = dateHeure.ToString("dd/MM/yyyy HH:mm:ss");
+
+            SaveLog();
         }
 
 
@@ -65,7 +66,8 @@ namespace EasySave
         //=======================================================================================================
         private void SaveLog()
         {
-            string destPath = "C:\\Users\\linol\\Downloads\\EasySave-ProSoft-dev (1)\\EasySave-ProSoft-dev\\EasySave\\EasySave\\bin\\Log";
+            string sCurrentDir = Environment.CurrentDirectory;
+            string destPath = sCurrentDir + "\\EasySave\\log";
 
             // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
             //string json = JsonSerializer.Serialize<State>(this);

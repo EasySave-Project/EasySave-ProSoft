@@ -6,7 +6,6 @@ namespace EasySave.model
     public class DifferentialBackUpJob : BackUpJob
     {
 
-        public static long Result { get; internal set; }
 
         public DifferentialBackUpJob(string name, string sourceDirectory, string targetDirectory) : base(name, sourceDirectory, targetDirectory)
         {
@@ -28,11 +27,7 @@ namespace EasySave.model
         {
             try
             {
-                long TimeBeforeSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
                 FileUtils.DifferentialCopyDirectory(name, sourceDirectory, targetDirectory);
-                long TimeAfterSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                Result = TimeAfterSave - TimeBeforeSave;
-                Console.WriteLine($"Temps d'execution: {Result}");
                 Console.WriteLine(ConsoleView.GetLineLanguage(53));
             }
             catch (Exception e)
