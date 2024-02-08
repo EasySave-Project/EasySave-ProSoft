@@ -9,6 +9,7 @@ namespace EasySave.utils
         // Connexion avec le StateManager
         private static StateManager stateManager = new StateManager();
 
+        private static LogManager logManager = new LogManager();    
         public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
             VerifyDirectoryAndDrive(sourceDir, targetDir);
@@ -61,11 +62,13 @@ namespace EasySave.utils
         {
             // initilisation du stateManager
             stateManager.InitState_Complete(name, sourceDir, targetDir);
+            logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 string tempPath = Path.Combine(targetDir, file.Name);
                 file.CopyTo(tempPath, true);
                 stateManager.UpdateState_Complete(file.Length);
+                logManager.PushLog(file.Length);
             }
         }
         private static void CopySubdirectoriesRecursively(string name, string sourceDir, string targetDir)
@@ -93,8 +96,11 @@ namespace EasySave.utils
         public static void CopyModifierOrAddedFile(string sourceDir, string targetDir,string name)
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
+
             // initilisation du stateManager
             stateManager.InitState_Differential(name, sourceDir, targetDir);
+            logManager.InitLog(name, sourceDir, targetDir);
+
             foreach (var sourceFile in sourceFiles)
             {
                 var targetFilePath = Path.Combine(targetDir, sourceFile.FullName.Substring(sourceDir.Length + 1));
@@ -105,6 +111,7 @@ namespace EasySave.utils
                     Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
                     sourceFile.CopyTo(targetFilePath, true);
                     stateManager.UpdateState_Differential(sourceFile.Length);
+                    logManager.PushLog(sourceFile.Length);
                 }
             }
         }
