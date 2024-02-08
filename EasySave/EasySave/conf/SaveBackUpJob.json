@@ -1,8 +1,0 @@
-[
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "t3",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
-  }
-]
