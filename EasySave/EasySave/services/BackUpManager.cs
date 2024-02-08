@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace EasySave.services;
 
-internal class BackUpManager
+public class BackUpManager
 {
 
     public static List<BackUpJob> listBackUps;
@@ -27,8 +27,6 @@ internal class BackUpManager
             Console.WriteLine($"Erreur lors de la sauvegarde : {ex.Message}");
         }
     }
-
-
 
     public void ExecuteBackup(BackUpJob job)
     {
