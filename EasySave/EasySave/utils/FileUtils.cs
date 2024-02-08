@@ -5,30 +5,40 @@ namespace EasySave.utils
     
     public static class FileUtils
     {
+        // Connexion avec le StateManager
+        private static StateManager stateManager = new StateManager();
 
-        public static void DifferentialCopyDirectory(string sourceDir, string targetDir)
+        public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
             VerifyDirectoryAndDrive(sourceDir, targetDir);
             // créer le répertoire target s'il n'existe pas déjà 
             // on se permet de créer le dossier si il n'est pas déjà créer.
             Directory.CreateDirectory(targetDir);
-            CopyModifierOrAddedFile(sourceDir, targetDir); 
+
+            // initilisation du stateManager
+            stateManager.InitState_Differential(name, sourceDir, targetDir);
+
+            CopyModifierOrAddedFile(sourceDir, targetDir);
             DeleteObsoleteFiles(sourceDir, targetDir);
-            CopySubdirectoriesRecursivelyForDifferential(sourceDir, targetDir);
+            CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
         }
-        public static void CompleteCopyDirectory(string sourceDir, string targetDir)
+        public static void CompleteCopyDirectory(string name, string sourceDir, string targetDir)
         {
 
             VerifyDirectoryAndDrive(sourceDir, targetDir);
             // créer le répertoire target s'il n'existe pas déjà 
             // on se permet de créer le dossier si il n'est pas déjà créer.
             Directory.CreateDirectory(targetDir);
+
+            // initilisation du stateManager
+            stateManager.InitState_Complete(name, sourceDir, targetDir);
+
             CopyFilesTo(sourceDir, targetDir);
             DeleteObsoleteFiles(sourceDir, targetDir);
-            CopySubdirectoriesRecursively(sourceDir, targetDir);
+            CopySubdirectoriesRecursively(name, sourceDir, targetDir);
 
         }
-        
+
         public static void VerifyDirectoryAndDrive(string sourceDir, string targetDir)
         {
             VerifyDirectoryEmpty(sourceDir);
@@ -67,26 +77,27 @@ namespace EasySave.utils
             {
                 string tempPath = Path.Combine(targetDir, file.Name);
                 file.CopyTo(tempPath, true);
+                stateManager.UpdateState_Complete(file.Length);
             }
         }
-        private static void CopySubdirectoriesRecursively(string sourceDir, string targetDir)
+        private static void CopySubdirectoriesRecursively(string name, string sourceDir, string targetDir)
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
                 string tempPath = Path.Combine(targetDir, subdir.Name);
                 Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                CompleteCopyDirectory(subdir.FullName, tempPath);
+                CompleteCopyDirectory(name, subdir.FullName, tempPath);
             }
 
             DeleteObsoleteDirectories(sourceDir, targetDir);
         }
-        private static void CopySubdirectoriesRecursivelyForDifferential(string sourceDir, string targetDir)
+        private static void CopySubdirectoriesRecursivelyForDifferential(string name, string sourceDir, string targetDir)
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
                 string tempPath = Path.Combine(targetDir, subdir.Name);
                 Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                DifferentialCopyDirectory(subdir.FullName, tempPath);
+                DifferentialCopyDirectory(name, subdir.FullName, tempPath);
             }
 
             DeleteObsoleteDirectories(sourceDir, targetDir);
@@ -103,6 +114,7 @@ namespace EasySave.utils
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
                     sourceFile.CopyTo(targetFilePath, true);
+                    stateManager.UpdateState_Differential(sourceFile.Length);
                 }
             }
         }

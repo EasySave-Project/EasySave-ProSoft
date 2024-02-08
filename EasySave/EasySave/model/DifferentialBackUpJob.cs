@@ -29,7 +29,7 @@ namespace EasySave.model
             try
             {
                 long TimeBeforeSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                FileUtils.DifferentialCopyDirectory(sourceDirectory, targetDirectory);
+                FileUtils.DifferentialCopyDirectory(name, sourceDirectory, targetDirectory);
                 long TimeAfterSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
                 Result = TimeAfterSave - TimeBeforeSave;
                 Console.WriteLine($"Temps d'execution: {Result}");
