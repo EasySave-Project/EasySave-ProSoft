@@ -1,0 +1,16 @@
+Lancer (S) Modifier (M) Supprimer (D)
+(add) – Ajouter un travail
+(all) - Exécution Séquentielle
+(lang) - Changer de langue
+(exit) – Quitter le logiciel
+Travail
+> Nom du travail :
+> Adresse répertoire source :
+> Adresse répertoire cible :
+(1) - Mode complet
+(2) – Mode différentiel
+> Sélectionner le mode de sauvegarde :
+Complet
+Différentiel
+> Confirmer la création du travail ? (Y/N)
+> Voulez-vous supprimer ce travail ? (Y/N)
