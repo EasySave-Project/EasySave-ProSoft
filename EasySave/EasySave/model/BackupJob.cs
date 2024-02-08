@@ -7,6 +7,7 @@
 
         public string targetDirectory { get; set; }
 
+        
 
         protected BackUpJob(string name, string sourceDirectory, string targetDirectory)
         {
@@ -16,6 +17,8 @@
         }
 
         public abstract void Excecute();
+
+        public abstract BackUpJob CloneToType(Type type);
 
     }
 }

@@ -11,11 +11,7 @@ namespace EasySave.utils
     {
         private static ConsoleView cv = new ConsoleView();
 
-        public static string filePath;
-        public static void Initialize(IConfiguration configuration)
-        {
-            filePath = configuration["BackUpSaveFile"];
-        }
+        public static string filePath = @"C:\PERSONNEL\cesi\info\SaveBackUp.json";
 
         public static List<BackUpJob> LoadJobsFromJson(string filePath)
         {
@@ -31,7 +27,7 @@ namespace EasySave.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(cv.GetLineLanguage(63) + e.Message);
+                Console.WriteLine(ConsoleView.GetLineLanguage(63) + e.Message);
                 return new List<BackUpJob>();
             }
         }

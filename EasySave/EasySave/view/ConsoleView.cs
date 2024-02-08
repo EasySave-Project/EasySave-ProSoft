@@ -16,7 +16,7 @@ namespace EasySave.view
         // Variables globales
         private static string sLanguage;
 
-        private BackUpController backUpController; 
+        public BackUpController backUpController { get; set; } 
 
         // Afficher l'écran de sélection de la langue
         public void ShowSelectLanguage()
@@ -45,16 +45,21 @@ namespace EasySave.view
         }
 
         // Renvoie la chaine de caractère de la langue sélectionnée à partir du fichier correspondant
-        public string GetLineLanguage(int iCodeLine)
+        public static string GetLineLanguage(int iCodeLine)
         {
             string sReturnLang = "";
             string sCurrentDir = Environment.CurrentDirectory; // Obtenir le répertoire courant
             string sRelativePath = "";
-            sRelativePath = sLanguage switch
+            switch (sLanguage)
             {
-                "1" => Path.Combine(sCurrentDir, "ProgSys_Menu_v1\\lang\\en_EN.txt"),
-                "2" => Path.Combine(sCurrentDir, "ProgSys_Menu_v1\\lang\\fr_FR.txt")
-            };
+                case "1":
+                    sRelativePath = Path.Combine(sCurrentDir, "EasySave\\lang\\en_EN.txt");
+                    break;
+                case "2":
+                    sRelativePath = Path.Combine(sCurrentDir, "EasySave\\lang\\fr_FR.txt");
+                    break;
+
+            }
             // Ouvrir le fichier en lecture
             using (StreamReader fileLang = new StreamReader(sRelativePath))
             {
@@ -390,7 +395,7 @@ namespace EasySave.view
                 }
             }
             iBackupMode = int.Parse(sBackupMode);
-
+           
             // Partie 5 : Confirmation
             Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(13) : GetLineLanguage(14)));
             Console.Write(GetLineLanguage(15));
@@ -409,7 +414,6 @@ namespace EasySave.view
                     Console.WriteLine(GetLineLanguage(44));
                     Console.Write(GetLineLanguage(15));
                     sValidation = Console.ReadLine();
-
                     if (sNameJob == "exit")
                     {
                         Console.WriteLine(GetLineLanguage(25));
@@ -419,7 +423,9 @@ namespace EasySave.view
             }
             if (sValidation == "Y")
             {
-                Console.WriteLine(GetLineLanguage(45));
+
+                BackUpType type;
+                backUpController.backUpManager.AddBackUpJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
             }
             else
             {
@@ -429,194 +435,102 @@ namespace EasySave.view
 
         private void ShowModifyJob(int iIndexJob)
         {
-            string sNameJob_Old = "";
-            string sSourcePath_Old = "";
-            string sDestinationPath_Old = "";
-            int iBackupMode_Old = 0;
-
-            string sNameJob;
-            string sSourcePath;
-            string sDestinationPath;
-            string sValidation;
-            string sBackupMode;
-            bool isValid;
-            int iBackupMode = 0;
-            int iNbJob;
-
-            // Code=> Mettre le code qui renvoie le numéro du job courant
-            iNbJob = iIndexJob;
-
-            Console.WriteLine("\n=======================EasySave=======================");
-
-            // Partie 1 : Nom du job
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : " + sNameJob_Old);
-            Console.Write(GetLineLanguage(6));
-            sNameJob = Console.ReadLine();
-
-            if (sNameJob == "exit")
+            string sNameJob_Old = BackUpManager.listBackUps[iIndexJob].name;
+            string sSourcePath_Old = BackUpManager.listBackUps[iIndexJob].sourceDirectory;
+            string sDestinationPath_Old = BackUpManager.listBackUps[iIndexJob].targetDirectory;
+            Type backUpType = BackUpManager.listBackUps[iIndexJob].GetType();
+            string sbackUpMode; 
+            string typeJob = backUpType.FullName;
+            if (typeJob.Contains("Complete"))
             {
-                Console.WriteLine(GetLineLanguage(25));
-                return;
+                sbackUpMode = GetLineLanguage(12);
             }
-
-            isValid = !String.IsNullOrEmpty(sNameJob) && !sNameJob.Contains(" ");
-            if (!isValid)
+            else {
+                sbackUpMode = GetLineLanguage(13);
+            }
+            while (true)
             {
-                while (!isValid)
-                {
-                    Console.WriteLine(GetLineLanguage(42));
-                    Console.Write(GetLineLanguage(6));
-                    sNameJob = Console.ReadLine();
-                    isValid = sNameJob.Length > 0 && !sNameJob.Contains(" ");
+                string sAnswer = "";
 
-                    if (sNameJob == "exit")
+                Console.WriteLine("\n=======================EasySave=======================");
+                Console.WriteLine(GetLineLanguage(16) + "\n");
+                Console.WriteLine(GetLineLanguage(17) + sNameJob_Old);
+                Console.WriteLine(GetLineLanguage(18) + sSourcePath_Old);
+                Console.WriteLine(GetLineLanguage(19) + sDestinationPath_Old);
+                Console.WriteLine(GetLineLanguage(20) + sbackUpMode);
+                Console.WriteLine("\n" + GetLineLanguage(21));
+                Console.WriteLine(GetLineLanguage(22));
+                sAnswer = Console.ReadLine();
+
+                // Diviser la réponses en deux parties
+                string[] sAnswerSplit = sAnswer.Split(' ');
+
+                // Vérifier si la réponse contient bien deux parties
+                if (sAnswerSplit.Length == 2)
+                {
+                    switch (sAnswerSplit[0])
                     {
-                        Console.WriteLine(GetLineLanguage(25));
-                        return;
+                        case "1":
+                            sNameJob_Old = sAnswerSplit[1];
+                            break;
+                        case "2":
+                            sSourcePath_Old = sAnswerSplit[1];
+                            break;
+                        case "3":
+                            sDestinationPath_Old = sAnswerSplit[1];
+                            break;
+                        case "4":
+                            if (sAnswerSplit[1] == "1" || sAnswerSplit[1] == "2")
+                            {
+                                sbackUpMode = sAnswerSplit[1];
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                            break;
                     }
                 }
-            }
-
-            // Partie 2 : Source du job
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : " + sNameJob + " ...");
-            Console.Write(GetLineLanguage(7));
-            sSourcePath = Console.ReadLine();
-
-            if (sNameJob == "exit")
-            {
-                Console.WriteLine(GetLineLanguage(25));
-                return;
-            }
-
-            isValid = !String.IsNullOrEmpty(sNameJob) && !sNameJob.Contains(" ");
-            if (!isValid)
-            {
-                while (!isValid)
+                else if (sAnswerSplit.Length == 1)
                 {
-                    Console.WriteLine(GetLineLanguage(42));
-                    Console.Write(GetLineLanguage(7));
-                    sSourcePath = Console.ReadLine();
-                    isValid = sSourcePath.Length > 0 && sSourcePath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
-
-                    if (sNameJob == "exit")
+                    switch (sAnswerSplit[0])
                     {
-                        Console.WriteLine(GetLineLanguage(25));
-                        return;
+                        case "apply":
+                            backUpController.backUpManager.UpdateBackUpJobName(iIndexJob, sNameJob_Old);
+                            backUpController.backUpManager.UpdateBackUpJobSourceDir(iIndexJob, sSourcePath_Old);
+                            backUpController.backUpManager.UpdateBackUpJobTargetDir(iIndexJob, sDestinationPath_Old);
+                            backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, backUpType);
+                            break;
+                        case "exit":
+                            return;
+                            break;
+                        default:
+                            Console.WriteLine("\nError : Order not recognised.\n");
+                            break;
                     }
                 }
-            }
-
-            // Partie 3 : Destination du job
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> ...");
-            Console.Write(GetLineLanguage(8));
-            sDestinationPath = Console.ReadLine();
-
-            if (sNameJob == "exit")
-            {
-                Console.WriteLine(GetLineLanguage(25));
-                return;
-            }
-
-            isValid = !String.IsNullOrEmpty(sNameJob) && !sNameJob.Contains(" ");
-            if (!isValid)
-            {
-                while (!isValid)
+                else
                 {
-                    Console.WriteLine(GetLineLanguage(43));
-                    Console.Write(GetLineLanguage(8));
-                    sDestinationPath = Console.ReadLine();
-                    isValid = sDestinationPath.Length > 0 && sDestinationPath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
-
-                    if (sNameJob == "exit")
-                    {
-                        Console.WriteLine(GetLineLanguage(25));
-                        return;
-                    }
+                    Console.WriteLine("\nError : Illegal character or unknown number.\n");
                 }
+                Console.WriteLine("======================================================\n");
             }
-
-            // Partie 4 : Mode de sauvegarde
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | ...");
-            Console.WriteLine(GetLineLanguage(9));
-            Console.WriteLine(GetLineLanguage(10));
-            Console.Write(GetLineLanguage(11));
-            sBackupMode = Console.ReadLine();
-            if (sBackupMode == "exit")
-            {
-                Console.WriteLine(GetLineLanguage(25));
-                return;
-            }
-            if (sBackupMode != "1" && sBackupMode != "2")
-            {
-                while (sBackupMode != "1" && sBackupMode != "2")
-                {
-                    Console.WriteLine(GetLineLanguage(24));
-                    Console.Write(GetLineLanguage(11));
-                    sBackupMode = Console.ReadLine();
-
-                    if (sBackupMode == "exit")
-                    {
-                        Console.WriteLine(GetLineLanguage(25));
-                        return;
-                    }
-                }
-            }
-            iBackupMode = int.Parse(sBackupMode);
-
-            // Partie 5 : Confirmation
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(13) : GetLineLanguage(14)));
-            Console.Write(GetLineLanguage(15));
-            sValidation = Console.ReadLine();
-
-            if (sNameJob == "exit")
-            {
-                Console.WriteLine(GetLineLanguage(25));
-                return;
-            }
-
-            if (sValidation != "Y" && sValidation != "N")
-            {
-                while (sValidation != "Y" && sValidation != "N")
-                {
-                    Console.WriteLine(GetLineLanguage(44));
-                    Console.Write(GetLineLanguage(14));
-                    sValidation = Console.ReadLine();
-
-                    if (sNameJob == "exit")
-                    {
-                        Console.WriteLine(GetLineLanguage(25));
-                        return;
-                    }
-                }
-            }
-            if (sValidation == "Y")
-            {
-                switch (iBackupMode)
-                {
-                    case 1 :
-                        backUpController.backUpManager.AddBackUpJob(BackUpType.Complete, sNameJob, sSourcePath, sDestinationPath);
-                        break;
-                    case 2 :
-                        backUpController.backUpManager.AddBackUpJob(BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
-                        break;
-                    default:
-                        Console.WriteLine(GetLineLanguage(47));
-                        break;
-                } 
-                Console.WriteLine(GetLineLanguage(45));
-            }
-            else
-            {
-                Console.WriteLine(GetLineLanguage(46));
-            }
+            
         }
+
+     
 
         private void ShowDeleteJob(int iIndexJob)
         {
             string sAnswer;
-            string sNameJob = BackUpManager.listBackUps[iIndexJob - 1].name ;
-            string sSourcePath = BackUpManager.listBackUps[iIndexJob -1].sourceDirectory;
-            string sDestinationPath = BackUpManager.listBackUps[iIndexJob-1].targetDirectory;
+            string sNameJob = BackUpManager.listBackUps[iIndexJob].name ;
+            string sSourcePath = BackUpManager.listBackUps[iIndexJob].sourceDirectory;
+            string sDestinationPath = BackUpManager.listBackUps[iIndexJob].targetDirectory;
+            Type type = BackUpManager.listBackUps[iIndexJob].GetType();
+            
             int iBackupMode = 1;
 
             Console.WriteLine("\n=======================EasySave=======================");
@@ -626,6 +540,7 @@ namespace EasySave.view
 
             if (sAnswer == "Y")
             {
+                backUpController.backUpManager.RemoveBackUpJob(sNameJob);
                 Console.WriteLine(GetLineLanguage(48));
             }
             else

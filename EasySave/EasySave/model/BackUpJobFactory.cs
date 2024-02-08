@@ -5,7 +5,6 @@ namespace EasySave.model
 {
     public static class BackUpJobFactory
     {
-        private static ConsoleView cv = new ConsoleView();
         public static BackUpJob CreateBackupJob(BackUpType type, string name, string sourceDir, string targetDir)
         {
             switch (type)
@@ -15,7 +14,7 @@ namespace EasySave.model
                 case BackUpType.Differential:
                     return new DifferentialBackUpJob(name, sourceDir, targetDir);
                 default:
-                    throw new ArgumentException(cv.GetLineLanguage(52));
+                    throw new ArgumentException(ConsoleView.GetLineLanguage(52));
             }
         }
 

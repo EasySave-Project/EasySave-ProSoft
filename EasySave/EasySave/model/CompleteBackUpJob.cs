@@ -19,6 +19,18 @@ namespace EasySave.model
         {
         }
 
+        public override BackUpJob CloneToType(Type type)
+        {
+            if(type == typeof(DifferentialBackUpJob))
+            {
+                DifferentialBackUpJob newJob = new DifferentialBackUpJob(name, sourceDirectory, targetDirectory);
+                
+                return newJob;
+            }
+            return null; 
+        }
+
+
         public override void Excecute()
         {
             try
@@ -27,13 +39,13 @@ namespace EasySave.model
                 FileUtils.CompleteCopyDirectory(sourceDirectory, targetDirectory);
 
                 long TimeAfterSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                Console.WriteLine(cv.GetLineLanguage(50));
+                Console.WriteLine(ConsoleView.GetLineLanguage(50));
                 Result = TimeAfterSave - TimeBeforeSave;
                 Console.WriteLine($"Temps d'execution: {Result}");
             }
             catch (Exception e)
             {
-                Console.WriteLine(cv.GetLineLanguage(51) + e.Message);
+                Console.WriteLine(ConsoleView.GetLineLanguage(51) + e.Message);
             }
         }
     }

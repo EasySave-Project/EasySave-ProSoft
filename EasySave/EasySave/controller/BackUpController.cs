@@ -11,12 +11,12 @@ namespace EasySave.controller
         public StateManager stateManager { get; set; }
 
 
-        //public BackUpController(BackUpManager backUpManager, LogManager logManager, StateManager stateManager)
-        //{
-        //    this._backUpManager = backUpManager;
-        //    this._logManager = logManager;
-        //    this._stateManager = stateManager;
-        //}
+        public BackUpController(BackUpManager backUpManager, LogManager logManager, StateManager stateManager)
+        {
+            this.backUpManager = backUpManager;
+            this.logManager = logManager;
+            this.stateManager = stateManager;
+        }
         public void initiateBackup(String sJobName)
         {
             try
