@@ -2,11 +2,14 @@
 using EasySave.model;
 using EasySave.utils;
 using Newtonsoft.Json;
+using EasySave.view;
+using EasySave.services;
 
 namespace EasySave.services;
 
 public class BackUpManager
 {
+    private static ConsoleView cv = new ConsoleView();
 
     public static List<BackUpJob> listBackUps;
 
@@ -24,7 +27,7 @@ public class BackUpManager
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Erreur lors de la sauvegarde : {ex.Message}");
+            Console.WriteLine(cv.GetLineLanguage(55) + ex.Message);
         }
     }
 
@@ -51,7 +54,7 @@ public class BackUpManager
     {
         if (indexJob > 4 && indexJob < 0)
         {
-            throw new ArgumentException("Erreur, l'indice du job ne peux être > 5 ");
+            throw new ArgumentException(cv.GetLineLanguage(56));
         }
         return listBackUps[indexJob];
     }
@@ -90,11 +93,11 @@ public class BackUpManager
     {
         if (listBackUps.Count >= 5)
         {
-            throw new InvalidOperationException("Le nombre maximal de jobs est atteint.");
+            throw new InvalidOperationException(cv.GetLineLanguage(57));
         }
         if (listBackUps.Any(j => j.name == jobName))
         {
-            throw new InvalidOperationException("Un job avec le même nom existe déjà.");
+            throw new InvalidOperationException(cv.GetLineLanguage(58));
         }
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
