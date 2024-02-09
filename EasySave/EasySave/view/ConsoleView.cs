@@ -9,6 +9,7 @@ using System.Threading.Tasks.Dataflow;
 using EasySave.controller;
 using EasySave.model;
 using EasySave.services;
+using EasySave.utils;
 namespace EasySave.view
 {
     public class ConsoleView
@@ -24,7 +25,6 @@ namespace EasySave.view
             // Vérifier la présence du dossier "conf"
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\conf";
-            Console.WriteLine(destPath);
             if (!System.IO.Directory.Exists(destPath))
             {
                 System.IO.Directory.CreateDirectory(destPath);
@@ -42,6 +42,10 @@ namespace EasySave.view
             {
                 System.IO.Directory.CreateDirectory(destPath);
             }
+            // Partie Lang
+            GenerateLang gl = new GenerateLang();
+            gl.AddFiles();
+
         }
 
 
