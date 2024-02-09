@@ -1,0 +1,8 @@
+[
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "Test11111",
+    "sourceDirectory": "C:\\Logo Document",
+    "targetDirectory": "C:\\ESD"
+  }
+]

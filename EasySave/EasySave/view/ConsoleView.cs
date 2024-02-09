@@ -472,19 +472,24 @@ namespace EasySave.view
             string sSourcePath_Old = BackUpManager.listBackUps[iIndexJob].sourceDirectory;
             string sDestinationPath_Old = BackUpManager.listBackUps[iIndexJob].targetDirectory;
             Type backUpType = BackUpManager.listBackUps[iIndexJob].GetType();
-            BackUpType type = BackUpType.Complete ; 
             string sbackUpMode; 
             string typeJob = backUpType.FullName;
+            BackUpType type;
+            BackUpType type_old;
             if (typeJob.Contains("Complete"))
             {
                 sbackUpMode = GetLineLanguage(12);
-                
+                type = BackUpType.Complete;
+                type_old = BackUpType.Complete;
             }
             else {
                 sbackUpMode = GetLineLanguage(13);
-               
+                type = BackUpType.Differential;
+                type_old = BackUpType.Differential;
             }
-            while (true)
+
+            bool bSecurity = false;
+            while (bSecurity == false)
             {
                 string sAnswer = "";
 
@@ -519,9 +524,9 @@ namespace EasySave.view
                             sbackUpMode = sAnswerSplit[1];
                             if (sAnswerSplit[1] == "1")
                             {
-                                
                                 type = BackUpType.Complete;
-                            }else if (sAnswerSplit[1] == "2")
+                            }
+                            else if (sAnswerSplit[1] == "2")
                             {
                                 type = BackUpType.Differential;
                             }
@@ -543,10 +548,13 @@ namespace EasySave.view
                             backUpController.backUpManager.UpdateBackUpJobName(iIndexJob, sNameJob_Old);
                             backUpController.backUpManager.UpdateBackUpJobSourceDir(iIndexJob, sSourcePath_Old);
                             backUpController.backUpManager.UpdateBackUpJobTargetDir(iIndexJob, sDestinationPath_Old);
-                            backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, type);
+                            if (type != type_old)
+                            {
+                                backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, type);
+                            }
                             break;
                         case "exit":
-                            return;
+                            bSecurity = true;
                             break;
                         default:
                             Console.WriteLine("\nError : Order not recognised.\n");
