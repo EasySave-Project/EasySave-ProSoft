@@ -13,7 +13,7 @@ Job
 Full
 Differential
 > Confirm job creation (Y/N)
-> Do you want to delete this job?
+ > Do you want to delete this job?
 Select what you wanted to change and enter the new data:
 (1) Job name :
 (2) Source directory address :
@@ -21,7 +21,7 @@ Select what you wanted to change and enter the new data:
 (4) Backup mode (1-Complete / 2-Differential) :
 (apply) - Apply modification
 (exit) - Return to menu
-Error : Illegal character or unknown number.
+Error: Illegal character or unknown number.
 Open all
 Exit program
 Open backup job 1
@@ -33,11 +33,11 @@ The string has been split using ','.
 Open backup job
 String has been split with '-' characters
 Error: Start index must be less than end index.
-Error: Illegal character, there must only be two indices separated by \"-\". 
-Execute job number:
-Modify job number :
-Delete job number :
-Error: Unknown order 
+Error: Illegal character, there must only be two indices separated by "-".
+Execute job number: 
+Modify job number: 
+Delete job number: 
+Error: Unknown order
 Error: Input value not recognized
 Error: Invalid job name.
 Error: Invalid source value.
@@ -59,7 +59,7 @@ The maximum number of jobs has been reached.
 A job with the same name already exists.
 Source directory does not exist or could not be found:
 The source directory is empty:
-The drive specified in the target path 
+The drive specified in the target path
 is not available.
 Error loading :
 Execution time :
