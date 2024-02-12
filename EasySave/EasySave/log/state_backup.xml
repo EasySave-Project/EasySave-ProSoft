@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StateManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NameJob>Test11111</NameJob>
+  <SourcePath>C:\Users\baptx\Desktop\source_wsh</SourcePath>
+  <TargetPath>C:\Users\baptx\Desktop\cible_wsh</TargetPath>
+  <State_Text>END</State_Text>
+  <TotalFileToCopy>9117883</TotalFileToCopy>
+  <TotalFileSize>9117883</TotalFileSize>
+  <NbFilesLeftToDo>0</NbFilesLeftToDo>
+  <Progression>100</Progression>
+</StateManager>

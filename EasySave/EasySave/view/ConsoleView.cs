@@ -565,7 +565,6 @@ namespace EasySave.view
                 {
                     Console.WriteLine("\nError : Illegal character or unknown number.\n");
                 }
-                Console.WriteLine("======================================================\n");
             }
             
         }
