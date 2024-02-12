@@ -64,11 +64,15 @@ namespace EasySave.view
                 switch (sLanguage)
                 {
                     case "1":
+                        ManageLang.ChangeLanguage("");
+                        bSecurity = true;
+                        break;
                     case "2":
+                        ManageLang.ChangeLanguage("fr");
                         bSecurity = true;
                         break;
                     default:
-                        Console.WriteLine(GetLineLanguage(23));
+                        Console.WriteLine(ManageLang.GetString("String23"));
                         break;
                 }
             }
@@ -144,7 +148,7 @@ namespace EasySave.view
                     }
                 }
 
-                Console.WriteLine(GetLineLanguage(1));
+                Console.WriteLine("\n" + GetLineLanguage(1));
                 Console.WriteLine(GetLineLanguage(2));
                 Console.WriteLine(GetLineLanguage(3));
                 Console.WriteLine(GetLineLanguage(4));
@@ -193,78 +197,62 @@ namespace EasySave.view
             if (sAnswerSplit.Length == 2)
             {
                 // Type 1 : Juste un job
-                if (sAnswerSplit[0].Length == 1)
+                if (!string.IsNullOrEmpty(sAnswerSplit[0]))
                 {
-                    switch (sAnswerSplit[0])
+                    // Conversion du premier caractère en entier
+                    int iJob;
+                    bool bValid = int.TryParse(sAnswerSplit[0], out iJob);
+                    // Vérification si le premier caractère est un entier positif et ne contient pas de "-" ou de ","
+                    if (bValid && iJob >= 0 && !sAnswerSplit[0].Contains("-") && !sAnswerSplit[0].Contains(","))
                     {
-                        case "1":
-                            Console.WriteLine(GetLineLanguage(26));
-                            CommandAnalysis(sAnswerSplit[1], 0);
-                            break;
-                        case "2":
-                            Console.WriteLine(GetLineLanguage(27));
-                            CommandAnalysis(sAnswerSplit[1], 1);
-                            break;
-                        case "3":
-                            Console.WriteLine(GetLineLanguage(28));
-                            CommandAnalysis(sAnswerSplit[1], 2);
-                            break;
-                        case "4":
-                            Console.WriteLine(GetLineLanguage(29));
-                            CommandAnalysis(sAnswerSplit[1], 3);
-                            break;
-                        case "5":
-                            Console.WriteLine(GetLineLanguage(30));
-                            CommandAnalysis(sAnswerSplit[1], 4);
-                            break;
-                        default:
-                            Console.WriteLine(GetLineLanguage(23));
-                            break;
-                    }
-                }
-                else
-                {
-                    // Type 2 : Liste de jobs
-                    string[] sAnswerSplit_List = sAnswerSplit[0].Split(',');
-                    if (sAnswerSplit_List.Length > 1)
-                    {
-                        Console.WriteLine(GetLineLanguage(31));
-                        for (int i = 0; i < sAnswerSplit_List.Length; i++)
-                        {
-                            Console.WriteLine(GetLineLanguage(32) + sAnswerSplit_List[i]);
-                            CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
-                            
-                        }
+                        // Exécution du job correspondant
+                        Console.WriteLine(GetLineLanguage(25 + iJob));
+                        CommandAnalysis(sAnswerSplit[1], iJob - 1);
                     }
                     else
                     {
-                        // Type 3 : Séquence de jobs
-                        sAnswerSplit_List = sAnswerSplit[0].Split('-');
+                        // Type 2 : Liste de jobs
+                        string[] sAnswerSplit_List = sAnswerSplit[0].Split(',');
                         if (sAnswerSplit_List.Length > 1)
                         {
-                            Console.WriteLine(GetLineLanguage(33));
-                            // Vérifier si le tableau contient bien deux éléments
-                            if (sAnswerSplit_List.Length == 2)
+                            Console.WriteLine(GetLineLanguage(31));
+                            for (int i = 0; i < sAnswerSplit_List.Length; i++)
                             {
-                                int iStartIndex = int.Parse(sAnswerSplit_List[0]);
-                                int iEndIndex = int.Parse(sAnswerSplit_List[1]);
-                                // Vérifier si le premier index est inférieur au deuxième
-                                if (iStartIndex < iEndIndex)
+                                Console.WriteLine(GetLineLanguage(32) + sAnswerSplit_List[i]);
+                                CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
+
+                            }
+                        }
+                        else
+                        {
+                            // Type 3 : Séquence de jobs
+                            sAnswerSplit_List = sAnswerSplit[0].Split('-');
+                            if (sAnswerSplit_List.Length > 1)
+                            {
+                                Console.WriteLine(GetLineLanguage(33));
+                                // Vérifier si le tableau contient bien deux éléments
+                                if (sAnswerSplit_List.Length == 2)
                                 {
-                                    for (int i = iStartIndex; i <= iEndIndex; i++)
+                                    int iStartIndex = int.Parse(sAnswerSplit_List[0]);
+                                    int iEndIndex = int.Parse(sAnswerSplit_List[1]);
+                                    // Vérifier si le premier index est inférieur au deuxième
+                                    if (iStartIndex < iEndIndex)
                                     {
-                                        Console.WriteLine(GetLineLanguage(32) + i);
-                                        CommandAnalysis(sAnswerSplit[1], i);
+                                        for (int i = iStartIndex; i <= iEndIndex; i++)
+                                        {
+                                            Console.WriteLine(GetLineLanguage(32) + i);
+                                            CommandAnalysis(sAnswerSplit[1], i);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine(GetLineLanguage(34));
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine(GetLineLanguage(34));
+                                    Console.WriteLine(GetLineLanguage(35));
                                 }
-                            }
-                            else
-                            {
-                                Console.WriteLine(GetLineLanguage(35));
                             }
                         }
                     }

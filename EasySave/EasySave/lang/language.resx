@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String" xml:space="preserve">
+    <value>Launch (S) Modify (M) Delete (D)</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>(add) - Add a job</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>(2) - Differential mode</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>&gt; Select backup mode :</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>Full</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Differential</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>&gt; Confirm job creation (Y/N)</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>&gt; Do you want to delete this job?</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Select what you wanted to change and enter the new data:</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>(1) Job name :</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>(2) Source directory address :</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>(3) Target directory address :</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>(all) - Sequential execution</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>(4) Backup mode (1-Complete / 2-Differential) :</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>(apply) - Apply modification</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>(exit) - Return to menu</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Error: Illegal character or unknown number.</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>Open all</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Exit program</value>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>Open backup job 1</value>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>Open backup job 2</value>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>Open backup job 3</value>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>Open backup job 4</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>(lang) - Change language</value>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>Open backup job 5</value>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>The string has been split using ','.</value>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>Open backup job</value>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>String has been split with '-' characters</value>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>Error: Start index must be less than end index.</value>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>Error: Illegal character, there must only be two indices separated by "-".</value>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>Execute job number:</value>
+  </data>
+  <data name="String37" xml:space="preserve">
+    <value>Modify job number:</value>
+  </data>
+  <data name="String38" xml:space="preserve">
+    <value>Delete job number:</value>
+  </data>
+  <data name="String39" xml:space="preserve">
+    <value>Error: Unknown order</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>(exit) - Exit software</value>
+  </data>
+  <data name="String40" xml:space="preserve">
+    <value>Error: Input value not recognized</value>
+  </data>
+  <data name="String41" xml:space="preserve">
+    <value>Error: Invalid job name.</value>
+  </data>
+  <data name="String42" xml:space="preserve">
+    <value>Error: Invalid source value.</value>
+  </data>
+  <data name="String43" xml:space="preserve">
+    <value>Error : Invalid destionation value.</value>
+  </data>
+  <data name="String44" xml:space="preserve">
+    <value>Error : Illegal character. Write "Y" for yes, or "N" for no.</value>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>Work Add</value>
+  </data>
+  <data name="String46" xml:space="preserve">
+    <value>Work No Add</value>
+  </data>
+  <data name="String47" xml:space="preserve">
+    <value>Error BackUpMode code not recognized</value>
+  </data>
+  <data name="String48" xml:space="preserve">
+    <value>Work Delete</value>
+  </data>
+  <data name="String49" xml:space="preserve">
+    <value>Work No Delete</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="String50" xml:space="preserve">
+    <value>Complete backup successful.</value>
+  </data>
+  <data name="String51" xml:space="preserve">
+    <value>Full backup error :</value>
+  </data>
+  <data name="String52" xml:space="preserve">
+    <value>Invalid backup type</value>
+  </data>
+  <data name="String53" xml:space="preserve">
+    <value>Differential backup successful.</value>
+  </data>
+  <data name="String54" xml:space="preserve">
+    <value>Full backup error :</value>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>Error during backup :</value>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>Error, job index cannot be &gt; 5</value>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>The maximum number of jobs has been reached.</value>
+  </data>
+  <data name="String58" xml:space="preserve">
+    <value>A job with the same name already exists.</value>
+  </data>
+  <data name="String59" xml:space="preserve">
+    <value>Source directory does not exist or could not be found:</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>&gt; Job name :</value>
+  </data>
+  <data name="String60" xml:space="preserve">
+    <value>The source directory is empty:</value>
+  </data>
+  <data name="String61" xml:space="preserve">
+    <value>The drive specified in the target path</value>
+  </data>
+  <data name="String62" xml:space="preserve">
+    <value>is not available.</value>
+  </data>
+  <data name="String63" xml:space="preserve">
+    <value>Error loading :</value>
+  </data>
+  <data name="String64" xml:space="preserve">
+    <value>Execution time :</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>&gt; Source directory address :</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>&gt; Target directory address :</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>(1) - Full mode</value>
+  </data>
+</root>
