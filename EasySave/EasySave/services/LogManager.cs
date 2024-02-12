@@ -9,6 +9,7 @@ using EasySave.services;
 using EasySave.controller;
 using System.Diagnostics;
 using EasySave.utils;
+using System.Xml.Serialization;
 
 namespace EasySave
 {
@@ -91,6 +92,18 @@ namespace EasySave
                 System.IO.File.WriteAllText(filePath, json);
             }
 
+            // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(LogManager));
+
+            // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
+            string xmlPath = destPath + "\\log_backup.xml";
+
+            // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
+            using (StreamWriter streamWriter = new StreamWriter(xmlPath))
+            {
+                // Appel de la méthode Serialize de la classe XmlSerializer pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
+                xmlSerializer.Serialize(streamWriter, this);
+            }
         }
 
 

@@ -1,6 +1,7 @@
 ﻿
 using EasySave.model;
 using System.Text.Json;
+using System.Xml.Serialization;
 
 namespace EasySave.services
 {
@@ -168,6 +169,19 @@ namespace EasySave.services
             {
                 filePath = destPath + "\\state_backup.json";
                 System.IO.File.WriteAllText(filePath, json);
+            }
+
+            // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type State en XML
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(StateManager));
+
+            // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
+            string xmlPath = destPath + "\\state_backup.xml";
+
+            // Utilisation d'un bloc using pour créer un flux de fichier pour écrire le fichier XML
+            using (FileStream fileStream = new FileStream(xmlPath, FileMode.Create))
+            {
+                // Appel de la méthode Serialize de la classe XmlSerializer pour écrire le fichier XML
+                xmlSerializer.Serialize(fileStream, this);
             }
 
         }

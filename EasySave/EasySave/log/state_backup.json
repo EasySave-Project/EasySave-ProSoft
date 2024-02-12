@@ -1,0 +1,310 @@
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 10,
+  "Progression": 0
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 141374,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 9,
+  "Progression": 9
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 410716,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 8,
+  "Progression": 26
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 680058,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 7,
+  "Progression": 43
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 680093,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 6,
+  "Progression": 43
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 948379,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 5,
+  "Progression": 61
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 948494,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 4,
+  "Progression": 61
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1206556,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 3,
+  "Progression": 77
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1372218,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 2,
+  "Progression": 88
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1386720,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 1,
+  "Progression": 89
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "END",
+  "TotalFileToCopy": 1552574,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 10,
+  "Progression": 0
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 141374,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 9,
+  "Progression": 9
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 410716,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 8,
+  "Progression": 26
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 680058,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 7,
+  "Progression": 43
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 680093,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 6,
+  "Progression": 43
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 948379,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 5,
+  "Progression": 61
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 948494,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 4,
+  "Progression": 61
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1206556,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 3,
+  "Progression": 77
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1372218,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 2,
+  "Progression": 88
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 1386720,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 1,
+  "Progression": 89
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Logo Document",
+  "TargetPath": "C:\\ESD",
+  "State_Text": "END",
+  "TotalFileToCopy": 1552574,
+  "TotalFileSize": 1552574,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 8,
+  "Progression": 0
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 594079,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 7,
+  "Progression": 6
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 883715,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 6,
+  "Progression": 9
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2521398,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 5,
+  "Progression": 27
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2544615,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 4,
+  "Progression": 27
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2856538,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 3,
+  "Progression": 31
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2937440,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 2,
+  "Progression": 32
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 9117862,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 1,
+  "Progression": 99
+}
+{
+  "NameJob": "Test11111",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "END",
+  "TotalFileToCopy": 9117883,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}
