@@ -3,9 +3,9 @@
   <NameJob>Test11111</NameJob>
   <SourcePath>C:\Users\baptx\Desktop\source_wsh</SourcePath>
   <TargetPath>C:\Users\baptx\Desktop\cible_wsh</TargetPath>
-  <State_Text>END</State_Text>
-  <TotalFileToCopy>9117883</TotalFileToCopy>
+  <State_Text>ACTIVE</State_Text>
+  <TotalFileToCopy>883715</TotalFileToCopy>
   <TotalFileSize>9117883</TotalFileSize>
-  <NbFilesLeftToDo>0</NbFilesLeftToDo>
-  <Progression>100</Progression>
+  <NbFilesLeftToDo>6</NbFilesLeftToDo>
+  <Progression>9</Progression>
 </StateManager>
