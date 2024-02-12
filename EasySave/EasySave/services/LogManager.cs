@@ -10,6 +10,9 @@ using EasySave.controller;
 using System.Diagnostics;
 using EasySave.utils;
 using System.Xml.Serialization;
+using System.Xml;
+using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace EasySave
 {
@@ -67,6 +70,8 @@ namespace EasySave
         //=======================================================================================================
         private void SaveLog()
         {
+            // FICHIER JSON
+            //=========================
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\log";
 
@@ -92,6 +97,9 @@ namespace EasySave
                 System.IO.File.WriteAllText(filePath, json);
             }
 
+            // FICHIER XML
+            //=========================
+
             // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(LogManager));
 
@@ -99,10 +107,37 @@ namespace EasySave
             string xmlPath = destPath + "\\log_backup.xml";
 
             // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
-            using (StreamWriter streamWriter = new StreamWriter(xmlPath))
+            using (StreamWriter streamWriter = File.AppendText(xmlPath))
             {
-                // Appel de la méthode Serialize de la classe XmlSerializer pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
-                xmlSerializer.Serialize(streamWriter, this);
+                // Création d'une instance de la classe XmlWriterSettings pour configurer le flux d'écriture XML
+                XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
+                xmlWriterSettings.OmitXmlDeclaration = true; // Ne pas écrire la déclaration XML
+                xmlWriterSettings.Indent = true; // Indenter le code XML
+
+                // Création d'une instance de la classe XmlWriter pour écrire dans le flux d'écriture
+                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, xmlWriterSettings))
+                {
+                    // Si le fichier XML n'existe pas, écrire la balise racine <Snippets>
+                    if (!File.Exists(xmlPath))
+                    {
+                        xmlWriter.WriteStartElement("Snippets");
+                    }
+
+                    // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
+                    xmlSerializer.Serialize(xmlWriter, this);
+
+                    // Si le fichier XML n'existe pas, écrire la balise de fermeture </Snippets>
+                    if (!File.Exists(xmlPath))
+                    {
+                        xmlWriter.WriteEndElement();
+                    }
+
+                    // Fermer le flux d'écriture XML
+                    xmlWriter.Close();
+                }
+
+                // Fermer le flux d'écriture
+                streamWriter.Close();
             }
         }
 

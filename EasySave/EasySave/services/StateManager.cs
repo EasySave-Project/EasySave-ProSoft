@@ -1,6 +1,7 @@
 ﻿
 using EasySave.model;
 using System.Text.Json;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace EasySave.services
@@ -145,6 +146,8 @@ namespace EasySave.services
         //=======================================================================================================
         private void SaveState()
         {
+            // FICHIER XML
+            //=========================
             string sCurrentDir = Environment.CurrentDirectory;
 
             string destPath = sCurrentDir + "\\EasySave\\log";
@@ -171,17 +174,46 @@ namespace EasySave.services
                 System.IO.File.WriteAllText(filePath, json);
             }
 
-            // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type State en XML
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(StateManager));
+            // FICHIER XML
+            //=========================
+            // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(LogManager));
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
-            string xmlPath = destPath + "\\state_backup.xml";
+            string xmlPath = destPath + "\\log_backup.xml";
 
-            // Utilisation d'un bloc using pour créer un flux de fichier pour écrire le fichier XML
-            using (FileStream fileStream = new FileStream(xmlPath, FileMode.Create))
+            // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
+            using (StreamWriter streamWriter = File.AppendText(xmlPath))
             {
-                // Appel de la méthode Serialize de la classe XmlSerializer pour écrire le fichier XML
-                xmlSerializer.Serialize(fileStream, this);
+                // Création d'une instance de la classe XmlWriterSettings pour configurer le flux d'écriture XML
+                XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
+                xmlWriterSettings.OmitXmlDeclaration = true; // Ne pas écrire la déclaration XML
+                xmlWriterSettings.Indent = true; // Indenter le code XML
+
+                // Création d'une instance de la classe XmlWriter pour écrire dans le flux d'écriture
+                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, xmlWriterSettings))
+                {
+                    // Si le fichier XML n'existe pas, écrire la balise racine <Snippets>
+                    if (!File.Exists(xmlPath))
+                    {
+                        xmlWriter.WriteStartElement("Snippets");
+                    }
+
+                    // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
+                    xmlSerializer.Serialize(xmlWriter, this);
+
+                    // Si le fichier XML n'existe pas, écrire la balise de fermeture </Snippets>
+                    if (!File.Exists(xmlPath))
+                    {
+                        xmlWriter.WriteEndElement();
+                    }
+
+                    // Fermer le flux d'écriture XML
+                    xmlWriter.Close();
+                }
+
+                // Fermer le flux d'écriture
+                streamWriter.Close();
             }
 
         }

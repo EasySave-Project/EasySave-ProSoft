@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LogManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name>Test11111</Name>
   <FileSource>C:\Users\baptx\Desktop\source_wsh</FileSource>
   <FileTarget>C:\Users\baptx\Desktop\cible_wsh</FileTarget>
-  <FileSize>21</FileSize>
-  <FileTransferTime>1707492408186</FileTransferTime>
-  <Time>09/02/2024 16:15:11</Time>
+  <FileSize>594079</FileSize>
+  <FileTransferTime>4</FileTransferTime>
+  <Time>12/02/2024 15:30:22</Time>
+</LogManager><LogManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Test11111</Name>
+  <FileSource>C:\Users\baptx\Desktop\source_wsh</FileSource>
+  <FileTarget>C:\Users\baptx\Desktop\cible_wsh</FileTarget>
+  <FileSize>289636</FileSize>
+  <FileTransferTime>1707748222397</FileTransferTime>
+  <Time>12/02/2024 15:30:22</Time>
 </LogManager>
