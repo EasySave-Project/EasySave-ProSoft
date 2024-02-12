@@ -12,20 +12,21 @@ namespace EasySave
 
         public static void Main(string[] args)
         {
+            //Console.WriteLine(ManageLang.GetString("String"));
 
-            
+
             ConsoleView cv = new ConsoleView();
             cv.InitConfFolder();
             BackUpManager bmManager = new BackUpManager();
             StateManager stateManager = new StateManager();
             LogManager logManager = new LogManager();
-            BackUpController controller = new BackUpController(bmManager,logManager, stateManager);        
+            BackUpController controller = new BackUpController(bmManager, logManager, stateManager);
             cv.backUpController = controller;
             cv.ShowSelectLanguage();
             cv.ShowMainMenu();
 
             Console.ReadKey();
-        
+
         }
     }
 }
