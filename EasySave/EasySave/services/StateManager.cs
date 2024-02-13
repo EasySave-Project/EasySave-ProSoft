@@ -8,47 +8,40 @@ namespace EasySave.services
 {
     public class StateManager
     {
-        // Déclaration des variables objet
-        public string NameJob { get; set; }
-        public string SourcePath { get; set; }
-        public string TargetPath { get; set; }
-        public string State_Text { get; set; }
-        public long TotalFileToCopy { get; set; }
-        public long TotalFileSize { get; set; }
-        public int NbFilesLeftToDo { get; set; }
-        public int Progression { get; set; }
+
+        State state = new State();
 
         //=======================================================================================================
         // Complete Version
         //=======================================================================================================
         public void InitState_Complete(string nameJob, string sourcePath, string targetPath)
         {
-            NameJob = nameJob;
-            SourcePath = sourcePath;
-            TargetPath = targetPath;
-            State_Text = "INITIALISATION";
-            TotalFileToCopy = 0;
-            TotalFileSize = GetTotalFileSize_Complete(sourcePath);
-            NbFilesLeftToDo = GetNbFilesLeftToDo_Complete(sourcePath);
-            Progression = 0;
+            state.NameJob = nameJob;
+            state.SourcePath = sourcePath;
+            state.TargetPath = targetPath;
+            state.State_Text = "INITIALISATION";
+            state.TotalFileToCopy = 0;
+            state.TotalFileSize = GetTotalFileSize_Complete(sourcePath);
+            state.NbFilesLeftToDo = GetNbFilesLeftToDo_Complete(sourcePath);
+            state.Progression = 0;
 
             SaveState();
         }
 
         public void UpdateState_Complete(long NbOctetFile)
         {
-            TotalFileToCopy = TotalFileToCopy + NbOctetFile;
+            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
 
-            NbFilesLeftToDo = NbFilesLeftToDo - 1;
-            Progression = (int)(((float)TotalFileToCopy / (float)TotalFileSize) * 100);
+            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
+            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
 
-            if (TotalFileSize == TotalFileToCopy)
+            if (state.TotalFileSize == state.TotalFileToCopy)
             {
-                State_Text = "END";
+                state.State_Text = "END";
             }
             else
             {
-                State_Text = "ACTIVE";
+                state.State_Text = "ACTIVE";
             }
             SaveState();
         }
@@ -83,14 +76,14 @@ namespace EasySave.services
         {
             long[] result = GetTotalFileSize_Differential(sourcePath, targetPath);
 
-            NameJob = nameJob;
-            SourcePath = sourcePath;
-            TargetPath = targetPath;
-            State_Text = "Initialisation";
-            TotalFileToCopy = 0;
-            TotalFileSize = result[1];
-            NbFilesLeftToDo = (int)result[0];
-            Progression = 0;
+            state.NameJob = nameJob;
+            state.SourcePath = sourcePath;
+            state.TargetPath = targetPath;
+            state.State_Text = "Initialisation";
+            state.TotalFileToCopy = 0;
+            state.TotalFileSize = result[1];
+            state.NbFilesLeftToDo = (int)result[0];
+            state.Progression = 0;
 
             SaveState();
         }
@@ -121,18 +114,18 @@ namespace EasySave.services
 
         public void UpdateState_Differential(long NbOctetFile)
         {
-            TotalFileToCopy = TotalFileToCopy + NbOctetFile;
+            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
 
-            NbFilesLeftToDo = NbFilesLeftToDo - 1;
-            Progression = (int)(((float)TotalFileToCopy / (float)TotalFileSize) * 100);
+            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
+            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
 
-            if (TotalFileSize == TotalFileToCopy)
+            if (state.TotalFileSize == state.TotalFileToCopy)
             {
-                State_Text = "END";
+                state.State_Text = "END";
             }
             else
             {
-                State_Text = "ACTIVE";
+                state.State_Text = "ACTIVE";
             }
 
             SaveState();
@@ -155,7 +148,7 @@ namespace EasySave.services
             // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
             //string json = JsonSerializer.Serialize<State>(this);
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize<StateManager>(this, options);
+            string json = JsonSerializer.Serialize<State>(state, options);
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
             string filePath = destPath + "\\state_backup.json";
@@ -177,10 +170,10 @@ namespace EasySave.services
             // FICHIER XML
             //=========================
             // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(LogManager));
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(State));
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
-            string xmlPath = destPath + "\\log_backup.xml";
+            string xmlPath = destPath + "\\state_backup.xml";
 
             // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
             using (StreamWriter streamWriter = File.AppendText(xmlPath))
@@ -199,8 +192,8 @@ namespace EasySave.services
                         xmlWriter.WriteStartElement("Snippets");
                     }
 
-                    // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
-                    xmlSerializer.Serialize(xmlWriter, this);
+                    // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type StateManager en XML dans le flux d'écriture
+                    xmlSerializer.Serialize(xmlWriter, state);
 
                     // Si le fichier XML n'existe pas, écrire la balise de fermeture </Snippets>
                     if (!File.Exists(xmlPath))
