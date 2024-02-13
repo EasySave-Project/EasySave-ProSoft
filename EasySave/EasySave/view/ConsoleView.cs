@@ -123,7 +123,7 @@ namespace EasySave.view
                 // Code=> remplir le tableau
                
                 List<String> sNameJob = new List<string>();
-               
+
                 foreach (BackUpJob bj in BackUpManager.listBackUps)
                 {
                     sNameJob.Add(bj.name);
@@ -156,7 +156,7 @@ namespace EasySave.view
                         ShowAddJob();
                         break;
                     case "all":
-                        backUpController.backUpManager.ExcecuteAllBackUps();
+                        backUpController.InitiateAllBackUpJobs();
                         Console.WriteLine(GetLineLanguage(24));
                         break;
                     case "lang":
@@ -282,7 +282,7 @@ namespace EasySave.view
             {
                 case "S":
                     Console.WriteLine(GetLineLanguage(36) + iNbJob +1 );
-                    BackUpManager.listBackUps[iNbJob].Excecute();
+                    backUpController.InitiateBackUpJob(BackUpManager.listBackUps[iNbJob]);
                     break;
                 case "M":
                     Console.WriteLine(GetLineLanguage(37) + iNbJob+ 1);
@@ -458,7 +458,7 @@ namespace EasySave.view
             {
 
                 BackUpType type;
-                backUpController.backUpManager.AddBackUpJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
+                backUpController.InitiateAddJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
             }
             else
             {
@@ -545,12 +545,12 @@ namespace EasySave.view
                     switch (sAnswerSplit[0])
                     {
                         case "apply":
-                            backUpController.backUpManager.UpdateBackUpJobName(iIndexJob, sNameJob_Old);
-                            backUpController.backUpManager.UpdateBackUpJobSourceDir(iIndexJob, sSourcePath_Old);
-                            backUpController.backUpManager.UpdateBackUpJobTargetDir(iIndexJob, sDestinationPath_Old);
+                            backUpController.IntiateModifyJobName(iIndexJob, sNameJob_Old);
+                            backUpController.InitiateModifyJobSourceDir(iIndexJob, sSourcePath_Old);
+                            backUpController.InitiateModifyJobTargetDir(iIndexJob, sDestinationPath_Old);
                             if (type != type_old)
                             {
-                                backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, type);
+                                backUpController.IniateModifyJobType(iIndexJob, type);
                             }
                             break;
                         case "exit":
@@ -589,7 +589,7 @@ namespace EasySave.view
 
             if (sAnswer == "Y")
             {
-                backUpController.backUpManager.RemoveBackUpJob(sNameJob);
+                backUpController.InitiateRemoveBackup(sNameJob);
                 Console.WriteLine(GetLineLanguage(48));
             }
             else
