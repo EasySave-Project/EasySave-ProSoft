@@ -270,15 +270,36 @@ namespace EasySave.view
             {
                 case "S":
                     Console.WriteLine(GetLineLanguage(36) + iNbJob +1 );
-                    BackUpManager.listBackUps[iNbJob].Excecute();
+                    try
+                    {
+                        BackUpManager.listBackUps[iNbJob].Excecute();
+                    }
+                    catch
+                    {
+                        Console.WriteLine(GetLineLanguage(40));
+                    }
                     break;
                 case "M":
                     Console.WriteLine(GetLineLanguage(37) + iNbJob+ 1);
-                    ShowModifyJob(iNbJob);
+                    try
+                    {
+                        ShowModifyJob(iNbJob);
+                    }
+                    catch
+                    {
+                        Console.WriteLine(GetLineLanguage(40));
+                    }
                     break;
                 case "D":
                     Console.WriteLine(GetLineLanguage(38) + iNbJob + 1);
-                    ShowDeleteJob(iNbJob);
+                    try
+                    {
+                        ShowDeleteJob(iNbJob);
+                    }
+                    catch
+                    {
+                        Console.WriteLine(GetLineLanguage(40));
+                    }
                     break;
                 default:
                     Console.WriteLine(GetLineLanguage(39));

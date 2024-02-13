@@ -19,44 +19,45 @@ namespace EasySave
 
     public class LogManager
     {
-        // Déclaration des variables objet
-        public string Name { get; set; }
-        public string FileSource { get; set; }
-        public string FileTarget { get; set; }
-        public long FileSize { get; set; }
-        public long FileTransferTime { get; set; }
-        public string Time { get; set; }
-
 
         //=======================================================================================================
         // Log 
         //=======================================================================================================
 
+        Log log = new Log();
+
         DateTime dateHeure = DateTime.Now;
+        private long long_FileTransferTime;
+        private long long_AfterFileTransferTime;
 
         public void InitLog(string nameJob, string sourcePath, string targetPath)
         {
-            Name = nameJob;
-            FileSource = sourcePath;
-            FileTarget = targetPath;
-            FileSize = 0;
+            log.Name = nameJob;
+            log.FileSource = sourcePath;
+            log.FileTarget = targetPath;
+            log.FileSize = 0;
             //Time before the transfer
-            FileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            Time = "";
+            long_FileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-            //long TimeBeforeSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            //long TimeAfterSave = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            log.Time = "";
         }
 
 
         public void PushLog(long NbOctetFile)
         {
-            FileSize = NbOctetFile;
+            log.FileSize = NbOctetFile;
 
             //Time after the transfer
-            FileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - FileTransferTime;
+            long_AfterFileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - long_FileTransferTime;
 
-            Time = dateHeure.ToString("dd/MM/yyyy HH:mm:ss");
+            // Créer un objet TimeSpan à partir des millisecondes
+            TimeSpan ts = TimeSpan.FromMilliseconds(long_AfterFileTransferTime);
+
+            // Formater le TimeSpan en HH:MM:SS:MS
+            string format = @"hh\:mm\:ss\:fff";
+            log.FileTransferTime = ts.ToString(format);
+
+            log.Time = dateHeure.ToString("dd/MM/yyyy HH:mm:ss");
 
             SaveLog();
         }
@@ -76,9 +77,8 @@ namespace EasySave
             string destPath = sCurrentDir + "\\EasySave\\log";
 
             // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
-            //string json = JsonSerializer.Serialize<State>(this);
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize<LogManager>(this, options);
+            string json = JsonSerializer.Serialize<Log>(log, options);
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
             string filePath = destPath + "\\log_backup.json";
@@ -101,7 +101,7 @@ namespace EasySave
             //=========================
 
             // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(LogManager));
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Log));
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
             string xmlPath = destPath + "\\log_backup.xml";
@@ -124,7 +124,7 @@ namespace EasySave
                     }
 
                     // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
-                    xmlSerializer.Serialize(xmlWriter, this);
+                    xmlSerializer.Serialize(xmlWriter, log);
 
                     // Si le fichier XML n'existe pas, écrire la balise de fermeture </Snippets>
                     if (!File.Exists(xmlPath))
