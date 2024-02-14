@@ -15,7 +15,7 @@ public class BackUpManager
         listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);
     }
 
-    public static void SaveJobsToJson()
+    public void SaveJobsToJson()
     {
         try
         {

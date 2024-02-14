@@ -127,7 +127,7 @@ namespace EasySave.view
                 // Code=> remplir le tableau
                
                 List<String> sNameJob = new List<string>();
-               
+
                 foreach (BackUpJob bj in BackUpManager.listBackUps)
                 {
                     sNameJob.Add(bj.name);
@@ -162,7 +162,7 @@ namespace EasySave.view
                         ShowAddJob();
                         break;
                     case "all":
-                        backUpController.backUpManager.ExcecuteAllBackUps();
+                        backUpController.InitiateAllBackUpJobs();
                         Console.WriteLine(ManageLang.GetString("view_menu_affichAll"));
                         break;
                     case "lang":
@@ -277,12 +277,13 @@ namespace EasySave.view
                     Console.WriteLine(ManageLang.GetString("view_menu_exe") + iNbJob +1 );
                     try
                     {
-                        BackUpManager.listBackUps[iNbJob].Excecute();
+                        backUpController.InitiateBackUpJob(BackUpManager.listBackUps[iNbJob]);
                     }
                     catch
                     {
                         Console.WriteLine(ManageLang.GetString("error_save"));
                     }
+
                     break;
                 case "M":
                     Console.WriteLine(ManageLang.GetString("view_modif") + iNbJob+ 1);
@@ -471,7 +472,7 @@ namespace EasySave.view
             if (sValidation == "Y")
             {
                 BackUpType type;
-                backUpController.backUpManager.AddBackUpJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
+                backUpController.InitiateAddJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
             }
             else
             {
@@ -560,12 +561,12 @@ namespace EasySave.view
                     switch (sAnswerSplit[0])
                     {
                         case "apply":
-                            backUpController.backUpManager.UpdateBackUpJobName(iIndexJob, sNameJob_Old);
-                            backUpController.backUpManager.UpdateBackUpJobSourceDir(iIndexJob, sSourcePath_Old);
-                            backUpController.backUpManager.UpdateBackUpJobTargetDir(iIndexJob, sDestinationPath_Old);
+                            backUpController.IntiateModifyJobName(iIndexJob, sNameJob_Old);
+                            backUpController.InitiateModifyJobSourceDir(iIndexJob, sSourcePath_Old);
+                            backUpController.InitiateModifyJobTargetDir(iIndexJob, sDestinationPath_Old);
                             if (type != type_old)
                             {
-                                backUpController.backUpManager.UpdateBackUpJobType(iIndexJob, type);
+                                backUpController.IniateModifyJobType(iIndexJob, type);
                             }
                             break;
                         case "exit":
@@ -604,8 +605,8 @@ namespace EasySave.view
 
             if (sAnswer == "Y")
             {
-                backUpController.backUpManager.RemoveBackUpJob(sNameJob);
-                Console.WriteLine(ManageLang.GetString("view_supp_AffichJobIsSupp"));
+                backUpController.InitiateRemoveBackup(sNameJob);
+                Console.WriteLine(ManageLang.GetString("view_supp_AffichJobIsSupp"));              
             }
             else
             {
