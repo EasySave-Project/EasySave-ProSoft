@@ -4,6 +4,7 @@ using EasySave.utils;
 using Newtonsoft.Json;
 using EasySave.view;
 using EasySave.services;
+using System.IO;
 
 namespace EasySave.services;
 
@@ -14,7 +15,7 @@ public class BackUpManager
     public BackUpManager() {
         listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);
     }
-
+    
     public void SaveJobsToJson()
     {
         try

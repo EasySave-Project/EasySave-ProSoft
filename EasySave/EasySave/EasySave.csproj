@@ -1,46 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<DebugType>embedded</DebugType>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="conf\" />
-    <Folder Include="log\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="lang\language.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>language.resx</DependentUpon>
-    </Compile>
-    <Compile Update="lang\language.fr.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>language.fr.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="lang\language.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>language.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="lang\language.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>language.fr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
