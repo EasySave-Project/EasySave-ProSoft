@@ -4,7 +4,7 @@
 # Ignorer les fichiers spécifiques générés lors de la compilation
 EasySave/EasySave/obj/
 EasySave/EasySave/bin/
-
+EasySave/EasySave/Properties
 # Ignorer les fichiers de configuration utilisateur de Visual Studio
 *.suo
 *.user
