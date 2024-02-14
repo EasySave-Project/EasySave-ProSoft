@@ -72,7 +72,7 @@ namespace EasySave.view
                         bSecurity = true;
                         break;
                     default:
-                        Console.WriteLine(ManageLang.GetString("String23"));
+                        Console.WriteLine(ManageLang.GetString("error_Caract")+"\n");
                         break;
                 }
             }
@@ -138,9 +138,9 @@ namespace EasySave.view
                 for (int i = 0; i < sNameJob.Count; i++)
                 {
                     // S'il y a un nom de job alors on l'affiche
-                    if (sNameJob[i] != null)
+                    if (sNameJob[i].Length != 1)
                     {
-                        Console.WriteLine("(" + (i + 1) + ") - " + sNameJob[i] + " | " + GetLineLanguage(0));
+                        Console.WriteLine("(" + (i + 1) + ") - " + sNameJob[i] + " | " + ManageLang.GetString("view_menu_allCmd"));
                     }
                     else
                     {
@@ -148,11 +148,13 @@ namespace EasySave.view
                     }
                 }
 
-                Console.WriteLine("\n" + GetLineLanguage(1));
-                Console.WriteLine(GetLineLanguage(2));
-                Console.WriteLine(GetLineLanguage(3));
-                Console.WriteLine(GetLineLanguage(4));
+                Console.WriteLine("\n" + ManageLang.GetString("view_menu_add"));
+                Console.WriteLine(ManageLang.GetString("view_menu_all"));
+                Console.WriteLine(ManageLang.GetString("view_menu_lang"));
+                Console.WriteLine(ManageLang.GetString("view_menu_param"));
+                Console.WriteLine(ManageLang.GetString("view_menu_exit"));
 
+                Console.Write(ManageLang.GetString("view_waitingAswer"));
                 sAnswer = Console.ReadLine();
                 switch (sAnswer)
                 {
@@ -161,13 +163,17 @@ namespace EasySave.view
                         break;
                     case "all":
                         backUpController.backUpManager.ExcecuteAllBackUps();
-                        Console.WriteLine(GetLineLanguage(24));
+                        Console.WriteLine(ManageLang.GetString("view_menu_affichAll"));
                         break;
                     case "lang":
                         ShowSelectLanguage();
                         break;
+                    case "param":
+                        ShowParam();
+                        break;
                     case "exit":
                         bSecurity = true;
+                        Console.WriteLine(ManageLang.GetString("view_menu_affichExit"));
                         break;
                     default:
                         string[] sListOfJob = new string[sNameJob.Count];
@@ -179,13 +185,13 @@ namespace EasySave.view
                         }
                         else
                         {
-                            Console.WriteLine(GetLineLanguage(24));
+                            Console.WriteLine(ManageLang.GetString("error_Caract"));
                         }
                         break;
                 }
                 Console.WriteLine("======================================================");
             }// fin de boucle
-            Console.WriteLine(GetLineLanguage(25));
+            Console.WriteLine(ManageLang.GetString("view_modif_exit"));
             Environment.Exit(0);
         }
 
@@ -206,7 +212,7 @@ namespace EasySave.view
                     if (bValid && iJob >= 0 && !sAnswerSplit[0].Contains("-") && !sAnswerSplit[0].Contains(","))
                     {
                         // Exécution du job correspondant
-                        Console.WriteLine(GetLineLanguage(25 + iJob));
+                        Console.WriteLine(ManageLang.GetString("view_menu_exe") + iJob);
                         CommandAnalysis(sAnswerSplit[1], iJob - 1);
                     }
                     else
@@ -215,12 +221,11 @@ namespace EasySave.view
                         string[] sAnswerSplit_List = sAnswerSplit[0].Split(',');
                         if (sAnswerSplit_List.Length > 1)
                         {
-                            Console.WriteLine(GetLineLanguage(31));
+                            Console.WriteLine(ManageLang.GetString("view_menu_chainSplit1"));
                             for (int i = 0; i < sAnswerSplit_List.Length; i++)
                             {
-                                Console.WriteLine(GetLineLanguage(32) + sAnswerSplit_List[i]);
+                                Console.WriteLine(ManageLang.GetString("view_menu_exe") + i);
                                 CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
-
                             }
                         }
                         else
@@ -229,7 +234,7 @@ namespace EasySave.view
                             sAnswerSplit_List = sAnswerSplit[0].Split('-');
                             if (sAnswerSplit_List.Length > 1)
                             {
-                                Console.WriteLine(GetLineLanguage(33));
+                                Console.WriteLine(ManageLang.GetString("view_menu_chainSplit2"));
                                 // Vérifier si le tableau contient bien deux éléments
                                 if (sAnswerSplit_List.Length == 2)
                                 {
@@ -240,18 +245,18 @@ namespace EasySave.view
                                     {
                                         for (int i = iStartIndex; i <= iEndIndex; i++)
                                         {
-                                            Console.WriteLine(GetLineLanguage(32) + i);
+                                            Console.WriteLine(ManageLang.GetString("view_menu_exe") + i);
                                             CommandAnalysis(sAnswerSplit[1], i);
                                         }
                                     }
                                     else
                                     {
-                                        Console.WriteLine(GetLineLanguage(34));
+                                        Console.WriteLine(ManageLang.GetString("error_index"));
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine(GetLineLanguage(35));
+                                    Console.WriteLine(ManageLang.GetString("error_listCaract"));
                                 }
                             }
                         }
@@ -260,7 +265,7 @@ namespace EasySave.view
             }
             else
             {
-                Console.WriteLine(GetLineLanguage(24));
+                Console.WriteLine(ManageLang.GetString("error_Caract"));
             }
         }
 
@@ -269,40 +274,40 @@ namespace EasySave.view
             switch (sAnswerCmd)
             {
                 case "S":
-                    Console.WriteLine(GetLineLanguage(36) + iNbJob +1 );
+                    Console.WriteLine(ManageLang.GetString("view_menu_exe") + iNbJob +1 );
                     try
                     {
                         BackUpManager.listBackUps[iNbJob].Excecute();
                     }
                     catch
                     {
-                        Console.WriteLine(GetLineLanguage(40));
+                        Console.WriteLine(ManageLang.GetString("error_save"));
                     }
                     break;
                 case "M":
-                    Console.WriteLine(GetLineLanguage(37) + iNbJob+ 1);
+                    Console.WriteLine(ManageLang.GetString("view_modif") + iNbJob+ 1);
                     try
                     {
                         ShowModifyJob(iNbJob);
                     }
                     catch
                     {
-                        Console.WriteLine(GetLineLanguage(40));
+                        Console.WriteLine(ManageLang.GetString("error_Loading"));
                     }
                     break;
                 case "D":
-                    Console.WriteLine(GetLineLanguage(38) + iNbJob + 1);
+                    Console.WriteLine(ManageLang.GetString("view_suppr") + iNbJob + 1);
                     try
                     {
                         ShowDeleteJob(iNbJob);
                     }
                     catch
                     {
-                        Console.WriteLine(GetLineLanguage(40));
+                        Console.WriteLine(ManageLang.GetString("error_Loading"));
                     }
                     break;
                 default:
-                    Console.WriteLine(GetLineLanguage(39));
+                    Console.WriteLine(ManageLang.GetString("error_UnknowCmd"));
                     break;
             }
         }
@@ -324,13 +329,13 @@ namespace EasySave.view
             Console.WriteLine("\n=======================EasySave=======================");
 
             // Partie 1 : Nom du job
-            Console.WriteLine("\n" + GetLineLanguage(5) + " (" + iNbJob + ") : ...");
-            Console.Write(GetLineLanguage(6));
+            Console.WriteLine("\n" + ManageLang.GetString("view_menu_nameJob") + " (" + iNbJob + ") : ...");
+            Console.Write(ManageLang.GetString("view_add_name"));
             sNameJob = Console.ReadLine();
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine(GetLineLanguage(25));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                 return;
             }
 
@@ -339,27 +344,27 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine(GetLineLanguage(41));
-                    Console.Write(GetLineLanguage(6));
+                    Console.WriteLine(ManageLang.GetString("error_NoneValidJob"));
+                    Console.Write(ManageLang.GetString("view_menu_nameJob"));
                     sNameJob = Console.ReadLine();
                     isValid = sNameJob.Length > 0 && !sNameJob.Contains(" ");
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine(GetLineLanguage(25));
+                        Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                         return;
                     }
                 }
             }
 
             // Partie 2 : Source du job
-            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " ...");
-            Console.Write(GetLineLanguage(7));
+            Console.WriteLine("\n" + ManageLang.GetString("view_menu_nameJob") + " (" + iNbJob + ") : " + sNameJob + " ...");
+            Console.Write(ManageLang.GetString("view_add_sourcePath"));
             sSourcePath = Console.ReadLine();
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine(GetLineLanguage(25));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                 return;
             }
 
@@ -368,27 +373,27 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine(GetLineLanguage(42));
-                    Console.Write(GetLineLanguage(7));
+                    Console.WriteLine(ManageLang.GetString("error_NoneSourcePath"));
+                    Console.Write(ManageLang.GetString("view_add_sourcePath"));
                     sSourcePath = Console.ReadLine();
                     isValid = sSourcePath.Length > 0 && sSourcePath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine(GetLineLanguage(25));
+                        Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                         return;
                     }
                 }
             }
 
             // Partie 3 : Destination du job
-            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> ...");
-            Console.Write(GetLineLanguage(8));
+            Console.WriteLine("\n" + ManageLang.GetString("view_menu_nameJob") + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> ...");
+            Console.Write(ManageLang.GetString("view_add_destPath"));
             sDestinationPath = Console.ReadLine();
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine(GetLineLanguage(25));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                 return;
             }
 
@@ -397,41 +402,41 @@ namespace EasySave.view
             {
                 while (!isValid)
                 {
-                    Console.WriteLine(GetLineLanguage(43));
-                    Console.Write(GetLineLanguage(8));
+                    Console.WriteLine(ManageLang.GetString("error_NoneDestPath"));
+                    Console.Write(ManageLang.GetString("view_add_destPath"));
                     sDestinationPath = Console.ReadLine();
                     isValid = sDestinationPath.Length > 0 && sDestinationPath.IndexOfAny(Path.GetInvalidPathChars()) == -1;
 
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine(GetLineLanguage(25));
+                        Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                         return;
                     }
                 }
             }
 
             // Partie 4 : Mode de sauvegarde
-            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | ...");
-            Console.WriteLine(GetLineLanguage(9));
-            Console.WriteLine(GetLineLanguage(10));
-            Console.Write(GetLineLanguage(11));
+            Console.WriteLine("\n" + ManageLang.GetString("view_menu_nameJob") + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | ...");
+            Console.WriteLine(ManageLang.GetString("view_add_modComplet"));
+            Console.WriteLine(ManageLang.GetString("view_add_modDiff"));
+            Console.Write(ManageLang.GetString("view_add_SelectMod"));
             sBackupMode = Console.ReadLine();
             if (sBackupMode == "exit")
             {
-                Console.WriteLine(GetLineLanguage(25));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                 return;
             }
             if (sBackupMode != "1" && sBackupMode != "2")
             {
                 while (sBackupMode != "1" && sBackupMode != "2")
                 {
-                    Console.WriteLine(GetLineLanguage(23));
-                    Console.Write(GetLineLanguage(11));
+                    Console.WriteLine(ManageLang.GetString("error_NoneCodeBackup"));
+                    Console.Write(ManageLang.GetString("view_add_SelectMod"));
                     sBackupMode = Console.ReadLine();
 
                     if (sBackupMode == "exit")
                     {
-                        Console.WriteLine(GetLineLanguage(25));
+                        Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                         return;
                     }
                 }
@@ -439,13 +444,13 @@ namespace EasySave.view
             iBackupMode = int.Parse(sBackupMode);
            
             // Partie 5 : Confirmation
-            Console.WriteLine("\n" + GetLineLanguage(6) + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(12) : GetLineLanguage(13)));
-            Console.Write(GetLineLanguage(14));
+            Console.WriteLine("\n" + ManageLang.GetString("view_menu_nameJob") + " (" + iNbJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? ManageLang.GetString("view_add_complet") : ManageLang.GetString("view_add_diff")));
+            Console.Write(ManageLang.GetString("view_add_confirm"));
             sValidation = Console.ReadLine();
 
             if (sNameJob == "exit")
             {
-                Console.WriteLine(GetLineLanguage(25));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                 return;
             }
 
@@ -453,25 +458,24 @@ namespace EasySave.view
             {
                 while (sValidation != "Y" && sValidation != "N")
                 {
-                    Console.WriteLine(GetLineLanguage(44));
-                    Console.Write(GetLineLanguage(14));
+                    Console.WriteLine(ManageLang.GetString("error_CaractValid"));
+                    Console.Write(ManageLang.GetString("view_add_confirm"));
                     sValidation = Console.ReadLine();
                     if (sNameJob == "exit")
                     {
-                        Console.WriteLine(GetLineLanguage(25));
+                        Console.WriteLine(ManageLang.GetString("view_modif_exit"));
                         return;
                     }
                 }
             }
             if (sValidation == "Y")
             {
-
                 BackUpType type;
                 backUpController.backUpManager.AddBackUpJob(type = iBackupMode == 1 ? BackUpType.Complete : BackUpType.Differential, sNameJob, sSourcePath, sDestinationPath);
             }
             else
             {
-                Console.WriteLine(GetLineLanguage(46));
+                Console.WriteLine(ManageLang.GetString("view_add_AffichJobIsNoAdd"));
             }
         }
 
@@ -487,12 +491,12 @@ namespace EasySave.view
             BackUpType type_old;
             if (typeJob.Contains("Complete"))
             {
-                sbackUpMode = GetLineLanguage(12);
+                sbackUpMode = ManageLang.GetString("view_add_complet");
                 type = BackUpType.Complete;
                 type_old = BackUpType.Complete;
             }
             else {
-                sbackUpMode = GetLineLanguage(13);
+                sbackUpMode = ManageLang.GetString("view_add_diff");
                 type = BackUpType.Differential;
                 type_old = BackUpType.Differential;
             }
@@ -503,13 +507,15 @@ namespace EasySave.view
                 string sAnswer = "";
 
                 Console.WriteLine("\n=======================EasySave=======================");
-                Console.WriteLine(GetLineLanguage(16) + "\n");
-                Console.WriteLine(GetLineLanguage(17) + sNameJob_Old);
-                Console.WriteLine(GetLineLanguage(18) + sSourcePath_Old);
-                Console.WriteLine(GetLineLanguage(19) + sDestinationPath_Old);
-                Console.WriteLine(GetLineLanguage(20) + sbackUpMode);
-                Console.WriteLine("\n" + GetLineLanguage(21));
-                Console.WriteLine(GetLineLanguage(22));
+                Console.WriteLine(ManageLang.GetString("view_modif_affich") + "\n");
+                Console.WriteLine(ManageLang.GetString("view_modif_name") + sNameJob_Old);
+                Console.WriteLine(ManageLang.GetString("view_modif_sourcePath") + sSourcePath_Old);
+                Console.WriteLine(ManageLang.GetString("view_modif_destPath") + sDestinationPath_Old);
+                Console.WriteLine(ManageLang.GetString("view_modif_modAffich") + sbackUpMode);
+                Console.WriteLine("\n" + ManageLang.GetString("view_modif_apply"));
+                Console.WriteLine(ManageLang.GetString("view_modif_exit"));
+
+                Console.Write(ManageLang.GetString("view_waitingAswer"));
                 sAnswer = Console.ReadLine();
 
                 // Diviser la réponses en deux parties
@@ -541,11 +547,11 @@ namespace EasySave.view
                             }
                             else
                             {
-                                Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                                Console.WriteLine(ManageLang.GetString("error_Caract"));
                             }
                             break;
                         default:
-                            Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                            Console.WriteLine(ManageLang.GetString("error_Caract"));
                             break;
                     }
                 }
@@ -566,13 +572,13 @@ namespace EasySave.view
                             bSecurity = true;
                             break;
                         default:
-                            Console.WriteLine("\nError : Order not recognised.\n");
+                            Console.WriteLine(ManageLang.GetString("error_UnknowCmd"));
                             break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("\nError : Illegal character or unknown number.\n");
+                    Console.WriteLine(ManageLang.GetString("error_Caract"));
                 }
             }
             
@@ -591,18 +597,55 @@ namespace EasySave.view
             int iBackupMode = 1;
 
             Console.WriteLine("\n=======================EasySave=======================");
-            Console.WriteLine(GetLineLanguage(6) + " (" + iIndexJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? GetLineLanguage(13) : GetLineLanguage(14)));
-            Console.WriteLine(GetLineLanguage(15));
+            Console.WriteLine(ManageLang.GetString("view_menu_nameJob") + " (" + iIndexJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? ManageLang.GetString("view_add_diff") : ManageLang.GetString("view_add_confirm")));
+            Console.WriteLine(ManageLang.GetString("view_supp_confirm"));
+            Console.Write(ManageLang.GetString("view_waitingAswer"));
             sAnswer = Console.ReadLine();
 
             if (sAnswer == "Y")
             {
                 backUpController.backUpManager.RemoveBackUpJob(sNameJob);
-                Console.WriteLine(GetLineLanguage(48));
+                Console.WriteLine(ManageLang.GetString("view_supp_AffichJobIsSupp"));
             }
             else
             {
-                Console.WriteLine(GetLineLanguage(49));
+                Console.WriteLine(ManageLang.GetString("view_supp_AffichJobIsNoSupp"));
+            }
+        }
+
+        private void ShowParam()
+        {
+            string sAnswer;
+            bool bSecurity = false;
+
+            Console.WriteLine("\n=======================EasySave=======================");
+            Console.WriteLine(ManageLang.GetString("view_param_titre"));
+            Console.WriteLine(ManageLang.GetString("view_param_json"));
+            Console.WriteLine(ManageLang.GetString("view_param_xml"));
+            Console.WriteLine("\n"+ ManageLang.GetString("view_modif_exit"));
+
+            while (bSecurity == false)
+            {
+                Console.Write(ManageLang.GetString("view_waitingAswer"));
+                sAnswer = Console.ReadLine();
+                switch (sAnswer)
+                {
+                    case "1":
+                        Console.WriteLine(ManageLang.GetString("view_param_AffichJSON"));
+                        bSecurity = true;
+                        break;
+                    case "2":
+                        Console.WriteLine(ManageLang.GetString("view_param_AffichXML"));
+                        bSecurity = true;
+                        break;
+                    case "exit":
+                        bSecurity = true;
+                        break;
+                    default:
+                        Console.WriteLine(ManageLang.GetString("error_Caract")+"\n");
+                        break;
+                }
+
             }
         }
     }

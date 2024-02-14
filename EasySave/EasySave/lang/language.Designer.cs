@@ -61,587 +61,641 @@ namespace EasySave.lang {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Launch (S) Modify (M) Delete (D).
+        ///   Recherche une chaîne localisée semblable à Error : Illegal character or unknown number..
         /// </summary>
-        internal static string String {
+        internal static string error_Caract {
             get {
-                return ResourceManager.GetString("String", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (add) - Add a job.
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (2) - Differential mode.
-        /// </summary>
-        internal static string String10 {
-            get {
-                return ResourceManager.GetString("String10", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à &gt; Select backup mode :.
-        /// </summary>
-        internal static string String11 {
-            get {
-                return ResourceManager.GetString("String11", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Full.
-        /// </summary>
-        internal static string String12 {
-            get {
-                return ResourceManager.GetString("String12", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Differential.
-        /// </summary>
-        internal static string String13 {
-            get {
-                return ResourceManager.GetString("String13", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à &gt; Confirm job creation (Y/N).
-        /// </summary>
-        internal static string String14 {
-            get {
-                return ResourceManager.GetString("String14", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à &gt; Do you want to delete this job?.
-        /// </summary>
-        internal static string String15 {
-            get {
-                return ResourceManager.GetString("String15", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Select what you wanted to change and enter the new data:.
-        /// </summary>
-        internal static string String16 {
-            get {
-                return ResourceManager.GetString("String16", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (1) Job name :.
-        /// </summary>
-        internal static string String17 {
-            get {
-                return ResourceManager.GetString("String17", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (2) Source directory address :.
-        /// </summary>
-        internal static string String18 {
-            get {
-                return ResourceManager.GetString("String18", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (3) Target directory address :.
-        /// </summary>
-        internal static string String19 {
-            get {
-                return ResourceManager.GetString("String19", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (all) - Sequential execution.
-        /// </summary>
-        internal static string String2 {
-            get {
-                return ResourceManager.GetString("String2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (4) Backup mode (1-Complete / 2-Differential) :.
-        /// </summary>
-        internal static string String20 {
-            get {
-                return ResourceManager.GetString("String20", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (apply) - Apply modification.
-        /// </summary>
-        internal static string String21 {
-            get {
-                return ResourceManager.GetString("String21", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (exit) - Return to menu.
-        /// </summary>
-        internal static string String22 {
-            get {
-                return ResourceManager.GetString("String22", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Illegal character or unknown number..
-        /// </summary>
-        internal static string String23 {
-            get {
-                return ResourceManager.GetString("String23", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open all.
-        /// </summary>
-        internal static string String24 {
-            get {
-                return ResourceManager.GetString("String24", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Exit program.
-        /// </summary>
-        internal static string String25 {
-            get {
-                return ResourceManager.GetString("String25", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job 1.
-        /// </summary>
-        internal static string String26 {
-            get {
-                return ResourceManager.GetString("String26", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job 2.
-        /// </summary>
-        internal static string String27 {
-            get {
-                return ResourceManager.GetString("String27", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job 3.
-        /// </summary>
-        internal static string String28 {
-            get {
-                return ResourceManager.GetString("String28", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job 4.
-        /// </summary>
-        internal static string String29 {
-            get {
-                return ResourceManager.GetString("String29", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (lang) - Change language.
-        /// </summary>
-        internal static string String3 {
-            get {
-                return ResourceManager.GetString("String3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job 5.
-        /// </summary>
-        internal static string String30 {
-            get {
-                return ResourceManager.GetString("String30", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à The string has been split using &apos;,&apos;..
-        /// </summary>
-        internal static string String31 {
-            get {
-                return ResourceManager.GetString("String31", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open backup job.
-        /// </summary>
-        internal static string String32 {
-            get {
-                return ResourceManager.GetString("String32", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à String has been split with &apos;-&apos; characters.
-        /// </summary>
-        internal static string String33 {
-            get {
-                return ResourceManager.GetString("String33", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Start index must be less than end index..
-        /// </summary>
-        internal static string String34 {
-            get {
-                return ResourceManager.GetString("String34", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Illegal character, there must only be two indices separated by &quot;-&quot;..
-        /// </summary>
-        internal static string String35 {
-            get {
-                return ResourceManager.GetString("String35", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Execute job number:.
-        /// </summary>
-        internal static string String36 {
-            get {
-                return ResourceManager.GetString("String36", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Modify job number:.
-        /// </summary>
-        internal static string String37 {
-            get {
-                return ResourceManager.GetString("String37", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Delete job number:.
-        /// </summary>
-        internal static string String38 {
-            get {
-                return ResourceManager.GetString("String38", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Unknown order.
-        /// </summary>
-        internal static string String39 {
-            get {
-                return ResourceManager.GetString("String39", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à (exit) - Exit software.
-        /// </summary>
-        internal static string String4 {
-            get {
-                return ResourceManager.GetString("String4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Input value not recognized.
-        /// </summary>
-        internal static string String40 {
-            get {
-                return ResourceManager.GetString("String40", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Invalid job name..
-        /// </summary>
-        internal static string String41 {
-            get {
-                return ResourceManager.GetString("String41", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error: Invalid source value..
-        /// </summary>
-        internal static string String42 {
-            get {
-                return ResourceManager.GetString("String42", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error : Invalid destionation value..
-        /// </summary>
-        internal static string String43 {
-            get {
-                return ResourceManager.GetString("String43", resourceCulture);
+                return ResourceManager.GetString("error_Caract", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Illegal character. Write &quot;Y&quot; for yes, or &quot;N&quot; for no..
         /// </summary>
-        internal static string String44 {
+        internal static string error_CaractValid {
             get {
-                return ResourceManager.GetString("String44", resourceCulture);
+                return ResourceManager.GetString("error_CaractValid", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Work Add.
+        ///   Recherche une chaîne localisée semblable à Error : The start index must be less than the end index..
         /// </summary>
-        internal static string String45 {
+        internal static string error_index {
             get {
-                return ResourceManager.GetString("String45", resourceCulture);
+                return ResourceManager.GetString("error_index", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Work No Add.
+        ///   Recherche une chaîne localisée semblable à Error : the job index cannot be &gt; 5.
         /// </summary>
-        internal static string String46 {
+        internal static string error_JobSuperior5 {
             get {
-                return ResourceManager.GetString("String46", resourceCulture);
+                return ResourceManager.GetString("error_JobSuperior5", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error BackUpMode code not recognized.
+        ///   Recherche une chaîne localisée semblable à Error : Illegal character or there must only be two indices separated by \&quot;-\&quot;..
         /// </summary>
-        internal static string String47 {
+        internal static string error_listCaract {
             get {
-                return ResourceManager.GetString("String47", resourceCulture);
+                return ResourceManager.GetString("error_listCaract", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Work Delete.
+        ///   Recherche une chaîne localisée semblable à Error : during loading :.
         /// </summary>
-        internal static string String48 {
+        internal static string error_Loading {
             get {
-                return ResourceManager.GetString("String48", resourceCulture);
+                return ResourceManager.GetString("error_Loading", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Work No Delete.
+        ///   Recherche une chaîne localisée semblable à Error : BackUpMode code not recognised.
         /// </summary>
-        internal static string String49 {
+        internal static string error_NoneCodeBackup {
             get {
-                return ResourceManager.GetString("String49", resourceCulture);
+                return ResourceManager.GetString("error_NoneCodeBackup", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Job.
+        ///   Recherche une chaîne localisée semblable à Error : Invalid destination value.
         /// </summary>
-        internal static string String5 {
+        internal static string error_NoneDestPath {
             get {
-                return ResourceManager.GetString("String5", resourceCulture);
+                return ResourceManager.GetString("error_NoneDestPath", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Complete backup successful..
+        ///   Recherche une chaîne localisée semblable à Error : Invalid source value.
         /// </summary>
-        internal static string String50 {
+        internal static string error_NoneSourcePath {
             get {
-                return ResourceManager.GetString("String50", resourceCulture);
+                return ResourceManager.GetString("error_NoneSourcePath", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Full backup error :.
+        ///   Recherche une chaîne localisée semblable à Error : Invalid job name..
         /// </summary>
-        internal static string String51 {
+        internal static string error_NoneValidJob {
             get {
-                return ResourceManager.GetString("String51", resourceCulture);
+                return ResourceManager.GetString("error_NoneValidJob", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Invalid backup type.
+        ///   Recherche une chaîne localisée semblable à Error : when saving :.
         /// </summary>
-        internal static string String52 {
+        internal static string error_save {
             get {
-                return ResourceManager.GetString("String52", resourceCulture);
+                return ResourceManager.GetString("error_save", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Differential backup successful..
+        ///   Recherche une chaîne localisée semblable à Error : during full backup :.
         /// </summary>
-        internal static string String53 {
+        internal static string error_saveComplete {
             get {
-                return ResourceManager.GetString("String53", resourceCulture);
+                return ResourceManager.GetString("error_saveComplete", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Full backup error :.
+        ///   Recherche une chaîne localisée semblable à Error : Unknown order.
         /// </summary>
-        internal static string String54 {
+        internal static string error_UnknowCmd {
             get {
-                return ResourceManager.GetString("String54", resourceCulture);
+                return ResourceManager.GetString("error_UnknowCmd", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error during backup :.
+        ///   Recherche une chaîne localisée semblable à Error : Value entered not recognised.
         /// </summary>
-        internal static string String55 {
+        internal static string error_UnknowSaisie {
             get {
-                return ResourceManager.GetString("String55", resourceCulture);
+                return ResourceManager.GetString("error_UnknowSaisie", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error, job index cannot be &gt; 5.
+        ///   Recherche une chaîne localisée semblable à Job Add.
         /// </summary>
-        internal static string String56 {
+        internal static string view_add_AffichJobIsAdd {
             get {
-                return ResourceManager.GetString("String56", resourceCulture);
+                return ResourceManager.GetString("view_add_AffichJobIsAdd", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à The maximum number of jobs has been reached..
+        ///   Recherche une chaîne localisée semblable à Job No Add.
         /// </summary>
-        internal static string String57 {
+        internal static string view_add_AffichJobIsNoAdd {
             get {
-                return ResourceManager.GetString("String57", resourceCulture);
+                return ResourceManager.GetString("view_add_AffichJobIsNoAdd", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à A job with the same name already exists..
+        ///   Recherche une chaîne localisée semblable à Complete.
         /// </summary>
-        internal static string String58 {
+        internal static string view_add_complet {
             get {
-                return ResourceManager.GetString("String58", resourceCulture);
+                return ResourceManager.GetString("view_add_complet", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Source directory does not exist or could not be found:.
+        ///   Recherche une chaîne localisée semblable à &gt; Confirm job creation (Y/N).
         /// </summary>
-        internal static string String59 {
+        internal static string view_add_confirm {
             get {
-                return ResourceManager.GetString("String59", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à &gt; Job name :.
-        /// </summary>
-        internal static string String6 {
-            get {
-                return ResourceManager.GetString("String6", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à The source directory is empty:.
-        /// </summary>
-        internal static string String60 {
-            get {
-                return ResourceManager.GetString("String60", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à The drive specified in the target path.
-        /// </summary>
-        internal static string String61 {
-            get {
-                return ResourceManager.GetString("String61", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à is not available..
-        /// </summary>
-        internal static string String62 {
-            get {
-                return ResourceManager.GetString("String62", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error loading :.
-        /// </summary>
-        internal static string String63 {
-            get {
-                return ResourceManager.GetString("String63", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Execution time :.
-        /// </summary>
-        internal static string String64 {
-            get {
-                return ResourceManager.GetString("String64", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à &gt; Source directory address :.
-        /// </summary>
-        internal static string String7 {
-            get {
-                return ResourceManager.GetString("String7", resourceCulture);
+                return ResourceManager.GetString("view_add_confirm", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Target directory address :.
         /// </summary>
-        internal static string String8 {
+        internal static string view_add_destPath {
             get {
-                return ResourceManager.GetString("String8", resourceCulture);
+                return ResourceManager.GetString("view_add_destPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Differential.
+        /// </summary>
+        internal static string view_add_diff {
+            get {
+                return ResourceManager.GetString("view_add_diff", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (1) - Full mode.
         /// </summary>
-        internal static string String9 {
+        internal static string view_add_modComplet {
             get {
-                return ResourceManager.GetString("String9", resourceCulture);
+                return ResourceManager.GetString("view_add_modComplet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (2) - Differential mode.
+        /// </summary>
+        internal static string view_add_modDiff {
+            get {
+                return ResourceManager.GetString("view_add_modDiff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &gt; Job name :.
+        /// </summary>
+        internal static string view_add_name {
+            get {
+                return ResourceManager.GetString("view_add_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à A job with the same name already exists..
+        /// </summary>
+        internal static string view_add_sameNameJob {
+            get {
+                return ResourceManager.GetString("view_add_sameNameJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &gt; Select backup mode :.
+        /// </summary>
+        internal static string view_add_SelectMod {
+            get {
+                return ResourceManager.GetString("view_add_SelectMod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &gt; Source directory address :.
+        /// </summary>
+        internal static string view_add_sourcePath {
+            get {
+                return ResourceManager.GetString("view_add_sourcePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The drive specified in the target path.
+        /// </summary>
+        internal static string view_CantDestPath_1 {
+            get {
+                return ResourceManager.GetString("view_CantDestPath_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Is not available..
+        /// </summary>
+        internal static string view_CantDestPath_2 {
+            get {
+                return ResourceManager.GetString("view_CantDestPath_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Execution time :.
+        /// </summary>
+        internal static string view_ExecutionTime {
+            get {
+                return ResourceManager.GetString("view_ExecutionTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The maximum number of jobs has been reached..
+        /// </summary>
+        internal static string view_jobMax {
+            get {
+                return ResourceManager.GetString("view_jobMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (add) - Add a job.
+        /// </summary>
+        internal static string view_menu_add {
+            get {
+                return ResourceManager.GetString("view_menu_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open all.
+        /// </summary>
+        internal static string view_menu_affichAll {
+            get {
+                return ResourceManager.GetString("view_menu_affichAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Exit program.
+        /// </summary>
+        internal static string view_menu_affichExit {
+            get {
+                return ResourceManager.GetString("view_menu_affichExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (all) - Sequential execution.
+        /// </summary>
+        internal static string view_menu_all {
+            get {
+                return ResourceManager.GetString("view_menu_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Start (S) Modify (M) Delete (D).
+        /// </summary>
+        internal static string view_menu_allCmd {
+            get {
+                return ResourceManager.GetString("view_menu_allCmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The string has been split using &apos;,&apos;..
+        /// </summary>
+        internal static string view_menu_chainSplit1 {
+            get {
+                return ResourceManager.GetString("view_menu_chainSplit1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The string has been split using &apos;-&apos; characters.
+        /// </summary>
+        internal static string view_menu_chainSplit2 {
+            get {
+                return ResourceManager.GetString("view_menu_chainSplit2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Execution of job number :.
+        /// </summary>
+        internal static string view_menu_exe {
+            get {
+                return ResourceManager.GetString("view_menu_exe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (exit) - Exit the software.
+        /// </summary>
+        internal static string view_menu_exit {
+            get {
+                return ResourceManager.GetString("view_menu_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (lang) - Change language.
+        /// </summary>
+        internal static string view_menu_lang {
+            get {
+                return ResourceManager.GetString("view_menu_lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Job.
+        /// </summary>
+        internal static string view_menu_nameJob {
+            get {
+                return ResourceManager.GetString("view_menu_nameJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open a backup job.
+        /// </summary>
+        internal static string view_menu_openJob {
+            get {
+                return ResourceManager.GetString("view_menu_openJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (param) - Parameters.
+        /// </summary>
+        internal static string view_menu_param {
+            get {
+                return ResourceManager.GetString("view_menu_param", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Modification of job number :.
+        /// </summary>
+        internal static string view_modif {
+            get {
+                return ResourceManager.GetString("view_modif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Select what you wanted to change and enter the new data:.
+        /// </summary>
+        internal static string view_modif_affich {
+            get {
+                return ResourceManager.GetString("view_modif_affich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (apply) - Apply modification.
+        /// </summary>
+        internal static string view_modif_apply {
+            get {
+                return ResourceManager.GetString("view_modif_apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (3) Target directory address :.
+        /// </summary>
+        internal static string view_modif_destPath {
+            get {
+                return ResourceManager.GetString("view_modif_destPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (exit) - Return to menu.
+        /// </summary>
+        internal static string view_modif_exit {
+            get {
+                return ResourceManager.GetString("view_modif_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (4) Backup mode (1-Complete / 2-Differential) :.
+        /// </summary>
+        internal static string view_modif_modAffich {
+            get {
+                return ResourceManager.GetString("view_modif_modAffich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (1) Job name :.
+        /// </summary>
+        internal static string view_modif_name {
+            get {
+                return ResourceManager.GetString("view_modif_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (2) Source directory address :.
+        /// </summary>
+        internal static string view_modif_sourcePath {
+            get {
+                return ResourceManager.GetString("view_modif_sourcePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Invalid backup type.
+        /// </summary>
+        internal static string view_NoneTypeSave {
+            get {
+                return ResourceManager.GetString("view_NoneTypeSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open backup job 1.
+        /// </summary>
+        internal static string view_open1 {
+            get {
+                return ResourceManager.GetString("view_open1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open backup job 2.
+        /// </summary>
+        internal static string view_open2 {
+            get {
+                return ResourceManager.GetString("view_open2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open backup job 3.
+        /// </summary>
+        internal static string view_open3 {
+            get {
+                return ResourceManager.GetString("view_open3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open backup job 4.
+        /// </summary>
+        internal static string view_open4 {
+            get {
+                return ResourceManager.GetString("view_open4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open backup job 5.
+        /// </summary>
+        internal static string view_open5 {
+            get {
+                return ResourceManager.GetString("view_open5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The format for saving Logs and States files has been changed to .JSON.
+        /// </summary>
+        internal static string view_param_AffichJSON {
+            get {
+                return ResourceManager.GetString("view_param_AffichJSON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The format for saving Logs and States files has been changed to .XML.
+        /// </summary>
+        internal static string view_param_AffichXML {
+            get {
+                return ResourceManager.GetString("view_param_AffichXML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (1) - .JSON.
+        /// </summary>
+        internal static string view_param_json {
+            get {
+                return ResourceManager.GetString("view_param_json", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Save Logs and States files in :.
+        /// </summary>
+        internal static string view_param_titre {
+            get {
+                return ResourceManager.GetString("view_param_titre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à (2) - .XML.
+        /// </summary>
+        internal static string view_param_xml {
+            get {
+                return ResourceManager.GetString("view_param_xml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Full backup successful..
+        /// </summary>
+        internal static string view_saveComplete {
+            get {
+                return ResourceManager.GetString("view_saveComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Differential backup successful..
+        /// </summary>
+        internal static string view_SaveDifferential {
+            get {
+                return ResourceManager.GetString("view_SaveDifferential", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The source directory is empty:.
+        /// </summary>
+        internal static string view_SourcePathEmpty {
+            get {
+                return ResourceManager.GetString("view_SourcePathEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Job No Delete.
+        /// </summary>
+        internal static string view_supp_AffichJobIsNoSupp {
+            get {
+                return ResourceManager.GetString("view_supp_AffichJobIsNoSupp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Job Delete.
+        /// </summary>
+        internal static string view_supp_AffichJobIsSupp {
+            get {
+                return ResourceManager.GetString("view_supp_AffichJobIsSupp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &gt; Do you want to delete this job (Y/N).
+        /// </summary>
+        internal static string view_supp_confirm {
+            get {
+                return ResourceManager.GetString("view_supp_confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Delete job number :.
+        /// </summary>
+        internal static string view_suppr {
+            get {
+                return ResourceManager.GetString("view_suppr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The source directory does not exist or could not be found :.
+        /// </summary>
+        internal static string view_UnknowSourcePath {
+            get {
+                return ResourceManager.GetString("view_UnknowSourcePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &gt; .
+        /// </summary>
+        internal static string view_waitingAswer {
+            get {
+                return ResourceManager.GetString("view_waitingAswer", resourceCulture);
             }
         }
     }
