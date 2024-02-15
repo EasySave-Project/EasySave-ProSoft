@@ -30,10 +30,22 @@ namespace EasySave.view
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Setting setting = new Setting();
-
-            // Accéder à la fenêtre parente et remplacer le contenu par la page2
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
+        }
+
+        private void Home_click1(object sender, RoutedEventArgs e)
+        {
+            Home home= new Home();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = home;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ListJob listJob = new ListJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = listJob;
         }
     }
 }
