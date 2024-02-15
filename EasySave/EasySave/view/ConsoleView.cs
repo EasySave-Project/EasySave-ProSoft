@@ -25,22 +25,22 @@ namespace EasySave.view
             // Vérifier la présence du dossier "conf"
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\conf";
-            if (!System.IO.Directory.Exists(destPath))
+            if (!Directory.Exists(destPath))
             {
-                System.IO.Directory.CreateDirectory(destPath);
+                Directory.CreateDirectory(destPath);
             }
             // Vérifier la présence du fichier "SaveBackUpJob.json" puis écrire rien dedans
             string filePath = destPath + "\\SaveBackUpJob.json";
-            if (!System.IO.File.Exists(filePath))
+            if (!File.Exists(filePath))
             {
-                System.IO.File.WriteAllText(filePath, "");
+                File.WriteAllText(filePath, "");
             }
             // Partie Log
             // Vérifier la présence du dossier "log"
             destPath = sCurrentDir + "\\EasySave\\log";
-            if (!System.IO.Directory.Exists(destPath))
+            if (!Directory.Exists(destPath))
             {
-                System.IO.Directory.CreateDirectory(destPath);
+                Directory.CreateDirectory(destPath);
             }
             // Partie Lang
             GenerateLang gl = new GenerateLang();

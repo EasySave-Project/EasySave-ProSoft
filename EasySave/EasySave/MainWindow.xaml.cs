@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using EasySave.utils;
+using System.Configuration;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,7 +20,14 @@ namespace EasySave
     {
         public MainWindow()
         {
+            SettingManager.ReadAllSettings();
+        
             InitializeComponent();
+        }
+
+        private void initSettings(object sender, EventArgs e)
+        {
+            
         }
     }
 }
