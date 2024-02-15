@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="img\arrow.png" />
+    <None Remove="img\delete.png" />
+    <None Remove="img\edit.png" />
     <None Remove="img\flag_french.png" />
     <None Remove="img\home.png" />
     <None Remove="img\home_page.png" />
@@ -18,6 +20,7 @@
     <None Remove="img\log.png" />
     <None Remove="img\logo_easysave.png" />
     <None Remove="img\patch_note.png" />
+    <None Remove="img\Play.png" />
     <None Remove="img\setting.png" />
   </ItemGroup>
 
@@ -27,6 +30,8 @@
 
   <ItemGroup>
     <resource Include="img\arrow.png" />
+    <Resource Include="img\delete.png" />
+    <Resource Include="img\edit.png" />
     <Resource Include="img\flag_french.png" />
     <Resource Include="img\home.png" />
     <Resource Include="img\home_page.png" />
@@ -35,6 +40,7 @@
     <Resource Include="img\log.png" />
     <Resource Include="img\logo_easysave.png" />
     <Resource Include="img\patch_note.png" />
+    <Resource Include="img\Play.png" />
     <Resource Include="img\setting.png" />
   </ItemGroup>
 

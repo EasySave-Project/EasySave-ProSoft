@@ -16,34 +16,38 @@ using System.Windows.Shapes;
 namespace EasySave.view
 {
     /// <summary>
-    /// Logique d'interaction pour Setting.xaml
+    /// Logique d'interaction pour ListJob.xaml
     /// </summary>
-    public partial class Setting : Page
+    public partial class ListJob : Page
     {
-        public Setting()
+        public ListJob()
         {
             InitializeComponent();
         }
 
-        private void setting_Click(object sender, RoutedEventArgs e)
+
+        private void List_job_Click(object sender, RoutedEventArgs e)
+        {
+            ListJob listJob = new ListJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = listJob;
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
         {
             Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
         }
 
-        private void home_Click(object sender, RoutedEventArgs e)
+        private void Home_click_1(object sender, RoutedEventArgs e)
         {
             Home home = new Home();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = home;
         }
 
-        private void list_Click(object sender, RoutedEventArgs e)
-        {
-            ListJob listJob = new ListJob();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = listJob;
-        }
+
     }
+
 }
