@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        MinWidth="1100" MaxWidth="1100"
+        MinHeight="719" MaxHeight="719">
     <Grid>
-
+        <Frame x:Name="Main" Margin="206,0,0,0" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>
