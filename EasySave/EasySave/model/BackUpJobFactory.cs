@@ -14,7 +14,7 @@ namespace EasySave.model
                 case BackUpType.Differential:
                     return new DifferentialBackUpJob(name, sourceDir, targetDir);
                 default:
-                    throw new ArgumentException(ConsoleView.GetLineLanguage(52));
+                    throw new ArgumentException(ManageLang.GetString("error_NoneCodeBackup"));
             }
         }
 

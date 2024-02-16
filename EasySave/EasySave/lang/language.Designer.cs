@@ -169,6 +169,24 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error : during differential backup.
+        /// </summary>
+        internal static string error_saveDifferential {
+            get {
+                return ResourceManager.GetString("error_saveDifferential", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error : The source directory does not exist or could not be found :.
+        /// </summary>
+        internal static string error_SourcePath_NotFound {
+            get {
+                return ResourceManager.GetString("error_SourcePath_NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Unknown order.
         /// </summary>
         internal static string error_UnknowCmd {

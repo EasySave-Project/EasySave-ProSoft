@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Xml;
 using System.Xml.Serialization;
 using EasySave.utils;
+using System.Runtime;
 
 namespace EasySave.services
 {
@@ -146,9 +147,12 @@ namespace EasySave.services
 
             string destPath = sCurrentDir + "\\EasySave\\log";
 
-            if(settings.StateType == "" ||  settings.StateType == null)
+            if(settings.LogType == "" || settings.LogType == null)
+            {
+                settings.LogType = "JSON";
+            }
 
-            if(settings.StateType == "JSON")
+            if (settings.StateType == "JSON")
             {
                 // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
                 //string json = JsonSerializer.Serialize<State>(this);
