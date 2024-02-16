@@ -17,6 +17,7 @@
   <ItemGroup>
     <Folder Include="conf\" />
     <Folder Include="log\" />
+    <Folder Include="Setting\" />
   </ItemGroup>
 
   <ItemGroup>
