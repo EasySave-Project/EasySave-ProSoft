@@ -23,11 +23,6 @@
     <None Remove="img\patch_note.png" />
     <None Remove="img\Play.png" />
     <None Remove="img\setting.png" />
-    <None Remove="view\type.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="view\type.json" />
   </ItemGroup>
 
   <ItemGroup>
