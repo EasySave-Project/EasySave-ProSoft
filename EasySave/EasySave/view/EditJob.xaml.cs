@@ -11,16 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-
+using System.Windows.Shapes;
 
 namespace EasySave.view
 {
     /// <summary>
-    /// Logique d'interaction pour AddJob.xaml
+    /// Logique d'interaction pour EditJob.xaml
     /// </summary>
-    public partial class AddJob : Page
+    public partial class EditJob : Page
     {
-        public AddJob()
+        public EditJob()
         {
             InitializeComponent();
         }
@@ -55,7 +55,7 @@ namespace EasySave.view
                 Filter = "Dossiers|*.none",
                 CheckFileExists = false,
                 CheckPathExists = true,
-
+                FileName = "Sélectionnez un dossier"
             };
 
             // Afficher la boîte de dialogue de sélection de dossier
