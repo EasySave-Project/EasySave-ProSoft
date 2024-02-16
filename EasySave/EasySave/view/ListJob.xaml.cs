@@ -126,6 +126,56 @@ namespace EasySave.view
         }
 
         //==============================================
+        // PLAY jobs
+        //==============================================
+        private void ExecuteJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Exécuter du job
+            index_SelectJob--;
+            try
+            {
+                backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+            }
+            catch
+            {
+                MessageBox.Show("Erreur lors de l'execution du job");
+            }
+        }
+
+        private void BtnPlay_Job1_Click(object sender, RoutedEventArgs e)
+        {
+            ExecuteJob(1);
+        }
+
+        private void BtnPlay_Job2_Click(object sender, RoutedEventArgs e)
+        {
+            ExecuteJob(2);
+        }
+
+        private void BtnPlay_Job3_Click(object sender, RoutedEventArgs e)
+        {
+            ExecuteJob(3);
+        }
+
+        private void BtnPlay_Job4_Click(object sender, RoutedEventArgs e)
+        {
+            ExecuteJob(4);
+        }
+
+        private void BtnPlay_Job5_Click(object sender, RoutedEventArgs e)
+        {
+            ExecuteJob(5);
+        }
+
+        //==============================================
+        // MODIFIER jobs
+        //==============================================
+
+        //==============================================
         // Bouton de navigation
         //==============================================
 
@@ -168,6 +218,12 @@ namespace EasySave.view
                 Label_IndexPages.Content = indexPage + " / " + nbPage;
                 ShowListJob();
             }
+        }
+
+
+        private void BtnEdit_job1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 
