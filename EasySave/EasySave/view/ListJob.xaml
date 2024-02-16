@@ -52,7 +52,7 @@
             </Grid>
         </Button>
 
-        <Rectangle HorizontalAlignment="Left" Height="401" Margin="283,247,0,0" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.5,0.5" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="413" Margin="281,247,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="0.5,0.5" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.5,0.5" Fill="White" Margin="281,139,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,266,0,0" Stroke="Black" VerticalAlignment="Top" Width="190" Fill="#D9D9D9">
 
@@ -68,14 +68,14 @@
         </Button>
         <StackPanel Margin="322,150,83,516" Orientation="Horizontal" HorizontalAlignment="Right"/>
         <Button Margin="628,150,343,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
+            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102" TextAlignment="Center"><Run Language="fr-fr" Text="Run"/><Run Text=" All"/></TextBlock>
         </Button>
         <Button Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
+            <TextBlock VerticalAlignment="Center" FontSize="16" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="121" HorizontalAlignment="Center" TextAlignment="Center"><Run Text="Add New "/><LineBreak/><Run Text="J"/><Run Text="o"/><Run Text="b"/></TextBlock>
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,320,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
         <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="319,324,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Button Margin="736,324,321,365"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button Margin="739,324,318,365"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
         <Button Margin="808,317,249,363" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
@@ -127,6 +127,21 @@
         </Button>
         <Button Margin="857,561,200,119" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+        </Button>
+        <Button Margin="320,611,740,71" Background="#D9D9D9" BorderBrush="Transparent">
+            <Image Height="35" Width="34" Source="/img/arrow_black.png"/>
+        </Button>
+        <Button Margin="752,612,308,70" Background="#D9D9D9" BorderBrush="Transparent">
+            <Image Height="35" Width="34" Source="/img/arrow_black.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.997"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
         </Button>
     </Grid>
 </Page>
