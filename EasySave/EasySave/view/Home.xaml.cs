@@ -27,25 +27,25 @@ namespace EasySave.view
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            Setting setting = new Setting();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = setting;
-        }
-
-        private void Home_click1(object sender, RoutedEventArgs e)
-        {
-            Home home= new Home();
+            Home home = new Home();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = home;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
         {
             ListJob listJob = new ListJob();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
+        }
+
+        private void Btn_Setting_Click(object sender, RoutedEventArgs e)
+        {
+            Setting setting = new Setting();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = setting;
         }
     }
 }

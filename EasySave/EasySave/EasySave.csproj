@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="img\arrow.png" />
+    <None Remove="img\arrow_black.png" />
     <None Remove="img\delete.png" />
     <None Remove="img\edit.png" />
     <None Remove="img\flag_french.png" />
@@ -30,6 +31,7 @@
 
   <ItemGroup>
     <resource Include="img\arrow.png" />
+    <Resource Include="img\arrow_black.png" />
     <Resource Include="img\delete.png" />
     <Resource Include="img\edit.png" />
     <Resource Include="img\flag_french.png" />
