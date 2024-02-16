@@ -17,6 +17,7 @@ namespace EasySave.view
         // Variables globales
         private static string sLanguage;
 
+        private Settings settings = new Settings();
         public BackUpController backUpController { get; set; }
 
         public void InitConfFolder()
@@ -42,10 +43,7 @@ namespace EasySave.view
             {
                 Directory.CreateDirectory(destPath);
             }
-            // Partie Lang
-            GenerateLang gl = new GenerateLang();
-            gl.AddFiles();
-
+            
         }
 
 
@@ -65,10 +63,12 @@ namespace EasySave.view
                 {
                     case "1":
                         ManageLang.ChangeLanguage("");
+                        settings.Lang = "en";
                         bSecurity = true;
                         break;
                     case "2":
                         ManageLang.ChangeLanguage("fr");
+                        settings.Lang = "fr";
                         bSecurity = true;
                         break;
                     default:
@@ -79,47 +79,24 @@ namespace EasySave.view
             Console.WriteLine("======================================================");
         }
 
-        // Renvoie la chaine de caractère de la langue sélectionnée à partir du fichier correspondant
-        public static string GetLineLanguage(int iCodeLine)
-        {
-            string sReturnLang = "";
-            string sCurrentDir = Environment.CurrentDirectory; // Obtenir le répertoire courant
-            string sRelativePath = "";
-            switch (sLanguage)
-            {
-                case "1":
-                    sRelativePath = Path.Combine(sCurrentDir, "EasySave\\lang\\en_EN.txt");
-                    break;
-                case "2":
-                    sRelativePath = Path.Combine(sCurrentDir, "EasySave\\lang\\fr_FR.txt");
-                    break;
-
-            }
-            // Ouvrir le fichier en lecture
-            using (StreamReader fileLang = new StreamReader(sRelativePath))
-            {
-                int i = 0;
-                // Lire le fichier jusqu'à la fin
-                while (!fileLang.EndOfStream)
-                {
-                    // Lire une ligne
-                    string line = fileLang.ReadLine();
-                    // Vérifier si le compteur de lignes correspond au paramètre
-                    if (i == iCodeLine)
-                    {
-                        sReturnLang = line;
-                    }
-                    i++;
-                }
-            }
-            return sReturnLang;
-        }
-
         public void ShowMainMenu()
         {
             bool bSecurity = false;
             string sAnswer;
-
+            
+            if(settings.Lang == "fr")
+            {
+                ManageLang.ChangeLanguage("fr");
+            }else if(settings.Lang == "en")
+            {
+                ManageLang.ChangeLanguage("");
+            }
+            else
+            {
+                ShowSelectLanguage();
+            }
+            
+            
             while (bSecurity == false)
             {
                 Console.WriteLine("\n=======================EasySave=======================");
@@ -154,7 +131,7 @@ namespace EasySave.view
                 Console.WriteLine(ManageLang.GetString("view_menu_param"));
                 Console.WriteLine(ManageLang.GetString("view_menu_exit"));
 
-                Console.Write(ManageLang.GetString("view_waitingAswer"));
+                Console.Write("\n" + ManageLang.GetString("view_waitingAswer"));
                 sAnswer = Console.ReadLine();
                 switch (sAnswer)
                 {
@@ -224,7 +201,7 @@ namespace EasySave.view
                             Console.WriteLine(ManageLang.GetString("view_menu_chainSplit1"));
                             for (int i = 0; i < sAnswerSplit_List.Length; i++)
                             {
-                                Console.WriteLine(ManageLang.GetString("view_menu_exe") + i);
+                                Console.WriteLine(ManageLang.GetString("view_menu_exe") + sAnswerSplit_List[i]);
                                 CommandAnalysis(sAnswerSplit[1], int.Parse(sAnswerSplit_List[i]));
                             }
                         }
@@ -245,8 +222,9 @@ namespace EasySave.view
                                     {
                                         for (int i = iStartIndex; i <= iEndIndex; i++)
                                         {
+                                            Console.WriteLine(i);  
                                             Console.WriteLine(ManageLang.GetString("view_menu_exe") + i);
-                                            CommandAnalysis(sAnswerSplit[1], i);
+                                            CommandAnalysis(sAnswerSplit[1], (i-1));
                                         }
                                     }
                                     else
@@ -274,7 +252,7 @@ namespace EasySave.view
             switch (sAnswerCmd)
             {
                 case "S":
-                    Console.WriteLine(ManageLang.GetString("view_menu_exe") + iNbJob +1 );
+                    //Console.WriteLine(ManageLang.GetString("view_menu_exe") + (iNbJob + 1));
                     try
                     {
                         backUpController.InitiateBackUpJob(BackUpManager.listBackUps[iNbJob]);
@@ -286,7 +264,7 @@ namespace EasySave.view
 
                     break;
                 case "M":
-                    Console.WriteLine(ManageLang.GetString("view_modif") + iNbJob+ 1);
+                    //Console.WriteLine(ManageLang.GetString("view_modif") + (iNbJob + 1));
                     try
                     {
                         ShowModifyJob(iNbJob);
@@ -297,7 +275,7 @@ namespace EasySave.view
                     }
                     break;
                 case "D":
-                    Console.WriteLine(ManageLang.GetString("view_suppr") + iNbJob + 1);
+                    Console.WriteLine(ManageLang.GetString("view_suppr") + (iNbJob + 1));
                     try
                     {
                         ShowDeleteJob(iNbJob);
@@ -593,12 +571,21 @@ namespace EasySave.view
             string sNameJob = BackUpManager.listBackUps[iIndexJob].name ;
             string sSourcePath = BackUpManager.listBackUps[iIndexJob].sourceDirectory;
             string sDestinationPath = BackUpManager.listBackUps[iIndexJob].targetDirectory;
-            Type type = BackUpManager.listBackUps[iIndexJob].GetType();
-            
-            int iBackupMode = 1;
+
+            Type backUpType = BackUpManager.listBackUps[iIndexJob].GetType();
+            string sbackUpMode;
+            string typeJob = backUpType.FullName;
+            if (typeJob.Contains("Complete"))
+            {
+                sbackUpMode = ManageLang.GetString("view_add_complet");
+            }
+            else
+            {
+                sbackUpMode = ManageLang.GetString("view_add_diff");
+            }
 
             Console.WriteLine("\n=======================EasySave=======================");
-            Console.WriteLine(ManageLang.GetString("view_menu_nameJob") + " (" + iIndexJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + (iBackupMode == 1 ? ManageLang.GetString("view_add_diff") : ManageLang.GetString("view_add_confirm")));
+            Console.WriteLine(ManageLang.GetString("view_menu_nameJob") + " (" + iIndexJob + ") : " + sNameJob + " [" + sSourcePath + " -> " + sDestinationPath + "] | " + sbackUpMode );
             Console.WriteLine(ManageLang.GetString("view_supp_confirm"));
             Console.Write(ManageLang.GetString("view_waitingAswer"));
             sAnswer = Console.ReadLine();
@@ -633,10 +620,14 @@ namespace EasySave.view
                 {
                     case "1":
                         Console.WriteLine(ManageLang.GetString("view_param_AffichJSON"));
+                        settings.LogType = "JSON";
+                        settings.StateType = "JSON";
                         bSecurity = true;
                         break;
                     case "2":
                         Console.WriteLine(ManageLang.GetString("view_param_AffichXML"));
+                        settings.LogType = "XML";
+                        settings.StateType = "XML";
                         bSecurity = true;
                         break;
                     case "exit":

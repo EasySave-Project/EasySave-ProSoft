@@ -153,6 +153,12 @@
   <data name="error_saveComplete" xml:space="preserve">
     <value>Error : during full backup :</value>
   </data>
+  <data name="error_saveDifferential" xml:space="preserve">
+    <value>Error : during differential backup</value>
+  </data>
+  <data name="error_SourcePath_NotFound" xml:space="preserve">
+    <value>Error : The source directory does not exist or could not be found :</value>
+  </data>
   <data name="error_UnknowCmd" xml:space="preserve">
     <value>Error : Unknown order</value>
   </data>

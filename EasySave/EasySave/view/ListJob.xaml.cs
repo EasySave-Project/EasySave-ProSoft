@@ -46,6 +46,13 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
         }
+
+        private void Btn_AddJob_Click(object sender, RoutedEventArgs e)
+        {
+            AddJob addjobg = new AddJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = addjobg;
+        }
     }
 
 }
