@@ -28,11 +28,11 @@ namespace EasySave.model
             try
             {
                 FileUtils.DifferentialCopyDirectory(name, sourceDirectory, targetDirectory);
-                Console.WriteLine(ConsoleView.GetLineLanguage(53));
+                Console.WriteLine(ManageLang.GetString("view_SaveDifferential"));
             }
             catch (Exception e)
             {
-                Console.WriteLine(ConsoleView.GetLineLanguage(54) + e.Message);
+                Console.WriteLine(ManageLang.GetString("error_saveDifferential") + " : " + e.Message);
             }
         }
     }
