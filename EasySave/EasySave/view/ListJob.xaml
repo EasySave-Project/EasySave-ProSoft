@@ -82,10 +82,10 @@
             <Rectangle x:Name="Rectangle_Job1" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="647" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job1" Content="Nom travail 1" HorizontalAlignment="Left" Height="24" Margin="19,8,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
             <Canvas>
-                <Button x:Name="BtnPlay_Job1" Canvas.Left="0" Canvas.Top="0" Margin="584,5,120,684"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30">
+                <Button x:Name="BtnPlay_Job1" Canvas.Left="0" Canvas.Top="0" Margin="584,5,120,684"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job1_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnEdit_job1" Canvas.Left="0" Canvas.Top="0" Margin="657,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="39" Width="43">
+                <Button x:Name="BtnEdit_job1" Canvas.Left="0" Canvas.Top="0" Margin="657,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="39" Width="43" Click="BtnEdit_job1_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
                 <Button x:Name="BtnDelete_job1" Canvas.Left="0" Canvas.Top="0" Margin="701,4,0,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="35" Width="46">
@@ -98,7 +98,7 @@
             <Rectangle x:Name="Rectangle_Job2" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job2" Content="Nom travail 2" HorizontalAlignment="Left" Height="24" Margin="20,0,0,0" VerticalAlignment="Center" Width="131" FontFamily="Arial Black" FontSize="14"/>
             <Canvas Grid.ColumnSpan="2">
-                <Button x:Name="BtnPlay_Job2" Canvas.Left="0" Canvas.Top="0" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30">
+                <Button x:Name="BtnPlay_Job2" Canvas.Left="0" Canvas.Top="0" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job2_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
                 <Button x:Name="BtnEdit_job2" Canvas.Left="0" Canvas.Top="0" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
@@ -114,7 +114,7 @@
             <Rectangle x:Name="Rectangle_Job3" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job3" Content="Nom travail 3" HorizontalAlignment="Left" Height="24" Margin="21,0,0,0" VerticalAlignment="Center" Width="131" FontFamily="Arial Black" FontSize="14"/>
             <Canvas>
-                <Button x:Name="BtnPlay_Job3" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30">
+                <Button x:Name="BtnPlay_Job3" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job3_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
                 <Button x:Name="BtnEdit_job3" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
@@ -130,7 +130,7 @@
             <Rectangle x:Name="Rectangle_Job4" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job4" Content="Nom travail 4" HorizontalAlignment="Left" Height="24" Margin="19,0,0,0" VerticalAlignment="Center" Width="131" FontFamily="Arial Black" FontSize="14"/>
             <Canvas>
-                <Button x:Name="BtnPlay_Job4" Margin="583,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30">
+                <Button x:Name="BtnPlay_Job4" Margin="583,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job4_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
                 <Button x:Name="BtnEdit_job4" Margin="656,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
@@ -146,7 +146,7 @@
             <Rectangle x:Name="Rectangle_Job5" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="647" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job5" Content="Nom travail 5" HorizontalAlignment="Left" Height="24" Margin="19,8,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
             <Canvas>
-                <Button x:Name="BtnPlay_Job5" Margin="583,4,120,685"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" >
+                <Button x:Name="BtnPlay_Job5" Margin="583,4,120,685"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job5_Click" >
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
                 <Button x:Name="BtnEdit_job5" Margin="656,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
