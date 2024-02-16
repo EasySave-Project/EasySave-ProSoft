@@ -24,7 +24,7 @@ namespace EasySave
         //=======================================================================================================
 
         Log log = new Log();
-        Settings s = new Settings();
+        Settings settings = new Settings();
         DateTime dateHeure = DateTime.Now;
         private long long_FileTransferTime;
         private long long_AfterFileTransferTime;
@@ -81,11 +81,12 @@ namespace EasySave
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
             string filePath = destPath + "\\log_backup.json";
-            if(s.LogType == "" ||  s.LogType == null)
+            if(settings.LogType == "" || settings.LogType == null)
             {
-                s.LogType = "JSON";
+                settings.LogType = "JSON";
             }
-            if (s.LogType == "JSON")
+
+            if (settings.LogType == "JSON")
             {
                 // Si le fichier JSON existe déjà dans le dossier de destination
                 if (File.Exists(filePath))
@@ -100,7 +101,7 @@ namespace EasySave
                     filePath = destPath + "\\log_backup.json";
                     File.WriteAllText(filePath, json);
                 }
-            } else if (s.LogType == "XML")
+            } else if (settings.LogType == "XML")
             {
                 // FICHIER XML
                 //=========================

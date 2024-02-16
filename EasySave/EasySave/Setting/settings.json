@@ -1,5 +1,5 @@
 {
-  "LogType": "JSON",
-  "StateType": "JSON",
+  "LogType": "XML",
+  "StateType": "XML",
   "Lang": "fr"
 }

@@ -30,7 +30,7 @@ namespace EasySave.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(ConsoleView.GetLineLanguage(63) + e.Message);
+                Console.WriteLine(ManageLang.GetString("error_Loading") + e.Message);
                 return new List<BackUpJob>();
             }
         }
