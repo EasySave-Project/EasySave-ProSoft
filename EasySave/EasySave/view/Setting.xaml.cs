@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasySave.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,11 @@ namespace EasySave.view
             InitializeComponent();
         }
 
-        private void setting_Click(object sender, RoutedEventArgs e)
+        private void list_Click(object sender, RoutedEventArgs e)
         {
-            Setting setting = new Setting();
+            ListJob listJob = new ListJob();
             Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = setting;
+            parentWindow.Content = listJob;
         }
 
         private void home_Click(object sender, RoutedEventArgs e)
@@ -39,11 +40,11 @@ namespace EasySave.view
             parentWindow.Content = home;
         }
 
-        private void list_Click(object sender, RoutedEventArgs e)
+        private void setting_Click(object sender, RoutedEventArgs e)
         {
-            ListJob listJob = new ListJob();
+            Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = listJob;
+            parentWindow.Content = setting;
         }
     }
 }

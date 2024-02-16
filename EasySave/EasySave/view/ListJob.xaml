@@ -17,14 +17,18 @@
         <Rectangle HorizontalAlignment="Left" Height="587" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
         <Rectangle HorizontalAlignment="Left" Height="587" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
 
-        <Button x:Name="List_job" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="List_job_Click">
+        <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="Btn_ListJob_Click" >
             <Grid Width="256">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="109*"/>
+                    <ColumnDefinition Width="19*"/>
+                </Grid.ColumnDefinitions>
                 <Image Source="/img/home.png" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-                <TextBlock VerticalAlignment="Center" Margin="80,0,92,0" FontSize="24" Foreground="White" FontFamily="Arial Black"><Run Text="List"/><Run Text="e"/></TextBlock>
-                <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
+                <TextBlock VerticalAlignment="Center" Margin="80,0,54,0" FontSize="24" Foreground="White" FontFamily="Arial Black"><Run Text="List"/><Run Text="e"/></TextBlock>
+                <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" Grid.ColumnSpan="2"/>
             </Grid>
         </Button>
-        <Button x:Name="Home_click" Margin="0,0,860,612" Background= "White" BorderThickness="0" Click="Home_click_1" >
+        <Button x:Name="Btn_Home" Margin="0,0,860,612" Background= "White" BorderThickness="0" Click="Btn_Home_Click" >
             <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Center" Width="223" Source="/img/logo_easysave.png"/>
         </Button>
 
@@ -35,7 +39,7 @@
                 <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
             </Grid>
         </Button>
-        <Button x:Name="Setting" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="240" Background="#3A57E8" Margin="0,384,0,0" Click="Setting_Click"  >
+        <Button x:Name="Btn_Setting" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="240" Background="#3A57E8" Margin="0,384,0,0" Click="Btn_Setting_Click" >
             <Grid Width="256">
 
                 <Image Source="/img/setting.png" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335"/>
@@ -57,75 +61,75 @@
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,266,0,0" Stroke="Black" VerticalAlignment="Top" Width="190" Fill="#D9D9D9">
 
         </Rectangle>
-        <Label Content="Listes des Travaux" HorizontalAlignment="Left" Height="24" Margin="316,274,0,0" VerticalAlignment="Top" Width="166" FontFamily="Arial Black" FontSize="14"/>
+        <Label x:Name="Label_ListJob" Content="Listes des Travaux" HorizontalAlignment="Left" Height="24" Margin="316,274,0,0" VerticalAlignment="Top" Width="166" FontFamily="Arial Black" FontSize="14"/>
 
 
         <Button Margin="322,150,649,520" Background="#D9D9D9" BorderBrush="Transparent">
             <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
         </Button>
-        <Button Margin="322,150,649,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
+        <Button x:Name="Btn_PauseAll" Margin="322,150,649,520" Background="#D9D9D9" BorderBrush="Transparent">
+            <TextBlock x:Name="TextBlock_PauseAll" VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
         </Button>
         <StackPanel Margin="322,150,83,516" Orientation="Horizontal" HorizontalAlignment="Right"/>
-        <Button Margin="628,150,343,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102" TextAlignment="Center"><Run Language="fr-fr" Text="Run"/><Run Text=" All"/></TextBlock>
+        <Button x:Name="Btn_RunAll" Margin="628,150,343,520" Background="#D9D9D9" BorderBrush="Transparent">
+            <TextBlock x:Name="TextBlock_RunAll" VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102" TextAlignment="Center"><Run Language="fr-fr" Text="Run"/><Run Text=" All"/></TextBlock>
         </Button>
-        <Button Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="16" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="121" HorizontalAlignment="Center" TextAlignment="Center"><Run Text="Add New "/><LineBreak/><Run Text="J"/><Run Text="o"/><Run Text="b"/></TextBlock>
+        <Button x:Name="Btn_AddJob" Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent">
+            <TextBlock x:Name="TextBlock_AddNewJob" VerticalAlignment="Center" FontSize="16" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="121" HorizontalAlignment="Center" TextAlignment="Center"><Run Text="Add New "/><LineBreak/><Run Text="J"/><Run Text="o"/><Run Text="b"/></TextBlock>
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,320,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
-        <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="319,324,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Button Margin="739,324,318,365"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Label x:Name="LabelName_Job1" Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="319,324,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
+        <Button x:Name="BtnPlay_Job1" Margin="739,324,318,365"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="808,317,249,363" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnEdit_job1" Margin="808,317,249,363" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="857,315,200,365" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnDelete_job1" Margin="857,315,200,365" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,380,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,440,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="301,500,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="301,561,0,0" Stroke="Black" VerticalAlignment="Top" Width="493" Fill="#D9D9D9"/>
-        <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,388,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="321,449,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,508,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Label Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,569,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-        <Button Margin="739,385,318,304"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Label x:Name="LabelName_Job2" Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,388,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
+        <Label x:Name="LabelName_Job3" Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="321,449,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
+        <Label x:Name="LabelName_Job4" Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,508,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
+        <Label x:Name="LabelName_Job5" Content="Nom travail" HorizontalAlignment="Left" Height="24" Margin="320,569,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
+        <Button x:Name="BtnPlay_Job2" Margin="739,385,318,304"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="739,445,318,244"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnPlay_Job3" Margin="739,445,318,244"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="739,505,318,184"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnPlay_Job4" Margin="739,505,318,184"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="739,565,318,124"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnPlay_Job5" Margin="739,565,318,124"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="808,381,249,299" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnEdit_job2" Margin="808,381,249,299" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="808,441,249,239" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnEdit_job3" Margin="808,441,249,239" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="808,501,249,179" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnEdit_job4" Margin="808,501,249,179" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="808,561,249,119" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnEdit_job5" Margin="808,561,249,119" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="857,381,200,299" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnDelete_job2" Margin="857,381,200,299" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="857,441,200,239" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnDelete_job3" Margin="857,441,200,239" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="857,501,200,179" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnDelete_job4" Margin="857,501,200,179" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        <Button Margin="857,561,200,119" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
+        <Button x:Name="BtnDelete_job5" Margin="857,561,200,119" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215">
             <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
         </Button>
         <Button Margin="320,611,740,71" Background="#D9D9D9" BorderBrush="Transparent">
