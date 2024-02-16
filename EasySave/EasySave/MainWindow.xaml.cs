@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using EasySave.controller;
+using EasySave.services;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +21,13 @@ namespace EasySave
         public MainWindow()
         {
             InitializeComponent();
+
+            // Instanciation
+            BackUpManager bmManager = new BackUpManager();
+            StateManager stateManager = new StateManager();
+            LogManager logManager = new LogManager();
+            BackUpController controller = new BackUpController(bmManager, logManager, stateManager);
+
             view.Home home = new view.Home();
             // Affichez la première page au démarrage de l'application
             Content = home;
