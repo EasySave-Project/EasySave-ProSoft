@@ -23,6 +23,9 @@ namespace EasySave
             SettingManager.ReadAllSettings();
         
             InitializeComponent();
+            view.Home home = new view.Home();
+            // Affichez la première page au démarrage de l'application
+            Content = home;
         }
 
         private void initSettings(object sender, EventArgs e)
