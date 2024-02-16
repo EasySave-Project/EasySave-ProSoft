@@ -94,12 +94,6 @@ public class BackUpManager
     }    
     public void AddBackUpJob(BackUpType type, String jobName, String sourceDir, String targetDir)
     {
-        if (listBackUps.Count >= 5)
-        {
-            Console.WriteLine(ConsoleView.GetLineLanguage(57));
-            return; 
-            //throw new InvalidOperationException("Le nombre maximal de jobs est atteint.");
-        }
         if (listBackUps.Any(j => j.name == jobName))
         {
             Console.WriteLine(ConsoleView.GetLineLanguage(59));

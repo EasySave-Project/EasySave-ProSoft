@@ -4,5 +4,35 @@
     "name": "test1",
     "sourceDirectory": "C:\\mt103",
     "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
+    "name": "test2",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
+    "name": "test3",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
+    "name": "test4",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
+    "name": "test5",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test6",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
   }
 ]
