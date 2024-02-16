@@ -1,14 +1,8 @@
 [
   {
     "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "Test11111",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test22",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+    "name": "test1",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
   }
 ]
