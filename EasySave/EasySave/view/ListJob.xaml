@@ -74,7 +74,7 @@
         <Button x:Name="Btn_RunAll" Margin="628,150,343,520" Background="#D9D9D9" BorderBrush="Transparent">
             <TextBlock x:Name="TextBlock_RunAll" VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102" TextAlignment="Center"><Run Language="fr-fr" Text="Run"/><Run Text=" All"/></TextBlock>
         </Button>
-        <Button x:Name="Btn_AddJob" Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent">
+        <Button x:Name="Btn_AddJob" Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_AddJob_Click">
             <TextBlock x:Name="TextBlock_AddNewJob" VerticalAlignment="Center" FontSize="16" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="121" HorizontalAlignment="Center" TextAlignment="Center"><Run Text="Add New "/><LineBreak/><Run Text="J"/><Run Text="o"/><Run Text="b"/></TextBlock>
         </Button>
         <!-- JOB 1 -->
@@ -88,7 +88,7 @@
                 <Button x:Name="BtnEdit_job1" Canvas.Left="0" Canvas.Top="0" Margin="657,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="39" Width="43" Click="BtnEdit_job1_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnDelete_job1" Canvas.Left="0" Canvas.Top="0" Margin="701,4,0,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="35" Width="46">
+                <Button x:Name="BtnDelete_job1" Canvas.Left="0" Canvas.Top="0" Margin="701,4,0,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="35" Width="46" Click="BtnDelete_job1_Click">
                     <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
             </Canvas>
@@ -101,10 +101,10 @@
                 <Button x:Name="BtnPlay_Job2" Canvas.Left="0" Canvas.Top="0" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job2_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnEdit_job2" Canvas.Left="0" Canvas.Top="0" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
+                <Button x:Name="BtnEdit_job2" Canvas.Left="0" Canvas.Top="0" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job2_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnDelete_job2" Canvas.Left="0" Canvas.Top="0" Margin="701,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39">
+                <Button x:Name="BtnDelete_job2" Canvas.Left="0" Canvas.Top="0" Margin="701,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job2_Click">
                     <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
             </Canvas>
@@ -117,10 +117,10 @@
                 <Button x:Name="BtnPlay_Job3" Margin="584,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job3_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnEdit_job3" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
+                <Button x:Name="BtnEdit_job3" Margin="657,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job3_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnDelete_job3" Margin="701,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39">
+                <Button x:Name="BtnDelete_job3" Margin="701,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job3_Click">
                     <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
             </Canvas>
@@ -133,10 +133,10 @@
                 <Button x:Name="BtnPlay_Job4" Margin="583,5,120,5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job4_Click">
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnEdit_job4" Margin="656,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
+                <Button x:Name="BtnEdit_job4" Margin="656,1,47,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job4_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnDelete_job4" Margin="700,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39">
+                <Button x:Name="BtnDelete_job4" Margin="700,1,0,0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job4_Click">
                     <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
             </Canvas>
@@ -149,10 +149,10 @@
                 <Button x:Name="BtnPlay_Job5" Margin="583,4,120,685"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="30" Click="BtnPlay_Job5_Click" >
                     <Image Source="/img/play.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnEdit_job5" Margin="656,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39">
+                <Button x:Name="BtnEdit_job5" Margin="656,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job5_Click">
                     <Image Source="/img/edit.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnDelete_job5" Margin="700,0,0,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39">
+                <Button x:Name="BtnDelete_job5" Margin="700,0,0,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job5_Click">
                     <Image Source="/img/delete.png" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
             </Canvas>

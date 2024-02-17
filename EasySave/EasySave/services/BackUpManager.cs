@@ -110,8 +110,9 @@ public class BackUpManager
         }
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
-         
-        listBackUps.Add(addBackUpJob);
+
+        //listBackUps.Add(addBackUpJob);
+        listBackUps.Insert(0, addBackUpJob);
         SaveJobsToJson();
     }
 
