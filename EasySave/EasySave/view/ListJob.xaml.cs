@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Reflection;
 
 namespace EasySave.view
 {
@@ -27,6 +28,7 @@ namespace EasySave.view
     {
         private int indexPage = 1;
         private int nbPage = 0;
+        private List<String> sNameJob = new List<string>();
 
         public ListJob()
         {
@@ -45,7 +47,7 @@ namespace EasySave.view
         private void ShowListJob()
         {
             // Récupération de la liste des jobs
-            List<String> sNameJob = new List<string>();
+            sNameJob.Clear();
             foreach (BackUpJob bj in BackUpManager.listBackUps)
             {
                 sNameJob.Add(bj.name);
@@ -138,11 +140,12 @@ namespace EasySave.view
             index_SelectJob--;
             try
             {
-                backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+                //backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+                MessageBox.Show("index du job : " + index_SelectJob);
             }
             catch
             {
-                MessageBox.Show("Erreur lors de l'execution du job");
+                MessageBox.Show("Erreur lors de l'execution du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -172,8 +175,118 @@ namespace EasySave.view
         }
 
         //==============================================
+        // AJOUTER jobs
+        //==============================================
+        private void Btn_AddJob_Click(object sender, RoutedEventArgs e)
+        {
+            //AddJob addjob = new AddJob();
+            //Window parentWindow = Window.GetWindow(this);
+            //parentWindow.Content = addjob;
+        }
+
+        //==============================================
         // MODIFIER jobs
         //==============================================
+
+        private void EditJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Modifier du job
+            index_SelectJob--;
+            try
+            {
+                //EditJob editjob = new EditJob(index_SelectJob);
+                //Window parentWindow = Window.GetWindow(this);
+                //parentWindow.Content = editjob;
+                MessageBox.Show("Modification : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
+
+            }
+            catch
+            {
+                MessageBox.Show("Erreur lors de l'ouverture de la page Modifier Job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void BtnEdit_job1_Click(object sender, RoutedEventArgs e)
+        {
+            EditJob(1);
+        }
+
+        private void BtnEdit_job2_Click(object sender, RoutedEventArgs e)
+        {
+            EditJob(2);
+        }
+
+        private void BtnEdit_job3_Click(object sender, RoutedEventArgs e)
+        {
+            EditJob(3);
+        }
+
+        private void BtnEdit_job4_Click(object sender, RoutedEventArgs e)
+        {
+            EditJob(4);
+        }
+
+        private void BtnEdit_job5_Click(object sender, RoutedEventArgs e)
+        {
+            EditJob(5);
+        }
+
+        //==============================================
+        // SUPPRIMER jobs
+        //==============================================
+
+        private void DeleteJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Supprimer du job
+            index_SelectJob--;
+            try
+            {
+                string sMsgBox = "Voulez-vous vraiment supprimer le travaux : " + sNameJob[index_SelectJob];
+                MessageBoxResult result = MessageBox.Show(sMsgBox, "Confirmation de suppression", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    // Oui
+                    //backUpController.InitiateRemoveBackup(sNameJob[index_SelectJob]);
+                    MessageBox.Show("Suppression : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Erreur lors de la suppression du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+        private void BtnDelete_job1_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteJob(1);
+        }
+
+        private void BtnDelete_job2_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteJob(2);
+        }
+
+        private void BtnDelete_job3_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteJob(3);
+        }
+
+        private void BtnDelete_job4_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteJob(4);
+        }
+
+        private void BtnDelete_job5_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteJob(5);
+        }
 
         //==============================================
         // Bouton de navigation
@@ -220,11 +333,6 @@ namespace EasySave.view
             }
         }
 
-
-        private void BtnEdit_job1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 
 }
