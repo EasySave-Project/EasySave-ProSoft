@@ -26,7 +26,7 @@ public class BackUpManager
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ConsoleView.GetLineLanguage(55) + ex.Message);
+            Console.WriteLine(ManageLang.GetString("error_save") + ex.Message);
         }
     }
 
@@ -53,7 +53,7 @@ public class BackUpManager
     {
         if (indexJob > 4 && indexJob < 0)
         {
-            throw new ArgumentException(ConsoleView.GetLineLanguage(56));
+            throw new ArgumentException(ManageLang.GetString("error_JobSuperior5"));
         }
         return listBackUps[indexJob];
     }
@@ -95,15 +95,9 @@ public class BackUpManager
     }    
     public void AddBackUpJob(BackUpType type, String jobName, String sourceDir, String targetDir)
     {
-        if (listBackUps.Count >= 5)
-        {
-            Console.WriteLine(ConsoleView.GetLineLanguage(57));
-            return; 
-            //throw new InvalidOperationException("Le nombre maximal de jobs est atteint.");
-        }
         if (listBackUps.Any(j => j.name == jobName))
         {
-            Console.WriteLine(ConsoleView.GetLineLanguage(59));
+            Console.WriteLine(ManageLang.GetString("error_JobSuperior5"));
             return;
             //throw new InvalidOperationException("Un job avec le même nom existe déjà.");
 

@@ -1,5 +1,8 @@
-﻿using EasySave.controller;
+
+using EasySave.controller;
 using EasySave.services;
+using EasySave.utils;
+using System.Configuration;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +23,8 @@ namespace EasySave
     {
         public MainWindow()
         {
+            SettingManager.ReadAllSettings();
+        
             InitializeComponent();
 
             // Instanciation
@@ -31,6 +36,11 @@ namespace EasySave
             view.Home home = new view.Home();
             // Affichez la première page au démarrage de l'application
             Content = home;
+        }
+
+        private void initSettings(object sender, EventArgs e)
+        {
+            
         }
     }
 }

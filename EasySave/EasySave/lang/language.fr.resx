@@ -153,6 +153,12 @@
   <data name="error_saveComplete" xml:space="preserve">
     <value>Erreur : lors de la sauvegarde complète</value>
   </data>
+  <data name="error_saveDifferential" xml:space="preserve">
+    <value>Erreur : lors de la sauvegarde différentiel</value>
+  </data>
+  <data name="error_SourcePath_NotFound" xml:space="preserve">
+    <value>Erreur : Le répertoire source n'existe pas ou n'a pas pu être trouvé :</value>
+  </data>
   <data name="error_UnknowCmd" xml:space="preserve">
     <value>Erreur : Commande inconnu</value>
   </data>

@@ -34,12 +34,12 @@ namespace EasySave.model
             {
                
                 FileUtils.CompleteCopyDirectory(name, sourceDirectory, targetDirectory);
-                Console.WriteLine(ConsoleView.GetLineLanguage(50));
+                Console.WriteLine(ManageLang.GetString("view_saveComplete"));
                 
             }
             catch (Exception e)
             {
-                Console.WriteLine(ConsoleView.GetLineLanguage(51) + e.Message);
+                Console.WriteLine(ManageLang.GetString("error_saveComplete") + " : " + e.Message);
             }
         }
     }

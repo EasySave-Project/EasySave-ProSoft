@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +45,33 @@
     <Resource Include="img\patch_note.png" />
     <Resource Include="img\Play.png" />
     <Resource Include="img\setting.png" />
+    <Folder Include="conf\" />
+    <Folder Include="log\" />
+    <Folder Include="Setting\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="lang\language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>language.resx</DependentUpon>
+    </Compile>
+    <Compile Update="lang\language.fr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>language.fr.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="lang\language.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="lang\language.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
