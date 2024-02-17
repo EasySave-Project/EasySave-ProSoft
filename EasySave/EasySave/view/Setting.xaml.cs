@@ -1,4 +1,5 @@
 ﻿using EasySave.view;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System;
+using System.IO;
 
 namespace EasySave.view
 {
@@ -46,5 +49,11 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
         }
+
+        private void Btn_Add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

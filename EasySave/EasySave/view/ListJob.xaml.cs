@@ -179,9 +179,9 @@ namespace EasySave.view
         //==============================================
         private void Btn_AddJob_Click(object sender, RoutedEventArgs e)
         {
-            //AddJob addjob = new AddJob();
-            //Window parentWindow = Window.GetWindow(this);
-            //parentWindow.Content = addjob;
+            AddJob addjobg = new AddJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = addjobg;
         }
 
         //==============================================
@@ -312,7 +312,7 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
         }
-
+        
         private void Btn_Right_Index_Click(object sender, RoutedEventArgs e)
         {
             if (indexPage < nbPage)
@@ -332,7 +332,6 @@ namespace EasySave.view
                 ShowListJob();
             }
         }
-
     }
 
 }
