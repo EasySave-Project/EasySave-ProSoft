@@ -62,16 +62,8 @@
 
         </Rectangle>
         <Label x:Name="Label_ListJob" Content="Listes des Travaux" HorizontalAlignment="Left" Height="24" Margin="316,274,0,0" VerticalAlignment="Top" Width="166" FontFamily="Arial Black" FontSize="14"/>
-
-
-        <Button Margin="322,150,649,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
-        </Button>
-        <Button x:Name="Btn_PauseAll" Margin="322,150,649,520" Background="#D9D9D9" BorderBrush="Transparent">
-            <TextBlock x:Name="TextBlock_PauseAll" VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102"><Run Language="fr-fr" Text="Pause All"/></TextBlock>
-        </Button>
         <StackPanel Margin="322,150,83,516" Orientation="Horizontal" HorizontalAlignment="Right"/>
-        <Button x:Name="Btn_RunAll" Margin="628,150,343,520" Background="#D9D9D9" BorderBrush="Transparent">
+        <Button x:Name="Btn_RunAll" Margin="320,150,651,520" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_RunAll_Click">
             <TextBlock x:Name="TextBlock_RunAll" VerticalAlignment="Center" FontSize="20" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="102" TextAlignment="Center"><Run Language="fr-fr" Text="Run"/><Run Text=" All"/></TextBlock>
         </Button>
         <Button x:Name="Btn_AddJob" Margin="889,150,82,520" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_AddJob_Click">

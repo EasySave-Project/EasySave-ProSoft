@@ -1,29 +1,11 @@
 ﻿using EasySave.model;
 using EasySave.services;
-using EasySave.controller;
-using EasySave.utils;
-using EasySave.view;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Reflection;
 
 namespace EasySave.view
 {
-    /// <summary>
-    /// Logique d'interaction pour ListJob.xaml
-    /// </summary>
+
     public partial class ListJob : Page
     {
         private int indexPage = 1;
@@ -40,7 +22,7 @@ namespace EasySave.view
         // Code de la page ListJob
         //==============================================
 
-        public BackUpController backUpController { get; set; }
+        private MainWindow _MainWindows = new MainWindow();
 
         string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
 
@@ -140,12 +122,11 @@ namespace EasySave.view
             index_SelectJob--;
             try
             {
-                //backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
-                MessageBox.Show("index du job : " + index_SelectJob);
+                _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
             }
             catch
             {
-                MessageBox.Show("Erreur lors de l'execution du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show("Erreur lors de l'execution du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -196,18 +177,10 @@ namespace EasySave.view
 
             // Modifier du job
             index_SelectJob--;
-            try
-            {
-                //EditJob editjob = new EditJob(index_SelectJob);
-                //Window parentWindow = Window.GetWindow(this);
-                //parentWindow.Content = editjob;
-                MessageBox.Show("Modification : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
-
-            }
-            catch
-            {
-                MessageBox.Show("Erreur lors de l'ouverture de la page Modifier Job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+            EditJob editjob = new EditJob(index_SelectJob);
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = editjob;
+            //MessageBox.Show("Modification : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob); 
         }
 
         private void BtnEdit_job1_Click(object sender, RoutedEventArgs e)
@@ -250,17 +223,18 @@ namespace EasySave.view
             try
             {
                 string sMsgBox = "Voulez-vous vraiment supprimer le travaux : " + sNameJob[index_SelectJob];
-                MessageBoxResult result = MessageBox.Show(sMsgBox, "Confirmation de suppression", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult result = System.Windows.MessageBox.Show(sMsgBox, "Confirmation de suppression", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
                     // Oui
-                    //backUpController.InitiateRemoveBackup(sNameJob[index_SelectJob]);
-                    MessageBox.Show("Suppression : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
+                    _MainWindows.backUpController.InitiateRemoveBackup(sNameJob[index_SelectJob]);
+                    System.Windows.MessageBox.Show("Suppression : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
+                    ShowListJob();
                 }
             }
             catch
             {
-                MessageBox.Show("Erreur lors de la suppression du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show("Erreur lors de la suppression du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
         private void BtnDelete_job1_Click(object sender, RoutedEventArgs e)
@@ -286,6 +260,14 @@ namespace EasySave.view
         private void BtnDelete_job5_Click(object sender, RoutedEventArgs e)
         {
             DeleteJob(5);
+        }
+
+        //==============================================
+        // Bouton ALL
+        //==============================================
+        private void Btn_RunAll_Click(object sender, RoutedEventArgs e)
+        {
+            _MainWindows.backUpController.InitiateAllBackUpJobs();
         }
 
         //==============================================

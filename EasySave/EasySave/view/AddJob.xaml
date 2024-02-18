@@ -68,7 +68,7 @@
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem Content="Complète"/>
+            <ComboBoxItem Content="Complète" IsSelected="True"/>
             <ComboBoxItem Content="Différentiel"/>
         </ComboBox>
         <Button x:Name="Btn_AddJob" Content="Ajouter" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_AddJob_Click"/>
