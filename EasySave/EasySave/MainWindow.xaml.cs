@@ -1,5 +1,5 @@
-
 using EasySave.controller;
+using EasySave.model;
 using EasySave.services;
 using EasySave.utils;
 using System.Configuration;
@@ -26,10 +26,12 @@ namespace EasySave
 
         public MainWindow()
         {
-            SettingManager.ReadAllSettings();
-        
             InitializeComponent();
             InitConfFolder();
+
+            Settings s = new Settings();
+             
+            ManageLang.ChangeLanguage(s.Lang);
 
             // Instanciation
             BackUpManager bmManager = new BackUpManager();
@@ -72,5 +74,6 @@ namespace EasySave
                 Directory.CreateDirectory(destPath);
             }
         }
+
     }
 }

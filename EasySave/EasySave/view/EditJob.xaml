@@ -43,13 +43,6 @@
             </Grid>
         </Button>
         <Label Content="Edit Job" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="491" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
-        <Button HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="106" Margin="5,643,0,0">
-            <Grid Width="256" RenderTransformOrigin="0.243,0.609">
-
-                <Image Source="/img/flag_french.png" Height="28" Width="39" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,0,0,0" RenderTransformOrigin="0.542,0.335"/>
-                <TextBlock VerticalAlignment="Center" Margin="57,0,153,0" FontSize="20" Foreground="White" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Text="FR"/>
-            </Grid>
-        </Button>
         <Rectangle HorizontalAlignment="Left" Height="490" Margin="321,162,0,0" VerticalAlignment="Top" Width="720" Fill="#FFDBDBDB"/>
         <Label x:Name="Label_NameJob" Content="Nom du Job" HorizontalAlignment="Left" Margin="400,212,0,0" VerticalAlignment="Top" Width="117" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D"/>
         <TextBox x:Name="TextBox_NameJob" HorizontalAlignment="Left" Margin="400,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontFamily="Arial Narrow" FontSize="16" />

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Globalization;
 using System.Resources;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace EasySave.services
 {
@@ -15,12 +16,12 @@ namespace EasySave.services
 
         static ManageLang()
         {
-            _rm = new ResourceManager("EasySave.lang.language", Assembly.GetExecutingAssembly());
+            _rm = new ResourceManager("EasySave.lang.langage", Assembly.GetExecutingAssembly());
         }
 
         public static string? GetString(string name)
         {
-            return _rm.GetString(name);
+            return _rm.GetString(name, CultureInfo.CurrentUICulture);
         }
 
         public static void ChangeLanguage(string language)
@@ -29,6 +30,8 @@ namespace EasySave.services
 
             CultureInfo.CurrentCulture = cultureInfo;
             CultureInfo.CurrentUICulture = cultureInfo;
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
         }
     }
 }
