@@ -92,7 +92,29 @@ namespace EasySave.utils
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 string tempPath = Path.Combine(targetDir, file.Name);
-                file.CopyTo(tempPath, true);
+                if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(file.Name).ToLower()))
+                {
+                    // todo executer crypto soft sur sourceFile, targetFile
+                    string sSourcePath_File = Path.Combine(sourceDir, file.Name);
+                    string sTargetPath_File = Path.Combine(targetDir, file.Name);
+                    string sClef = "secret";
+                    string argument = "\"" + sSourcePath_File + "\" \"" + sTargetPath_File + "\" \"" + sClef + "\"";
+                    // Obtenir le fichier ressource
+                    var resource = cryptoSoft.ressource_cryptosoft.cryptoSoft_V4;
+                    // Créer un fichier temporaire avec le contenu du fichier ressource
+                    string tempPath_crypto = System.IO.Path.GetTempFileName();
+                    File.WriteAllBytes(tempPath_crypto, resource);
+                    // Appeler le .EXE avec les paramètres
+                    var process = Process.Start(tempPath_crypto, argument);
+                    // Attendre que le .EXE se termine
+                    process.WaitForExit();
+                    // Supprimer le fichier temporaire
+                    File.Delete(tempPath_crypto);
+                } 
+                else
+                {
+                    file.CopyTo(tempPath, true);
+                }
                 stateManager.UpdateState_Complete(file.Length);
                 logManager.PushLog(file.Length);
             }
@@ -140,21 +162,22 @@ namespace EasySave.utils
                     {
                         // todo executer crypto soft sur sourceFile, targetFile
                         string sSourcePath_File = sourceFile.FullName;
-                        string sTargetPath_File = targetDir;
+                        string sTargetPath_File = targetFilePath; //targetDir
                         string sClef = "secret";
-
+                        string argument = "\"" + sSourcePath_File + "\" \"" + sTargetPath_File + "\" \"" + sClef + "\"";
                         // Obtenir le fichier ressource
-                        var resource = cryptoSoft.ressource_cryptosoft.cryptosoft_V2;
+                        var resource = cryptoSoft.ressource_cryptosoft.cryptoSoft_V4;
                         // Créer un fichier temporaire avec le contenu du fichier ressource
                         string tempPath = System.IO.Path.GetTempFileName();
                         File.WriteAllBytes(tempPath, resource);
                         // Appeler le .EXE avec les paramètres
-                        var process = Process.Start(tempPath, sSourcePath_File + " " + sTargetPath_File + " " + sClef);
+                        var process = Process.Start(tempPath,argument);
                         // Attendre que le .EXE se termine
                         process.WaitForExit();
                         // Supprimer le fichier temporaire
                         File.Delete(tempPath);
-                    } else
+                    } 
+                    else
                     {
                         sourceFile.CopyTo(targetFilePath, true);
                     }

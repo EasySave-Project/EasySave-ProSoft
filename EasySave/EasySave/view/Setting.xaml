@@ -51,7 +51,7 @@
         </Button>
         <Label Content="{x:Static rs:langage.title_setting}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="400" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
         <Rectangle HorizontalAlignment="Left" Height="520" Margin="280,140,0,0"  VerticalAlignment="Top" Width="780" Fill="#FFE5E5E5"/>
-        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.state_Type}" HorizontalAlignment="Left" Margin="336,175,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.log_Type}" HorizontalAlignment="Left" Margin="336,175,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <!-- ComboBox pour 'LogType' -->
         <ComboBox Margin="342,201,644,499" x:Name="ComboBox_LogType" 
           SelectedValuePath="Content" 
