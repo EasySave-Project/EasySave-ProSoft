@@ -72,6 +72,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>langage.resx</DependentUpon>
     </Compile>
+    <Compile Update="lang\resource_pdf.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>resource_pdf.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -82,6 +87,10 @@
     <EmbeddedResource Update="lang\langage.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>langage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="lang\resource_pdf.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resource_pdf.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

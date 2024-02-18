@@ -2,6 +2,8 @@
 using EasySave.services;
 using System.Xml.Linq;
 using System.IO;
+using System.Diagnostics;
+using System.Windows;
 namespace EasySave.utils
 {
     
@@ -14,28 +16,47 @@ namespace EasySave.utils
 
         public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
-            VerifyDirectoryAndDrive(sourceDir, targetDir);
-            // créer le répertoire target s'il n'existe pas déjà 
-            // on se permet de créer le dossier si il n'est pas déjà créer.
-            Directory.CreateDirectory(targetDir);
+            // Vérifier si l'application de la calculatrice Windows est ouverte
+            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
+            if (!isNotepadRunning)
+            {
+                // Si la calculatrice n'est pas ouverte :
 
+                VerifyDirectoryAndDrive(sourceDir, targetDir);
+                // créer le répertoire target s'il n'existe pas déjà 
+                // on se permet de créer le dossier si il n'est pas déjà créer.
+                Directory.CreateDirectory(targetDir);
 
-            CopyModifierOrAddedFile(sourceDir, targetDir, name);
-            DeleteObsoleteFiles(sourceDir, targetDir);
-            CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
+                CopyModifierOrAddedFile(sourceDir, targetDir, name);
+                DeleteObsoleteFiles(sourceDir, targetDir);
+                CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Erreur : Impossible d'exécuter le Travail, l'application de la calculatrice est ouverte en arrière-plan.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
         public static void CompleteCopyDirectory(string name, string sourceDir, string targetDir)
         {
+            // Vérifier si le processus de la calculatrice est en cours d'exécution
+            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
+            if (!isNotepadRunning)
+            {
+                // Si la calculatrice n'est pas ouverte :
 
-            VerifyDirectoryAndDrive(sourceDir, targetDir);
-            // créer le répertoire target s'il n'existe pas déjà 
-            // on se permet de créer le dossier si il n'est pas déjà créer.
-            Directory.CreateDirectory(targetDir);
+                VerifyDirectoryAndDrive(sourceDir, targetDir);
+                // créer le répertoire target s'il n'existe pas déjà 
+                // on se permet de créer le dossier si il n'est pas déjà créer.
+                Directory.CreateDirectory(targetDir);
 
-            CopyFilesTo(sourceDir, targetDir,name);
-            DeleteObsoleteFiles(sourceDir, targetDir);
-            CopySubdirectoriesRecursively(name, sourceDir, targetDir);
-
+                CopyFilesTo(sourceDir, targetDir,name);
+                DeleteObsoleteFiles(sourceDir, targetDir);
+                CopySubdirectoriesRecursively(name, sourceDir, targetDir);
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Erreur : Impossible d'exécuter le Travail, l'application de la calculatrice est ouverte en arrière-plan.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         public static void VerifyDirectoryAndDrive(string sourceDir, string targetDir)
