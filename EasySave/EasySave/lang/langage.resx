@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_add" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="btn_delete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="error_add_encrypt" xml:space="preserve">
+    <value>This extension is already in the list</value>
+  </data>
+  <data name="error_add_format" xml:space="preserve">
+    <value>Invalid extension format. Please enter the extension starting with a dot.</value>
+  </data>
   <data name="error_Caract" xml:space="preserve">
     <value>Error : Illegal character or unknown number.</value>
   </data>
@@ -164,6 +179,39 @@
   </data>
   <data name="error_UnknowSaisie" xml:space="preserve">
     <value>Error : Value entered not recognised</value>
+  </data>
+  <data name="ext_crypt" xml:space="preserve">
+    <value>Extension to crypt</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>Type of lang :</value>
+  </data>
+  <data name="log_Type" xml:space="preserve">
+    <value>Type of Log :</value>
+  </data>
+  <data name="msgbox_save" xml:space="preserve">
+    <value>settings have been saved successfully ! </value>
+  </data>
+  <data name="release" xml:space="preserve">
+    <value>Release Note</value>
+  </data>
+  <data name="state_Type" xml:space="preserve">
+    <value>Type of State :</value>
+  </data>
+  <data name="title_home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="title_listJob" xml:space="preserve">
+    <value>List of Jobs</value>
+  </data>
+  <data name="title_log" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="title_setting" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="userManual" xml:space="preserve">
+    <value>User Manual</value>
   </data>
   <data name="view_add_AffichJobIsAdd" xml:space="preserve">
     <value>Job Add</value>

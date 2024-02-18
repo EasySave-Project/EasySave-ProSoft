@@ -14,7 +14,7 @@
     <None Remove="img\arrow_black.png" />
     <None Remove="img\delete.png" />
     <None Remove="img\edit.png" />
-    <None Remove="img\flag_french.png" />
+    <None Remove="img\flag_fr.png" />
     <None Remove="img\home.png" />
     <None Remove="img\home_page.png" />
     <None Remove="img\icon_manuel.png" />
@@ -45,7 +45,7 @@
     <Resource Include="img\arrow_black.png" />
     <Resource Include="img\delete.png" />
     <Resource Include="img\edit.png" />
-    <Resource Include="img\flag_french.png" />
+    <Resource Include="img\flag_fr.png" />
     <Resource Include="img\home.png" />
     <Resource Include="img\home_page.png" />
     <Resource Include="img\icon_manuel.png" />
@@ -62,26 +62,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="lang\language.Designer.cs">
+    <Compile Update="lang\langage.fr.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>language.resx</DependentUpon>
+      <DependentUpon>langage.fr.resx</DependentUpon>
     </Compile>
-    <Compile Update="lang\language.fr.Designer.cs">
+    <Compile Update="lang\langage.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>language.fr.resx</DependentUpon>
+      <DependentUpon>langage.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="lang\language.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>language.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="lang\langage.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>langage.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="lang\language.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>language.fr.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="lang\langage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>langage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

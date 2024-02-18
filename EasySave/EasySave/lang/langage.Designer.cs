@@ -22,24 +22,24 @@ namespace EasySave.lang {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class language {
+    public class langage {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal language() {
+        internal langage() {
         }
         
         /// <summary>
         ///   Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EasySave.lang.language", typeof(language).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EasySave.lang.langage", typeof(langage).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace EasySave.lang {
         ///   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,54 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à add.
+        /// </summary>
+        public static string btn_add {
+            get {
+                return ResourceManager.GetString("btn_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à delete.
+        /// </summary>
+        public static string btn_delete {
+            get {
+                return ResourceManager.GetString("btn_delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Save.
+        /// </summary>
+        public static string btn_save {
+            get {
+                return ResourceManager.GetString("btn_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à This extension is already in the list.
+        /// </summary>
+        public static string error_add_encrypt {
+            get {
+                return ResourceManager.GetString("error_add_encrypt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Invalid extension format. Please enter the extension starting with a dot..
+        /// </summary>
+        public static string error_add_format {
+            get {
+                return ResourceManager.GetString("error_add_format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Illegal character or unknown number..
         /// </summary>
-        internal static string error_Caract {
+        public static string error_Caract {
             get {
                 return ResourceManager.GetString("error_Caract", resourceCulture);
             }
@@ -72,7 +117,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Illegal character. Write &quot;Y&quot; for yes, or &quot;N&quot; for no..
         /// </summary>
-        internal static string error_CaractValid {
+        public static string error_CaractValid {
             get {
                 return ResourceManager.GetString("error_CaractValid", resourceCulture);
             }
@@ -81,7 +126,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : The start index must be less than the end index..
         /// </summary>
-        internal static string error_index {
+        public static string error_index {
             get {
                 return ResourceManager.GetString("error_index", resourceCulture);
             }
@@ -90,7 +135,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : the job index cannot be &gt; 5.
         /// </summary>
-        internal static string error_JobSuperior5 {
+        public static string error_JobSuperior5 {
             get {
                 return ResourceManager.GetString("error_JobSuperior5", resourceCulture);
             }
@@ -99,7 +144,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Illegal character or there must only be two indices separated by \&quot;-\&quot;..
         /// </summary>
-        internal static string error_listCaract {
+        public static string error_listCaract {
             get {
                 return ResourceManager.GetString("error_listCaract", resourceCulture);
             }
@@ -108,7 +153,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : during loading :.
         /// </summary>
-        internal static string error_Loading {
+        public static string error_Loading {
             get {
                 return ResourceManager.GetString("error_Loading", resourceCulture);
             }
@@ -117,7 +162,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : BackUpMode code not recognised.
         /// </summary>
-        internal static string error_NoneCodeBackup {
+        public static string error_NoneCodeBackup {
             get {
                 return ResourceManager.GetString("error_NoneCodeBackup", resourceCulture);
             }
@@ -126,7 +171,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Invalid destination value.
         /// </summary>
-        internal static string error_NoneDestPath {
+        public static string error_NoneDestPath {
             get {
                 return ResourceManager.GetString("error_NoneDestPath", resourceCulture);
             }
@@ -135,7 +180,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Invalid source value.
         /// </summary>
-        internal static string error_NoneSourcePath {
+        public static string error_NoneSourcePath {
             get {
                 return ResourceManager.GetString("error_NoneSourcePath", resourceCulture);
             }
@@ -144,7 +189,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Invalid job name..
         /// </summary>
-        internal static string error_NoneValidJob {
+        public static string error_NoneValidJob {
             get {
                 return ResourceManager.GetString("error_NoneValidJob", resourceCulture);
             }
@@ -153,7 +198,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : when saving :.
         /// </summary>
-        internal static string error_save {
+        public static string error_save {
             get {
                 return ResourceManager.GetString("error_save", resourceCulture);
             }
@@ -162,7 +207,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : during full backup :.
         /// </summary>
-        internal static string error_saveComplete {
+        public static string error_saveComplete {
             get {
                 return ResourceManager.GetString("error_saveComplete", resourceCulture);
             }
@@ -171,7 +216,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : during differential backup.
         /// </summary>
-        internal static string error_saveDifferential {
+        public static string error_saveDifferential {
             get {
                 return ResourceManager.GetString("error_saveDifferential", resourceCulture);
             }
@@ -180,7 +225,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : The source directory does not exist or could not be found :.
         /// </summary>
-        internal static string error_SourcePath_NotFound {
+        public static string error_SourcePath_NotFound {
             get {
                 return ResourceManager.GetString("error_SourcePath_NotFound", resourceCulture);
             }
@@ -189,7 +234,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Unknown order.
         /// </summary>
-        internal static string error_UnknowCmd {
+        public static string error_UnknowCmd {
             get {
                 return ResourceManager.GetString("error_UnknowCmd", resourceCulture);
             }
@@ -198,16 +243,115 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Value entered not recognised.
         /// </summary>
-        internal static string error_UnknowSaisie {
+        public static string error_UnknowSaisie {
             get {
                 return ResourceManager.GetString("error_UnknowSaisie", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Extension to crypt.
+        /// </summary>
+        public static string ext_crypt {
+            get {
+                return ResourceManager.GetString("ext_crypt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type of lang :.
+        /// </summary>
+        public static string lang {
+            get {
+                return ResourceManager.GetString("lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type of Log :.
+        /// </summary>
+        public static string log_Type {
+            get {
+                return ResourceManager.GetString("log_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à settings have been saved successfully ! .
+        /// </summary>
+        public static string msgbox_save {
+            get {
+                return ResourceManager.GetString("msgbox_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Release Note.
+        /// </summary>
+        public static string release {
+            get {
+                return ResourceManager.GetString("release", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type of State :.
+        /// </summary>
+        public static string state_Type {
+            get {
+                return ResourceManager.GetString("state_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Home.
+        /// </summary>
+        public static string title_home {
+            get {
+                return ResourceManager.GetString("title_home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à List of Jobs.
+        /// </summary>
+        public static string title_listJob {
+            get {
+                return ResourceManager.GetString("title_listJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Logs.
+        /// </summary>
+        public static string title_log {
+            get {
+                return ResourceManager.GetString("title_log", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Settings.
+        /// </summary>
+        public static string title_setting {
+            get {
+                return ResourceManager.GetString("title_setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à User Manual.
+        /// </summary>
+        public static string userManual {
+            get {
+                return ResourceManager.GetString("userManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Job Add.
         /// </summary>
-        internal static string view_add_AffichJobIsAdd {
+        public static string view_add_AffichJobIsAdd {
             get {
                 return ResourceManager.GetString("view_add_AffichJobIsAdd", resourceCulture);
             }
@@ -216,7 +360,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Job No Add.
         /// </summary>
-        internal static string view_add_AffichJobIsNoAdd {
+        public static string view_add_AffichJobIsNoAdd {
             get {
                 return ResourceManager.GetString("view_add_AffichJobIsNoAdd", resourceCulture);
             }
@@ -225,7 +369,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Complete.
         /// </summary>
-        internal static string view_add_complet {
+        public static string view_add_complet {
             get {
                 return ResourceManager.GetString("view_add_complet", resourceCulture);
             }
@@ -234,7 +378,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Confirm job creation (Y/N).
         /// </summary>
-        internal static string view_add_confirm {
+        public static string view_add_confirm {
             get {
                 return ResourceManager.GetString("view_add_confirm", resourceCulture);
             }
@@ -243,7 +387,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Target directory address :.
         /// </summary>
-        internal static string view_add_destPath {
+        public static string view_add_destPath {
             get {
                 return ResourceManager.GetString("view_add_destPath", resourceCulture);
             }
@@ -252,7 +396,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Differential.
         /// </summary>
-        internal static string view_add_diff {
+        public static string view_add_diff {
             get {
                 return ResourceManager.GetString("view_add_diff", resourceCulture);
             }
@@ -261,7 +405,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (1) - Full mode.
         /// </summary>
-        internal static string view_add_modComplet {
+        public static string view_add_modComplet {
             get {
                 return ResourceManager.GetString("view_add_modComplet", resourceCulture);
             }
@@ -270,7 +414,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (2) - Differential mode.
         /// </summary>
-        internal static string view_add_modDiff {
+        public static string view_add_modDiff {
             get {
                 return ResourceManager.GetString("view_add_modDiff", resourceCulture);
             }
@@ -279,7 +423,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Job name :.
         /// </summary>
-        internal static string view_add_name {
+        public static string view_add_name {
             get {
                 return ResourceManager.GetString("view_add_name", resourceCulture);
             }
@@ -288,7 +432,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à A job with the same name already exists..
         /// </summary>
-        internal static string view_add_sameNameJob {
+        public static string view_add_sameNameJob {
             get {
                 return ResourceManager.GetString("view_add_sameNameJob", resourceCulture);
             }
@@ -297,7 +441,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Select backup mode :.
         /// </summary>
-        internal static string view_add_SelectMod {
+        public static string view_add_SelectMod {
             get {
                 return ResourceManager.GetString("view_add_SelectMod", resourceCulture);
             }
@@ -306,7 +450,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Source directory address :.
         /// </summary>
-        internal static string view_add_sourcePath {
+        public static string view_add_sourcePath {
             get {
                 return ResourceManager.GetString("view_add_sourcePath", resourceCulture);
             }
@@ -315,7 +459,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The drive specified in the target path.
         /// </summary>
-        internal static string view_CantDestPath_1 {
+        public static string view_CantDestPath_1 {
             get {
                 return ResourceManager.GetString("view_CantDestPath_1", resourceCulture);
             }
@@ -324,7 +468,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Is not available..
         /// </summary>
-        internal static string view_CantDestPath_2 {
+        public static string view_CantDestPath_2 {
             get {
                 return ResourceManager.GetString("view_CantDestPath_2", resourceCulture);
             }
@@ -333,7 +477,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Execution time :.
         /// </summary>
-        internal static string view_ExecutionTime {
+        public static string view_ExecutionTime {
             get {
                 return ResourceManager.GetString("view_ExecutionTime", resourceCulture);
             }
@@ -342,7 +486,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The maximum number of jobs has been reached..
         /// </summary>
-        internal static string view_jobMax {
+        public static string view_jobMax {
             get {
                 return ResourceManager.GetString("view_jobMax", resourceCulture);
             }
@@ -351,7 +495,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (add) - Add a job.
         /// </summary>
-        internal static string view_menu_add {
+        public static string view_menu_add {
             get {
                 return ResourceManager.GetString("view_menu_add", resourceCulture);
             }
@@ -360,7 +504,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open all.
         /// </summary>
-        internal static string view_menu_affichAll {
+        public static string view_menu_affichAll {
             get {
                 return ResourceManager.GetString("view_menu_affichAll", resourceCulture);
             }
@@ -369,7 +513,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Exit program.
         /// </summary>
-        internal static string view_menu_affichExit {
+        public static string view_menu_affichExit {
             get {
                 return ResourceManager.GetString("view_menu_affichExit", resourceCulture);
             }
@@ -378,7 +522,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (all) - Sequential execution.
         /// </summary>
-        internal static string view_menu_all {
+        public static string view_menu_all {
             get {
                 return ResourceManager.GetString("view_menu_all", resourceCulture);
             }
@@ -387,7 +531,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Start (S) Modify (M) Delete (D).
         /// </summary>
-        internal static string view_menu_allCmd {
+        public static string view_menu_allCmd {
             get {
                 return ResourceManager.GetString("view_menu_allCmd", resourceCulture);
             }
@@ -396,7 +540,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The string has been split using &apos;,&apos;..
         /// </summary>
-        internal static string view_menu_chainSplit1 {
+        public static string view_menu_chainSplit1 {
             get {
                 return ResourceManager.GetString("view_menu_chainSplit1", resourceCulture);
             }
@@ -405,7 +549,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The string has been split using &apos;-&apos; characters.
         /// </summary>
-        internal static string view_menu_chainSplit2 {
+        public static string view_menu_chainSplit2 {
             get {
                 return ResourceManager.GetString("view_menu_chainSplit2", resourceCulture);
             }
@@ -414,7 +558,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Execution of job number :.
         /// </summary>
-        internal static string view_menu_exe {
+        public static string view_menu_exe {
             get {
                 return ResourceManager.GetString("view_menu_exe", resourceCulture);
             }
@@ -423,7 +567,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (exit) - Exit the software.
         /// </summary>
-        internal static string view_menu_exit {
+        public static string view_menu_exit {
             get {
                 return ResourceManager.GetString("view_menu_exit", resourceCulture);
             }
@@ -432,7 +576,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (lang) - Change language.
         /// </summary>
-        internal static string view_menu_lang {
+        public static string view_menu_lang {
             get {
                 return ResourceManager.GetString("view_menu_lang", resourceCulture);
             }
@@ -441,7 +585,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Job.
         /// </summary>
-        internal static string view_menu_nameJob {
+        public static string view_menu_nameJob {
             get {
                 return ResourceManager.GetString("view_menu_nameJob", resourceCulture);
             }
@@ -450,7 +594,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open a backup job.
         /// </summary>
-        internal static string view_menu_openJob {
+        public static string view_menu_openJob {
             get {
                 return ResourceManager.GetString("view_menu_openJob", resourceCulture);
             }
@@ -459,7 +603,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (param) - Parameters.
         /// </summary>
-        internal static string view_menu_param {
+        public static string view_menu_param {
             get {
                 return ResourceManager.GetString("view_menu_param", resourceCulture);
             }
@@ -468,7 +612,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Modification of job number :.
         /// </summary>
-        internal static string view_modif {
+        public static string view_modif {
             get {
                 return ResourceManager.GetString("view_modif", resourceCulture);
             }
@@ -477,7 +621,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Select what you wanted to change and enter the new data:.
         /// </summary>
-        internal static string view_modif_affich {
+        public static string view_modif_affich {
             get {
                 return ResourceManager.GetString("view_modif_affich", resourceCulture);
             }
@@ -486,7 +630,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (apply) - Apply modification.
         /// </summary>
-        internal static string view_modif_apply {
+        public static string view_modif_apply {
             get {
                 return ResourceManager.GetString("view_modif_apply", resourceCulture);
             }
@@ -495,7 +639,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (3) Target directory address :.
         /// </summary>
-        internal static string view_modif_destPath {
+        public static string view_modif_destPath {
             get {
                 return ResourceManager.GetString("view_modif_destPath", resourceCulture);
             }
@@ -504,7 +648,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (exit) - Return to menu.
         /// </summary>
-        internal static string view_modif_exit {
+        public static string view_modif_exit {
             get {
                 return ResourceManager.GetString("view_modif_exit", resourceCulture);
             }
@@ -513,7 +657,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (4) Backup mode (1-Complete / 2-Differential) :.
         /// </summary>
-        internal static string view_modif_modAffich {
+        public static string view_modif_modAffich {
             get {
                 return ResourceManager.GetString("view_modif_modAffich", resourceCulture);
             }
@@ -522,7 +666,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (1) Job name :.
         /// </summary>
-        internal static string view_modif_name {
+        public static string view_modif_name {
             get {
                 return ResourceManager.GetString("view_modif_name", resourceCulture);
             }
@@ -531,7 +675,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (2) Source directory address :.
         /// </summary>
-        internal static string view_modif_sourcePath {
+        public static string view_modif_sourcePath {
             get {
                 return ResourceManager.GetString("view_modif_sourcePath", resourceCulture);
             }
@@ -540,7 +684,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Invalid backup type.
         /// </summary>
-        internal static string view_NoneTypeSave {
+        public static string view_NoneTypeSave {
             get {
                 return ResourceManager.GetString("view_NoneTypeSave", resourceCulture);
             }
@@ -549,7 +693,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open backup job 1.
         /// </summary>
-        internal static string view_open1 {
+        public static string view_open1 {
             get {
                 return ResourceManager.GetString("view_open1", resourceCulture);
             }
@@ -558,7 +702,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open backup job 2.
         /// </summary>
-        internal static string view_open2 {
+        public static string view_open2 {
             get {
                 return ResourceManager.GetString("view_open2", resourceCulture);
             }
@@ -567,7 +711,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open backup job 3.
         /// </summary>
-        internal static string view_open3 {
+        public static string view_open3 {
             get {
                 return ResourceManager.GetString("view_open3", resourceCulture);
             }
@@ -576,7 +720,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open backup job 4.
         /// </summary>
-        internal static string view_open4 {
+        public static string view_open4 {
             get {
                 return ResourceManager.GetString("view_open4", resourceCulture);
             }
@@ -585,7 +729,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Open backup job 5.
         /// </summary>
-        internal static string view_open5 {
+        public static string view_open5 {
             get {
                 return ResourceManager.GetString("view_open5", resourceCulture);
             }
@@ -594,7 +738,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The format for saving Logs and States files has been changed to .JSON.
         /// </summary>
-        internal static string view_param_AffichJSON {
+        public static string view_param_AffichJSON {
             get {
                 return ResourceManager.GetString("view_param_AffichJSON", resourceCulture);
             }
@@ -603,7 +747,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The format for saving Logs and States files has been changed to .XML.
         /// </summary>
-        internal static string view_param_AffichXML {
+        public static string view_param_AffichXML {
             get {
                 return ResourceManager.GetString("view_param_AffichXML", resourceCulture);
             }
@@ -612,7 +756,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (1) - .JSON.
         /// </summary>
-        internal static string view_param_json {
+        public static string view_param_json {
             get {
                 return ResourceManager.GetString("view_param_json", resourceCulture);
             }
@@ -621,7 +765,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Save Logs and States files in :.
         /// </summary>
-        internal static string view_param_titre {
+        public static string view_param_titre {
             get {
                 return ResourceManager.GetString("view_param_titre", resourceCulture);
             }
@@ -630,7 +774,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à (2) - .XML.
         /// </summary>
-        internal static string view_param_xml {
+        public static string view_param_xml {
             get {
                 return ResourceManager.GetString("view_param_xml", resourceCulture);
             }
@@ -639,7 +783,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Full backup successful..
         /// </summary>
-        internal static string view_saveComplete {
+        public static string view_saveComplete {
             get {
                 return ResourceManager.GetString("view_saveComplete", resourceCulture);
             }
@@ -648,7 +792,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Differential backup successful..
         /// </summary>
-        internal static string view_SaveDifferential {
+        public static string view_SaveDifferential {
             get {
                 return ResourceManager.GetString("view_SaveDifferential", resourceCulture);
             }
@@ -657,7 +801,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The source directory is empty:.
         /// </summary>
-        internal static string view_SourcePathEmpty {
+        public static string view_SourcePathEmpty {
             get {
                 return ResourceManager.GetString("view_SourcePathEmpty", resourceCulture);
             }
@@ -666,7 +810,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Job No Delete.
         /// </summary>
-        internal static string view_supp_AffichJobIsNoSupp {
+        public static string view_supp_AffichJobIsNoSupp {
             get {
                 return ResourceManager.GetString("view_supp_AffichJobIsNoSupp", resourceCulture);
             }
@@ -675,7 +819,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Job Delete.
         /// </summary>
-        internal static string view_supp_AffichJobIsSupp {
+        public static string view_supp_AffichJobIsSupp {
             get {
                 return ResourceManager.GetString("view_supp_AffichJobIsSupp", resourceCulture);
             }
@@ -684,7 +828,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; Do you want to delete this job (Y/N).
         /// </summary>
-        internal static string view_supp_confirm {
+        public static string view_supp_confirm {
             get {
                 return ResourceManager.GetString("view_supp_confirm", resourceCulture);
             }
@@ -693,7 +837,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Delete job number :.
         /// </summary>
-        internal static string view_suppr {
+        public static string view_suppr {
             get {
                 return ResourceManager.GetString("view_suppr", resourceCulture);
             }
@@ -702,7 +846,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à The source directory does not exist or could not be found :.
         /// </summary>
-        internal static string view_UnknowSourcePath {
+        public static string view_UnknowSourcePath {
             get {
                 return ResourceManager.GetString("view_UnknowSourcePath", resourceCulture);
             }
@@ -711,7 +855,7 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &gt; .
         /// </summary>
-        internal static string view_waitingAswer {
+        public static string view_waitingAswer {
             get {
                 return ResourceManager.GetString("view_waitingAswer", resourceCulture);
             }
