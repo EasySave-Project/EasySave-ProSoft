@@ -2,12 +2,5 @@
   "LogType": "Xml",
   "StateType": "Json",
   "Lang": "fr",
-  "ExtensionsToCrypt": [
-    ".txt",
-    ".xmd",
-    ".dll",
-    ".bat",
-    ".ps1",
-    ".pdf"
-  ]
+  "ExtensionsToCrypt": []
 }
