@@ -66,6 +66,11 @@ public class BackUpManager
     
     public void UpdateBackUpJobName(int index, string newName)
     {
+        if (listBackUps.Any(j => j.name == newName))
+        {
+            Console.WriteLine(ManageLang.GetString("view_add_sameNameJob"));
+            return;
+        }
         listBackUps[index].name = newName;
         SaveJobsToJson();
     }
@@ -97,16 +102,17 @@ public class BackUpManager
     {
         if (listBackUps.Any(j => j.name == jobName))
         {
-            Console.WriteLine(ManageLang.GetString("error_JobSuperior5"));
+            Console.WriteLine(ManageLang.GetString("view_add_sameNameJob"));
             return;
             //throw new InvalidOperationException("Un job avec le même nom existe déjà.");
 
         }
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
-
+        
         //listBackUps.Add(addBackUpJob);
         listBackUps.Insert(0, addBackUpJob);
+
         SaveJobsToJson();
     }
 
