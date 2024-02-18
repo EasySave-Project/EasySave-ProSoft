@@ -61,6 +61,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Add new Job.
+        /// </summary>
+        public static string add_newJob {
+            get {
+                return ResourceManager.GetString("add_newJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à add.
         /// </summary>
         public static string btn_add {
@@ -75,6 +84,15 @@ namespace EasySave.lang {
         public static string btn_delete {
             get {
                 return ResourceManager.GetString("btn_delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Edit.
+        /// </summary>
+        public static string btn_edit {
+            get {
+                return ResourceManager.GetString("btn_edit", resourceCulture);
             }
         }
         
@@ -349,7 +367,7 @@ namespace EasySave.lang {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Add new Job.
+        ///   Recherche une chaîne localisée semblable à Add a Job.
         /// </summary>
         public static string title_addJob {
             get {
