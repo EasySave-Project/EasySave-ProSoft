@@ -80,22 +80,22 @@ namespace EasySave.view
             // Gestion des erreurs
             if (string.IsNullOrWhiteSpace(sNameJob) || sNameJob.Contains(" ") || sNameJob.Contains(";"))
             {
-                System.Windows.MessageBox.Show("Erreur : Le nom du travail n'est pas valide.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneValidJob"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             else if (string.IsNullOrEmpty(sSourceFolder) || !System.IO.Directory.Exists(sSourceFolder))
             {
-                System.Windows.MessageBox.Show("Erreur : La valeur de la source n'est pas valide", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneSourcePath"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             else if (string.IsNullOrEmpty(sDestinationFolder) || !System.IO.Directory.Exists(sDestinationFolder))
             {
-                System.Windows.MessageBox.Show("Erreur : La valeur de la destionation n'est pas valide", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneDestPath"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             else if (string.IsNullOrEmpty(sType))
             {
-                System.Windows.MessageBox.Show("Erreur : Le type de sauvegarde n'est pas valide", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneCodeBackup"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 

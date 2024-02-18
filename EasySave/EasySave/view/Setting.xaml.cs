@@ -102,12 +102,12 @@ namespace EasySave.view
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show(ManageLang.GetString("error_add_encrypt"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_add_encrypt"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             else
             {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_add_format"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_add_format"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

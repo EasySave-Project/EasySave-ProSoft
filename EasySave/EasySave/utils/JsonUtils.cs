@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using EasySave.view;
 using EasySave.services;
 using System.IO;
+using System.Windows;
 
 
 namespace EasySave.utils
@@ -30,7 +31,7 @@ namespace EasySave.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(ManageLang.GetString("error_Loading") + e.Message);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_Loading") + e.Message, ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return new List<BackUpJob>();
             }
         }

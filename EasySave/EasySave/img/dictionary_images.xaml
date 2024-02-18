@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <BitmapImage x:Key="arrow" UriSource="/img/arrow.png" />
+    <BitmapImage x:Key="arrow_black" UriSource="/img/arrow_black.png" />
+    <BitmapImage x:Key="delete" UriSource="/img/delete.png" />
+    <BitmapImage x:Key="edit" UriSource="/img/edit.png" />
+    <BitmapImage x:Key="flag_en" UriSource="/img/flag_en.png" />
+    <BitmapImage x:Key="flag_fr" UriSource="/img/flag_fr.png" />
+    <BitmapImage x:Key="home" UriSource="/img/home.png" />
+    <BitmapImage x:Key="home_page" UriSource="/img/home_page.png" />
+    <BitmapImage x:Key="icon_manuel" UriSource="/img/icon_manuel.png" />
+    <BitmapImage x:Key="leave" UriSource="/img/leave.png" />
+    <BitmapImage x:Key="log" UriSource="/img/log.png" />
+    <BitmapImage x:Key="logo_easysave" UriSource="/img/logo_easysave.png" />
+    <BitmapImage x:Key="patch_note" UriSource="/img/patch_note.png" />
+    <BitmapImage x:Key="play" UriSource="/img/Play.png" />
+    <BitmapImage x:Key="setting" UriSource="/img/setting.png" />
+</ResourceDictionary>

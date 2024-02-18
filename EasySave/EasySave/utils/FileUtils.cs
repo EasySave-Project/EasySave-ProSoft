@@ -36,7 +36,7 @@ namespace EasySave.utils
             }
             else
             {
-                System.Windows.MessageBox.Show("Erreur : Impossible d'exécuter le Travail, l'application de la calculatrice est ouverte en arrière-plan.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
         public static void CompleteCopyDirectory(string name, string sourceDir, string targetDir)
@@ -58,7 +58,7 @@ namespace EasySave.utils
             }
             else
             {
-                System.Windows.MessageBox.Show("Erreur : Impossible d'exécuter le Travail, l'application de la calculatrice est ouverte en arrière-plan.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

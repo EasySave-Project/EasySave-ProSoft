@@ -2,6 +2,7 @@ using EasySave.view;
 using EasySave.utils;
 using System.Threading;
 using EasySave.services;
+using System.Windows;
 
 
 namespace EasySave.model
@@ -32,14 +33,11 @@ namespace EasySave.model
         {
             try
             {
-               
                 FileUtils.CompleteCopyDirectory(name, sourceDirectory, targetDirectory);
-                Console.WriteLine(ManageLang.GetString("view_saveComplete"));
-                
             }
             catch (Exception e)
             {
-                Console.WriteLine(ManageLang.GetString("error_saveComplete") + " : " + e.Message);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_saveComplete") + " : " + e.Message, ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }

@@ -214,6 +214,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error : Unable to run Job, notepad application open in background.
+        /// </summary>
+        public static string error_notepad_open {
+            get {
+                return ResourceManager.GetString("error_notepad_open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : when saving :.
         /// </summary>
         public static string error_save {
@@ -250,6 +259,24 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error : Unable to delete.
+        /// </summary>
+        public static string error_suppresion {
+            get {
+                return ResourceManager.GetString("error_suppresion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error.
+        /// </summary>
+        public static string error_title {
+            get {
+                return ResourceManager.GetString("error_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : Unknown order.
         /// </summary>
         public static string error_UnknowCmd {
@@ -264,6 +291,15 @@ namespace EasySave.lang {
         public static string error_UnknowSaisie {
             get {
                 return ResourceManager.GetString("error_UnknowSaisie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Job execution.
+        /// </summary>
+        public static string exe_job_title {
+            get {
+                return ResourceManager.GetString("exe_job_title", resourceCulture);
             }
         }
         
@@ -570,6 +606,15 @@ namespace EasySave.lang {
         public static string view_CantDestPath_2 {
             get {
                 return ResourceManager.GetString("view_CantDestPath_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Successful job execution!.
+        /// </summary>
+        public static string view_exe_successful {
+            get {
+                return ResourceManager.GetString("view_exe_successful", resourceCulture);
             }
         }
         
@@ -930,6 +975,15 @@ namespace EasySave.lang {
         public static string view_supp_confirm {
             get {
                 return ResourceManager.GetString("view_supp_confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Confirmation of deletion.
+        /// </summary>
+        public static string view_supp_title {
+            get {
+                return ResourceManager.GetString("view_supp_title", resourceCulture);
             }
         }
         

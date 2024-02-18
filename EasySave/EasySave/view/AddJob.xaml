@@ -19,13 +19,13 @@
 
         <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="Btn_ListJob_Click" >
             <Grid Width="256">
-                <Image Source="/img/home.png" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Image Source="{StaticResource home}" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,-9,0,0"/>
                 <TextBlock VerticalAlignment="Center" Margin="75,0,16,0" FontSize="10" Foreground="White" FontFamily="Arial Black"><Run Text="{x:Static rs:langage.title_listJob}"/></TextBlock>
-                <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
+                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
             </Grid>
         </Button>
         <Button x:Name="Btn_Home" Margin="0,0,860,612" Background= "White" BorderThickness="0" Click="Btn_Home_Click">
-            <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Center" Width="223" Source="/img/logo_easysave.png"/>
+            <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Center" Width="223" Source="{StaticResource logo_easysave}"/>
         </Button>
 
         <Button HorizontalAlignment="Left" Height="80" Margin="0,263,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Visibility="Hidden" IsEnabled="False">
@@ -38,9 +38,9 @@
         <Button x:Name="Btn_Setting" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="240" Background="#3A57E8" Margin="0,384,0,0" Click="Btn_Setting_Click">
             <Grid Width="256">
 
-                <Image Source="/img/setting.png" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335"/>
+                <Image Source="{StaticResource setting}" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335"/>
                 <TextBlock VerticalAlignment="Center" Margin="78,0,46,0" FontSize="12" Foreground="White" FontFamily="Arial Black"><Run Language="fr-fr" Text="{x:Static rs:langage.title_setting}"/></TextBlock>
-                <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" RenderTransformOrigin="0.699,0.502"/>
+                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" RenderTransformOrigin="0.699,0.502"/>
             </Grid>
         </Button>
         <Label Content="{x:Static rs:langage.title_addJob}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="491" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
