@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 using EasySave.controller;
+=======
+﻿using EasySave.controller;
+using EasySave.model;
+>>>>>>> Feat/WPF-Settings
 using EasySave.services;
 using EasySave.utils;
 using System.Configuration;
@@ -21,11 +26,14 @@ namespace EasySave
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
-            SettingManager.ReadAllSettings();
-        
             InitializeComponent();
+
+            Settings s = new Settings();
+             
+            ManageLang.ChangeLanguage(s.Lang);
 
             // Instanciation
             BackUpManager bmManager = new BackUpManager();
@@ -38,9 +46,6 @@ namespace EasySave
             Content = home;
         }
 
-        private void initSettings(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }
