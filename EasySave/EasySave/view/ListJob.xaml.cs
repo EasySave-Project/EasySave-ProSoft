@@ -126,7 +126,7 @@ namespace EasySave.view
             }
             catch
             {
-                System.Windows.MessageBox.Show("Erreur lors de l'execution du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -222,19 +222,19 @@ namespace EasySave.view
             index_SelectJob--;
             try
             {
-                string sMsgBox = "Voulez-vous vraiment supprimer le travaux : " + sNameJob[index_SelectJob];
-                MessageBoxResult result = System.Windows.MessageBox.Show(sMsgBox, "Confirmation de suppression", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                string sMsgBox = ManageLang.GetString("view_suppr") + " : " + sNameJob[index_SelectJob];
+                MessageBoxResult result = System.Windows.MessageBox.Show(sMsgBox, ManageLang.GetString("view_supp_title"), MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
                     // Oui
                     _MainWindows.backUpController.InitiateRemoveBackup(sNameJob[index_SelectJob]);
-                    System.Windows.MessageBox.Show("Suppression : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
+                    //System.Windows.MessageBox.Show("Suppression : " + sNameJob[index_SelectJob] + " / Index : " + index_SelectJob);
                     ShowListJob();
                 }
             }
             catch
             {
-                System.Windows.MessageBox.Show("Erreur lors de la suppression du job", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_suppresion"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
         private void BtnDelete_job1_Click(object sender, RoutedEventArgs e)

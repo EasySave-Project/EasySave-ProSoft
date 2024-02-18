@@ -1,6 +1,7 @@
 using EasySave.utils;
 using EasySave.view;
 using EasySave.services;
+using System.Windows;
 namespace EasySave.model
 {
     public class DifferentialBackUpJob : BackUpJob
@@ -28,11 +29,10 @@ namespace EasySave.model
             try
             {
                 FileUtils.DifferentialCopyDirectory(name, sourceDirectory, targetDirectory);
-                Console.WriteLine(ManageLang.GetString("view_SaveDifferential"));
             }
             catch (Exception e)
             {
-                Console.WriteLine(ManageLang.GetString("error_saveDifferential") + " : " + e.Message);
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_saveDifferential") + " : " + e.Message, ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }

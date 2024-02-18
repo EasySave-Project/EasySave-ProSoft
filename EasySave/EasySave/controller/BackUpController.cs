@@ -1,5 +1,6 @@
 ﻿using EasySave.model;
 using EasySave.services;
+using System.Windows;
 
 namespace EasySave.controller
 {
@@ -21,6 +22,7 @@ namespace EasySave.controller
         public void InitiateBackUpJob(BackUpJob bj)
         {
             backUpManager.ExecuteBackup(bj);
+            System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
         }
         public void InitiateAllBackUpJobs()
         {

@@ -168,6 +168,9 @@
   <data name="error_NoneValidJob" xml:space="preserve">
     <value>Erreur : Le nom du travail n'est pas valide.</value>
   </data>
+  <data name="error_notepad_open" xml:space="preserve">
+    <value>Erreur : Impossible d'exécuter le Travail, l'application du notepad est ouverte en arrière-plan</value>
+  </data>
   <data name="error_save" xml:space="preserve">
     <value>Erreur : lors de la sauvegarde</value>
   </data>
@@ -180,11 +183,20 @@
   <data name="error_SourcePath_NotFound" xml:space="preserve">
     <value>Erreur : Le répertoire source n'existe pas ou n'a pas pu être trouvé :</value>
   </data>
+  <data name="error_suppresion" xml:space="preserve">
+    <value>Erreur : Suppression impossible</value>
+  </data>
+  <data name="error_title" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
   <data name="error_UnknowCmd" xml:space="preserve">
     <value>Erreur : Commande inconnu</value>
   </data>
   <data name="error_UnknowSaisie" xml:space="preserve">
     <value>Erreur : Valeur saisie non reconnu</value>
+  </data>
+  <data name="exe_job_title" xml:space="preserve">
+    <value>Exécution du travail</value>
   </data>
   <data name="ext_crypt" xml:space="preserve">
     <value>Extension à crypter</value>
@@ -290,6 +302,9 @@
   </data>
   <data name="view_ExecutionTime" xml:space="preserve">
     <value>Temps d'execution :</value>
+  </data>
+  <data name="view_exe_successful" xml:space="preserve">
+    <value>Exécution du travail réussi !</value>
   </data>
   <data name="view_jobMax" xml:space="preserve">
     <value>Le nombre maximal de jobs est atteint.</value>
@@ -410,6 +425,9 @@
   </data>
   <data name="view_supp_confirm" xml:space="preserve">
     <value>&gt; Voulez-vous supprimer ce travail ? (Y/N)</value>
+  </data>
+  <data name="view_supp_title" xml:space="preserve">
+    <value>Confirmation de suppression</value>
   </data>
   <data name="view_UnknowSourcePath" xml:space="preserve">
     <value>Le répertoire source n'existe pas ou n'a pas pu être trouvé :</value>
