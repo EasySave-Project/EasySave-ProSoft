@@ -61,6 +61,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Add new Job.
+        /// </summary>
+        public static string add_newJob {
+            get {
+                return ResourceManager.GetString("add_newJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à add.
         /// </summary>
         public static string btn_add {
@@ -75,6 +84,15 @@ namespace EasySave.lang {
         public static string btn_delete {
             get {
                 return ResourceManager.GetString("btn_delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Edit.
+        /// </summary>
+        public static string btn_edit {
+            get {
+                return ResourceManager.GetString("btn_edit", resourceCulture);
             }
         }
         
@@ -286,6 +304,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Name of the job :.
+        /// </summary>
+        public static string nameJob {
+            get {
+                return ResourceManager.GetString("nameJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Release Note.
         /// </summary>
         public static string release {
@@ -295,11 +322,56 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Run all.
+        /// </summary>
+        public static string runAll {
+            get {
+                return ResourceManager.GetString("runAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Select a folder .
+        /// </summary>
+        public static string select_folder {
+            get {
+                return ResourceManager.GetString("select_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Source directory :.
+        /// </summary>
+        public static string sourceDir {
+            get {
+                return ResourceManager.GetString("sourceDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Type of State :.
         /// </summary>
         public static string state_Type {
             get {
                 return ResourceManager.GetString("state_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Target directory :.
+        /// </summary>
+        public static string targetDir {
+            get {
+                return ResourceManager.GetString("targetDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Add a Job.
+        /// </summary>
+        public static string title_addJob {
+            get {
+                return ResourceManager.GetString("title_addJob", resourceCulture);
             }
         }
         
@@ -336,6 +408,33 @@ namespace EasySave.lang {
         public static string title_setting {
             get {
                 return ResourceManager.GetString("title_setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type of save :.
+        /// </summary>
+        public static string type {
+            get {
+                return ResourceManager.GetString("type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Complete.
+        /// </summary>
+        public static string typeComplete {
+            get {
+                return ResourceManager.GetString("typeComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Differential.
+        /// </summary>
+        public static string typeDifferential {
+            get {
+                return ResourceManager.GetString("typeDifferential", resourceCulture);
             }
         }
         
