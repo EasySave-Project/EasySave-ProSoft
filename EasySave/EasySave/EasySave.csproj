@@ -62,6 +62,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="cryptoSoft\ressource_cryptosoft.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ressource_cryptosoft.resx</DependentUpon>
+    </Compile>
     <Compile Update="lang\langage.fr.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -80,6 +85,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="cryptoSoft\ressource_cryptosoft.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ressource_cryptosoft.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="lang\langage.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>langage.fr.Designer.cs</LastGenOutput>

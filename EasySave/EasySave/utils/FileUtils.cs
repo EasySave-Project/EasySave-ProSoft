@@ -4,6 +4,7 @@ using System.Xml.Linq;
 using System.IO;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Input;
 namespace EasySave.utils
 {
     
@@ -13,6 +14,8 @@ namespace EasySave.utils
         private static StateManager stateManager = new StateManager();
 
         private static LogManager logManager = new LogManager();
+
+        private static Settings settings = new Settings();
 
         public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
@@ -132,7 +135,29 @@ namespace EasySave.utils
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
-                    sourceFile.CopyTo(targetFilePath, true);
+
+                    if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(sourceFile.Name).ToLower()))
+                    {
+                        // todo executer crypto soft sur sourceFile, targetFile
+                        string sSourcePath_File = sourceFile.FullName;
+                        string sTargetPath_File = targetDir;
+                        string sClef = "secret";
+
+                        // Obtenir le fichier ressource
+                        var resource = cryptoSoft.ressource_cryptosoft.cryptosoft_V2;
+                        // Créer un fichier temporaire avec le contenu du fichier ressource
+                        string tempPath = System.IO.Path.GetTempFileName();
+                        File.WriteAllBytes(tempPath, resource);
+                        // Appeler le .EXE avec les paramètres
+                        var process = Process.Start(tempPath, sSourcePath_File + " " + sTargetPath_File + " " + sClef);
+                        // Attendre que le .EXE se termine
+                        process.WaitForExit();
+                        // Supprimer le fichier temporaire
+                        File.Delete(tempPath);
+                    } else
+                    {
+                        sourceFile.CopyTo(targetFilePath, true);
+                    }
                     stateManager.UpdateState_Differential(sourceFile.Length);
                     logManager.PushLog(sourceFile.Length);
                 }
