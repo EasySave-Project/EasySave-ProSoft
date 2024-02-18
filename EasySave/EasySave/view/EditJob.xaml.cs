@@ -31,7 +31,7 @@ namespace EasySave.view
 
         public EditJob(int indexJob)
         {
-            indexJob = indexJob_Transfert;
+            indexJob_Transfert = indexJob;
             InitializeComponent();
             InitFields();
         }
