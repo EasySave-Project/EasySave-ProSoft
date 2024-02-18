@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EasySave.view"
+      xmlns:rs="clr-namespace:EasySave.lang"
       mc:Ignorable="d" 
       Title="AddJob" Height="719" Width="1100">
 
@@ -42,18 +43,18 @@
                 <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" RenderTransformOrigin="0.699,0.502"/>
             </Grid>
         </Button>
-        <Label Content="Add New Job" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="491" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
+        <Label Content="{x:Static rs:langage.title_addJob}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="491" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
         <Rectangle HorizontalAlignment="Left" Height="490" Margin="321,162,0,0" VerticalAlignment="Top" Width="720" Fill="#FFDBDBDB"/>
-        <Label x:Name="Label_NameJob" Content="Nom du Job" HorizontalAlignment="Left" Margin="400,212,0,0" VerticalAlignment="Top" Width="117" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D"/>
+        <Label x:Name="Label_NameJob" Content="{x:Static rs:langage.nameJob}" HorizontalAlignment="Left" Margin="400,212,0,0" VerticalAlignment="Top" Width="150" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D"/>
         <TextBox x:Name="TextBox_NameJob" HorizontalAlignment="Left" Margin="400,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontFamily="Arial Narrow" FontSize="16" />
         <Grid>
             <TextBox x:Name="TextBox_SelectedFolderA" Margin="400,300,246,399" FontFamily="Arial Narrow" />
-            <Button Content="Sélectionner un dossier" Click="OnSelectFolderClick" Margin="854,300,81,399" />
-            <Button Content="Sélectionner un dossier" Click="OnSelectFolderClickB" Margin="855,361,80,338" />
+            <Button Content="{x:Static rs:langage.select_folder}" Click="OnSelectFolderClick" Margin="854,300,81,399" />
+            <Button Content="{x:Static rs:langage.select_folder}" Click="OnSelectFolderClickB" Margin="855,361,80,338" />
             <TextBox x:Name="TextBox_SelectedFolderB" Margin="400,361,245,338" RenderTransformOrigin="0.514,-4.614" FontFamily="Arial Narrow" />
         </Grid>
-        <Label x:Name="Label_PathA" Content="Chemin initial" HorizontalAlignment="Left" Margin="400,270,0,0" VerticalAlignment="Top" Width="207" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="30"/>
-        <Label x:Name="Label_PathB" Content="Chemin visé" HorizontalAlignment="Left" Margin="400,331,0,0" VerticalAlignment="Top" Width="195" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
+        <Label x:Name="Label_PathA" Content="{x:Static rs:langage.sourceDir}" HorizontalAlignment="Left" Margin="400,270,0,0" VerticalAlignment="Top" Width="207" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="30"/>
+        <Label x:Name="Label_PathB" Content="{x:Static rs:langage.targetDir}" HorizontalAlignment="Left" Margin="400,331,0,0" VerticalAlignment="Top" Width="195" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
         <ComboBox x:Name="ComboBox_TypeSave" Margin="400,419,560,280" FontFamily="Arial Narrow">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
@@ -61,10 +62,10 @@
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem Content="Complète" IsSelected="True"/>
-            <ComboBoxItem Content="Différentiel"/>
+            <ComboBoxItem Content="{x:Static rs:langage.typeComplete}" IsSelected="True"/>
+            <ComboBoxItem Content="{x:Static rs:langage.typeDifferential}"/>
         </ComboBox>
-        <Button x:Name="Btn_AddJob" Content="Ajouter" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_AddJob_Click"/>
-        <Label x:Name="Label_TypeSave" Content="Mode de Sauvegarde" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" Width="242" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
+        <Button x:Name="Btn_AddJob" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_AddJob_Click"/>
+        <Label x:Name="Label_TypeSave" Content="{x:Static rs:langage.type}" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" Width="242" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
     </Grid>
 </Page>
