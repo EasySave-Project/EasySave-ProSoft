@@ -1,7 +1,7 @@
 {
   "LogType": "Xml",
   "StateType": "Json",
-  "Lang": "fr",
+  "Lang": "en",
   "ExtensionsToCrypt": [
     ".txt",
     ".png"

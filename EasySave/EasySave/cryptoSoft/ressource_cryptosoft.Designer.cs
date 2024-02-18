@@ -63,9 +63,9 @@ namespace EasySave.cryptoSoft {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] cryptosoft_V2 {
+        internal static byte[] cryptoSoft_V4 {
             get {
-                object obj = ResourceManager.GetObject("cryptosoft_V2", resourceCulture);
+                object obj = ResourceManager.GetObject("cryptoSoft_V4", resourceCulture);
                 return ((byte[])(obj));
             }
         }
