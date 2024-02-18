@@ -4,10 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EasySave.view"
+      xmlns:rs="clr-namespace:EasySave.lang" 
+      xmlns:utils="clr-namespace:EasySave.utils"
       mc:Ignorable="d" 
 
       Title="ListJob" Height="719" Width="1100">
-
+    <Page.Resources>
+        <utils:LocalizeConverter x:Key="LocalizeConverter"/>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,7 +28,7 @@
                     <ColumnDefinition Width="19*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="/img/home.png" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-                <TextBlock VerticalAlignment="Center" Margin="80,0,54,0" FontSize="24" Foreground="White" FontFamily="Arial Black"><Run Text="List"/><Run Text="e"/></TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="65,0,54,0" FontSize="10" Foreground="White" FontFamily="Arial Black"><Run Text="{x:Static rs:langage.title_listJob}"/></TextBlock>
                 <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" Grid.ColumnSpan="2"/>
             </Grid>
         </Button>
@@ -35,7 +39,7 @@
         <Button HorizontalAlignment="Left" Height="80" Margin="0,263,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Visibility="Hidden" IsEnabled="False">
             <Grid Width="256">
                 <Image Source="/img/log.png" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
-                <TextBlock VerticalAlignment="Center" Margin="80,0,92,0" FontSize="24" Foreground="White" FontFamily="Arial Black" RenderTransformOrigin="0.484,1.006"><Run Language="fr-fr" Text="Log"/></TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="80,0,92,0" FontSize="10" Foreground="White" FontFamily="Arial Black" RenderTransformOrigin="0.484,1.006"><Run Language="fr-fr" Text="{x:Static rs:langage.title_log}"/></TextBlock>
                 <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
             </Grid>
         </Button>
@@ -43,18 +47,11 @@
             <Grid Width="256">
 
                 <Image Source="/img/setting.png" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335"/>
-                <TextBlock VerticalAlignment="Center" Margin="78,0,46,0" FontSize="20" Foreground="White" FontFamily="Arial Black"><Run Language="fr-fr" Text="Générale"/></TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="78,0,46,0" FontSize="10" Foreground="White" FontFamily="Arial Black"><Run Language="fr-fr" Text="{x:Static rs:langage.title_setting}"/></TextBlock>
                 <Image Source="/img/arrow.png" Height="40" VerticalAlignment="Center" Margin="194,0,36,0" RenderTransformOrigin="0.699,0.502"/>
             </Grid>
         </Button>
-        <Label Content="Liste de Travaux" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="449" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
-        <Button HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="106" Margin="5,643,0,0">
-            <Grid Width="256" RenderTransformOrigin="0.243,0.609">
-
-                <Image Source="/img/flag_french.png" Height="28" Width="39" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,0,0,0" RenderTransformOrigin="0.542,0.335"/>
-                <TextBlock VerticalAlignment="Center" Margin="57,0,153,0" FontSize="20" Foreground="White" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Text="FR"/>
-            </Grid>
-        </Button>
+        <Label Content="{x:Static rs:langage.title_listJob }" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="600" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
 
         <Rectangle HorizontalAlignment="Left" Height="413" Margin="281,247,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="0.5,0.5" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.5,0.5" Fill="White" Margin="281,139,0,0"/>

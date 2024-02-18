@@ -1,4 +1,7 @@
-﻿using EasySave.utils;
+﻿using EasySave.controller;
+using EasySave.model;
+using EasySave.services;
+using EasySave.utils;
 using System.Configuration;
 using System.Text;
 using System.Windows;
@@ -18,19 +21,25 @@ namespace EasySave
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
-            SettingManager.ReadAllSettings();
-        
             InitializeComponent();
+            Settings s = new Settings();
+            // Instanciation
+            
+            ManageLang.ChangeLanguage(s.Lang);
+
+            BackUpManager bmManager = new BackUpManager();
+            StateManager stateManager = new StateManager();
+            LogManager logManager = new LogManager();
+            BackUpController controller = new BackUpController(bmManager, logManager, stateManager);
+
             view.Home home = new view.Home();
             // Affichez la première page au démarrage de l'application
             Content = home;
         }
 
-        private void initSettings(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

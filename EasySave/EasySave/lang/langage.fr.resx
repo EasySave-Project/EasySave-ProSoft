@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="btn_delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="btn_save" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="error_add_encrypt" xml:space="preserve">
+    <value>L'extension existe déjà.</value>
+  </data>
+  <data name="error_add_format" xml:space="preserve">
+    <value>l'extension n'est pas valide, entrez une extension commencant par un '.'</value>
+  </data>
   <data name="error_Caract" xml:space="preserve">
     <value>Erreur : Caractère illégal ou numéro inconnu.</value>
   </data>
@@ -164,6 +179,39 @@
   </data>
   <data name="error_UnknowSaisie" xml:space="preserve">
     <value>Erreur : Valeur saisie non reconnu</value>
+  </data>
+  <data name="ext_crypt" xml:space="preserve">
+    <value>Extension à crypter</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>Type de langue :</value>
+  </data>
+  <data name="log_Type" xml:space="preserve">
+    <value>Type de log :</value>
+  </data>
+  <data name="msgbox_save" xml:space="preserve">
+    <value>Paramètres sauvegardés avec succès !</value>
+  </data>
+  <data name="release" xml:space="preserve">
+    <value>Notes de mise à jour</value>
+  </data>
+  <data name="state_Type" xml:space="preserve">
+    <value>Type de State :</value>
+  </data>
+  <data name="title_home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="title_listJob" xml:space="preserve">
+    <value>Liste des travaux</value>
+  </data>
+  <data name="title_log" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="title_setting" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="userManual" xml:space="preserve">
+    <value>Manuel utilisateur</value>
   </data>
   <data name="view_add_AffichJobIsAdd" xml:space="preserve">
     <value>Travail Ajouter</value>
