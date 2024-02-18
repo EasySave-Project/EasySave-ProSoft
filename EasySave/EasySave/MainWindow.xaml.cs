@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-
 using EasySave.controller;
-=======
-﻿using EasySave.controller;
 using EasySave.model;
->>>>>>> Feat/WPF-Settings
 using EasySave.services;
 using EasySave.utils;
 using System.Configuration;
