@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System;
+using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace EasySave.view
@@ -46,6 +50,50 @@ namespace EasySave.view
             Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
+        }
+
+        private void BtnUserManuel_Click(object sender, RoutedEventArgs e)
+        {
+            // Obtenir le fichier PDF à partir du fichier ressource
+            byte[] pdfBytes = lang.resource_pdf.pdf_test;
+
+            // Créer un nom de fichier temporaire
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            // Sauvegarder le fichier PDF dans le fichier temporaire
+            File.WriteAllBytes(tempFile, pdfBytes);
+
+            // Créer un objet ProcessStartInfo avec la propriété UseShellExecute à true
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = tempFile,
+                UseShellExecute = true
+            };
+
+            // Lancer le processus avec l'objet ProcessStartInfo
+            Process.Start(psi);
+        }
+
+        private void BtnUpdateNote_Click(object sender, RoutedEventArgs e)
+        {
+            // Obtenir le fichier PDF à partir du fichier ressource
+            byte[] pdfBytes = lang.resource_pdf.pdf_test;
+
+            // Créer un nom de fichier temporaire
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            // Sauvegarder le fichier PDF dans le fichier temporaire
+            File.WriteAllBytes(tempFile, pdfBytes);
+
+            // Créer un objet ProcessStartInfo avec la propriété UseShellExecute à true
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = tempFile,
+                UseShellExecute = true
+            };
+
+            // Lancer le processus avec l'objet ProcessStartInfo
+            Process.Start(psi);
         }
     }
 }
