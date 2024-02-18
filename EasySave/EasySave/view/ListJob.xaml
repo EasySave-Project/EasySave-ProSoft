@@ -9,9 +9,6 @@
       mc:Ignorable="d" 
 
       Title="ListJob" Height="719" Width="1100">
-    <Page.Resources>
-        <utils:LocalizeConverter x:Key="LocalizeConverter"/>
-    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
