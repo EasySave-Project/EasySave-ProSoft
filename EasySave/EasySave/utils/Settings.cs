@@ -117,7 +117,7 @@ namespace EasySave.utils
                 _stateType = "Json";
                 _lang = "fr";
                 _extensionsToCrypt = new List<string>();
-                var directoryPath = Path.GetDirectoryName(_filePath);
+                var directoryPath = System.IO.Path.GetDirectoryName(_filePath);
                 if (!Directory.Exists(directoryPath))
                 {
                     Directory.CreateDirectory(directoryPath);

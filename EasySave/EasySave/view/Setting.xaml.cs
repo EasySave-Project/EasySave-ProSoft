@@ -34,8 +34,6 @@ namespace EasySave.view
             ManageLang.ChangeLanguage(settings.Lang);
             this.DataContext = settings;
             InitializeComponent();
-            
-            
         }
 
         private void list_Click(object sender, RoutedEventArgs e)
@@ -74,8 +72,12 @@ namespace EasySave.view
             // Appel de la méthode pour sauvegarder les paramètres
             settings.SaveSettings();
             ManageLang.ChangeLanguage(settings.Lang);
-            MessageBox.Show(ManageLang.GetString("msgbox_save"));
-            
+            System.Windows.MessageBox.Show(ManageLang.GetString("msgbox_save"));
+
+            // Actualiser la page
+            Setting setting = new Setting();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = setting;
         }
 
 
@@ -100,12 +102,12 @@ namespace EasySave.view
                 }
                 else
                 {
-                    MessageBox.Show(ManageLang.GetString("error_add_encrypt"));
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_add_encrypt"));
                 }
             }
             else
             {
-                MessageBox.Show(ManageLang.GetString("error_add_format"));
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_add_format"));
             }
         }
 
