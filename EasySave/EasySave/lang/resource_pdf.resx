@@ -118,7 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pdf_test" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dossier_Synthese_Baptiste_BERRETTA_FISA Info 23-26 Toulouse_Semestre_5 (1).PDF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="patchNoteV2_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PatchNoteV2_en.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="patchNoteV2_fr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PatchNoteV2_fr.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="userManuel_en_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserManuel_en_v2.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="userManuel_fr_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserManuel_fr_v2.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

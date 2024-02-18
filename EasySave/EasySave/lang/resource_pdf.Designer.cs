@@ -63,9 +63,39 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] pdf_test {
+        internal static byte[] patchNoteV2_en {
             get {
-                object obj = ResourceManager.GetObject("pdf_test", resourceCulture);
+                object obj = ResourceManager.GetObject("patchNoteV2_en", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] patchNoteV2_fr {
+            get {
+                object obj = ResourceManager.GetObject("patchNoteV2_fr", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] userManuel_en_v2 {
+            get {
+                object obj = ResourceManager.GetObject("userManuel_en_v2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] userManuel_fr_v2 {
+            get {
+                object obj = ResourceManager.GetObject("userManuel_fr_v2", resourceCulture);
                 return ((byte[])(obj));
             }
         }

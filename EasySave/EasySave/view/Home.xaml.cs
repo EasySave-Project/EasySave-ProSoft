@@ -18,6 +18,7 @@ using System;
 using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Windows.Forms;
+using EasySave.utils;
 
 namespace EasySave.view
 {
@@ -26,6 +27,7 @@ namespace EasySave.view
     /// </summary>
     public partial class Home : Page
     {
+        private Settings settings = new Settings();
         private MainWindow mainWindow;
         public Home()
         {
@@ -56,7 +58,17 @@ namespace EasySave.view
         private void BtnUserManuel_Click(object sender, RoutedEventArgs e)
         {
             // Obtenir le fichier PDF à partir du fichier ressource
-            byte[] pdfBytes = lang.resource_pdf.pdf_test;
+            byte[] pdfBytes;
+            if (settings.Lang == "fr")
+            {
+                // Français
+                pdfBytes = lang.resource_pdf.userManuel_fr_v2;
+            } 
+            else
+            {
+                // Anglais
+                pdfBytes = lang.resource_pdf.userManuel_en_v2;
+            }
 
             // Créer un nom de fichier temporaire
             string tempFile = System.IO.Path.GetTempFileName();
@@ -78,7 +90,17 @@ namespace EasySave.view
         private void BtnUpdateNote_Click(object sender, RoutedEventArgs e)
         {
             // Obtenir le fichier PDF à partir du fichier ressource
-            byte[] pdfBytes = lang.resource_pdf.pdf_test;
+            byte[] pdfBytes;
+            if (settings.Lang == "fr")
+            {
+                // Français
+                pdfBytes = lang.resource_pdf.patchNoteV2_fr;
+            }
+            else
+            {
+                // Anglais
+                pdfBytes = lang.resource_pdf.patchNoteV2_en;
+            }
 
             // Créer un nom de fichier temporaire
             string tempFile = System.IO.Path.GetTempFileName();
