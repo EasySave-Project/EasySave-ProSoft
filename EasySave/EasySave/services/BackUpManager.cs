@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using EasySave.view;
 using EasySave.services;
 using System.IO;
+using System.Windows;
 
 namespace EasySave.services;
 
@@ -51,9 +52,10 @@ public class BackUpManager
 
     public BackUpJob FindBackupJobById(int indexJob)
     {
-        if (indexJob > 4 && indexJob < 0)
+        if (indexJob < 0)
         {
-            throw new ArgumentException(ManageLang.GetString("error_JobSuperior5"));
+            System.Windows.MessageBox.Show(ManageLang.GetString("error_JobSuperior5"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return null;
         }
         return listBackUps[indexJob];
     }
@@ -68,7 +70,7 @@ public class BackUpManager
     {
         if (listBackUps.Any(j => j.name == newName))
         {
-            Console.WriteLine(ManageLang.GetString("view_add_sameNameJob"));
+            System.Windows.MessageBox.Show(ManageLang.GetString("view_add_sameNameJob"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
         listBackUps[index].name = newName;
@@ -102,7 +104,7 @@ public class BackUpManager
     {
         if (listBackUps.Any(j => j.name == jobName))
         {
-            Console.WriteLine(ManageLang.GetString("view_add_sameNameJob"));
+            System.Windows.MessageBox.Show(ManageLang.GetString("view_add_sameNameJob"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
             //throw new InvalidOperationException("Un job avec le même nom existe déjà.");
 

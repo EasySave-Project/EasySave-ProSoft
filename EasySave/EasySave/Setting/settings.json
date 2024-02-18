@@ -3,7 +3,6 @@
   "StateType": "Json",
   "Lang": "en",
   "ExtensionsToCrypt": [
-    ".txt",
-    ".png"
+    ".txt"
   ]
 }
