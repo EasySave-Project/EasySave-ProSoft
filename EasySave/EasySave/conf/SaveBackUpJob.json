@@ -1,0 +1,14 @@
+[
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "cc",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "aa",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  }
+]

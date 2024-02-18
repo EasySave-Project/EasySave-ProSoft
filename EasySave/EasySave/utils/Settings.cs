@@ -4,6 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace EasySave.utils
 {
@@ -40,39 +51,39 @@ namespace EasySave.utils
 
         public void LoadSettings()
         {
-            if (File.Exists(_filePath))
-            {
-                var json = File.ReadAllText(_filePath);
-                dynamic settings = JsonConvert.DeserializeObject(json);
-                _logType = settings?.LogType;
-                _stateType = settings?.StateType;
-                _lang = settings?.Lang;
-            }
-            else
-            {
-                _logType = "JSON";
-                _stateType = "JSON";
-                _lang = "fr";
+            //if (File.Exists(_filePath))
+            //{
+            //    var json = File.ReadAllText(_filePath);
+            //    dynamic settings = JsonConvert.DeserializeObject(json);
+            //    _logType = settings?.LogType;
+            //    _stateType = settings?.StateType;
+            //    _lang = settings?.Lang;
+            //}
+            //else
+            //{
+            //    _logType = "JSON";
+            //    _stateType = "JSON";
+            //    _lang = "fr";
 
-                var directoryPath = Path.GetDirectoryName(_filePath);
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
-                SaveSettings(); // Crée le fichier JSON avec les valeurs par défaut
-            }
+            //    var directoryPath = Path.GetDirectoryName(_filePath);
+            //    if (!Directory.Exists(directoryPath))
+            //    {
+            //        Directory.CreateDirectory(directoryPath);
+            //    }
+            //    SaveSettings(); // Crée le fichier JSON avec les valeurs par défaut
+            //}
         }
 
         private void SaveSettings()
         {
-            var settings = new
-            {
-                LogType = _logType,
-                StateType = _stateType,
-                Lang = _lang
-            };
-            var json = JsonConvert.SerializeObject(settings, Formatting.Indented);
-            File.WriteAllText(_filePath, json);
+            //var settings = new
+            //{
+            //    LogType = _logType,
+            //    StateType = _stateType,
+            //    Lang = _lang
+            //};
+            //var json = JsonConvert.SerializeObject(settings, Formatting.Indented);
+            //File.WriteAllText(_filePath, json);
         }
 
     }

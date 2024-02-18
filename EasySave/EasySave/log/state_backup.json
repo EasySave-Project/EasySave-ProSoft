@@ -1,0 +1,90 @@
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 8,
+  "Progression": 0
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 594079,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 7,
+  "Progression": 6
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 883715,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 6,
+  "Progression": 9
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2521398,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 5,
+  "Progression": 27
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2544615,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 4,
+  "Progression": 27
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2856538,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 3,
+  "Progression": 31
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 2937440,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 2,
+  "Progression": 32
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 9117862,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 1,
+  "Progression": 99
+}
+{
+  "NameJob": "aa",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "END",
+  "TotalFileToCopy": 9117883,
+  "TotalFileSize": 9117883,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}

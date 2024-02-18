@@ -71,7 +71,7 @@
             <ComboBoxItem Content="Complète"/>
             <ComboBoxItem Content="Différentiel"/>
         </ComboBox>
-        <Button x:Name="Btn_AddJob" Content="Modifier" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_AddJob_Click"/>
+        <Button x:Name="Btn_AddJob" Content="Modifier" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_ModifyJob_Click"/>
         <Label x:Name="Label_TypeSave" Content="Mode de Sauvegarde" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" Width="242" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
     </Grid>
 </Page>

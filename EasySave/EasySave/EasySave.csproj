@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,15 @@
     <None Remove="img\patch_note.png" />
     <None Remove="img\Play.png" />
     <None Remove="img\setting.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +57,7 @@
     <Resource Include="img\setting.png" />
     <Folder Include="conf\" />
     <Folder Include="log\" />
+    <Folder Include="Properties\" />
     <Folder Include="Setting\" />
   </ItemGroup>
 
