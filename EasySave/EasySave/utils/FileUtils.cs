@@ -10,7 +10,8 @@ namespace EasySave.utils
         // Connexion avec le StateManager
         private static StateManager stateManager = new StateManager();
 
-        private static LogManager logManager = new LogManager();    
+        private static LogManager logManager = new LogManager();
+
         public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
             VerifyDirectoryAndDrive(sourceDir, targetDir);
