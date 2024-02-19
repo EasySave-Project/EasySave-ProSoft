@@ -147,8 +147,8 @@
   <data name="error_index" xml:space="preserve">
     <value>Error : The start index must be less than the end index.</value>
   </data>
-  <data name="error_JobSuperior5" xml:space="preserve">
-    <value>Error : the job index cannot be &gt; 5</value>
+  <data name="error_JobInferior" xml:space="preserve">
+    <value>Error : the job index cannot be &lt; 0</value>
   </data>
   <data name="error_listCaract" xml:space="preserve">
     <value>Error : Illegal character or there must only be two indices separated by \"-\".</value>

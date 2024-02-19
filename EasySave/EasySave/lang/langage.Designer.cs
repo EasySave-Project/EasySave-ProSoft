@@ -151,11 +151,11 @@ namespace EasySave.lang {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Error : the job index cannot be &gt; 5.
+        ///   Recherche une chaîne localisée semblable à Error : the job index cannot be &lt; 0.
         /// </summary>
-        public static string error_JobSuperior5 {
+        public static string error_JobInferior {
             get {
-                return ResourceManager.GetString("error_JobSuperior5", resourceCulture);
+                return ResourceManager.GetString("error_JobInferior", resourceCulture);
             }
         }
         

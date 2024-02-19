@@ -33,6 +33,7 @@ namespace EasySave.utils
                 CopyModifierOrAddedFile(sourceDir, targetDir, name);
                 DeleteObsoleteFiles(sourceDir, targetDir);
                 CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
+                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -45,7 +46,7 @@ namespace EasySave.utils
             bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
             if (!isNotepadRunning)
             {
-                // Si la calculatrice n'est pas ouverte :
+                // Si le blocnote n'est pas ouverte :
 
                 VerifyDirectoryAndDrive(sourceDir, targetDir);
                 // créer le répertoire target s'il n'existe pas déjà 
@@ -55,6 +56,7 @@ namespace EasySave.utils
                 CopyFilesTo(sourceDir, targetDir,name);
                 DeleteObsoleteFiles(sourceDir, targetDir);
                 CopySubdirectoriesRecursively(name, sourceDir, targetDir);
+                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
