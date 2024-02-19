@@ -116,7 +116,7 @@ namespace EasySave.utils
                     file.CopyTo(tempPath, true);
                 }
                 stateManager.UpdateState_Complete(file.Length);
-                logManager.PushLog(file.Length);
+                logManager.PushLog(file.Length, name);
             }
         }
         private static void CopySubdirectoriesRecursively(string name, string sourceDir, string targetDir)
@@ -182,7 +182,7 @@ namespace EasySave.utils
                         sourceFile.CopyTo(targetFilePath, true);
                     }
                     stateManager.UpdateState_Differential(sourceFile.Length);
-                    logManager.PushLog(sourceFile.Length);
+                    logManager.PushLog(sourceFile.Length, name);
                 }
             }
         }

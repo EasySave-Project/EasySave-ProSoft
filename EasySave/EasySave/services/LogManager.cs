@@ -43,7 +43,7 @@ namespace EasySave
         }
 
 
-        public void PushLog(long NbOctetFile)
+        public void PushLog(long NbOctetFile, string name)
         {
             log.FileSize = NbOctetFile;
 
@@ -59,7 +59,7 @@ namespace EasySave
 
             log.Time = dateHeure.ToString("dd/MM/yyyy HH:mm:ss");
 
-            SaveLog();
+            SaveLog(name);
         }
 
 
@@ -69,7 +69,7 @@ namespace EasySave
         //=======================================================================================================
         // Sauvegarde dans le fichier JSON
         //=======================================================================================================
-        private void SaveLog()
+        private void SaveLog(string name)
         {
             // FICHIER JSON
             //=========================
@@ -81,13 +81,13 @@ namespace EasySave
             string json = JsonSerializer.Serialize<Log>(log, options);
 
             // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
-            string filePath = destPath + "\\log_backup.json";
+            string filePath = destPath + "\\log_backup_" + name + ".json";
             if(settings.LogType == "" || settings.LogType == null)
             {
-                settings.LogType = "JSON";
+                settings.LogType = "Json";
             }
 
-            if (settings.LogType == "JSON")
+            if (settings.LogType == "Json")
             {
                 // Si le fichier JSON existe déjà dans le dossier de destination
                 if (File.Exists(filePath))
@@ -99,10 +99,10 @@ namespace EasySave
                 }
                 else
                 {
-                    filePath = destPath + "\\log_backup.json";
+                    filePath = destPath + "\\log_backup_" + name + ".json";
                     File.WriteAllText(filePath, json);
                 }
-            } else if (settings.LogType == "XML")
+            } else if (settings.LogType == "Xml")
             {
                 // FICHIER XML
                 //=========================
@@ -111,7 +111,7 @@ namespace EasySave
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Log));
 
                 // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
-                string xmlPath = destPath + "\\log_backup.xml";
+                string xmlPath = destPath + "\\log_backup_" + name + ".xml";
 
                 // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
                 using (StreamWriter streamWriter = File.AppendText(xmlPath))

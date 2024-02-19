@@ -1,0 +1,50 @@
+{
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 594127,
+  "NbFilesLeftToDo": 3,
+  "Progression": 0
+}
+{
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 594079,
+  "TotalFileSize": 594127,
+  "NbFilesLeftToDo": 2,
+  "Progression": 99
+}
+{
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "TotalFileToCopy": 594100,
+  "TotalFileSize": 594127,
+  "NbFilesLeftToDo": 1,
+  "Progression": 99
+}
+{
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "INITIALISATION",
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 27,
+  "NbFilesLeftToDo": 1,
+  "Progression": 0
+}
+{
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "TotalFileToCopy": 27,
+  "TotalFileSize": 27,
+  "NbFilesLeftToDo": 0,
+  "Progression": 100
+}
