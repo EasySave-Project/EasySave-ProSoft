@@ -28,7 +28,7 @@ namespace EasySave.services
             state.NbFilesLeftToDo = GetNbFilesLeftToDo_Complete(sourcePath);
             state.Progression = 0;
 
-            SaveState();
+            SaveState(nameJob);
         }
 
         public void UpdateState_Complete(long NbOctetFile)
@@ -46,7 +46,7 @@ namespace EasySave.services
             {
                 state.State_Text = "ACTIVE";
             }
-            SaveState();
+            SaveState(state.NameJob);
         }
 
         private int GetTotalFileSize_Complete(string sourcePath)
@@ -88,7 +88,7 @@ namespace EasySave.services
             state.NbFilesLeftToDo = (int)result[0];
             state.Progression = 0;
 
-            SaveState();
+            SaveState(nameJob);
         }
 
         private long[] GetTotalFileSize_Differential(string sourcePath, string targetPath)
@@ -131,7 +131,7 @@ namespace EasySave.services
                 state.State_Text = "ACTIVE";
             }
 
-            SaveState();
+            SaveState(state.NameJob);
         }
 
 
@@ -140,7 +140,7 @@ namespace EasySave.services
         //=======================================================================================================
         // Sauvegarde dans le fichier JSON
         //=======================================================================================================
-        private void SaveState()
+        private void SaveState(string name)
         {
             // FICHIER JSON
             //=========================
@@ -150,10 +150,10 @@ namespace EasySave.services
 
             if(settings.LogType == "" || settings.LogType == null)
             {
-                settings.LogType = "JSON";
+                settings.LogType = "Json";
             }
 
-            if (settings.StateType == "JSON")
+            if (settings.StateType == "Json")
             {
                 // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
                 //string json = JsonSerializer.Serialize<State>(this);
@@ -161,7 +161,7 @@ namespace EasySave.services
                 string json = JsonSerializer.Serialize<State>(state, options);
 
                 // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
-                string filePath = destPath + "\\state_backup.json";
+                string filePath = destPath + "\\state_backup_" + name + ".json";
 
                 // Si le fichier JSON existe déjà dans le dossier de destination
                 if (File.Exists(filePath))
@@ -173,10 +173,10 @@ namespace EasySave.services
                 }
                 else
                 {
-                    filePath = destPath + "\\state_backup.json";
+                    filePath = destPath + "\\state_backup_" + name + ".json";
                     File.WriteAllText(filePath, json);
                 }
-            }else if(settings.StateType == "XML")
+            }else if(settings.StateType == "Xml")
             {
                 // FICHIER XML
                 //=========================
@@ -184,7 +184,7 @@ namespace EasySave.services
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(State));
 
                 // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
-                string xmlPath = destPath + "\\state_backup.xml";
+                string xmlPath = destPath + "\\state_backup_" + name + ".xml";
 
                 // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
                 using (StreamWriter streamWriter = File.AppendText(xmlPath))

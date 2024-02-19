@@ -1,38 +1,14 @@
 [
   {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test2",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test222",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
   },
   {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
-  },
-  {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
-  },
-  {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
-  },
-  {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
-  },
-  {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
-    "name": "test",
-    "sourceDirectory": "C:\\mt103",
-    "targetDirectory": "C:\\sauve"
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test11",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
   }
 ]
