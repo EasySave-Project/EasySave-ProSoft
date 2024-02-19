@@ -2,7 +2,5 @@
   "LogType": "Json",
   "StateType": "Json",
   "Lang": "fr",
-  "ExtensionsToCrypt": [
-    ".txt"
-  ]
+  "ExtensionsToCrypt": []
 }

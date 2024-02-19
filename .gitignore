@@ -7,6 +7,7 @@ EasySave/EasySave/bin/
 EasySave/EasySave/Properties/
 EasySave/EasySave/Settings/
 EasySave/EasySave/conf/
+EasySave/EasySave/log/
 # Ignorer les fichiers de configuration utilisateur de Visual Studio
 *.suo
 *.user
