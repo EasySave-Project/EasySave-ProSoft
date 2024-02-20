@@ -14,6 +14,7 @@
     <None Remove="img\arrow_black.png" />
     <None Remove="img\delete.png" />
     <None Remove="img\edit.png" />
+    <None Remove="img\flag_en.png" />
     <None Remove="img\flag_fr.png" />
     <None Remove="img\home.png" />
     <None Remove="img\home_page.png" />
@@ -22,8 +23,11 @@
     <None Remove="img\log.png" />
     <None Remove="img\logo_easysave.png" />
     <None Remove="img\patch_note.png" />
+    <None Remove="img\pause.png" />
     <None Remove="img\Play.png" />
     <None Remove="img\setting.png" />
+    <None Remove="img\start.png" />
+    <None Remove="img\stop.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\pause.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
@@ -45,16 +53,18 @@
     <Resource Include="img\arrow_black.png" />
     <Resource Include="img\delete.png" />
     <Resource Include="img\edit.png" />
+    <Resource Include="img\flag_en.png" />
     <Resource Include="img\flag_fr.png" />
     <Resource Include="img\home.png" />
     <Resource Include="img\home_page.png" />
     <Resource Include="img\icon_manuel.png" />
-    <Resource Include="img\leave.png" />
     <Resource Include="img\log.png" />
     <Resource Include="img\logo_easysave.png" />
     <Resource Include="img\patch_note.png" />
     <Resource Include="img\Play.png" />
     <Resource Include="img\setting.png" />
+    <Resource Include="img\start.png" />
+    <Resource Include="img\stop.png" />
     <Folder Include="conf\" />
     <Folder Include="log\" />
     <Folder Include="Properties\" />
