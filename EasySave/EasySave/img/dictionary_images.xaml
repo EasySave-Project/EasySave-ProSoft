@@ -11,10 +11,12 @@
     <BitmapImage x:Key="home" UriSource="/img/home.png" />
     <BitmapImage x:Key="home_page" UriSource="/img/home_page.png" />
     <BitmapImage x:Key="icon_manuel" UriSource="/img/icon_manuel.png" />
-    <BitmapImage x:Key="leave" UriSource="/img/leave.png" />
     <BitmapImage x:Key="log" UriSource="/img/log.png" />
     <BitmapImage x:Key="logo_easysave" UriSource="/img/logo_easysave.png" />
     <BitmapImage x:Key="patch_note" UriSource="/img/patch_note.png" />
     <BitmapImage x:Key="play" UriSource="/img/Play.png" />
     <BitmapImage x:Key="setting" UriSource="/img/setting.png" />
+    <BitmapImage x:Key="pause" UriSource="/img/pause.png" />
+    <BitmapImage x:Key="start" UriSource="/img/start.png" />
+    <BitmapImage x:Key="stop" UriSource="/img/stop.png" />
 </ResourceDictionary>

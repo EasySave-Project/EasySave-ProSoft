@@ -36,31 +36,6 @@ namespace EasySave.view
             InitializeComponent();
         }
 
-        private void list_Click(object sender, RoutedEventArgs e)
-        {
-            ListJob listJob = new ListJob();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = listJob;
-        }
-
-        private void home_Click(object sender, RoutedEventArgs e)
-        {
-            Home home = new Home();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = home;
-        }
-
-        private void setting_Click(object sender, RoutedEventArgs e)
-        {
-            Setting setting = new Setting();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = setting;
-        }
-
-        private void Btn_Add_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
@@ -87,8 +62,7 @@ namespace EasySave.view
             // on autorise seulement les extensions donc commencant par un .
             string regexExtension = @"^\.\w+$";
 
-
-            if (Regex.IsMatch(extension,regexExtension))
+            if (Regex.IsMatch(extension, regexExtension))
             {
                 // Ajouter l'extension à la liste si elle n'est pas déjà présente
                 if (!settings.ExtensionsToCrypt.Contains(extension))
@@ -124,6 +98,33 @@ namespace EasySave.view
                 // Mettre à jour la liste des extensions affichée
                 ListBoxExtensions.Items.Refresh();
             }
+        }
+
+
+
+        //==============================================
+        // Bouton de navigation
+        //==============================================
+
+        private void home_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = home;
+        }
+
+        private void setting_Click(object sender, RoutedEventArgs e)
+        {
+            Setting setting = new Setting();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = setting;
+        }
+
+        private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
+        {
+            ListJob listJob = new ListJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = listJob;
         }
     }
 }

@@ -11,23 +11,18 @@
       Title="Setting" Height="719" Width="1100"
 >
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
         <Rectangle HorizontalAlignment="Center" Height="106"  VerticalAlignment="Top" Width="1100" Margin="0,1,0,0"  Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="587" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
         <Rectangle HorizontalAlignment="Left" Height="587" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
 
-        <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="list_Click">
+        <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="Btn_ListJob_Click" >
             <Grid Width="256">
-                <Image Source="{StaticResource home}" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,-9,0,0"/>
-                <TextBlock VerticalAlignment="Center" Margin="70,0,62,0" FontSize="10" Foreground="White" FontFamily="Arial Black" Height="16"><Run Text="{x:Static rs:langage.title_listJob}"/></TextBlock>
-                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
+                <Image Source="{StaticResource home}" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,-9,0,0"/>
+                <TextBlock VerticalAlignment="Center" Margin="61,0,23,0" Foreground="White" FontFamily="Arial Black" FontSize="14"><Run Text="{x:Static rs:langage.title_listJob}"/></TextBlock>
+                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Top" Margin="193,7,37,0"/>
             </Grid>
         </Button>
         <Button x:Name="Btn_Home" Margin="0,0,860,612" Background= "White" BorderThickness="0" Click="home_Click">
-
             <Image HorizontalAlignment="Left" Height="86" VerticalAlignment="Center" Width="223" Source="{StaticResource logo_easysave}"/>
         </Button>
         <Button HorizontalAlignment="Left" Height="80" Margin="0,263,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Visibility="Hidden" IsEnabled="False">
@@ -37,16 +32,11 @@
                 <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="194,0,36,0"/>
             </Grid>
         </Button>
-        <Button x:Name="Btn_Setting" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="240" Background="#3A57E8" Margin="0,384,0,0" Click="setting_Click">
+        <Button x:Name="Btn_Setting" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="240" Background="#3A57E8" Margin="0,384,0,0" >
             <Grid Width="256">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="13*"/>
-                    <ColumnDefinition Width="51*"/>
-                </Grid.ColumnDefinitions>
-
-                <Image Source="{StaticResource setting}" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335" Grid.ColumnSpan="2"/>
-                <TextBlock VerticalAlignment="Center" Margin="26,0,46,0" FontSize="10" Foreground="White" FontFamily="Arial Black" Grid.Column="1"><Run Language="fr-fr" Text="{x:Static rs:langage.title_setting}"/></TextBlock>
-                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="142,0,36,0" RenderTransformOrigin="0.699,0.502" Grid.Column="1"/>
+                <Image Source="{StaticResource setting}" Height="51" Width="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,-3,0,0" RenderTransformOrigin="0.542,0.335"/>
+                <TextBlock VerticalAlignment="Center" Margin="70,0,54,0" FontSize="14" Foreground="White" FontFamily="Arial Black" Grid.ColumnSpan="2"><Run Language="fr-fr" Text="{x:Static rs:langage.title_setting}"/></TextBlock>
+                <Image Source="{StaticResource arrow}" Height="40" VerticalAlignment="Center" Margin="192,0,36,0" RenderTransformOrigin="0.699,0.502"/>
             </Grid>
         </Button>
         <Label Content="{x:Static rs:langage.title_setting}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="400" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
