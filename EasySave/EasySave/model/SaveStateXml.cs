@@ -19,6 +19,11 @@ namespace EasySave.model
                 xmlSerializer.Serialize(streamWriter, etat);
             }
         }
+
+        public void SaveLog(Log log)
+        {
+           // throw new NotImplementedException();
+        }
     }
 
 	

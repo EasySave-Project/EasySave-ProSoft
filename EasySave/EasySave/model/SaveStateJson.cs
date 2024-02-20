@@ -17,6 +17,10 @@ namespace EasySave.model
             string filePath = Path.Combine(cheminDossier, "state_backup.json");
             File.WriteAllText(filePath, json);
         }
+
+        public void SaveLog(Log log)
+        {
+        }
     }
 
 

@@ -1,6 +1,24 @@
 [
   {
     "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "Parodie",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "addJob",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test3",
+    "sourceDirectory": "C:\\mt103",
+    "targetDirectory": "C:\\sauve"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
     "name": "TypeSaveTest",
     "sourceDirectory": "C:\\mt103",
     "targetDirectory": "C:\\sauve"

@@ -4,5 +4,7 @@
     {
 
         void SauvegardeState(State etat, string cheminDossier);
+
+        void SaveLog(Log log);
     }
 }
