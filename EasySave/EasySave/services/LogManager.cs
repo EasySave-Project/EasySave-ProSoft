@@ -93,7 +93,7 @@ namespace EasySave
                 if (File.Exists(filePath))
                 {
                     // Lecture du contenu du fichier JSON existant
-                    string oldJson = System.IO.File.ReadAllText(filePath);
+                    string oldJson = File.ReadAllText(filePath);
                     string newJson = oldJson + "\n" + json;
                     File.WriteAllText(filePath, newJson);
                 }
