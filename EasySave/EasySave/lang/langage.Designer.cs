@@ -313,6 +313,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Files to priorityze.
+        /// </summary>
+        public static string ext_filespriorityze {
+            get {
+                return ResourceManager.GetString("ext_filespriorityze", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Type of lang :.
         /// </summary>
         public static string lang {
@@ -372,6 +381,15 @@ namespace EasySave.lang {
         public static string select_folder {
             get {
                 return ResourceManager.GetString("select_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Size max in ko.
+        /// </summary>
+        public static string sizemax {
+            get {
+                return ResourceManager.GetString("sizemax", resourceCulture);
             }
         }
         

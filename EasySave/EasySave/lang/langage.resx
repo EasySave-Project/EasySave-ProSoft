@@ -201,6 +201,9 @@
   <data name="ext_crypt" xml:space="preserve">
     <value>Extension to crypt</value>
   </data>
+  <data name="ext_filespriorityze" xml:space="preserve">
+    <value>Files to priorityze</value>
+  </data>
   <data name="lang" xml:space="preserve">
     <value>Type of lang :</value>
   </data>
@@ -221,6 +224,9 @@
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Select a folder </value>
+  </data>
+  <data name="sizemax" xml:space="preserve">
+    <value>Size max in ko</value>
   </data>
   <data name="sourceDir" xml:space="preserve">
     <value>Source directory :</value>

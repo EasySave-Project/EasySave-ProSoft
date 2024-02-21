@@ -743,5 +743,19 @@ namespace EasySave.lang {
                 return ResourceManager.GetString("view_waitingAswer", resourceCulture);
             }
         }
+        internal static string ext_filespriorityze
+        {
+            get
+            {
+                return ResourceManager.GetString("ext_filespriorityze", resourceCulture);
+            }
+        }
+        internal static string sizemax
+        {
+            get
+            {
+                return ResourceManager.GetString("sizemax", resourceCulture);
+            }
+        }
     }
 }

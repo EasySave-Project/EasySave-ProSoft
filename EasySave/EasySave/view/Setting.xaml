@@ -41,28 +41,28 @@
         </Button>
         <Label Content="{x:Static rs:langage.title_setting}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="400" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
         <Rectangle HorizontalAlignment="Left" Height="520" Margin="280,140,0,0"  VerticalAlignment="Top" Width="780" Fill="#FFE5E5E5"/>
-        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.log_Type}" HorizontalAlignment="Left" Margin="336,175,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.log_Type}" HorizontalAlignment="Left" Margin="340,172,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <!-- ComboBox pour 'LogType' -->
-        <ComboBox Margin="342,201,644,499" x:Name="ComboBox_LogType" 
+        <ComboBox Margin="340,200,646,500" x:Name="ComboBox_LogType" 
           SelectedValuePath="Content" 
           SelectedValue="{Binding LogType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="Json"/>
             <ComboBoxItem Content="Xml"/>
         </ComboBox>
 
-        <Label x:Name="Label_TypeState" Content="{x:Static rs:langage.state_Type}" HorizontalAlignment="Left" Margin="336,300,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeState" Content="{x:Static rs:langage.state_Type}" HorizontalAlignment="Left" Margin="340,272,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
 
         <!-- ComboBox pour 'StateType' -->
-        <ComboBox Margin="342,334,658,359" Width="100" Height="25" x:Name="ComboBox_StateType"   
+        <ComboBox Margin="340,300,655,399" x:Name="ComboBox_StateType"   
           SelectedValuePath="Content" 
           SelectedValue="{Binding StateType,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="Json"/>
             <ComboBoxItem Content="Xml"/>
         </ComboBox>
 
-        <Label x:Name="Label_TypeLang" Content="{x:Static rs:langage.lang}" HorizontalAlignment="Left" Margin="336,450,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeLang" Content="{x:Static rs:langage.lang}" HorizontalAlignment="Left" Margin="340,471,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <!-- ComboBox pour 'LangType' -->
-        <ComboBox Margin="342,492,658,202" Width="100" Height="25" x:Name="ComboBox_Lang"   
+        <ComboBox Margin="340,500,660,195" Width="100" x:Name="ComboBox_Lang"   
           SelectedValuePath="Content" 
           SelectedValue="{Binding Lang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="fr"/>
@@ -70,13 +70,27 @@
         </ComboBox>
 
         <Button Content="{x:Static rs:langage.btn_save}" Click="SaveSettings_Click" HorizontalAlignment="Left" Margin="342,577,0,0" VerticalAlignment="Top" Width="100"/>
+        <Grid>
+            <Rectangle HorizontalAlignment="Left" Height="223" Margin="724,176,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
+            <Label x:Name="Label_TypeToCrypt" Content="{x:Static rs:langage.ext_crypt}" HorizontalAlignment="Left" Margin="730,185,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="TextBox_cryptage" HorizontalAlignment="Left" Margin="740,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_add" Click="AddExtensionBtn_click" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="740,260,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_delete"  Click="DeleteBtn_click" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="740,290,0,0" VerticalAlignment="Top" Width="80"/>
+            <ListBox x:Name="ListBoxExtensions" ItemsSource="{Binding ExtensionsToCrypt}" HorizontalAlignment="Left" Margin="868,231,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
+        </Grid>
 
-        <Rectangle HorizontalAlignment="Left" Height="223" Margin="724,176,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
-        <Label x:Name="Label_TypeToCrypt" Content="{x:Static rs:langage.ext_crypt}" HorizontalAlignment="Left" Margin="730,185,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="TextBox_cryptage" HorizontalAlignment="Left" Margin="740,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_add" Click="AddExtensionBtn_click" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="740,260,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_delete"  Click="DeleteBtn_click" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="740,290,0,0" VerticalAlignment="Top" Width="80"/>
-        <ListBox x:Name="ListBoxExtensions" ItemsSource="{Binding ExtensionsToCrypt}" HorizontalAlignment="Left" Margin="868,231,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
+        <Grid>
+            <Rectangle HorizontalAlignment="Left" Height="223" Margin="724,410,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
+            <Label x:Name="Label_TypeTopriority" Content="{x:Static rs:langage.ext_filespriorityze}" HorizontalAlignment="Left" Margin="738,417,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="TextBox_priority" HorizontalAlignment="Left" Margin="740,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_add_Priorityze"  Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="740,485,0,0" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btn_delete_Priority"  Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="740,515,0,0" VerticalAlignment="Top" Width="80"/>
+            <ListBox x:Name="ListBoxExtensions_Priority" ItemsSource="{Binding ExtensionsToCrypt}" HorizontalAlignment="Left" Margin="870,456,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
+        </Grid>
+        
+        <Label x:Name="Label_TypeLang_Copy" Content="{x:Static rs:langage.sizemax}" HorizontalAlignment="Left" Margin="340,369,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="341,400,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
 
 
     </Grid>

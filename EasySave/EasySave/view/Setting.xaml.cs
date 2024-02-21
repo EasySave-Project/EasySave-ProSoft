@@ -126,5 +126,6 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
         }
+
     }
 }
