@@ -13,6 +13,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using System.IO;
+using EasySave.services;
 
 namespace EasySave
 {
@@ -29,6 +30,22 @@ namespace EasySave
         DateTime dateHeure = DateTime.Now;
         private long long_FileTransferTime;
         private long long_AfterFileTransferTime;
+        IStrategieSave typeSave;
+
+        public LogManager() {
+            if(settings.LogType == "Json")
+            {
+                typeSave = new SaveJson();
+            }else if (settings.LogType == "Xml")
+            {
+                typeSave = new SaveXML();
+            }else
+            {
+                throw new Exception("Log type invalid");
+            }
+        
+        }
+
 
         public void InitLog(string nameJob, string sourcePath, string targetPath)
         {
@@ -59,7 +76,7 @@ namespace EasySave
 
             log.Time = dateHeure.ToString("dd/MM/yyyy HH:mm:ss");
 
-            SaveLog(name);
+            SaveLog();
         }
 
 
@@ -69,86 +86,9 @@ namespace EasySave
         //=======================================================================================================
         // Sauvegarde dans le fichier JSON
         //=======================================================================================================
-        private void SaveLog(string name)
+        private void SaveLog()
         {
-            // FICHIER JSON
-            //=========================
-            string sCurrentDir = Environment.CurrentDirectory;
-            string destPath = sCurrentDir + "\\EasySave\\log";
-
-            // Appel de la méthode Serialize de la classe JsonSerializer pour convertir l'objet courant de type State en une chaîne JSON
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize<Log>(log, options);
-
-            // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier JSON
-            string filePath = destPath + "\\log_backup_" + name + ".json";
-            if(settings.LogType == "" || settings.LogType == null)
-            {
-                settings.LogType = "Json";
-            }
-
-            if (settings.LogType == "Json")
-            {
-                // Si le fichier JSON existe déjà dans le dossier de destination
-                if (File.Exists(filePath))
-                {
-                    // Lecture du contenu du fichier JSON existant
-                    string oldJson = File.ReadAllText(filePath);
-                    string newJson = oldJson + "\n" + json;
-                    File.WriteAllText(filePath, newJson);
-                }
-                else
-                {
-                    filePath = destPath + "\\log_backup_" + name + ".json";
-                    File.WriteAllText(filePath, json);
-                }
-            } else if (settings.LogType == "Xml")
-            {
-                // FICHIER XML
-                //=========================
-
-                // Création d'une instance de la classe XmlSerializer pour sérialiser l'objet courant de type LogManager en XML
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Log));
-
-                // Déclaration et initialisation d'une variable de type chaîne pour stocker le chemin du fichier XML
-                string xmlPath = destPath + "\\log_backup_" + name + ".xml";
-
-                // Utilisation d'un bloc using pour créer un flux d'écriture vers le fichier XML
-                using (StreamWriter streamWriter = File.AppendText(xmlPath))
-                {
-                    // Création d'une instance de la classe XmlWriterSettings pour configurer le flux d'écriture XML
-                    XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
-                    xmlWriterSettings.OmitXmlDeclaration = true; // Ne pas écrire la déclaration XML
-                    xmlWriterSettings.Indent = true; // Indenter le code XML
-
-                    // Création d'une instance de la classe XmlWriter pour écrire dans le flux d'écriture
-                    using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, xmlWriterSettings))
-                    {
-                        // Si le fichier XML n'existe pas, écrire la balise racine <Snippets>
-                        if (!File.Exists(xmlPath))
-                        {
-                            xmlWriter.WriteStartElement("Snippets");
-                        }
-
-                        // Appel de la méthode WriteNode de la classe XmlWriter pour écrire l'objet courant de type LogManager en XML dans le flux d'écriture
-                        xmlSerializer.Serialize(xmlWriter, log);
-
-                        // Si le fichier XML n'existe pas, écrire la balise de fermeture </Snippets>
-                        if (!File.Exists(xmlPath))
-                        {
-                            xmlWriter.WriteEndElement();
-                        }
-
-                        // Fermer le flux d'écriture XML
-                        xmlWriter.Close();
-                    }
-
-                    // Fermer le flux d'écriture
-                    streamWriter.Close();
-                }
-            }
-            
-
+            typeSave.SaveLog(log);
             
         }
 
