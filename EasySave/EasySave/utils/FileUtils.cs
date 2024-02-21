@@ -33,7 +33,7 @@ namespace EasySave.utils
                 CopyModifierOrAddedFile(sourceDir, targetDir, name);
                 DeleteObsoleteFiles(sourceDir, targetDir);
                 CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
-                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
+                //System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -56,7 +56,7 @@ namespace EasySave.utils
                 CopyFilesTo(sourceDir, targetDir,name);
                 DeleteObsoleteFiles(sourceDir, targetDir);
                 CopySubdirectoriesRecursively(name, sourceDir, targetDir);
-                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
+                //System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -88,11 +88,13 @@ namespace EasySave.utils
 
         private static void CopyFilesTo(string sourceDir, string targetDir,string name)
         {
-            // initilisation du stateManager
-            stateManager.InitState_Complete(name, sourceDir, targetDir);
+            // Initilisation du stateManager et du logManager
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
+                // Initilisation du stateManager et du logManager
+                stateManager.InitState_Complete(name, sourceDir, targetDir);
+
                 string tempPath = Path.Combine(targetDir, file.Name);
                 if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(file.Name).ToLower()))
                 {
@@ -117,7 +119,7 @@ namespace EasySave.utils
                 {
                     file.CopyTo(tempPath, true);
                 }
-                stateManager.UpdateState_Complete(file.Length);
+                stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
                 logManager.PushLog(file.Length, name);
             }
         }
@@ -147,8 +149,7 @@ namespace EasySave.utils
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
 
-            // initilisation du stateManager
-            stateManager.InitState_Differential(name, sourceDir, targetDir);
+            // initilisation du logManager
             logManager.InitLog(name, sourceDir, targetDir);
 
             foreach (var sourceFile in sourceFiles)
@@ -158,6 +159,9 @@ namespace EasySave.utils
 
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
+                    // initilisation du stateManager
+                    stateManager.InitState_Differential(name, sourceDir, targetDir);
+
                     Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
 
                     if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(sourceFile.Name).ToLower()))
@@ -183,7 +187,7 @@ namespace EasySave.utils
                     {
                         sourceFile.CopyTo(targetFilePath, true);
                     }
-                    stateManager.UpdateState_Differential(sourceFile.Length);
+                    stateManager.UpdateState_Differential(sourceFile.Length, sourceDir, targetDir);
                     logManager.PushLog(sourceFile.Length, name);
                 }
             }
