@@ -19,10 +19,10 @@ namespace EasySave.services
         {
             if(settings.StateType == "Json")
             {
-                typeSave = new SauvegardeJson();
+                typeSave = new SaveJson();
             }else if (settings.StateType == "Xml")
             {
-                typeSave = new SauvegardeXML();
+                typeSave = new SaveXML();
             }
             else
             {
@@ -158,9 +158,7 @@ namespace EasySave.services
         //=======================================================================================================
         private void SaveState()
         {
-            string sCurrentDir = Environment.CurrentDirectory;
-            string destPath = Path.Combine(sCurrentDir, "EasySave", "log");
-            typeSave.SauvegardeState(state, destPath);
+            typeSave.SaveState(state);
         }
     }
 }
