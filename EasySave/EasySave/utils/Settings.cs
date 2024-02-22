@@ -23,12 +23,14 @@ namespace EasySave.utils
 {
     public class Settings : INotifyPropertyChanged
     {
+        private static string path = Environment.CurrentDirectory + "\\EasySave\\Setting";
+        private static readonly string _filePath = path + "\\settings.json";
         private static string _logType;
         private static string _lang;
-        private static string path = Environment.CurrentDirectory + "\\EasySave\\Setting";
-        private static readonly string _filePath = path + "\\settings.json"; 
         private static string _stateType;
+        private static int? _nbKo;
         private static List<string> _extensionsToCrypt = new List<string>();
+        private static List<string> _extensionsToPriority = new List<string>();
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
@@ -64,6 +66,18 @@ namespace EasySave.utils
                 }
             }
         }
+        public List<string> ExtensionsToPriority
+        {
+            get { return _extensionsToPriority ?? new List<string>(); }
+            set
+            {
+                if (_extensionsToPriority != value)
+                {
+                    _extensionsToPriority = value;
+                    OnPropertyChanged(nameof(ExtensionsToPriority));
+                }
+            }
+        }
         public string StateType
         {
             get { return _stateType ?? "Json"; }
@@ -91,7 +105,20 @@ namespace EasySave.utils
             }
         }
 
-        
+        public int NbKo
+        {
+            get { return _nbKo ?? -1; }
+            set
+            {
+                if (_nbKo != value)
+                {
+                    _nbKo = value;
+                    OnPropertyChanged(nameof(NbKo));
+                }
+            }
+        }
+
+
 
         public void LoadSettings()
         {
@@ -102,6 +129,8 @@ namespace EasySave.utils
                 _logType = settings?.LogType;
                 _stateType = settings?.StateType;
                 _lang = settings?.Lang;
+                _nbKo = settings?.NbKo;
+                // Extensions to crypt
                 if (settings?.ExtensionsToCrypt != null)
                 {
                     _extensionsToCrypt = new List<string>(settings.ExtensionsToCrypt.ToObject<string[]>());
@@ -110,13 +139,24 @@ namespace EasySave.utils
                 {
                     _extensionsToCrypt = new List<string>();
                 }
+                // Extensions to Priority
+                if (settings?.ExtensionsToPriority != null)
+                {
+                    _extensionsToPriority = new List<string>(settings.ExtensionsToPriority.ToObject<string[]>());
+                }
+                else
+                {
+                    _extensionsToPriority = new List<string>();
+                }
             }
             else
             {
                 _logType = "Json";
                 _stateType = "Json";
                 _lang = "fr";
+                _nbKo = -1;
                 _extensionsToCrypt = new List<string>();
+                _extensionsToPriority = new List<string>();
                 var directoryPath = System.IO.Path.GetDirectoryName(_filePath);
                 if (!Directory.Exists(directoryPath))
                 {
@@ -133,7 +173,9 @@ namespace EasySave.utils
                 LogType = _logType,
                 StateType = _stateType,
                 Lang = _lang,
+                NbKo = _nbKo,
                 ExtensionsToCrypt = _extensionsToCrypt.ToArray(),
+                ExtensionsToPriority = _extensionsToPriority.ToArray()
             };
             var json = JsonConvert.SerializeObject(settings, Formatting.Indented);
             File.WriteAllText(_filePath, json);

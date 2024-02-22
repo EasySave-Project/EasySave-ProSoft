@@ -19,6 +19,7 @@ using System.IO;
 using EasySave.utils;
 using EasySave.services;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace EasySave.view
 {
@@ -33,7 +34,9 @@ namespace EasySave.view
         {
             ManageLang.ChangeLanguage(settings.Lang);
             this.DataContext = settings;
+
             InitializeComponent();
+            Initialize_NbKo();
         }
 
 
@@ -43,6 +46,25 @@ namespace EasySave.view
             settings.LogType = ComboBox_LogType.SelectedValue.ToString();
             settings.StateType = ComboBox_StateType.SelectedValue.ToString();
             settings.Lang = ComboBox_Lang.SelectedValue.ToString();
+
+            if (string.IsNullOrEmpty(TextBox_nbKo.Text))
+            {
+                // Si la TextBox est vide, affectez -1 à settings.NbKo
+                settings.NbKo = -1;
+            }
+            else if (int.TryParse(TextBox_nbKo.Text, out int nbKoValue) && nbKoValue >= 0)
+            {
+                // La valeur saisie est un entier valide et est supérieure ou égale à 0
+                settings.NbKo = nbKoValue;
+            }
+            else
+            {
+                // La valeur saisie n'est pas un entier valide ou est inférieure à 0
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_ValueNbKo"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+
 
             // Appel de la méthode pour sauvegarder les paramètres
             settings.SaveSettings();
@@ -55,6 +77,21 @@ namespace EasySave.view
             parentWindow.Content = setting;
         }
 
+        private void Initialize_NbKo()
+        {
+            if (settings.NbKo == -1)
+            {
+                TextBox_nbKo.Text = "";
+            }
+            else
+            {
+                TextBox_nbKo.Text = settings.NbKo.ToString();
+            }
+        }
+
+        //==============================================
+        // Extensions à chiffrer
+        //==============================================
 
         private void AddExtensionBtn_click(object sender, RoutedEventArgs e)
         {
@@ -100,6 +137,53 @@ namespace EasySave.view
             }
         }
 
+        //==============================================
+        // Extensions prioritaires
+        //==============================================
+
+        private void btn_add_Priority_Click(object sender, RoutedEventArgs e)
+        {
+            string extension = TextBox_Priority.Text.Trim();
+            // on autorise seulement les extensions donc commencant par un .
+            string regexExtension = @"^\.\w+$";
+
+            if (Regex.IsMatch(extension, regexExtension))
+            {
+                // Ajouter l'extension à la liste si elle n'est pas déjà présente
+                if (!settings.ExtensionsToPriority.Contains(extension))
+                {
+                    settings.ExtensionsToPriority.Add(extension);
+                    settings.SaveSettings(); // Sauvegarder les changements dans le fichier JSON
+
+                    // Mettre à jour l'interface utilisateur
+                    ListBoxExtensions_Priority.Items.Refresh();
+                    TextBox_Priority.Clear(); // Effacer le TextBox après l'ajout
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_add_encrypt"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
+            {
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_add_format"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void btn_delete_Priority_Click(object sender, RoutedEventArgs e)
+        {
+            // Supposons que vous ayez un ListBox nommé ListBoxExtensions pour lister les extensions
+            var selectedExtension = ListBoxExtensions_Priority.SelectedItem as string;
+            if (selectedExtension != null)
+            {
+                settings.ExtensionsToPriority.Remove(selectedExtension);
+                settings.SaveSettings();
+
+                // Mettre à jour la liste des extensions affichée
+                ListBoxExtensions_Priority.Items.Refresh();
+            }
+        }
+
 
 
         //==============================================
@@ -126,5 +210,6 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
         }
+
     }
 }

@@ -28,7 +28,10 @@ namespace EasySave.model
         {
             try
             {
+                FileUtils.DifferentialCopyDirectory_Priority(name, sourceDirectory, targetDirectory);
                 FileUtils.DifferentialCopyDirectory(name, sourceDirectory, targetDirectory);
+
+                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception e)
             {

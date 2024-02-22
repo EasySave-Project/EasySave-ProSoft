@@ -2,5 +2,9 @@
   "LogType": "Json",
   "StateType": "Json",
   "Lang": "fr",
-  "ExtensionsToCrypt": []
+  "NbKo": -1,
+  "ExtensionsToCrypt": [],
+  "ExtensionsToPriority": [
+    ".txt"
+  ]
 }
