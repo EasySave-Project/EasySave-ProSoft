@@ -195,11 +195,17 @@
   <data name="error_UnknowSaisie" xml:space="preserve">
     <value>Erreur : Valeur saisie non reconnu</value>
   </data>
+  <data name="error_ValueNbKo" xml:space="preserve">
+    <value>Vous ne pouvez que mettre un nombre positif et sans virgule</value>
+  </data>
   <data name="exe_job_title" xml:space="preserve">
     <value>Exécution du travail</value>
   </data>
   <data name="ext_crypt" xml:space="preserve">
-    <value>Extension à crypter</value>
+    <value>Extension à chiffrer</value>
+  </data>
+  <data name="ext_prio" xml:space="preserve">
+    <value>Extensions prioritaires</value>
   </data>
   <data name="lang" xml:space="preserve">
     <value>Type de langue :</value>

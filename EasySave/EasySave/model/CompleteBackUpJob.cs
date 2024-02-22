@@ -33,7 +33,10 @@ namespace EasySave.model
         {
             try
             {
+                FileUtils.CompleteCopyDirectory_Priority(name, sourceDirectory, targetDirectory);
                 FileUtils.CompleteCopyDirectory(name, sourceDirectory, targetDirectory);
+                
+                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception e)
             {

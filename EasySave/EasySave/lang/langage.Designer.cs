@@ -295,6 +295,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à You can only enter a positive number without a decimal point.
+        /// </summary>
+        public static string error_ValueNbKo {
+            get {
+                return ResourceManager.GetString("error_ValueNbKo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Job execution.
         /// </summary>
         public static string exe_job_title {
@@ -309,6 +318,15 @@ namespace EasySave.lang {
         public static string ext_crypt {
             get {
                 return ResourceManager.GetString("ext_crypt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Priority extensions.
+        /// </summary>
+        public static string ext_prio {
+            get {
+                return ResourceManager.GetString("ext_prio", resourceCulture);
             }
         }
         

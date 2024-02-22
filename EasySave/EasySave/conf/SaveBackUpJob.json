@@ -1,6 +1,6 @@
 [
   {
-    "$type": "EasySave.model.DifferentialBackUpJob, EasySave",
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
     "name": "test11",
     "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
     "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
