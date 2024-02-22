@@ -294,7 +294,7 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
         }
-        
+
         private void Btn_Right_Index_Click(object sender, RoutedEventArgs e)
         {
             if (indexPage < nbPage)
