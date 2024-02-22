@@ -34,27 +34,6 @@ namespace EasySave.view
             InitializeComponent();
         }
 
-        private void Btn_Home_Click(object sender, RoutedEventArgs e)
-        {
-            Home home = new Home();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = home;
-        }
-
-        private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
-        {
-            ListJob listJob = new ListJob();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = listJob;
-        }
-
-        private void Btn_Setting_Click(object sender, RoutedEventArgs e)
-        {
-            Setting setting = new Setting();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Content = setting;
-        }
-
         private void BtnUserManuel_Click(object sender, RoutedEventArgs e)
         {
             // Obtenir le fichier PDF à partir du fichier ressource
@@ -63,7 +42,7 @@ namespace EasySave.view
             {
                 // Français
                 pdfBytes = lang.resource_pdf.userManuel_fr_v2;
-            } 
+            }
             else
             {
                 // Anglais
@@ -117,6 +96,31 @@ namespace EasySave.view
 
             // Lancer le processus avec l'objet ProcessStartInfo
             Process.Start(psi);
+        }
+
+        //==============================================
+        // Bouton de navigation
+        //==============================================
+
+        private void Btn_Home_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = home;
+        }
+
+        private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
+        {
+            ListJob listJob = new ListJob();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = listJob;
+        }
+
+        private void Btn_Setting_Click(object sender, RoutedEventArgs e)
+        {
+            Setting setting = new Setting();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Content = setting;
         }
     }
 }
