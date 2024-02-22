@@ -5,6 +5,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Shell;
 namespace EasySave.utils
 {
     
@@ -16,6 +17,10 @@ namespace EasySave.utils
         private static LogManager logManager = new LogManager();
 
         private static Settings settings = new Settings();
+
+        // Variable tableau string contenant deux champs : nom du fichier et le path du fichier
+        private static List<string[]> tab_PriorityFiles;
+
 
         public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
         {
@@ -92,6 +97,11 @@ namespace EasySave.utils
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
+                // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
+                if (CheckFilePriority(name, file.FullName))
+                {
+                    continue;
+                }
                 // Initilisation du stateManager et du logManager
                 stateManager.InitState_Complete(name, sourceDir, targetDir);
                 string tempPath = Path.Combine(targetDir, file.Name);
@@ -101,23 +111,20 @@ namespace EasySave.utils
                 {
                     continue;
                 }
+                if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(file.Name).ToLower()))
+                {
+                    // todo executer crypto soft sur sourceFile, targetFile
+                    string sSourcePath_File = Path.Combine(sourceDir, file.Name);
+                    string sTargetPath_File = Path.Combine(targetDir, file.Name);
+                    string sClef = "secret";
+                    FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
+                }
                 else
                 {
-                    if (settings.ExtensionsToCrypt.Contains(Path.GetExtension(file.Name).ToLower()))
-                    {
-                        // todo executer crypto soft sur sourceFile, targetFile
-                        string sSourcePath_File = Path.Combine(sourceDir, file.Name);
-                        string sTargetPath_File = Path.Combine(targetDir, file.Name);
-                        string sClef = "secret";
-                        FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
-                    } 
-                    else
-                    {
-                        file.CopyTo(tempPath, true);
-                    }
-                    stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
-                    logManager.PushLog(file.Length, name);
+                    file.CopyTo(tempPath, true);
                 }
+                stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
+                logManager.PushLog(file.Length, name);
             }
         }
 
@@ -157,6 +164,12 @@ namespace EasySave.utils
 
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
+                    // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
+                    if (CheckFilePriority(name, sourceFile.FullName))
+                    {
+                        continue;
+                    }
+                    
                     // initilisation du stateManager
                     stateManager.InitState_Differential(name, sourceDir, targetDir);
 
@@ -229,29 +242,69 @@ namespace EasySave.utils
         }
 
         //===============================================================
+        // Fonction pour gérer le tableau de priorité
+        //===============================================================
+
+        // Méthode d'initialisation tardive pour tab_PriorityFiles
+        private static void InitializeTab_PriorityFiles()
+        {
+            if (tab_PriorityFiles == null)
+            {
+                tab_PriorityFiles = new List<string[]>();
+            }
+        }
+
+        // Ajouter une méthode pour ajouter des éléments à tab_PriorityFiles
+        public static void AddToTab_PriorityFiles(string fileName, string filePath)
+        {
+            InitializeTab_PriorityFiles(); // Assurez-vous que la liste est initialisée
+            tab_PriorityFiles.Add(new string[] { fileName, filePath });
+        }
+
+        // Méthode pour vérifier si un fichier à copier coller est prioritaire
+        public static bool CheckFilePriority(string fileName, string filePath)
+        {
+            foreach (var file in tab_PriorityFiles)
+            {
+                if (file[0] == fileName && file[1] == filePath)
+                {
+                    // Le fichier et son chemin d'accès correspondent à une entrée de priorité
+                    return true;
+                }
+            }
+            // Le fichier et son chemin d'accès ne correspondent à aucune entrée de priorité
+            return false;
+        }
+
+
+
+        //===============================================================
         // Fonction pour les fichiers prioritaires COMPLETE
         //===============================================================
 
         // Fonction pour les fichiers prioritaires en mode complete
         public static void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir)
         {
-            // Vérifier si le processus de la calculatrice est en cours d'exécution
-            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-            if (!isNotepadRunning)
+            // Si il y a des choses dans la liste de priorité, on les copie en priorité
+            if (settings.ExtensionsToPriority.Count > 0)
             {
-                // Si le blocnote n'est pas ouverte :
+                InitializeTab_PriorityFiles();
+                    
+                // Vérifier si le processus de la calculatrice est en cours d'exécution
+                bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
+                if (!isNotepadRunning)
+                {
+                    // Si le blocnote n'est pas ouverte :
 
-                VerifyDirectoryAndDrive(sourceDir, targetDir);
-                // créer le répertoire target s'il n'existe pas déjà 
-                // on se permet de créer le dossier si il n'est pas déjà créer.
-                Directory.CreateDirectory(targetDir);
-
-                CopyFilesTo_Priority(sourceDir, targetDir, name);
-                CopySubdirectoriesRecursively_Priority(name, sourceDir, targetDir);
-            }
-            else
-            {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    VerifyDirectoryAndDrive(sourceDir, targetDir);
+                    Directory.CreateDirectory(targetDir);
+                    CopyFilesTo_Priority(sourceDir, targetDir, name);
+                    CopySubdirectoriesRecursively_Priority(name, sourceDir, targetDir);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
         }
 
@@ -263,6 +316,7 @@ namespace EasySave.utils
             {
                 if (settings.ExtensionsToPriority.Contains(Path.GetExtension(file.Name).ToLower()))
                 {
+                
                     // Initilisation du stateManager et du logManager
                     stateManager.InitState_Complete(name, sourceDir, targetDir);
                     string tempPath = Path.Combine(targetDir, file.Name);
@@ -286,6 +340,9 @@ namespace EasySave.utils
                         {
                             file.CopyTo(tempPath, true);
                         }
+                        // Mettre le fichier copier dans le tableau de priorité
+                        AddToTab_PriorityFiles(file.Name, tempPath);
+
                         stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
                         logManager.PushLog(file.Length, name);
                     }
@@ -314,23 +371,29 @@ namespace EasySave.utils
         // Fonction pour les fichiers prioritaires en mode différentiel
         public static void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir)
         {
-            // Vérifier si l'application de la calculatrice Windows est ouverte
-            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-            if (!isNotepadRunning)
+            // Si il y a des choses dans la liste de priorité, on les copie en priorité
+            if (settings.ExtensionsToPriority.Count > 0)
             {
-                // Si la calculatrice n'est pas ouverte :
+                InitializeTab_PriorityFiles();
 
-                VerifyDirectoryAndDrive(sourceDir, targetDir);
-                // créer le répertoire target s'il n'existe pas déjà 
-                // on se permet de créer le dossier si il n'est pas déjà créer.
-                Directory.CreateDirectory(targetDir);
+                // Vérifier si l'application de la calculatrice Windows est ouverte
+                bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
+                if (!isNotepadRunning)
+                {
+                    // Si la calculatrice n'est pas ouverte :
 
-                CopyModifierOrAddedFile_Priority(sourceDir, targetDir, name);
-                CopySubdirectoriesRecursivelyForDifferential_Priority(name, sourceDir, targetDir);
-            }
-            else
-            {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    VerifyDirectoryAndDrive(sourceDir, targetDir);
+                    // créer le répertoire target s'il n'existe pas déjà 
+                    // on se permet de créer le dossier si il n'est pas déjà créer.
+                    Directory.CreateDirectory(targetDir);
+
+                    CopyModifierOrAddedFile_Priority(sourceDir, targetDir, name);
+                    CopySubdirectoriesRecursivelyForDifferential_Priority(name, sourceDir, targetDir);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
         }
 
@@ -375,6 +438,9 @@ namespace EasySave.utils
                             {
                                 sourceFile.CopyTo(targetFilePath, true);
                             }
+                            // Mettre le fichier copier dans le tableau de priorité
+                            AddToTab_PriorityFiles(sourceFile.Name, targetFilePath);
+
                             stateManager.UpdateState_Differential(sourceFile.Length, sourceDir, targetDir);
                             logManager.PushLog(sourceFile.Length, name);
                         }

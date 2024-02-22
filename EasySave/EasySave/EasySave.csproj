@@ -66,7 +66,6 @@
     <Resource Include="img\start.png" />
     <Resource Include="img\stop.png" />
     <Folder Include="conf\" />
-    <Folder Include="log\" />
     <Folder Include="Properties\" />
     <Folder Include="Setting\" />
   </ItemGroup>
