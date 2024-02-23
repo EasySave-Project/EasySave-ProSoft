@@ -28,6 +28,8 @@ namespace EasySave
         {
             InitializeComponent();
             InitConfFolder();
+            this.WindowStyle = WindowStyle.None;
+            this.MouseLeftButtonDown += delegate { this.DragMove(); };
 
             Settings s = new Settings();
              

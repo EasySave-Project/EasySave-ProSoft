@@ -219,5 +219,9 @@ namespace EasySave.view
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
         }
+        private void Btn_Leave_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

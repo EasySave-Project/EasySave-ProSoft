@@ -10,8 +10,8 @@
 
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="106"  VerticalAlignment="Top" Width="1100" Margin="0,1,0,0"  Fill="White"/>
-        <Rectangle HorizontalAlignment="Left" Height="587" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
-        <Rectangle HorizontalAlignment="Left" Height="587" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
+        <Rectangle HorizontalAlignment="Left" Height="612" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
+        <Rectangle HorizontalAlignment="Left" Height="613" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
 
         <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="Btn_ListJob_Click" >
             <Grid Width="256">
@@ -62,5 +62,11 @@
         </ComboBox>
         <Button x:Name="Btn_AddJob" Content="{x:Static rs:langage.btn_edit}" HorizontalAlignment="Left" Margin="400,460,0,0" VerticalAlignment="Top" Height="31" Width="140" Foreground="#FF001F4D" FontFamily="Arial Black" Background="White" FontSize="18" Click="Btn_ModifyJob_Click"/>
         <Label x:Name="Label_TypeSave" Content="{x:Static rs:langage.type}" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" Width="242" FontFamily="Arial Black" FontSize="16" Foreground="#FF001F4D" Height="29"/>
+        <Button  x:Name="Btn_Leave" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
+            <Image Source="{StaticResource start}" Height="68" Width="106" RenderTransformOrigin="0.542,0.335">
+
+            </Image>
+        </Button>
     </Grid>
+
 </Page>
