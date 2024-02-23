@@ -2,6 +2,7 @@
 using EasySave.services;
 using System.Windows;
 using System.Windows.Controls;
+using EasySave.services;
 
 namespace EasySave.view
 {
@@ -11,16 +12,18 @@ namespace EasySave.view
         private int indexPage = 1;
         private int nbPage = 0;
         private List<String> sNameJob = new List<string>();
-
+        StateManager stateManager = new StateManager();
         public ListJob()
         {
             InitializeComponent();
             ShowListJob();
+            stateManager.ProgressionChanged += StateManager_ProgressionChanged;
         }
 
         //==============================================
         // Code de la page ListJob
         //==============================================
+        
 
         private MainWindow _MainWindows = new MainWindow();
 
@@ -313,6 +316,19 @@ namespace EasySave.view
                 Label_IndexPages.Content = indexPage + " / " + nbPage;
                 ShowListJob();
             }
+        }
+
+
+
+        private void StateManager_ProgressionChanged(int progression)
+        {
+            // Utilisez la nouvelle valeur de progression
+            Console.WriteLine($"Nouvelle progression : {progression}%");
+        }
+
+        private void Btn_Leave_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 

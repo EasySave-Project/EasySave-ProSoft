@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EasySave"
         mc:Ignorable="d"
         MinWidth="1100" MaxWidth="1100"
-        MinHeight="719" MaxHeight="719">
+        MinHeight="700" MaxHeight="719">
     <Grid>
         <Frame x:Name="Main" Margin="206,0,0,0" NavigationUIVisibility="Hidden" />
     </Grid>

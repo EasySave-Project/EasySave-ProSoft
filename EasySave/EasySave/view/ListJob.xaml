@@ -8,15 +8,16 @@
       xmlns:utils="clr-namespace:EasySave.utils"
       mc:Ignorable="d" 
 
-      Title="ListJob" Height="719" Width="1100">
+      Title="ListJob" Height="719" Width="1100"
+      >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Rectangle HorizontalAlignment="Center" Height="106"  VerticalAlignment="Top" Width="1100" Margin="0,1,0,0"  Fill="White"/>
-        <Rectangle HorizontalAlignment="Left" Height="587" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
-        <Rectangle HorizontalAlignment="Left" Height="587" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
+        <Rectangle HorizontalAlignment="Left" Height="612" Margin="0,107,0,0"  VerticalAlignment="Top" Width="240" Fill="#222738"/>
+        <Rectangle HorizontalAlignment="Left" Height="614" Margin="240,107,0,0" VerticalAlignment="Top" Width="860" Fill="#001F4D"/>
 
         <Button x:Name="Btn_ListJob" HorizontalAlignment="Left" Height="80" Margin="0,144,0,0" VerticalAlignment="Top" Width="240" Background="#3A57E8" Click="Btn_ListJob_Click" >
             <Grid Width="256">
@@ -45,7 +46,7 @@
         </Button>
         <Label Content="{x:Static rs:langage.title_listJob }" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="600" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="413" Margin="281,247,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="0.5,0.5" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="429" Margin="281,247,0,0" VerticalAlignment="Top" Width="782" RenderTransformOrigin="0.5,0.5" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="780" RenderTransformOrigin="0.5,0.5" Fill="White" Margin="281,139,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="300,266,0,0" VerticalAlignment="Top" Width="190" Fill="#D9D9D9">
 
@@ -81,7 +82,9 @@
                 <Button x:Name="BtnStart_Job1" Canvas.Left="487" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="26" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job1" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
+                <ProgressBar x:Name="ProgressBar_Job1" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
+                     Maximum="100" 
+                     Value="{Binding UpdateState_Complete.state.Progression}"/>
             </Canvas>
         </Grid>
 
@@ -196,10 +199,10 @@
 
         </Grid>
 
-        <Button x:Name="Btn_Left_Index" Margin="320,611,740,71" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Left_Index_Click">
+        <Button x:Name="Btn_Left_Index" Margin="320,623,740,59" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Left_Index_Click">
             <Image Height="35" Width="34" Source="{StaticResource arrow_black}"/>
         </Button>
-        <Button x:Name="Btn_Right_Index" Margin="752,612,308,70" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Right_Index_Click">
+        <Button x:Name="Btn_Right_Index" Margin="752,623,308,59" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Right_Index_Click">
             <Image Height="35" Width="34" Source="{StaticResource arrow_black}" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -211,7 +214,12 @@
                 </Image.RenderTransform>
             </Image>
         </Button>
-        <Label x:Name="Label_IndexPages" Content="XX / XX" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,618,0,0" VerticalAlignment="Top" Width="132" FontFamily="Arial" FontSize="14"/>
+        <Label x:Name="Label_IndexPages" Content="XX / XX" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,628,0,0" VerticalAlignment="Top" Width="132" FontFamily="Arial" FontSize="14"/>
+        <Button  x:Name="Btn_Leave" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
+            <Image Source="{StaticResource start}" Height="68" Width="106" RenderTransformOrigin="0.542,0.335">
+
+            </Image>
+        </Button>
 
     </Grid>
 </Page>
