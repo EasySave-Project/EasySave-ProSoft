@@ -97,14 +97,14 @@ namespace EasySave.utils
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
+                string tempPath = Path.Combine(targetDir, file.Name);
                 // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
-                if (CheckFilePriority(name, file.FullName))
+                if (CheckFilePriority(file.Name, tempPath))
                 {
                     continue;
                 }
                 // Initilisation du stateManager et du logManager
                 stateManager.InitState_Complete(name, sourceDir, targetDir);
-                string tempPath = Path.Combine(targetDir, file.Name);
 
                 // Vérifier si le fichier ne dépasse pas la taille limite de Ko
                 if (settings.NbKo != -1 && file.Length > settings.NbKo * 1024)
@@ -165,7 +165,7 @@ namespace EasySave.utils
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
                     // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
-                    if (CheckFilePriority(name, sourceFile.FullName))
+                    if (CheckFilePriority(sourceFile.Name, targetFilePath))
                     {
                         continue;
                     }
@@ -285,11 +285,10 @@ namespace EasySave.utils
         // Fonction pour les fichiers prioritaires en mode complete
         public static void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir)
         {
+            InitializeTab_PriorityFiles();
             // Si il y a des choses dans la liste de priorité, on les copie en priorité
             if (settings.ExtensionsToPriority.Count > 0)
-            {
-                InitializeTab_PriorityFiles();
-                    
+            {       
                 // Vérifier si le processus de la calculatrice est en cours d'exécution
                 bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
                 if (!isNotepadRunning)
@@ -371,11 +370,10 @@ namespace EasySave.utils
         // Fonction pour les fichiers prioritaires en mode différentiel
         public static void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir)
         {
+            InitializeTab_PriorityFiles();
             // Si il y a des choses dans la liste de priorité, on les copie en priorité
             if (settings.ExtensionsToPriority.Count > 0)
             {
-                InitializeTab_PriorityFiles();
-
                 // Vérifier si l'application de la calculatrice Windows est ouverte
                 bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
                 if (!isNotepadRunning)

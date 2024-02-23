@@ -56,7 +56,16 @@ namespace EasySave.services
 
         public void UpdateState_Complete(long NbOctetFile, string sourcePath, string targetPath)
         {
-            if (state.TotalFileSize == state.TotalFileToCopy)
+            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
+
+            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
+            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
+
+            state.SourcePath = sourcePath;
+            state.TargetPath = targetPath;
+
+            //if (state.TotalFileSize == state.TotalFileToCopy)
+            if(state.NbFilesLeftToDo == 0)
             {
                 state.State_Text = "END";
                 bSecurityIsRecursive = true;
@@ -65,14 +74,6 @@ namespace EasySave.services
             {
                 state.State_Text = "ACTIVE";
             }
-
-            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
-
-            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
-            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
-
-            state.SourcePath = sourcePath;
-            state.TargetPath = targetPath;
 
             SaveState();
         }
@@ -134,19 +135,25 @@ namespace EasySave.services
 
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
-                    Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
-                    // Incrémenter le nombre de fichiers différents
-                    result[0] = result[0] + 1;
-                    // Ajouter la taille du fichier source à la taille cumulée
-                    result[1] = result[1] + sourceFile.Length;
+                    result[0]++; // Incrémenter le nombre de fichiers différents
+                    result[1] += sourceFile.Length; // Ajouter la taille du fichier à la taille cumulée
                 }
             }
+
             return result;
         }
 
         public void UpdateState_Differential(long NbOctetFile, string sourcePath, string targetPath)
         {
-            if (state.TotalFileSize == state.TotalFileToCopy)
+            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
+
+            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
+            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
+
+            state.SourcePath = sourcePath;
+            state.TargetPath = targetPath;
+
+            if (state.NbFilesLeftToDo == 0)
             {
                 state.State_Text = "END";
                 bSecurityIsRecursive = true;
@@ -155,14 +162,6 @@ namespace EasySave.services
             {
                 state.State_Text = "ACTIVE";
             }
-
-            state.TotalFileToCopy = state.TotalFileToCopy + NbOctetFile;
-
-            state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
-            state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
-
-            state.SourcePath = sourcePath;
-            state.TargetPath = targetPath;
 
             SaveState();
         }
