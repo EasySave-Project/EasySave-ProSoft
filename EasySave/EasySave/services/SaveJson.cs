@@ -30,6 +30,7 @@ namespace EasySave.services
             {
                 File.WriteAllText(filePath, json);
             }
+
         }
 
         public void SaveLog(Log log)
