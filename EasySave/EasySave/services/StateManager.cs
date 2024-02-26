@@ -19,10 +19,11 @@ namespace EasySave.services
 
         public StateManager()
         {
-            if(settings.StateType == "Json")
+            if (settings.StateType == "Json")
             {
                 typeSave = new SaveJson();
-            }else if (settings.StateType == "Xml")
+            }
+            else if (settings.StateType == "Xml")
             {
                 typeSave = new SaveXML();
             }
@@ -37,7 +38,7 @@ namespace EasySave.services
         //=======================================================================================================
         public void InitState_Complete(string nameJob, string sourcePath, string targetPath)
         {
-            if(bSecurityIsRecursive == true)
+            if (bSecurityIsRecursive == true)
             {
                 state.NameJob = nameJob;
                 state.SourcePath = sourcePath;
@@ -51,7 +52,7 @@ namespace EasySave.services
                 bSecurityIsRecursive = false;
                 SaveState();
             }
-            
+
         }
 
         public void UpdateState_Complete(long NbOctetFile, string sourcePath, string targetPath)
@@ -65,7 +66,7 @@ namespace EasySave.services
             state.TargetPath = targetPath;
 
             //if (state.TotalFileSize == state.TotalFileToCopy)
-            if(state.NbFilesLeftToDo == 0)
+            if (state.NbFilesLeftToDo == 0)
             {
                 state.State_Text = "END";
                 bSecurityIsRecursive = true;

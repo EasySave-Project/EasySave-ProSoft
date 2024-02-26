@@ -125,6 +125,7 @@ namespace EasySave.utils
                 }
                 stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
                 logManager.PushLog(file.Length, name);
+                Thread.Sleep(1000);
             }
         }
 
