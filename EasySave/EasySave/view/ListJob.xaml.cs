@@ -8,6 +8,8 @@ using System.Windows.Threading;
 using static EasySave.services.StateManager;
 using System;
 using System.Diagnostics;
+using EasySave.utils;
+using System.Xml;
 
 namespace EasySave.view
 {
@@ -20,6 +22,7 @@ namespace EasySave.view
         private List<String> sNameJob = new List<string>();
         private static Thread thread_ProgressBar;
         private volatile bool stopThread = false;
+        private Settings settings_state = new Settings();
 
         public ListJob()
         {
@@ -350,23 +353,52 @@ namespace EasySave.view
                             if (label.Visibility == Visibility.Visible && label.Content?.ToString() != "" && progressBar != null)
                             {
                                 currentJobs[i] = label.Content.ToString();
-                                filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.json");
 
-                                if (File.Exists(filePath))
+                                if (settings_state.StateType == "Json")
                                 {
-                                    fileContent = File.ReadAllText(filePath);
+                                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.json");
 
-                                    lastProgress = 0;
-                                    using (var jsonReader = new JsonTextReader(new StringReader(fileContent)) { SupportMultipleContent = true })
+                                    if (File.Exists(filePath))
                                     {
-                                        var serializer = new JsonSerializer();
-                                        while (jsonReader.Read())
-                                        {
-                                            dynamic fileObject = serializer.Deserialize<dynamic>(jsonReader);
-                                            lastProgress = fileObject?.Progression ?? lastProgress;
-                                        }
+                                        fileContent = File.ReadAllText(filePath);
 
-                                        progressBar.Value = lastProgress;
+                                        lastProgress = 0;
+                                        using (var jsonReader = new JsonTextReader(new StringReader(fileContent)) { SupportMultipleContent = true })
+                                        {
+                                            var serializer = new JsonSerializer();
+                                            while (jsonReader.Read())
+                                            {
+                                                dynamic fileObject = serializer.Deserialize<dynamic>(jsonReader);
+                                                lastProgress = fileObject?.Progression ?? lastProgress;
+                                            }
+
+                                            progressBar.Value = lastProgress;
+                                        }
+                                    }
+                                }
+                                else if (settings_state.StateType == "Xml")
+                                {
+                                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.xml");
+
+                                    if (File.Exists(filePath))
+                                    {
+                                        string xmlContent = File.ReadAllText(filePath);
+                                        string[] stateElements = xmlContent.Split(new string[] { "</State>" }, StringSplitOptions.RemoveEmptyEntries);
+
+                                        foreach (string stateElement in stateElements)
+                                        {
+                                            string stateXml = stateElement + "</State>";
+
+                                            XmlDocument xmlDoc = new XmlDocument();
+                                            xmlDoc.LoadXml(stateXml);
+
+                                            XmlNode progressNode = xmlDoc.SelectSingleNode("//Progression");
+                                            if (progressNode != null)
+                                            {
+                                                lastProgress = int.Parse(progressNode.InnerText);
+                                                progressBar.Value = lastProgress;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -375,6 +407,7 @@ namespace EasySave.view
                 }
             }
         }
+
 
         //==============================================
         // Bouton de navigation
