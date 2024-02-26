@@ -2,33 +2,35 @@
 using EasySave.services;
 using System.Windows;
 using System.Windows.Controls;
-using EasySave.services;
+using Newtonsoft.Json;
+using System.IO;
+using System.Windows.Threading;
+using static EasySave.services.StateManager;
+using System;
+using System.Diagnostics;
 
 namespace EasySave.view
 {
 
     public partial class ListJob : Page
     {
+        private MainWindow _MainWindows = new MainWindow();
         private int indexPage = 1;
         private int nbPage = 0;
         private List<String> sNameJob = new List<string>();
-        StateManager stateManager = new StateManager();
+        private static Thread thread_ProgressBar;
+        private volatile bool stopThread = false;
+
         public ListJob()
         {
             InitializeComponent();
             ShowListJob();
-            stateManager.ProgressionChanged += StateManager_ProgressionChanged;
+            ProgressBar_Thread();
         }
 
         //==============================================
         // Code de la page ListJob
         //==============================================
-        
-
-        private MainWindow _MainWindows = new MainWindow();
-
-        string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
-
         private void ShowListJob()
         {
             // Récupération de la liste des jobs
@@ -123,14 +125,25 @@ namespace EasySave.view
 
             // Exécuter du job
             index_SelectJob--;
-            try
+
+            // Exécuter du job dans un thread séparé
+            Thread jobThread = new Thread(() =>
             {
-                _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
-            }
-            catch
-            {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+                try
+                {
+                    _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+                }
+                catch
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            });
+
+            // Faire du thread un thread d'arrière-plan
+            jobThread.IsBackground = true;
+
+            // Démarrer le thread
+            jobThread.Start();
         }
 
         private void BtnPlay_Job1_Click(object sender, RoutedEventArgs e)
@@ -274,11 +287,102 @@ namespace EasySave.view
         }
 
         //==============================================
+        // Récupération des barres de progression
+        //==============================================
+
+        private void ProgressBar_Thread()
+        {
+            // Vérifier si le thread est déjà créé
+            if (thread_ProgressBar == null || !thread_ProgressBar.IsAlive)
+            {
+                // Réinitialiser stopThread
+                stopThread = false;
+
+                // Créer un nouveau thread sur la méthode ReadData
+                thread_ProgressBar = new Thread(ProgressBar_ReadData);
+
+                // Faire du thread un thread d'arrière-plan
+                thread_ProgressBar.IsBackground = true;
+
+                // Démarrer le thread
+                thread_ProgressBar.Start();
+            }
+        }
+
+        private void ProgressBar_Stop()
+        {
+            // Vérifier si le thread existe et est en cours d'exécution
+            if (thread_ProgressBar != null && thread_ProgressBar.IsAlive)
+            {
+                // Demander au thread de s'arrêter
+                stopThread = true;
+            }
+        }
+
+        private void ProgressBar_ReadData()
+        {
+            string[] currentJobs = new string[5];
+            System.Windows.Controls.Label label = null;
+            System.Windows.Controls.ProgressBar progressBar = null;
+            string filePath;
+            string fileContent;
+            int lastProgress;
+
+            while (!stopThread)
+            {
+                Thread.Sleep(100);
+                for (int i = 0; i < 5; i++)
+                {
+                    Dispatcher.Invoke(() =>
+                    {
+                        label = (System.Windows.Controls.Label)FindName($"LabelName_Job{i + 1}");
+                    });
+
+                    if (label != null)
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            progressBar = (System.Windows.Controls.ProgressBar)FindName($"ProgressBar_Job{i + 1}");
+                        });
+
+                        Dispatcher.Invoke(() =>
+                        {
+                            if (label.Visibility == Visibility.Visible && label.Content?.ToString() != "" && progressBar != null)
+                            {
+                                currentJobs[i] = label.Content.ToString();
+                                filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.json");
+
+                                if (File.Exists(filePath))
+                                {
+                                    fileContent = File.ReadAllText(filePath);
+
+                                    lastProgress = 0;
+                                    using (var jsonReader = new JsonTextReader(new StringReader(fileContent)) { SupportMultipleContent = true })
+                                    {
+                                        var serializer = new JsonSerializer();
+                                        while (jsonReader.Read())
+                                        {
+                                            dynamic fileObject = serializer.Deserialize<dynamic>(jsonReader);
+                                            lastProgress = fileObject?.Progression ?? lastProgress;
+                                        }
+
+                                        progressBar.Value = lastProgress;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        }
+
+        //==============================================
         // Bouton de navigation
         //==============================================
 
         private void Btn_Home_Click(object sender, RoutedEventArgs e)
         {
+            ProgressBar_Stop();
             Home home = new Home();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = home;
@@ -286,6 +390,7 @@ namespace EasySave.view
 
         private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
         {
+            ProgressBar_Stop();
             ListJob listJob = new ListJob();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
@@ -293,6 +398,7 @@ namespace EasySave.view
 
         private void Btn_Setting_Click(object sender, RoutedEventArgs e)
         {
+            ProgressBar_Stop();
             Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
@@ -318,16 +424,9 @@ namespace EasySave.view
             }
         }
 
-
-
-        private void StateManager_ProgressionChanged(int progression)
-        {
-            // Utilisez la nouvelle valeur de progression
-            Console.WriteLine($"Nouvelle progression : {progression}%");
-        }
-
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
+            ProgressBar_Stop();
             System.Windows.Application.Current.Shutdown();
         }
     }

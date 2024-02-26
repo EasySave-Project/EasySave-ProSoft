@@ -7,6 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using EasySave.model;
+using EasySave.services;
 
 namespace EasySave.services
 {
@@ -30,7 +31,6 @@ namespace EasySave.services
             {
                 File.WriteAllText(filePath, json);
             }
-
         }
 
         public void SaveLog(Log log)

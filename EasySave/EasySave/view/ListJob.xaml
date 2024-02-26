@@ -82,9 +82,7 @@
                 <Button x:Name="BtnStart_Job1" Canvas.Left="487" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="26" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job1" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
-                     Maximum="100" 
-                     Value="{Binding UpdateState_Complete.state.Progression}"/>
+                <ProgressBar x:Name="ProgressBar_Job1" Visibility="Visible" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9" Minimum="0"  Maximum="100"/>
             </Canvas>
         </Grid>
 
@@ -115,7 +113,7 @@
                 <Button x:Name="BtnStart_Job2" Canvas.Left="489" Canvas.Top="2"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="28" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job2" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
+                <ProgressBar x:Name="ProgressBar_Job2" Visibility="Visible" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
         </Grid>
         <!-- JOB 3 -->
@@ -141,7 +139,7 @@
                 <Button x:Name="BtnStart_Job3" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job3" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
+                <ProgressBar x:Name="ProgressBar_Job3" Visibility="Visible" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
         </Grid>
         <!-- JOB 4 -->
@@ -167,7 +165,7 @@
                 <Button x:Name="BtnStart_Job4" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job4" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
+                <ProgressBar x:Name="ProgressBar_Job4" Visibility="Visible" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
         </Grid>
         <!-- JOB 5 -->
@@ -193,7 +191,7 @@
                 <Button x:Name="BtnStart_Job5" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <ProgressBar x:Name="ProgressBar_Job5" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
+                <ProgressBar x:Name="ProgressBar_Job5" Visibility="Visible" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
 
 
@@ -220,6 +218,6 @@
 
             </Image>
         </Button>
-
+        
     </Grid>
 </Page>
