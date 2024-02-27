@@ -1,6 +1,36 @@
 [
   {
     "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test77",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test66",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test55",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test44",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
+    "name": "test33",
+    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
+    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+  },
+  {
+    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
     "name": "test22",
     "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
     "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"

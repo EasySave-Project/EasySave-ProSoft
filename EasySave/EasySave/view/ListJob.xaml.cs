@@ -21,14 +21,13 @@ namespace EasySave.view
         private int nbPage = 0;
         private List<String> sNameJob = new List<string>();
         private static Thread thread_ProgressBar;
-        private volatile bool stopThread = false;
         private Settings settings_state = new Settings();
 
         public ListJob()
         {
             InitializeComponent();
             ShowListJob();
-            ProgressBar_Thread();
+            //ProgressBar_Thread();
         }
 
         //==============================================
@@ -128,6 +127,9 @@ namespace EasySave.view
 
             // Exécuter du job
             index_SelectJob--;
+
+            // Lancer le thread de la barre de progression
+            ProgressBar_Thread(btnJob);
 
             // Exécuter du job dans un thread séparé
             Thread jobThread = new Thread(() =>
@@ -293,96 +295,63 @@ namespace EasySave.view
         // Récupération des barres de progression
         //==============================================
 
-        private void ProgressBar_Thread()
-        {
-            // Vérifier si le thread est déjà créé
-            if (thread_ProgressBar == null || !thread_ProgressBar.IsAlive)
-            {
-                // Réinitialiser stopThread
-                stopThread = false;
-
-                // Créer un nouveau thread sur la méthode ReadData
-                thread_ProgressBar = new Thread(ProgressBar_ReadData);
-
-                // Faire du thread un thread d'arrière-plan
-                thread_ProgressBar.IsBackground = true;
-
-                // Démarrer le thread
-                thread_ProgressBar.Start();
-            }
+        private void ProgressBar_Thread(int btnJob)
+        {   
+            // Créer un nouveau thread pour ProgressTEST
+            Thread thread_ProgressTEST = new Thread(() => ProgressTEST(btnJob));
+            thread_ProgressTEST.IsBackground = true;
+            thread_ProgressTEST.Start();
         }
 
-        private void ProgressBar_Stop()
+        private void ProgressTEST(int btnJob)
         {
-            // Vérifier si le thread existe et est en cours d'exécution
-            if (thread_ProgressBar != null && thread_ProgressBar.IsAlive)
-            {
-                // Demander au thread de s'arrêter
-                stopThread = true;
-            }
-        }
-
-        private void ProgressBar_ReadData()
-        {
-            string[] currentJobs = new string[5];
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+            index_SelectJob--;
+            // Récupération du nom du job par rapport à l'index
+            string jobNameCurrent = sNameJob[index_SelectJob];
+            // Setup des éléments WPF
             System.Windows.Controls.Label label = null;
             System.Windows.Controls.ProgressBar progressBar = null;
-            string filePath;
-            string fileContent;
-            int lastProgress;
-
-            while (!stopThread)
+            Dispatcher.Invoke(() =>
             {
-                Thread.Sleep(100);
-                for (int i = 0; i < 5; i++)
+                label = (System.Windows.Controls.Label)FindName($"LabelName_Job{btnJob}");
+                progressBar = (System.Windows.Controls.ProgressBar)FindName($"ProgressBar_Job{btnJob}");
+            });
+            // Variables
+            bool Security = false;
+            int timeAt100 = 0;
+            string filePath;
+
+            while (Security == false)
+            {
+                if(settings_state.StateType == "Xml")
                 {
-                    Dispatcher.Invoke(() =>
-                    {
-                        label = (System.Windows.Controls.Label)FindName($"LabelName_Job{i + 1}");
-                    });
+                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{jobNameCurrent}.xml");
+                } else
+                {
+                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{jobNameCurrent}.json");
+                }
 
-                    if (label != null)
+                Dispatcher.Invoke(() =>
+                {
+                    // Vérifier si la page affiché est toujours celle qui présente notre job
+                    if (label.Content.ToString() == jobNameCurrent)
                     {
-                        Dispatcher.Invoke(() =>
+                        // Afficher la barre de progression
+                        progressBar.Visibility = Visibility.Visible;
+                        if (File.Exists(filePath))
                         {
-                            progressBar = (System.Windows.Controls.ProgressBar)FindName($"ProgressBar_Job{i + 1}");
-                        });
-
-                        Dispatcher.Invoke(() =>
-                        {
-                            if (label.Visibility == Visibility.Visible && label.Content?.ToString() != "" && progressBar != null)
+                            if (settings_state.StateType == "Xml")
                             {
-                                currentJobs[i] = label.Content.ToString();
-
-                                if (settings_state.StateType == "Json")
+                                // Mode XML
+                                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                                 {
-                                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.json");
-
-                                    if (File.Exists(filePath))
+                                    // Lecture du contenu du fichier
+                                    using (StreamReader sr = new StreamReader(fs))
                                     {
-                                        fileContent = File.ReadAllText(filePath);
-
-                                        lastProgress = 0;
-                                        using (var jsonReader = new JsonTextReader(new StringReader(fileContent)) { SupportMultipleContent = true })
-                                        {
-                                            var serializer = new JsonSerializer();
-                                            while (jsonReader.Read())
-                                            {
-                                                dynamic fileObject = serializer.Deserialize<dynamic>(jsonReader);
-                                                lastProgress = fileObject?.Progression ?? lastProgress;
-                                            }
-
-                                            progressBar.Value = lastProgress;
-                                        }
-                                    }
-                                }
-                                else if (settings_state.StateType == "Xml")
-                                {
-                                    filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{currentJobs[i]}.xml");
-
-                                    if (File.Exists(filePath))
-                                    {
-                                        string xmlContent = File.ReadAllText(filePath);
+                                        string xmlContent = sr.ReadToEnd();
                                         string[] stateElements = xmlContent.Split(new string[] { "</State>" }, StringSplitOptions.RemoveEmptyEntries);
 
                                         foreach (string stateElement in stateElements)
@@ -395,17 +364,62 @@ namespace EasySave.view
                                             XmlNode progressNode = xmlDoc.SelectSingleNode("//Progression");
                                             if (progressNode != null)
                                             {
-                                                lastProgress = int.Parse(progressNode.InnerText);
-                                                progressBar.Value = lastProgress;
+                                                progressBar.Value = int.Parse(progressNode.InnerText);
                                             }
                                         }
                                     }
                                 }
                             }
-                        });
+                            else
+                            {
+                                // Mode JSON
+                                string fileContent = File.ReadAllText(filePath);
+                                int lastProgress = 0;
+                                using (var jsonReader = new JsonTextReader(new StringReader(fileContent)) { SupportMultipleContent = true })
+                                {
+                                    var serializer = new JsonSerializer();
+                                    while (jsonReader.Read())
+                                    {
+                                        dynamic fileObject = serializer.Deserialize<dynamic>(jsonReader);
+                                        lastProgress = fileObject?.Progression ?? lastProgress;
+                                    }
+                                    progressBar.Value = lastProgress;
+                                }
+                            }
+                        }
                     }
-                }
+                });
+
+                // Si la progression est à 100%, on incrémente le temps écoulé
+                Dispatcher.Invoke(() =>
+                {
+                    if (progressBar.Value == 100)
+                    {
+                        timeAt100 += 100;
+                    }
+                    // Sinon, on le remet à zéro
+                    else
+                    {
+                        timeAt100 = 0;
+                    }
+                    // Si le temps écoulé à 100% dépasse 3 secondes, on passe Security à true
+                    if (timeAt100 >= 3000)
+                    {
+                        Security = true;
+                        progressBar.Visibility = Visibility.Hidden;
+                    }
+                });
+                Thread.Sleep(100);
             }
+        }
+
+        private void HiddenAllProgressBar()
+        {
+            ProgressBar_Job1.Visibility = Visibility.Hidden;
+            ProgressBar_Job2.Visibility = Visibility.Hidden;
+            ProgressBar_Job3.Visibility = Visibility.Hidden;
+            ProgressBar_Job4.Visibility = Visibility.Hidden;
+            ProgressBar_Job5.Visibility = Visibility.Hidden;
         }
 
 
@@ -415,7 +429,6 @@ namespace EasySave.view
 
         private void Btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            ProgressBar_Stop();
             Home home = new Home();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = home;
@@ -423,7 +436,6 @@ namespace EasySave.view
 
         private void Btn_ListJob_Click(object sender, RoutedEventArgs e)
         {
-            ProgressBar_Stop();
             ListJob listJob = new ListJob();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = listJob;
@@ -431,7 +443,6 @@ namespace EasySave.view
 
         private void Btn_Setting_Click(object sender, RoutedEventArgs e)
         {
-            ProgressBar_Stop();
             Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
@@ -444,6 +455,7 @@ namespace EasySave.view
                 indexPage++;
                 Label_IndexPages.Content = indexPage + " / " + nbPage;
                 ShowListJob();
+                HiddenAllProgressBar();
             }
         }
 
@@ -454,12 +466,12 @@ namespace EasySave.view
                 indexPage--;
                 Label_IndexPages.Content = indexPage + " / " + nbPage;
                 ShowListJob();
+                HiddenAllProgressBar();
             }
         }
 
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
-            ProgressBar_Stop();
             System.Windows.Application.Current.Shutdown();
         }
     }
