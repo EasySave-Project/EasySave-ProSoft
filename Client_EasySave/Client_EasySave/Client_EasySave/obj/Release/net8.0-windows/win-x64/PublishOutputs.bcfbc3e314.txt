@@ -1,0 +1,7 @@
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\Client_EasySave.pdb
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\D3DCompiler_47_cor3.dll
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\PenImc_cor3.dll
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\PresentationNative_cor3.dll
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\vcruntime140_cor3.dll
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\wpfgfx_cor3.dll
+C:\Users\baptx\Desktop\CESI\3e année v2\Cours Semestre 5\ProgSys\Fichier visual code v2\INTERFACE_EasySave\CLIENT\Execute Client\Client_EasySave.exe

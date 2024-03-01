@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="arrow_black" UriSource="/img/arrow_black.png" />
+    <BitmapImage x:Key="logo_easysave" UriSource="/img/logo_easysave.png" />
+    <BitmapImage x:Key="pause" UriSource="/img/pause.png" />
+    <BitmapImage x:Key="play" UriSource="/img/Play.png" />
+    <BitmapImage x:Key="start" UriSource="/img/start.png" />
+    <BitmapImage x:Key="stop" UriSource="/img/stop.png" />
+
+</ResourceDictionary>

@@ -66,151 +66,38 @@
         <Button x:Name="Btn_AddJob" Margin="772,150,70,520" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_AddJob_Click">
             <TextBlock x:Name="TextBlock_AddNewJob" VerticalAlignment="Center" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="233" HorizontalAlignment="Center" TextAlignment="Center" FontSize="14"><Run Text="{x:Static rs:langage.add_newJob}"/></TextBlock>
         </Button>
-        <!-- JOB 1 -->
-        <Grid x:Name="Grid_Job1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="747" Margin="301,320,0,0">
-            <Rectangle x:Name="Rectangle_Job1" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="647" Fill="#D9D9D9"/>
-            <Label x:Name="LabelName_Job1" Content="Nom travail 1" HorizontalAlignment="Left" Height="24" Margin="19,5,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Canvas>
-                <Button x:Name="BtnPlay_Job1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" Click="BtnPlay_Job1_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image Source="{StaticResource play}" Height="28" Width="28" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnEdit_job1" Canvas.Left="0" Canvas.Top="0" Margin="657,0,47,680" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="39"  Width="43" Click="BtnEdit_job1_Click">
-                    <Image Source="{StaticResource edit}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnDelete_job1" Canvas.Left="701" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Height="38" Width="50" Click="BtnDelete_job1_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Image Source="{StaticResource delete}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnPause_Job1" Canvas.Left="568" Canvas.Top="5"   BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnPauseJob1_Click">
-                    <Image Source="{StaticResource pause}" Height="21" Width="21" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnStop_Job1" Canvas.Left="528" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtnStop_Job1_Click">
-                    <Image Source="{StaticResource stop}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <ProgressBar x:Name="ProgressBar_Job1" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9" Minimum="0"  Maximum="100"/>
 
-            </Canvas>
-        </Grid>
+        <ListView ItemsSource="{Binding Jobs}" SelectionMode="Single" Margin="300,310,60,64">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,5">
+                        <TextBlock Text="{Binding JobName}" Margin="0,6,30,0" />
+                        <ProgressBar Value="{Binding JobProgress, Mode=TwoWay}" Width="250" Margin="0,0,10,0" />
+                        <!-- Boutons Play, Pause, Stop, Resume avec espacement individuel -->
+                        <Button Click="BtnPlay_Click" Margin="0,0,15,0">
+                            <Image Source="{StaticResource play}" Height="25" Width="50"/>
+                        </Button>
+                        <Button Click="BtnPause_Click" Margin="0,0,15,0" >
+                            <Image Source="{StaticResource pause}" Height="25" Width="50"/>
+                        </Button>
+                        <Button Click="BtnStop_Click" Margin="0,0,15,0" >
+                            <Image Source="{StaticResource stop}" Height="25" Width="50"/>
+                        </Button>
+                        <Button Click="BtnResume_Click" Margin="0,0,15,0" >
+                            <Image Source="{StaticResource replay}" Height="25" Width="50"/>
+                        </Button>
+                        <!-- Boutons Supprimer et Modifier avec espacement individuel -->
+                        <Button Click="BtnEdit_Click" Margin="0,0,15,0" >
+                            <Image Source="{StaticResource edit}" Height="25" Width="50"/>
+                        </Button>
+                        <Button Click="BtnDelete_Click" Margin="0,0,0,0" >
+                            <Image Source="{StaticResource delete}" Height="25" Width="50"/>
+                        </Button>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <!-- JOB 2 -->
-        <Grid x:Name="Grid_Job2" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="747" Margin="301,380,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="625*"/>
-                <ColumnDefinition Width="122*"/>
-            </Grid.ColumnDefinitions>
-            <Rectangle x:Name="Rectangle_Job2" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9" Grid.ColumnSpan="2"/>
-            <Label x:Name="LabelName_Job2" Content="Nom travail 2" HorizontalAlignment="Left" Height="24" Margin="19,5,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Canvas Grid.ColumnSpan="2">
-                <Button x:Name="BtnPlay_Job2" Canvas.Left="609" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" Click="BtnPlay_Job2_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource play}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnEdit_job2" Canvas.Left="657" Canvas.Top="0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job2_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource edit}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnDelete_job2" Canvas.Left="701" Canvas.Top="0" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job2_Click" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                    <Image Source="{StaticResource delete}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnPause_Job2" Canvas.Left="569" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnPauseJob2_Click">
-                    <Image Source="{StaticResource pause}" Height="23" Width="21" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnStop_Job2" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job2_Click">
-                    <Image Source="{StaticResource stop}" Height="27" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <ProgressBar x:Name="ProgressBar_Job2" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
-
-            </Canvas>
-        </Grid>
-        <!-- JOB 3 -->
-        <Grid x:Name="Grid_Job3" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="747" Margin="301,440,0,0">
-            <Rectangle x:Name="Rectangle_Job3" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9"/>
-            <Label x:Name="LabelName_Job3" Content="Nom travail 3" HorizontalAlignment="Left" Height="24" Margin="19,5,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Canvas>
-                <Button x:Name="BtnPlay_Job3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" Click="BtnPlay_Job3_Click" HorizontalAlignment="Left" Canvas.Left="609" Canvas.Top="5" VerticalAlignment="Center">
-                    <Image Source="{StaticResource play}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnEdit_job3" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job3_Click" HorizontalAlignment="Left" Canvas.Left="657" VerticalAlignment="Center">
-                    <Image Source="{StaticResource edit}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnDelete_job3" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job3_Click" HorizontalAlignment="Left" Canvas.Left="701" VerticalAlignment="Center">
-                    <Image Source="{StaticResource delete}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnPause_Job3" Canvas.Left="569" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnPauseJob3_Click">
-                    <Image Source="{StaticResource pause}" Height="22" Width="21" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnStop_Job3" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job3_Click">
-                    <Image Source="{StaticResource stop}" Height="27" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                
-                <ProgressBar x:Name="ProgressBar_Job3" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
-            </Canvas>
-        </Grid>
-        <!-- JOB 4 -->
-        <Grid x:Name="Grid_Job4" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="746" Margin="301,500,0,0">
-            <Rectangle x:Name="Rectangle_Job4" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Center" Width="647" Fill="#D9D9D9"/>
-            <Label x:Name="LabelName_Job4" Content="Nom travail 4" HorizontalAlignment="Left" Height="24" Margin="19,5,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Canvas>
-                <Button x:Name="BtnPlay_Job4"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" Click="BtnPlay_Job4_Click" HorizontalAlignment="Left" Canvas.Left="609" Canvas.Top="5" VerticalAlignment="Center">
-                    <Image Source="{StaticResource play}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnEdit_job4" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job4_Click" HorizontalAlignment="Left" Canvas.Left="656" VerticalAlignment="Center">
-                    <Image Source="{StaticResource edit}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnDelete_job4" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job4_Click" HorizontalAlignment="Left" Canvas.Left="700" VerticalAlignment="Center">
-                    <Image Source="{StaticResource delete}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnPause_Job4" Canvas.Left="569" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnPauseJob4_Click">
-                    <Image Source="{StaticResource pause}" Height="22" Width="21" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnStop_Job4" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job4_Click">
-                    <Image Source="{StaticResource stop}" Height="27" Width="31" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-               
-                <ProgressBar x:Name="ProgressBar_Job4" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
-
-            </Canvas>
-        </Grid>
-        <!-- JOB 5 -->
-        <Grid x:Name="Grid_Job5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="746" Margin="301,561,0,0">
-            <Rectangle x:Name="Rectangle_Job5" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="648" Fill="#D9D9D9"/>
-            <Label x:Name="LabelName_Job5" Content="Nom travail 5" HorizontalAlignment="Left" Height="24" Margin="19,4,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Canvas Height="34" VerticalAlignment="Top" Margin="0,-1,0,0">
-                <Button x:Name="BtnPlay_Job5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" Click="BtnPlay_Job5_Click" Canvas.Left="609" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                    <Image Source="{StaticResource play}" Height="28" Width="30" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnEdit_job5" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="43" Height="39" Click="BtnEdit_job5_Click" Canvas.Left="656" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Image Source="{StaticResource edit}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnDelete_job5" Background="White" BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="46" Height="39" Click="BtnDelete_job5_Click" Canvas.Left="700" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Image Source="{StaticResource delete}" Height="28" Width="29" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnPause_Job5" Canvas.Left="569" Canvas.Top="5"   BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnPauseJob5_Click">
-                    <Image Source="{StaticResource pause}" Height="23" Width="21" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                <Button x:Name="BtnStop_Job5" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job5_Click">
-                    <Image Source="{StaticResource stop}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
-                
-                <ProgressBar x:Name="ProgressBar_Job5" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
-            </Canvas>
-
-
-        </Grid>
-
-        <Button x:Name="Btn_Left_Index" Margin="320,623,740,59" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Left_Index_Click">
-            <Image Height="35" Width="34" Source="{StaticResource arrow_black}"/>
-        </Button>
-        <Button x:Name="Btn_Right_Index" Margin="752,623,308,59" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_Right_Index_Click">
-            <Image Height="35" Width="34" Source="{StaticResource arrow_black}" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="179.997"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Button>
-        <Label x:Name="Label_IndexPages" Content="XX / XX" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="0,628,0,0" VerticalAlignment="Top" Width="132" FontFamily="Arial" FontSize="14"/>
         <Button  x:Name="Btn_Leave" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
             <Image Source="{StaticResource start}" Height="68" Width="106" RenderTransformOrigin="0.542,0.335">
 

@@ -28,6 +28,7 @@
     <None Remove="img\setting.png" />
     <None Remove="img\start.png" />
     <None Remove="img\stop.png" />
+	<None Remove="img\replay.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,6 +66,7 @@
     <Resource Include="img\setting.png" />
     <Resource Include="img\start.png" />
     <Resource Include="img\stop.png" />
+	<Resource Include="img\replay.png" />
     <Folder Include="conf\" />
     <Folder Include="log\" />
     <Folder Include="state\" />

@@ -19,4 +19,5 @@
     <BitmapImage x:Key="pause" UriSource="/img/pause.png" />
     <BitmapImage x:Key="start" UriSource="/img/start.png" />
     <BitmapImage x:Key="stop" UriSource="/img/stop.png" />
+    <BitmapImage x:Key="replay" UriSource="/img/replay.png" />
 </ResourceDictionary>
