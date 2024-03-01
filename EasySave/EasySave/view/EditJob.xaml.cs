@@ -43,9 +43,9 @@ namespace EasySave.view
         private void InitFields()
         {
             // Récupérer les informations du job par rapport à l'index en paramètre
-            TextBox_NameJob.Text = BackUpManager.listBackUps[indexJob_Transfert].name;
-            TextBox_SelectedFolderA.Text = BackUpManager.listBackUps[indexJob_Transfert].sourceDirectory;
-            TextBox_SelectedFolderB.Text = BackUpManager.listBackUps[indexJob_Transfert].targetDirectory;
+            TextBox_NameJob.Text = BackUpManager.listBackUps[indexJob_Transfert].Name;
+            TextBox_SelectedFolderA.Text = BackUpManager.listBackUps[indexJob_Transfert].SourceDirectory;
+            TextBox_SelectedFolderB.Text = BackUpManager.listBackUps[indexJob_Transfert].TargetDirectory;
 
             Type backUpType = BackUpManager.listBackUps[indexJob_Transfert].GetType();
             string typeJob = backUpType.FullName;
@@ -115,7 +115,7 @@ namespace EasySave.view
             if (sType != sType_Old)
             {
                 BackUpType type;
-                if (sType == "Complète")
+                if (sType == ManageLang.GetString("typeComplete"))
                 {
                     type = BackUpType.Complete;
                     _MainWindows.backUpController.IniateModifyJobType(indexJob_Transfert, type);

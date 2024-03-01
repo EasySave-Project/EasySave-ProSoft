@@ -120,6 +120,9 @@
   <data name="add_newJob" xml:space="preserve">
     <value>Add new Job</value>
   </data>
+  <data name="allJobCompleted" xml:space="preserve">
+    <value>All the jobs are done !</value>
+  </data>
   <data name="btn_add" xml:space="preserve">
     <value>add</value>
   </data>
@@ -207,6 +210,12 @@
   <data name="ext_prio" xml:space="preserve">
     <value>Priority extensions</value>
   </data>
+  <data name="jobNotRunning" xml:space="preserve">
+    <value>the job has not been started</value>
+  </data>
+  <data name="label_nbKo" xml:space="preserve">
+    <value>number of Ko</value>
+  </data>
   <data name="lang" xml:space="preserve">
     <value>Type of lang :</value>
   </data>
@@ -219,11 +228,17 @@
   <data name="nameJob" xml:space="preserve">
     <value>Name of the job :</value>
   </data>
+  <data name="pauseAll" xml:space="preserve">
+    <value>Pause all</value>
+  </data>
   <data name="release" xml:space="preserve">
     <value>Release Note</value>
   </data>
   <data name="runAll" xml:space="preserve">
     <value>Run all</value>
+  </data>
+  <data name="sameTargetDirectoryError" xml:space="preserve">
+    <value>you can’t select the same target folder as another job</value>
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Select a folder </value>
@@ -233,6 +248,9 @@
   </data>
   <data name="state_Type" xml:space="preserve">
     <value>Type of State :</value>
+  </data>
+  <data name="stopAll" xml:space="preserve">
+    <value>Stop all</value>
   </data>
   <data name="targetDir" xml:space="preserve">
     <value>Target directory :</value>

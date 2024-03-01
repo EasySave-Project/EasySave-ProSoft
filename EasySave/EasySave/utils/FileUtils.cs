@@ -6,76 +6,139 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Shell;
+using MessageBox = System.Windows.MessageBox;
+using System.Threading;
 namespace EasySave.utils
 {
     
-    public static class FileUtils
+    public class FileUtils
     {
         // Instanciation des classes
-        private static StateManager stateManager = new StateManager();
+        private StateManager stateManager = new StateManager();
 
-        private static LogManager logManager = new LogManager();
+        private LogManager logManager = new LogManager();
 
         private static Settings settings = new Settings();
+
+        private bool isPaused;
+
 
         // Variable tableau string contenant deux champs : nom du fichier et le path du fichier
         private static List<string[]> tab_PriorityFiles;
 
 
-        public static void DifferentialCopyDirectory(string name, string sourceDir, string targetDir)
+        public FileUtils()
+        {
+            isPaused = false;
+        }
+        public bool IsPaused
+        {
+            get
+            {
+                return isPaused;
+            }
+            set
+            {
+                isPaused = value;
+            }
+        }
+        public void Pause()
+        {
+            IsPaused = true;
+        }
+
+        public void Reset()
+        {
+            isPaused=false;
+        }
+        public void Resume()
+        {
+            IsPaused = false;
+        }
+
+
+
+        public void Wait(CancellationToken cancellationToken)
+        {
+            while (isPaused && !cancellationToken.IsCancellationRequested)
+            {
+                Thread.Sleep(1000);
+            }
+        }
+
+
+
+
+
+        public void DifferentialCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
             // Vérifier si l'application de la calculatrice Windows est ouverte
             bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
+           
+
             if (!isNotepadRunning)
             {
                 // Si la calculatrice n'est pas ouverte :
-
+                Wait(cancellationToken);
+               
                 VerifyDirectoryAndDrive(sourceDir, targetDir);
                 // créer le répertoire target s'il n'existe pas déjà 
                 // on se permet de créer le dossier si il n'est pas déjà créer.
-                Directory.CreateDirectory(targetDir);
 
-                CopyModifierOrAddedFile(sourceDir, targetDir, name);
-                DeleteObsoleteFiles(sourceDir, targetDir);
-                CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir);
+                cancellationToken.ThrowIfCancellationRequested();
+
+
+                Directory.CreateDirectory(targetDir);
+                CopyModifierOrAddedFile(sourceDir, targetDir, name,cancellationToken);
+                DeleteObsoleteFiles(sourceDir, targetDir, cancellationToken);
+                CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir, cancellationToken);
+               
+                
             }
             else
             {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                Pause();
+               // System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-        public static void CompleteCopyDirectory(string name, string sourceDir, string targetDir)
+        public  void CompleteCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
+            
             // Vérifier si le processus de la calculatrice est en cours d'exécution
             bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
             if (!isNotepadRunning)
             {
                 // Si le blocnote n'est pas ouverte :
-
+                cancellationToken.ThrowIfCancellationRequested();
+                Wait(cancellationToken);
                 VerifyDirectoryAndDrive(sourceDir, targetDir);
                 // créer le répertoire target s'il n'existe pas déjà 
                 // on se permet de créer le dossier si il n'est pas déjà créer.
                 Directory.CreateDirectory(targetDir);
-
-                CopyFilesTo(sourceDir, targetDir,name);
-                DeleteObsoleteFiles(sourceDir, targetDir);
-                CopySubdirectoriesRecursively(name, sourceDir, targetDir);
+               
+                CopyFilesTo(sourceDir, targetDir, name, cancellationToken);
+                DeleteObsoleteFiles(sourceDir, targetDir, cancellationToken);
+                CopySubdirectoriesRecursively(name, sourceDir, targetDir, cancellationToken);
+               
+                
+                
             }
             else
             {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                Pause();
+                //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         
 
-        public static void VerifyDirectoryAndDrive(string sourceDir, string targetDir)
+        public void VerifyDirectoryAndDrive(string sourceDir, string targetDir)
         {
             VerifyDirectoryExists(sourceDir);
             VerifyDriveAvailable(sourceDir);
             VerifyDriveAvailable(targetDir);
         }
-        private static void VerifyDirectoryExists(string dir)
+        private void VerifyDirectoryExists(string dir)
         {
             if (!Directory.Exists(dir))
             {
@@ -83,7 +146,7 @@ namespace EasySave.utils
             }
         }
 
-        private static void VerifyDriveAvailable(string dir)
+        private void VerifyDriveAvailable(string dir)
         {
             if (!DriveInfo.GetDrives().Any(d => d.IsReady && dir.StartsWith(d.Name, StringComparison.OrdinalIgnoreCase)))
             {
@@ -91,12 +154,14 @@ namespace EasySave.utils
             }
         }
 
-        private static void CopyFilesTo(string sourceDir, string targetDir,string name)
+        private void CopyFilesTo(string sourceDir, string targetDir,string name, CancellationToken cancellationToken)
         {
+            
             // Initilisation du stateManager et du logManager
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
+                
                 string tempPath = Path.Combine(targetDir, file.Name);
                 // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
                 if (CheckFilePriority(file.Name, tempPath))
@@ -117,41 +182,51 @@ namespace EasySave.utils
                     string sSourcePath_File = Path.Combine(sourceDir, file.Name);
                     string sTargetPath_File = Path.Combine(targetDir, file.Name);
                     string sClef = "secret";
+                    Wait(cancellationToken);
+                    cancellationToken.ThrowIfCancellationRequested();
                     FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
                 }
                 else
                 {
+                    Wait(cancellationToken);
+                    cancellationToken.ThrowIfCancellationRequested();
                     file.CopyTo(tempPath, true);
                 }
                 stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
-                logManager.PushLog(file.Length, name);
-                Thread.Sleep(1000);
+
+                logManager.PushLog(file.Length);
             }
         }
 
-        private static void CopySubdirectoriesRecursively(string name, string sourceDir, string targetDir)
+        private void CopySubdirectoriesRecursively(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
+                Wait(cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
                 string tempPath = Path.Combine(targetDir, subdir.Name);
-                Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                CompleteCopyDirectory(name, subdir.FullName, tempPath);
+                Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe 
+                CompleteCopyDirectory(name, subdir.FullName, tempPath,cancellationToken);
             }
 
-            DeleteObsoleteDirectories(sourceDir, targetDir);
+            DeleteObsoleteDirectories(sourceDir, targetDir, cancellationToken);
         }
-        private static void CopySubdirectoriesRecursivelyForDifferential(string name, string sourceDir, string targetDir)
+        private  void CopySubdirectoriesRecursivelyForDifferential(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
+
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
+                Wait(cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
+                cancellationToken.ThrowIfCancellationRequested();
                 string tempPath = Path.Combine(targetDir, subdir.Name);
                 Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                DifferentialCopyDirectory(name, subdir.FullName, tempPath);
+                DifferentialCopyDirectory(name, subdir.FullName, tempPath, cancellationToken);
             }
 
-            DeleteObsoleteDirectories(sourceDir, targetDir);
+            DeleteObsoleteDirectories(sourceDir, targetDir, cancellationToken);
         }
-        public static void CopyModifierOrAddedFile(string sourceDir, string targetDir,string name)
+        public  void CopyModifierOrAddedFile(string sourceDir, string targetDir,string name,CancellationToken cancellationToken)
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
 
@@ -189,24 +264,30 @@ namespace EasySave.utils
                             string sSourcePath_File = sourceFile.FullName;
                             string sTargetPath_File = targetFilePath; //targetDir
                             string sClef = "secret";
+                            Wait(cancellationToken);
+                            cancellationToken.ThrowIfCancellationRequested();
                             FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
                         }
                         else
                         {
+                            Wait(cancellationToken);
+                            cancellationToken.ThrowIfCancellationRequested();
                             sourceFile.CopyTo(targetFilePath, true);
                         }
                         stateManager.UpdateState_Differential(sourceFile.Length, sourceDir, targetDir);
-                        logManager.PushLog(sourceFile.Length, name);
+                        logManager.PushLog(sourceFile.Length);
                     }
                    
                 }
             }
         }
-        public static void DeleteObsoleteFiles(string sourceDir, string targetDir)
+        public void DeleteObsoleteFiles(string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles().Select(f => f.Name).ToHashSet();
             foreach (FileInfo file in new DirectoryInfo(targetDir).GetFiles())
             {
+                Wait(cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
                 if (!sourceFiles.Contains(file.Name))
                 {
                     file.Delete();
@@ -214,11 +295,13 @@ namespace EasySave.utils
             }
         }
 
-        private static void DeleteObsoleteDirectories(string sourceDir, string targetDir)
+        private void DeleteObsoleteDirectories(string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
             var sourceDirs = new DirectoryInfo(sourceDir).GetDirectories().Select(d => d.Name).ToHashSet();
             foreach (DirectoryInfo dir in new DirectoryInfo(targetDir).GetDirectories())
             {
+                Wait(cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
                 if (!sourceDirs.Contains(dir.Name))
                 {
                     dir.Delete(true);
@@ -226,7 +309,7 @@ namespace EasySave.utils
             }
         }
 
-        private static void FileToCryptoSoft(string sSourcePath_File, string sTargetPath_File, string sClef)
+        private  void FileToCryptoSoft(string sSourcePath_File, string sTargetPath_File, string sClef)
         {
             string argument = "\"" + sSourcePath_File + "\" \"" + sTargetPath_File + "\" \"" + sClef + "\"";
             // Obtenir le fichier ressource
@@ -247,7 +330,7 @@ namespace EasySave.utils
         //===============================================================
 
         // Méthode d'initialisation tardive pour tab_PriorityFiles
-        private static void InitializeTab_PriorityFiles()
+        private void InitializeTab_PriorityFiles()
         {
             if (tab_PriorityFiles == null)
             {
@@ -256,14 +339,14 @@ namespace EasySave.utils
         }
 
         // Ajouter une méthode pour ajouter des éléments à tab_PriorityFiles
-        public static void AddToTab_PriorityFiles(string fileName, string filePath)
+        public void AddToTab_PriorityFiles(string fileName, string filePath)
         {
             InitializeTab_PriorityFiles(); // Assurez-vous que la liste est initialisée
             tab_PriorityFiles.Add(new string[] { fileName, filePath });
         }
 
         // Méthode pour vérifier si un fichier à copier coller est prioritaire
-        public static bool CheckFilePriority(string fileName, string filePath)
+        public  bool CheckFilePriority(string fileName, string filePath)
         {
             foreach (var file in tab_PriorityFiles)
             {
@@ -284,8 +367,9 @@ namespace EasySave.utils
         //===============================================================
 
         // Fonction pour les fichiers prioritaires en mode complete
-        public static void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir)
+        public  void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
+            
             InitializeTab_PriorityFiles();
             // Si il y a des choses dans la liste de priorité, on les copie en priorité
             if (settings.ExtensionsToPriority.Count > 0)
@@ -297,26 +381,34 @@ namespace EasySave.utils
                     // Si le blocnote n'est pas ouverte :
 
                     VerifyDirectoryAndDrive(sourceDir, targetDir);
+                    Wait(cancellationToken);
+
+                    cancellationToken.ThrowIfCancellationRequested();
                     Directory.CreateDirectory(targetDir);
-                    CopyFilesTo_Priority(sourceDir, targetDir, name);
-                    CopySubdirectoriesRecursively_Priority(name, sourceDir, targetDir);
+                    CopyFilesTo_Priority(sourceDir, targetDir, name, cancellationToken);
+                    CopySubdirectoriesRecursively_Priority(name, sourceDir, targetDir,cancellationToken);
+                   
+                    
+
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    Pause();
+                    //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }
 
-        private static void CopyFilesTo_Priority(string sourceDir, string targetDir, string name)
+        private  void CopyFilesTo_Priority(string sourceDir, string targetDir, string name, CancellationToken cancellationToken)
         {
+
             // Initilisation du stateManager et du logManager
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 if (settings.ExtensionsToPriority.Contains(Path.GetExtension(file.Name).ToLower()))
                 {
-                
+                   
                     // Initilisation du stateManager et du logManager
                     stateManager.InitState_Complete(name, sourceDir, targetDir);
                     string tempPath = Path.Combine(targetDir, file.Name);
@@ -334,23 +426,27 @@ namespace EasySave.utils
                             string sSourcePath_File = Path.Combine(sourceDir, file.Name);
                             string sTargetPath_File = Path.Combine(targetDir, file.Name);
                             string sClef = "secret";
+                            Wait(cancellationToken);
+                            cancellationToken.ThrowIfCancellationRequested();
                             FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
                         }
                         else
                         {
+                            Wait(cancellationToken);
+                            cancellationToken.ThrowIfCancellationRequested();
                             file.CopyTo(tempPath, true);
                         }
                         // Mettre le fichier copier dans le tableau de priorité
                         AddToTab_PriorityFiles(file.Name, tempPath);
 
                         stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
-                        logManager.PushLog(file.Length, name);
+                        logManager.PushLog(file.Length);
                     }
                 }
             }
         }
 
-        private static void CopySubdirectoriesRecursively_Priority(string name, string sourceDir, string targetDir)
+        private  void CopySubdirectoriesRecursively_Priority(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
@@ -358,8 +454,9 @@ namespace EasySave.utils
                 if (new DirectoryInfo(subdir.FullName).GetFiles().Any(f => settings.ExtensionsToPriority.Contains(Path.GetExtension(f.Name).ToLower())))
                 {
                     string tempPath = Path.Combine(targetDir, subdir.Name);
+                    cancellationToken.ThrowIfCancellationRequested();
                     Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                    CompleteCopyDirectory_Priority(name, subdir.FullName, tempPath);
+                    CompleteCopyDirectory_Priority(name, subdir.FullName, tempPath, cancellationToken);
                 }
             }
         }
@@ -369,8 +466,9 @@ namespace EasySave.utils
         //===============================================================
 
         // Fonction pour les fichiers prioritaires en mode différentiel
-        public static void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir)
+        public  void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
+
             InitializeTab_PriorityFiles();
             // Si il y a des choses dans la liste de priorité, on les copie en priorité
             if (settings.ExtensionsToPriority.Count > 0)
@@ -384,20 +482,26 @@ namespace EasySave.utils
                     VerifyDirectoryAndDrive(sourceDir, targetDir);
                     // créer le répertoire target s'il n'existe pas déjà 
                     // on se permet de créer le dossier si il n'est pas déjà créer.
+                    Wait(cancellationToken);
+                    cancellationToken.ThrowIfCancellationRequested();
                     Directory.CreateDirectory(targetDir);
 
-                    CopyModifierOrAddedFile_Priority(sourceDir, targetDir, name);
-                    CopySubdirectoriesRecursivelyForDifferential_Priority(name, sourceDir, targetDir);
+                    CopyModifierOrAddedFile_Priority(sourceDir, targetDir, name, cancellationToken);
+                    CopySubdirectoriesRecursivelyForDifferential_Priority(name, sourceDir, targetDir,cancellationToken);
+                    
+                    
+                    
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    Pause();
+                    //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }
 
         // Fonction CopyModifierOrAddedFile_Priority
-        public static void CopyModifierOrAddedFile_Priority(string sourceDir, string targetDir, string name)
+        public void CopyModifierOrAddedFile_Priority(string sourceDir, string targetDir, string name, CancellationToken cancellationToken)
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
 
@@ -431,17 +535,21 @@ namespace EasySave.utils
                                 string sSourcePath_File = sourceFile.FullName;
                                 string sTargetPath_File = targetFilePath; //targetDir
                                 string sClef = "secret";
+                                Wait(cancellationToken);
+                                cancellationToken.ThrowIfCancellationRequested();
                                 FileToCryptoSoft(sSourcePath_File, sTargetPath_File, sClef);
                             }
                             else
                             {
+                                Wait(cancellationToken);
+                                cancellationToken.ThrowIfCancellationRequested();
                                 sourceFile.CopyTo(targetFilePath, true);
                             }
                             // Mettre le fichier copier dans le tableau de priorité
                             AddToTab_PriorityFiles(sourceFile.Name, targetFilePath);
 
                             stateManager.UpdateState_Differential(sourceFile.Length, sourceDir, targetDir);
-                            logManager.PushLog(sourceFile.Length, name);
+                            logManager.PushLog(sourceFile.Length);
                         }
                     }
                 }
@@ -449,18 +557,21 @@ namespace EasySave.utils
         }
 
         // Fonction CopySubdirectoriesRecursivelyForDifferential_Priority
-        private static void CopySubdirectoriesRecursivelyForDifferential_Priority(string name, string sourceDir, string targetDir)
+        private  void CopySubdirectoriesRecursivelyForDifferential_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
                 // Copier seulement les dossiers qui contiennent des fichiers prioritaires
                 if (new DirectoryInfo(subdir.FullName).GetFiles().Any(f => settings.ExtensionsToPriority.Contains(Path.GetExtension(f.Name).ToLower())))
                 {
+                    cancellationToken.ThrowIfCancellationRequested();
                     string tempPath = Path.Combine(targetDir, subdir.Name);
                     Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
-                    DifferentialCopyDirectory_Priority(name, subdir.FullName, tempPath);
+                    DifferentialCopyDirectory_Priority(name, subdir.FullName, tempPath, cancellationToken);
                 }
             }
         }
+
+        
     }
 }

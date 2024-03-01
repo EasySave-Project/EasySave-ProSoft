@@ -10,11 +10,11 @@ namespace EasySave.model
     public class CompleteBackUpJob : BackUpJob
 
     {
-
-       
+        
 
         public CompleteBackUpJob(string name, string sourceDirectory, string targetDirectory) : base(name, sourceDirectory, targetDirectory)
         {
+
         }
 
         public override BackUpJob CloneToType(BackUpType type)
@@ -28,20 +28,22 @@ namespace EasySave.model
             return null; 
         }
 
+       
 
-        public override void Excecute()
+        public override void Excecute(CancellationToken cs)
         {
+           
             try
             {
-                FileUtils.CompleteCopyDirectory_Priority(name, sourceDirectory, targetDirectory);
-                FileUtils.CompleteCopyDirectory(name, sourceDirectory, targetDirectory);
-                
-                System.Windows.MessageBox.Show(ManageLang.GetString("view_exe_successful"), ManageLang.GetString("exe_job_title"), MessageBoxButton.OK, MessageBoxImage.Information);
+                base.fileTransfer.CompleteCopyDirectory_Priority(name, sourceDirectory, targetDirectory, cs);
+                base.fileTransfer.CompleteCopyDirectory(name, sourceDirectory, targetDirectory ,cs);
             }
             catch (Exception e)
             {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_saveComplete") + " : " + e.Message, ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+              //  System.Windows.MessageBox.Show(ManageLang.GetString("error_saveComplete") + " : " + e.Message, ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+           
+            
         }
     }
 }

@@ -10,6 +10,9 @@ using System;
 using System.Diagnostics;
 using EasySave.utils;
 using System.Xml;
+using EasySave.services;
+using Button = System.Windows.Controls.Button;
+
 
 namespace EasySave.view
 {
@@ -23,23 +26,46 @@ namespace EasySave.view
         private static Thread thread_ProgressBar;
         private Settings settings_state = new Settings();
 
+
+        StateManager stateManager = new StateManager();
+        private List<bool> jobsRunning = new List<bool>();
+        private List<bool> jobsPaused = new List<bool>();
+        private List<bool> jobsStopped = new List<bool>();
+
         public ListJob()
         {
+            
             InitializeComponent();
+            initJobs();
             ShowListJob();
-            //ProgressBar_Thread();
         }
-
+        private void initJobs()
+        {
+            for (int i = 0; i < BackUpManager.listBackUps.Count; i++)
+            {
+                jobsPaused.Add(false);
+                jobsRunning.Add(false);
+                jobsStopped.Add(false);
+            }
+        }
         //==============================================
         // Code de la page ListJob
         //==============================================
+
+
+
+        private MainWindow _MainWindows = new MainWindow();
+
+        string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
+
+
         private void ShowListJob()
         {
             // Récupération de la liste des jobs
             sNameJob.Clear();
             foreach (BackUpJob bj in BackUpManager.listBackUps)
             {
-                sNameJob.Add(bj.name);
+                sNameJob.Add(bj.Name);
             }
 
             // Initialisation des pages
@@ -131,24 +157,17 @@ namespace EasySave.view
             // Lancer le thread de la barre de progression
             ProgressBar_Thread(btnJob);
 
-            // Exécuter du job dans un thread séparé
-            Thread jobThread = new Thread(() =>
+    
+            try
             {
-                try
-                {
-                    _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
-                }
-                catch
-                {
-                    System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            });
+                _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+            }
+            catch
+            {
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            
 
-            // Faire du thread un thread d'arrière-plan
-            jobThread.IsBackground = true;
-
-            // Démarrer le thread
-            jobThread.Start();
         }
 
         private void BtnPlay_Job1_Click(object sender, RoutedEventArgs e)
@@ -175,6 +194,9 @@ namespace EasySave.view
         {
             ExecuteJob(5);
         }
+
+        
+
 
         //==============================================
         // AJOUTER jobs
@@ -286,10 +308,6 @@ namespace EasySave.view
         //==============================================
         // Bouton ALL
         //==============================================
-        private void Btn_RunAll_Click(object sender, RoutedEventArgs e)
-        {
-            _MainWindows.backUpController.InitiateAllBackUpJobs();
-        }
 
         //==============================================
         // Récupération des barres de progression
@@ -424,6 +442,7 @@ namespace EasySave.view
 
 
         //==============================================
+
         // Bouton de navigation
         //==============================================
 
@@ -470,9 +489,196 @@ namespace EasySave.view
             }
         }
 
+
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        //==============================================
+        // PLAY jobs
+        //==============================================
+        private void ExecuteJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+            index_SelectJob--;
+            BackUpManager.listBackUps[index_SelectJob].ResetJob();
+            _MainWindows.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[index_SelectJob]);
+            try
+            {
+                if (jobsPaused[index_SelectJob] == true )
+                {
+                    
+                   jobsRunning[index_SelectJob] = true;
+                    _MainWindows.backUpController.InitiateResumeBackUp(BackUpManager.listBackUps[index_SelectJob]);
+                    jobsPaused[index_SelectJob] = false;
+                    
+                }
+                else
+                {
+                    jobsRunning[index_SelectJob] = true;
+                    _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
+                }
+            }
+            catch
+            {
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void StopJob(int btnJob)
+        {
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+            index_SelectJob--;
+            try
+            {
+                if (jobsRunning[index_SelectJob] == true)
+                {
+                    jobsStopped[index_SelectJob] = true;
+                    _MainWindows.backUpController.backUpManager.StopBackup(BackUpManager.listBackUps[index_SelectJob]);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("jobNotRunning"));
+                }
+                
+                
+            }catch(Exception ex)
+            {
+                System.Windows.MessageBox.Show("Error on the pause :" + ex.Message);
+            }
+             
+        }
+
+        
+        //==============================================
+        // Bouton ALL
+        //==============================================
+        private void Btn_RunAll_Click(object sender, RoutedEventArgs e)
+        {
+            
+            for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+            {
+                ExecuteJob(i);
+            }
+        }
+
+        private void btnStopAllJob_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 1;i<= BackUpManager.listBackUps.Count; i++)
+            {
+                StopJob(i);
+            }
+        }
+
+
+        private void PauseJob(int btnJob)
+        {
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Supprimer du job
+            index_SelectJob--;
+
+            try
+            {
+                if (jobsRunning[index_SelectJob] == true)
+                {
+                    jobsPaused[index_SelectJob] = true;
+                    _MainWindows.backUpController.backUpManager.PauseBackup(BackUpManager.listBackUps[index_SelectJob]);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show(ManageLang.GetString("jobNotRunning"));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+            }
+        }
+        private void btn_PauseAll_click(object sender, RoutedEventArgs e)
+        {
+            
+            for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+            {
+                PauseJob(i);
+            }
+            
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        private void btnPauseJob1_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(1);
+        }
+
+        private void btnPauseJob2_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(2);
+        }
+
+        private void btnPauseJob3_Click(object sender, RoutedEventArgs e)
+        {       
+            PauseJob(3);
+        }
+        private void btnPauseJob4_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(4);
+        }
+        private void btnPauseJob5_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(5);
+        }
+
+
+        private void BtnStop_Job1_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(1);
+        }
+        private void BtnStop_Job2_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(2);
+        }
+        private void BtnStop_Job3_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(3);
+        }
+        private void BtnStop_Job4_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(4);
+        }
+        private void BtnStop_Job5_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(5);
         }
     }
 
