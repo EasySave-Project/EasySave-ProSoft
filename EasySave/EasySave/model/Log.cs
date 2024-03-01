@@ -8,39 +8,44 @@ namespace EasySave.model
 {
     public class Log
     {
-        // Déclaration des variables objet
-        private string name;
-        private string fileSource;
-        private string fileTarget;
-        private long fileSize;
-        private string fileTransferTime;
-        private string time;
+    
+        private string _name;
+    
+        private string _fileSource;
+        
+        private string _fileTarget;
+        
+        private long _fileSize;
+        
+        private string _fileTransferTime;
+        
+        private string _time;
 
         public string Name { 
-            get { return name; }
-            set { name = value; }
+            get { return _name; }
+            set { _name = value; }
         }
         public string FileSource { 
-            get {  return fileSource; } 
-            set {  fileSource = value; }
+            get {  return _fileSource; } 
+            set {  _fileSource = value; }
         }
         public string FileTarget { 
-            get {  return fileTarget; }
-            set { fileTarget = value; }
+            get {  return _fileTarget; }
+            set { _fileTarget = value; }
         }
     
         public string FileTransferTime { 
-            get {  return fileTransferTime; }
-            set { fileTransferTime = value; }
+            get {  return _fileTransferTime; }
+            set { _fileTransferTime = value; }
         }
         public string Time {
-            get { return time; } 
-            set { time = value; }
+            get { return _time; } 
+            set { _time = value; }
         }
 
         public long FileSize {  
-            get { return fileSize; }
-            set { fileSize = value; }
+            get { return _fileSize; }
+            set { _fileSize = value; }
         }
 
         

@@ -31,12 +31,12 @@ namespace EasySave
             this.WindowStyle = WindowStyle.None;
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
 
-            Settings s = new Settings();
+            Settings s = Settings.Instance;
              
             ManageLang.ChangeLanguage(s.Lang);
 
             // Instanciation
-            BackUpManager bmManager = new BackUpManager();
+            BackUpManager bmManager = BackUpManager.Instance;
             StateManager stateManager = new StateManager();
             LogManager logManager = new LogManager();
             BackUpController controller = new BackUpController(bmManager, logManager, stateManager);

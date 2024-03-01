@@ -24,7 +24,7 @@ namespace EasySave.view
         private int nbPage = 0;
         private List<String> sNameJob = new List<string>();
         private static Thread thread_ProgressBar;
-        private Settings settings_state = new Settings();
+        private Settings settings_state = Settings.Instance;
 
 
         StateManager stateManager = new StateManager();
@@ -504,12 +504,14 @@ namespace EasySave.view
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
             index_SelectJob--;
-            // Lancer le thread de la barre de progression
-            ProgressBar_Thread(btnJob);
+            
 
             BackUpManager.listBackUps[index_SelectJob].ResetJob();
             
             _MainWindows.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[index_SelectJob]);
+
+            // Lancer le thread de la barre de progression
+            ProgressBar_Thread(btnJob);
             try
             {
                 if (jobsPaused[index_SelectJob] == true )

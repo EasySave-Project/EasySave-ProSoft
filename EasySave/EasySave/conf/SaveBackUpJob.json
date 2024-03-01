@@ -12,7 +12,7 @@
           "$type": "System.Threading.ManualResetEvent, System.Private.CoreLib",
           "Handle": {
             "$type": "System.IntPtr, System.Private.CoreLib",
-            "value": 2188
+            "value": 3208
           },
           "SafeWaitHandle": {
             "$type": "Microsoft.Win32.SafeHandles.SafeWaitHandle, System.Private.CoreLib",
@@ -22,7 +22,7 @@
         }
       }
     },
-    "TargetDirectory": "C:\\sauve2",
+    "TargetDirectory": "C:\\sauve",
     "Name": "test2",
     "SourceDirectory": "C:\\database\\CATS_FAB",
     "FileTransfert": {

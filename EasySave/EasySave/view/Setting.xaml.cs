@@ -30,13 +30,12 @@ namespace EasySave.view
     public partial class Setting : Page
     {
 
-        private Settings settings = new Settings();
-        private BackUpController backUpController = new BackUpController();
+        private Settings settings = Settings.Instance;
+        private BackUpController backUpController;
         public Setting()
         {
             ManageLang.ChangeLanguage(settings.Lang);
             this.DataContext = settings;
-
             InitializeComponent();
             Initialize_NbKo();
         }

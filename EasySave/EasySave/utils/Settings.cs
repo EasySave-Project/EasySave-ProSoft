@@ -32,12 +32,26 @@ namespace EasySave.utils
         private static List<string> _extensionsToCrypt = new List<string>();
         private static List<string> _extensionsToPriority = new List<string>();
 
+        private static Settings _instance;
+
+
+        public static Settings Instance
+        {
+            get
+            {
+                if(_instance == null)
+                {
+                    _instance = new Settings();
+                }
+                return _instance;
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public Settings()
+        private Settings()
         {
             LoadSettings(); // Charge ou initialise les paramètres à partir du fichier JSON.
         }

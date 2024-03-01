@@ -18,12 +18,25 @@ public class BackUpManager
 
     private ConcurrentBag<Thread> _runningThreads = new ConcurrentBag<Thread>();
 
+    private static BackUpManager _instance;
+
+    public static BackUpManager Instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = new BackUpManager();
+            }
+            return _instance;
+        }
+    }
 
     public ConcurrentBag<Thread> RunningThreads
     {
         get { return _runningThreads; }
     }
-    public BackUpManager() {
+    private BackUpManager() {
         listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);   
     }
 
@@ -81,7 +94,7 @@ public class BackUpManager
         {
             try
             {
-                job.Excecute(job.CancellationTokenSource.Token);
+                job.Execute(job.CancellationTokenSource.Token);
             }
             catch (OperationCanceledException)
             {
