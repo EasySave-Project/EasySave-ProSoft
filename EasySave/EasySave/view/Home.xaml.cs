@@ -42,12 +42,12 @@ namespace EasySave.view
             if (settings.Lang == "fr")
             {
                 // Français
-                pdfBytes = lang.resource_pdf.userManuel_fr_v2;
+                pdfBytes = lang.resource_pdf.User_Manual_fr;
             }
             else
             {
                 // Anglais
-                pdfBytes = lang.resource_pdf.userManuel_en_v2;
+                pdfBytes = lang.resource_pdf.User_Manual_en;
             }
 
             // Créer un nom de fichier temporaire
@@ -74,12 +74,12 @@ namespace EasySave.view
             if (settings.Lang == "fr")
             {
                 // Français
-                pdfBytes = lang.resource_pdf.patchNoteV2_fr;
+                pdfBytes = lang.resource_pdf.patchNoteV3_fr;
             }
             else
             {
                 // Anglais
-                pdfBytes = lang.resource_pdf.patchNoteV2_en;
+                pdfBytes = lang.resource_pdf.patchNoteV3_en;
             }
 
             // Créer un nom de fichier temporaire

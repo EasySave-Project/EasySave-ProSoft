@@ -7888,3 +7888,1123 @@
   "TotalFileToCopy": 4666229611,
   "TotalFileSize": 5357055869
 }
+{
+  "NbFilesLeftToDo": 98,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 97,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 96,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 95,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 94,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 93,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 92,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 91,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 90,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 89,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2455615,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 88,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866682052,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 87,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866684271,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 86,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4666229611,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 85,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-license-agreement",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-license-agreement",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4666586683,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 84,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-sanitizer",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-sanitizer",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667169386,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 83,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-audio",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-audio",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667214710,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 82,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-audio",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-audio",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667215034,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 81,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-common-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-common-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667528292,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 80,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-common-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-common-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667528588,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 79,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-ember-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-ember-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667854319,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 78,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-ember-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-ember-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667854763,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 77,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4671726800,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 76,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4671727347,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 75,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4719589886,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 74,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4719590590,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 73,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730789141,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 72,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730789700,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 71,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730800532,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 70,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730800840,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 69,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-clash",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-clash",
+  "State_Text": "ACTIVE",
+  "Progression": 90,
+  "TotalFileToCopy": 4824682777,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 68,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-clash",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-clash",
+  "State_Text": "ACTIVE",
+  "Progression": 90,
+  "TotalFileToCopy": 4824683411,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 67,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-collections",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-collections",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913205113,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 66,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-collections",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-collections",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913205747,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 65,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913437960,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 64,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913438494,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 63,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913555684,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 62,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913556200,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 61,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913720101,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 60,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913720582,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 59,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-honor",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-honor",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963496752,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 58,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-honor",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-honor",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963497297,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 57,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963506678,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 56,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963507063,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 55,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4964020521,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 54,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4964020856,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 53,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974885685,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 52,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974886326,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 51,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974895469,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 50,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974895805,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 49,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-loot",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-loot",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5080891490,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 48,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-loot",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-loot",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5080892006,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 47,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5082780024,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 46,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5082780585,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 45,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5111838536,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 44,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5111839079,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 43,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121091873,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 42,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121092430,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 41,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121238143,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 40,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121238691,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 39,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-parties",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-parties",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5137934601,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 38,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-parties",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-parties",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5137935222,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 37,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-paw",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-paw",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139750998,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 36,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-paw",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-paw",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139751498,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 35,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-pft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-pft",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139779203,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 34,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-pft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-pft",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139779584,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 33,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145243295,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 32,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145243872,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 31,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145426845,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 30,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145427360,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 29,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147232186,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 28,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147232807,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 27,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-settings",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-settings",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147624677,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 26,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-settings",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-settings",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147625191,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 25,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163201776,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 24,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163202224,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 23,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163287649,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 22,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163288098,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 21,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-social",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-social",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166001088,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 20,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-social",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-social",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166001725,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 19,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-startup",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-startup",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166009256,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 18,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-startup",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-startup",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166009590,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 17,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5328439634,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 16,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5328439954,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 15,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-store",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-store",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5331083255,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 14,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-store",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-store",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5331083885,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 13,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333246414,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 12,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333246973,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 11,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333418555,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 10,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333419055,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 9,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351209872,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351210171,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351972990,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351973921,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356904426,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356904871,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356990200,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356990681,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5357055557,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 5357055869,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 98,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 97,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 96,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 95,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 94,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 93,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 92,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 91,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 90,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 89,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2455615,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 88,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866682052,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 87,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866684271,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 86,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4666229611,
+  "TotalFileSize": 5357055869
+}

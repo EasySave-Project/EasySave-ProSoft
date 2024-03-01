@@ -183,7 +183,42 @@ namespace EasySave.view
             }
         }
 
+        //==============================================
+        // Extensions prioritaires
+        //==============================================
 
+        private void btn_add_ApplicationBusiness_Click(object sender, RoutedEventArgs e)
+        {
+            // Vérifier si le champ est pas vide
+            if (string.IsNullOrEmpty(TextBox_ApplicationBusiness.Text))
+            {
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_Caract"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            // Vérfier si l'application est pas déjà dans la liste
+            if (settings.BusinessApplication.Contains(TextBox_ApplicationBusiness.Text))
+            {
+                System.Windows.MessageBox.Show(ManageLang.GetString("error_setting_app_same"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            // Ajouter l'extension à la liste si elle n'est pas déjà présente
+            settings.BusinessApplication.Add(TextBox_ApplicationBusiness.Text);
+
+            // Mettre à jour l'interface utilisateur
+            ListBoxExtensions_ApplicationBusiness.Items.Refresh();
+            TextBox_ApplicationBusiness.Clear();
+
+        }
+
+        private void btn_delete_ApplicationBusiness_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedApplication = ListBoxExtensions_ApplicationBusiness.SelectedItem as string;
+            if (selectedApplication != null)
+            {
+                settings.BusinessApplication.Remove(selectedApplication);
+                ListBoxExtensions_ApplicationBusiness.Items.Refresh();
+            }
+        }
 
         //==============================================
         // Bouton de navigation
@@ -236,5 +271,7 @@ namespace EasySave.view
                 System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
             }
         }
+
+        
     }
 }

@@ -41,52 +41,62 @@
         </Button>
         <Label Content="{x:Static rs:langage.title_setting}" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="400" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
         <Rectangle HorizontalAlignment="Left" Height="520" Margin="280,140,0,0"  VerticalAlignment="Top" Width="780" Fill="#FFE5E5E5"/>
-        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.log_Type}" HorizontalAlignment="Left" Margin="336,180,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeLog" Content="{x:Static rs:langage.log_Type}" HorizontalAlignment="Left" Margin="320,186,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <!-- ComboBox pour 'LogType' -->
-        <ComboBox Margin="342,215,658,479" x:Name="ComboBox_LogType" 
+        <ComboBox Margin="326,221,674,473" x:Name="ComboBox_LogType" 
           SelectedValuePath="Content" 
           SelectedValue="{Binding LogType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Height="25">
             <ComboBoxItem Content="Json"/>
             <ComboBoxItem Content="Xml"/>
         </ComboBox>
 
-        <Label x:Name="Label_TypeState" Content="{x:Static rs:langage.state_Type}" HorizontalAlignment="Left" Margin="336,268,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeState" Content="{x:Static rs:langage.state_Type}" HorizontalAlignment="Left" Margin="494,186,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
 
         <!-- ComboBox pour 'StateType' -->
-        <ComboBox Margin="342,303,658,391" Width="100" Height="25" x:Name="ComboBox_StateType"   
+        <ComboBox Margin="500,221,500,473" Width="100" Height="25" x:Name="ComboBox_StateType"   
           SelectedValuePath="Content" 
           SelectedValue="{Binding StateType,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="Json"/>
             <ComboBoxItem Content="Xml"/>
         </ComboBox>
 
-        <Label x:Name="Label_TypeLang" Content="{x:Static rs:langage.lang}" HorizontalAlignment="Left" Margin="336,450,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <Label x:Name="Label_TypeLang" Content="{x:Static rs:langage.lang}" HorizontalAlignment="Left" Margin="320,288,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <!-- ComboBox pour 'LangType' -->
-        <ComboBox Margin="342,492,658,202" Width="100" Height="25" x:Name="ComboBox_Lang"   
+        <ComboBox Margin="326,322,674,372" Width="100" Height="25" x:Name="ComboBox_Lang"   
           SelectedValuePath="Content" 
           SelectedValue="{Binding Lang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="fr"/>
             <ComboBoxItem Content="en"/>
         </ComboBox>
 
+        <Rectangle HorizontalAlignment="Left" Height="193" Margin="721,162,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
+        <Rectangle HorizontalAlignment="Left" Height="193" Margin="721,400,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
+        <Rectangle HorizontalAlignment="Left" Height="193" Margin="327,400,0,0"  VerticalAlignment="Top" Width="288" Fill="#FF3A3A3A"/>
+
         <Button Content="{x:Static rs:langage.btn_save}" Click="SaveSettings_Click" HorizontalAlignment="Left" Margin="608,613,0,0" VerticalAlignment="Top" Width="100" Height="34"/>
+        <!-- Champ pour CryptoSoft -->
+        <Label x:Name="Label_TypeToCrypt" Content="{x:Static rs:langage.ext_crypt}" HorizontalAlignment="Left" Margin="727,170,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TextBox_cryptage" HorizontalAlignment="Left" Margin="737,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btn_add" Click="AddExtensionBtn_click" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="737,245,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btn_delete"  Click="DeleteBtn_click" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="737,275,0,0" VerticalAlignment="Top" Width="80"/>
+        <ListBox x:Name="ListBoxExtensions" ItemsSource="{Binding ExtensionsToCrypt}" HorizontalAlignment="Left" Margin="865,216,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
 
-        <Rectangle HorizontalAlignment="Left" Height="223" Margin="724,165,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
-        <Label x:Name="Label_TypeToCrypt" Content="{x:Static rs:langage.ext_crypt}" HorizontalAlignment="Left" Margin="730,185,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="TextBox_cryptage" HorizontalAlignment="Left" Margin="740,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_add" Click="AddExtensionBtn_click" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="740,260,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_delete"  Click="DeleteBtn_click" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="740,290,0,0" VerticalAlignment="Top" Width="80"/>
-        <ListBox x:Name="ListBoxExtensions" ItemsSource="{Binding ExtensionsToCrypt}" HorizontalAlignment="Left" Margin="868,231,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
-        <Rectangle HorizontalAlignment="Left" Height="193" Margin="724,413,0,0"  VerticalAlignment="Top" Width="287" Fill="#FF3A3A3A"/>
+        <!-- Champ pour fichier prioritaire -->
+        <Label x:Name="Label_TypeToPriority" Content="{x:Static rs:langage.ext_prio}" HorizontalAlignment="Left" Margin="727,409,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TextBox_Priority" HorizontalAlignment="Left" Margin="737,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btn_add_Priority" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="737,484,0,0" VerticalAlignment="Top" Width="80" Click="btn_add_Priority_Click"/>
+        <Button x:Name="btn_delete_Priority" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="737,514,0,0" VerticalAlignment="Top" Width="80" Click="btn_delete_Priority_Click"/>
+        <ListBox x:Name="ListBoxExtensions_Priority" ItemsSource="{Binding ExtensionsToPriority}" HorizontalAlignment="Left" Margin="865,455,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
 
-        <Label x:Name="Label_TypeToPriority" Content="{x:Static rs:langage.ext_prio}" HorizontalAlignment="Left" Margin="730,422,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="TextBox_Priority" HorizontalAlignment="Left" Margin="740,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_add_Priority" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="740,497,0,0" VerticalAlignment="Top" Width="80" Click="btn_add_Priority_Click"/>
-        <Button x:Name="btn_delete_Priority" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="740,527,0,0" VerticalAlignment="Top" Width="80" Click="btn_delete_Priority_Click"/>
-        <ListBox x:Name="ListBoxExtensions_Priority" ItemsSource="{Binding ExtensionsToPriority}" HorizontalAlignment="Left" Margin="868,468,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
+        <!-- Champ application métier -->
+        <Label x:Name="Label_ApplicationBusiness" Content="{x:Static rs:langage.setting_app}" HorizontalAlignment="Left" Margin="342,412,0,0" VerticalAlignment="Top" Width="258" Foreground="White" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TextBox_ApplicationBusiness" HorizontalAlignment="Left" Margin="350,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btn_add_ApplicationBusiness" Content="{x:Static rs:langage.btn_add}" HorizontalAlignment="Left" Margin="350,479,0,0" VerticalAlignment="Top" Width="80" Click="btn_add_ApplicationBusiness_Click" />
+        <Button x:Name="btn_delete_ApplicationBusiness" Content="{x:Static rs:langage.btn_delete}" HorizontalAlignment="Left" Margin="350,509,0,0" VerticalAlignment="Top" Width="80" Click="btn_delete_ApplicationBusiness_Click" />
+        <ListBox x:Name="ListBoxExtensions_ApplicationBusiness" ItemsSource="{Binding BusinessApplication}" HorizontalAlignment="Left" Margin="478,450,0,0"  VerticalAlignment="Top" Height="129" Width="120" Background="#FFF3F3F3" />
 
-        <TextBox x:Name="TextBox_nbKo" HorizontalAlignment="Left" Margin="342,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="22"/>
-        <Label x:Name="Label_nbKo" Content="{x:Static rs:langage.label_nbKo}" HorizontalAlignment="Left" Margin="336,360,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
+        <TextBox x:Name="TextBox_nbKo" HorizontalAlignment="Center" Margin="0,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="22"/>
+        <Label x:Name="Label_nbKo" Content="{x:Static rs:langage.label_nbKo}" HorizontalAlignment="Left" Margin="494,289,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="16"/>
         <Button  x:Name="Btn_Leave" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
             <Image Source="{StaticResource start}" Height="68" Width="106" RenderTransformOrigin="0.542,0.335">
 

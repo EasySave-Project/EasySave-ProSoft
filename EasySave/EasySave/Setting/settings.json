@@ -1,8 +1,11 @@
 {
   "LogType": "Json",
   "StateType": "Json",
-  "Lang": "fr",
+  "Lang": "en",
   "NbKo": -1,
   "ExtensionsToCrypt": [],
-  "ExtensionsToPriority": []
+  "ExtensionsToPriority": [],
+  "BusinessApplication": [
+    "notepad"
+  ]
 }
