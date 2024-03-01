@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client_EasySave"
         mc:Ignorable="d"
         MinWidth="1100" MaxWidth="1100"
-        MinHeight="719" MaxHeight="1100"
+        MinHeight="719" MaxHeight="719"
         Title="MainWindow">
 
     <Window.Resources>
@@ -28,7 +28,7 @@
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="160,178,0,0" VerticalAlignment="Top" Width="190" Fill="#D9D9D9"/>
         <Label x:Name="messageLabel" Content="List Job" HorizontalAlignment="Left" Height="24" Margin="172,186,0,0" VerticalAlignment="Top" Width="168" FontFamily="Arial Black" FontSize="14"/>
 
-        <Label Content="Affichage Job" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="779" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
+        <Label Content="Job View" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="779" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
 
         <Button x:Name="Btn_RunAll" Margin="403,177,565,717" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_RunAll_Click" >
             <TextBlock x:Name="TextBlock_RunAll" Text="Run all" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="119" TextAlignment="Center"/>
