@@ -7,5 +7,6 @@
     <BitmapImage x:Key="play" UriSource="/img/Play.png" />
     <BitmapImage x:Key="start" UriSource="/img/start.png" />
     <BitmapImage x:Key="stop" UriSource="/img/stop.png" />
+    <BitmapImage x:Key="replay" UriSource="/img/replay.png" />
 
 </ResourceDictionary>

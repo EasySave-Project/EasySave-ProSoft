@@ -28,86 +28,109 @@
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="160,178,0,0" VerticalAlignment="Top" Width="190" Fill="#D9D9D9"/>
         <Label x:Name="messageLabel" Content="List Job" HorizontalAlignment="Left" Height="24" Margin="172,186,0,0" VerticalAlignment="Top" Width="168" FontFamily="Arial Black" FontSize="14"/>
 
-
-
         <Label Content="Affichage Job" HorizontalAlignment="Left" Margin="279,22,0,0" VerticalAlignment="Top" Height="63" Width="779" Foreground="#FF001F4D" FontFamily="Arial Black" FontSize="48"/>
 
+        <Button x:Name="Btn_RunAll" Margin="403,177,565,717" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_RunAll_Click" >
+            <TextBlock x:Name="TextBlock_RunAll" Text="Run all" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="119" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Btn_PauseAll" Margin="566,177,402,717" Background="#D9D9D9" BorderBrush="Transparent" Click="btn_PauseAll_click" >
+            <TextBlock x:Name="TextBlock_PauseAll" Text="Pause all" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="81" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Btn_StopAll_Copy" Margin="730,177,238,717" Background="#D9D9D9" BorderBrush="Transparent" Click="btnStopAllJob_Click" >
+            <TextBlock x:Name="TextBlock_StopAll" Text="Stop all" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="81" TextAlignment="Center"/>
+        </Button>
+
         <!-- 1 -->
-        <Grid x:Name="Grid_Job1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,244,0,0">
+        <Grid x:Name="Grid_Job1" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,244,0,0">
             <Rectangle HorizontalAlignment="Center" Height="46" Stroke="Black" VerticalAlignment="Center" Width="761" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job1" Content="Nom travail 1" HorizontalAlignment="Left" Height="24" Margin="19,11,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Button x:Name="BtnPlay_Job1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="BtnPlay_Job1_Click">
+            <Button x:Name="BtnPlay_Job1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0" Click="BtnPlay_Job1_Click">
                 <Image Source="{StaticResource play}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btnstop_Job1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0">
+            <Button x:Name="Btnstop_Job1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="Btnstop_Job1_Click">
                 <Image Source="{StaticResource stop}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btn_pause1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0">
+            <Button x:Name="Btn_pause1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0" Click="Btn_pause1_Click">
                 <Image Source="{StaticResource pause}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+            </Button>
+            <Button x:Name="Btn_resume1" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="690,0,0,0" Click="Btn_resume1_Click">
+                <Image Source="{StaticResource replay}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
             </Button>
             <ProgressBar x:Name="ProgressBar_Job1" HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="240" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
                  Maximum="100" Margin="200,0,0,0" />
         </Grid>
         <!-- 2 -->
-        <Grid x:Name="Grid_Job2" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,319,0,0">
+        <Grid x:Name="Grid_Job2" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,319,0,0">
             <Rectangle HorizontalAlignment="Center" Height="45" Stroke="Black" VerticalAlignment="Center" Width="761" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job2" Content="Nom travail 2" HorizontalAlignment="Left" Height="24" Margin="19,11,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Button x:Name="BtnPlay_Job2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="BtnPlay_Job2_Click">
+            <Button x:Name="BtnPlay_Job2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0" Click="BtnPlay_Job2_Click">
                 <Image Source="{StaticResource play}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btnstop_Job2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0">
+            <Button x:Name="Btnstop_Job2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="Btnstop_Job2_Click">
                 <Image Source="{StaticResource stop}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btn_pause2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0">
+            <Button x:Name="Btn_pause2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0" Click="Btn_pause2_Click">
                 <Image Source="{StaticResource pause}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+            </Button>
+            <Button x:Name="Btn_resume2" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="690,0,0,0" Click="Btn_resume2_Click">
+                <Image Source="{StaticResource replay}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
             </Button>
             <ProgressBar x:Name="ProgressBar_Job2" HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="240" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
                  Maximum="100" Margin="200,0,0,0" />
         </Grid>
         <!-- 3 -->
-        <Grid x:Name="Grid_Job3" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,394,0,0">
+        <Grid x:Name="Grid_Job3" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,394,0,0">
             <Rectangle HorizontalAlignment="Center" Height="45" Stroke="Black" VerticalAlignment="Center" Width="761" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job3" Content="Nom travail 3" HorizontalAlignment="Left" Height="24" Margin="19,11,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Button x:Name="BtnPlay_Job3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="BtnPlay_Job3_Click">
+            <Button x:Name="BtnPlay_Job3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0" Click="BtnPlay_Job3_Click">
                 <Image Source="{StaticResource play}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btnstop_Job3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0">
+            <Button x:Name="Btnstop_Job3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="Btnstop_Job3_Click">
                 <Image Source="{StaticResource stop}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btn_pause3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0">
+            <Button x:Name="Btn_pause3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0" Click="Btn_pause3_Click">
                 <Image Source="{StaticResource pause}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+            </Button>
+            <Button x:Name="Btn_resume3" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="690,0,0,0" Click="Btn_resume3_Click">
+                <Image Source="{StaticResource replay}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
             </Button>
             <ProgressBar x:Name="ProgressBar_Job3" HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="240" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
                  Maximum="100" Margin="200,0,0,0" />
         </Grid>
         <!-- 4 -->
-        <Grid x:Name="Grid_Job4" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,469,0,0">
+        <Grid x:Name="Grid_Job4" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,469,0,0">
             <Rectangle HorizontalAlignment="Center" Height="45" Stroke="Black" VerticalAlignment="Center" Width="761" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job4" Content="Nom travail 4" HorizontalAlignment="Left" Height="24" Margin="19,11,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Button x:Name="BtnPlay_Job4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="BtnPlay_Job4_Click">
+            <Button x:Name="BtnPlay_Job4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0" Click="BtnPlay_Job4_Click">
                 <Image Source="{StaticResource play}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btnstop_Job4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0">
+            <Button x:Name="Btnstop_Job4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="Btnstop_Job4_Click">
                 <Image Source="{StaticResource stop}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btn_pause4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0">
+            <Button x:Name="Btn_pause4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0" Click="Btn_pause4_Click">
                 <Image Source="{StaticResource pause}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+            </Button>
+            <Button x:Name="Btn_resume4" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="690,0,0,0" Click="Btn_resume4_Click">
+                <Image Source="{StaticResource replay}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
             </Button>
             <ProgressBar x:Name="ProgressBar_Job4" HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="240" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
                  Maximum="100" Margin="200,0,0,0" />
         </Grid>
         <!-- 5 -->
-        <Grid x:Name="Grid_Job5" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,544,0,0">
+        <Grid x:Name="Grid_Job5" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,544,0,0">
             <Rectangle HorizontalAlignment="Center" Height="45" Stroke="Black" VerticalAlignment="Center" Width="761" Fill="#D9D9D9"/>
             <Label x:Name="LabelName_Job5" Content="Nom travail 5" HorizontalAlignment="Left" Height="24" Margin="19,11,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial Black" FontSize="14"/>
-            <Button x:Name="BtnPlay_Job5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="BtnPlay_Job5_Click">
+            <Button x:Name="BtnPlay_Job5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0" Click="BtnPlay_Job5_Click">
                 <Image Source="{StaticResource play}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btnstop_Job5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="545,0,0,0">
+            <Button x:Name="Btnstop_Job5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="645,0,0,0" Click="Btnstop_Job5_Click">
                 <Image Source="{StaticResource stop}" Height="34" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
             </Button>
-            <Button x:Name="Btn_pause5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0">
+            <Button x:Name="Btn_pause5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="595,0,0,0" Click="Btn_pause5_Click">
                 <Image Source="{StaticResource pause}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
+            </Button>
+            <Button x:Name="Btn_resume5" Canvas.Left="608" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="40" Height="34"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="690,0,0,0" Click="Btn_resume5_Click">
+                <Image Source="{StaticResource replay}" Height="26" Width="28" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
             </Button>
             <ProgressBar x:Name="ProgressBar_Job5" HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="240" Canvas.Left="242" Canvas.Top="9" Minimum="0" 
                  Maximum="100" Margin="200,0,0,0" />
@@ -128,7 +151,7 @@
             </Button.RenderTransform>
             <Image Source="{StaticResource arrow_black}" Height="28" Width="37" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
         </Button>
-        
+
         <Button x:Name="BtnConnexionServ" Content="Connect to the server" HorizontalAlignment="Left" Margin="832,34,0,0" VerticalAlignment="Top" Height="39" Width="155" Click="BtnConnexionServ_Click"/>
 
     </Grid>

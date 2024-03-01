@@ -17,6 +17,7 @@
 	<Resource Include="img\Play.png" />
 	<Resource Include="img\start.png" />
 	<Resource Include="img\stop.png" />
+	<Resource Include="img\replay.png" />
   </ItemGroup>
 
 

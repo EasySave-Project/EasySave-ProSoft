@@ -12,7 +12,7 @@
           "$type": "System.Threading.ManualResetEvent, System.Private.CoreLib",
           "Handle": {
             "$type": "System.IntPtr, System.Private.CoreLib",
-            "value": 2524
+            "value": 1556
           },
           "SafeWaitHandle": {
             "$type": "Microsoft.Win32.SafeHandles.SafeWaitHandle, System.Private.CoreLib",
@@ -43,7 +43,7 @@
           "$type": "System.Threading.ManualResetEvent, System.Private.CoreLib",
           "Handle": {
             "$type": "System.IntPtr, System.Private.CoreLib",
-            "value": 2872
+            "value": 1560
           },
           "SafeWaitHandle": {
             "$type": "Microsoft.Win32.SafeHandles.SafeWaitHandle, System.Private.CoreLib",

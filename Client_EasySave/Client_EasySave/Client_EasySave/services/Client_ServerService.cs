@@ -20,7 +20,10 @@ namespace EasySaveClient.Services
         start = 0,
         stop = 1,
         suspend = 2,
-        resume = 3
+        resume = 3,
+        allstart = 4,
+        allsuspend = 5,
+        allstop = 6
     }
 
     public class ServerMessageObject
@@ -102,16 +105,23 @@ namespace EasySaveClient.Services
                     // Vérifier si le séparateur a été trouvé
                     if (separatorIndex >= 0)
                     {
-                        // Extraire la partie de la chaîne jusqu'au premier séparateur
-                        string jsonMessage = message.Substring(0, separatorIndex);
-
-                        // Utilisez Dispatcher ici pour appeler LoadJson sur le thread UI
-                        Application.Current.Dispatcher.Invoke(() =>
+                        try 
                         {
-                            // Appeler la méthode LoadJson du viewModel
-                            viewModel.LoadJson(jsonMessage);
-                            mainWindow.ReloadData();
-                        });
+                            // Extraire la partie de la chaîne jusqu'au premier séparateur
+                            string jsonMessage = message.Substring(0, separatorIndex);
+
+                            // Utilisez Dispatcher ici pour appeler LoadJson sur le thread UI
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                // Appeler la méthode LoadJson du viewModel
+                                viewModel.LoadJson(jsonMessage);
+                                mainWindow.ReloadData();
+                            });
+                        } 
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Error : " + e.Message);
+                        }
                     }
                 }
             }

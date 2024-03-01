@@ -14,7 +14,10 @@ namespace EasySave.services
         start = 0,
         stop = 1,
         suspend = 2,
-        resume = 3
+        resume = 3,
+        allstart = 4,
+        allsuspend = 5,
+        allstop = 6
     }
 
     public class ServerManager
@@ -179,6 +182,63 @@ namespace EasySave.services
                                 try
                                 {
                                     mainWindow.backUpController.InitiateResumeBackUp(BackUpManager.listBackUps[jobId]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                                }
+                                break;
+
+                            case ServerAction.allstart:
+                                // START ALL JOBS
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                try
+                                {
+                                    for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+                                    {
+                                        mainWindow.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[i]);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                                }
+                                break;
+
+                            case ServerAction.allsuspend:
+                                // SUSPEND ALL JOBS
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                try
+                                {
+                                    for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+                                    {
+                                        mainWindow.backUpController.backUpManager.PauseBackup(BackUpManager.listBackUps[i]);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                                }
+                                break;
+
+                            case ServerAction.allstop:
+                                // STOP ALL JOBS
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                try
+                                {
+                                    for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+                                    {
+                                        mainWindow.backUpController.backUpManager.StopBackup(BackUpManager.listBackUps[i]);
+                                    }
                                 }
                                 catch (Exception ex)
                                 {

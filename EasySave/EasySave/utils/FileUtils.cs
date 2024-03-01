@@ -313,7 +313,7 @@ namespace EasySave.utils
         {
             string argument = "\"" + sSourcePath_File + "\" \"" + sTargetPath_File + "\" \"" + sClef + "\"";
             // Obtenir le fichier ressource
-            var resource = cryptoSoft.ressource_cryptosoft.cryptoSoft_V4;
+            var resource = cryptoSoft.ressource_cryptosoft.cryptoSoft_V5;
             // Créer un fichier temporaire avec le contenu du fichier ressource
             string tempPath_crypto = System.IO.Path.GetTempFileName();
             File.WriteAllBytes(tempPath_crypto, resource);

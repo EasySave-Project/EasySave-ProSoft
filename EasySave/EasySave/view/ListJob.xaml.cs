@@ -234,19 +234,18 @@ namespace EasySave.view
         // Bouton ALL
         //==============================================
         private void Btn_RunAll_Click(object sender, RoutedEventArgs e)
-        {
-            
-            for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+        {            
+            for (int i = 0; i < BackUpManager.listBackUps.Count; i++)
             {
-                ExecuteJob(i-1);
+                ExecuteJob(i);
             }
         }
 
         private void btnStopAllJob_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 1;i<= BackUpManager.listBackUps.Count; i++)
+            for (int i = 0; i < BackUpManager.listBackUps.Count; i++)
             {
-                StopJob(i-1);
+                StopJob(i);
             }
         }
 
@@ -276,9 +275,9 @@ namespace EasySave.view
         private void btn_PauseAll_click(object sender, RoutedEventArgs e)
         {
             
-            for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
+            for (int i = 0; i < BackUpManager.listBackUps.Count; i++)
             {
-                PauseJob(i - 1);
+                PauseJob(i);
             }
             
             

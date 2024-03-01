@@ -37,7 +37,7 @@ namespace EasySave.model
             if (settings_state.StateType == "Xml")
             {
                 // XML
-                string filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{jobName}.xml");
+                string filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "state", $"state_backup_{jobName}.xml");
                 if (File.Exists(filePath))
                 {
                     using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -68,7 +68,7 @@ namespace EasySave.model
             else
             {
                 // JSON
-                string filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "log", $"state_backup_{jobName}.json");
+                string filePath = Path.Combine(Environment.CurrentDirectory, "EasySave", "state", $"state_backup_{jobName}.json");
                 if (File.Exists(filePath))
                 {
                     string fileContent = File.ReadAllText(filePath);

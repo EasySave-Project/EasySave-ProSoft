@@ -61,7 +61,13 @@ namespace EasySave.model
                         if (Jobs[i].JobName == jobName)
                         {
                             // Mise à jour de la progression du travail pour l'emploi actuel
-                            Jobs[i].JobProgress = progress;
+                            if (progress == 0)
+                            {
+                                Jobs[i].JobProgress = 1;
+                            } else
+                            {
+                                Jobs[i].JobProgress = progress;
+                            }
                         }
                     }
                 });

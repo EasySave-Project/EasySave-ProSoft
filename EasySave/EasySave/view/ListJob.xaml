@@ -55,13 +55,13 @@
         </Rectangle>
         <Label x:Name="Label_ListJob" Content="{x:Static rs:langage.title_listJob}" HorizontalAlignment="Left" Height="24" Margin="320,272,0,0" VerticalAlignment="Top" Width="145" FontFamily="Arial Black" FontSize="14"/>
         <StackPanel Margin="322,150,83,516" Orientation="Horizontal" HorizontalAlignment="Right"/>
-        <Button x:Name="Btn_RunAll" Margin="289,149,682,521" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_RunAll_Click" >
+        <Button x:Name="Btn_RunAll" Margin="300,155,671,515" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_RunAll_Click" >
             <TextBlock x:Name="TextBlock_RunAll" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="119" TextAlignment="Center"><Run Text="{x:Static rs:langage.runAll}"/></TextBlock>
         </Button>
-        <Button x:Name="Btn_PauseAll" Margin="439,149,566,521" Background="#D9D9D9" BorderBrush="Transparent" Click="btn_PauseAll_click" >
+        <Button x:Name="Btn_PauseAll" Margin="440,155,531,515" Background="#D9D9D9" BorderBrush="Transparent" Click="btn_PauseAll_click" >
             <TextBlock x:Name="TextBlock_PauseAll" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="81" TextAlignment="Center"><Run Text="{x:Static rs:langage.pauseAll}"/></TextBlock>
         </Button>
-        <Button x:Name="Btn_StopAll_Copy" Margin="550,149,455,521" Background="#D9D9D9" BorderBrush="Transparent" Click="btnStopAllJob_Click" >
+        <Button x:Name="Btn_StopAll_Copy" Margin="579,155,392,515" Background="#D9D9D9" BorderBrush="Transparent" Click="btnStopAllJob_Click" >
             <TextBlock x:Name="TextBlock_StopAll" VerticalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Arial Black" RenderTransformOrigin="0.824,0.565" Width="81" TextAlignment="Center"><Run Text="{x:Static rs:langage.stopAll}"/></TextBlock>
         </Button>
         <Button x:Name="Btn_AddJob" Margin="772,150,70,520" Background="#D9D9D9" BorderBrush="Transparent" Click="Btn_AddJob_Click">

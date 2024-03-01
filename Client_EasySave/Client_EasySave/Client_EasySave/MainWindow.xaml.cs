@@ -150,6 +150,130 @@ namespace Client_EasySave
         }
 
         //==============================================
+        // Pause des jobs
+        //==============================================
+
+        private void PauseJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Exécuter du job
+            index_SelectJob--;
+
+            // Lancer le message
+            serverManager.SendAction(index_SelectJob, ServerAction.suspend);
+        }
+
+        private void Btn_pause1_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(1);
+        }
+
+        private void Btn_pause2_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(2);
+        }
+
+        private void Btn_pause3_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(3);
+        }
+
+        private void Btn_pause4_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(4);
+        }
+
+        private void Btn_pause5_Click(object sender, RoutedEventArgs e)
+        {
+            PauseJob(5);
+        }
+
+        //==============================================
+        // Stop des jobs
+        //==============================================
+
+        private void StopJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Exécuter du job
+            index_SelectJob--;
+
+            // Lancer le message
+            serverManager.SendAction(index_SelectJob, ServerAction.stop);
+        }
+        private void Btnstop_Job1_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(1);
+        }
+
+        private void Btnstop_Job2_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(2);
+        }
+
+        private void Btnstop_Job3_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(3);
+        }
+
+        private void Btnstop_Job4_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(4);
+        }
+
+        private void Btnstop_Job5_Click(object sender, RoutedEventArgs e)
+        {
+            StopJob(5);
+        }
+
+        //==============================================
+        // Resume des jobs
+        //==============================================
+        private void ResumeJob(int btnJob)
+        {
+            // Calculer l'index global du job en fonction de la page actuelle
+            int index_Start = (indexPage - 1) * 5;
+            int index_SelectJob = index_Start + btnJob;
+
+            // Exécuter du job
+            index_SelectJob--;
+
+            // Lancer le message
+            serverManager.SendAction(index_SelectJob, ServerAction.resume);
+        }
+
+        private void Btn_resume1_Click(object sender, RoutedEventArgs e)
+        {
+            ResumeJob(1);
+        }
+
+        private void Btn_resume2_Click(object sender, RoutedEventArgs e)
+        {
+            ResumeJob(2);
+        }
+
+        private void Btn_resume3_Click(object sender, RoutedEventArgs e)
+        {
+            ResumeJob(3);
+        }
+
+        private void Btn_resume4_Click(object sender, RoutedEventArgs e)
+        {
+            ResumeJob(4);
+        }
+
+        private void Btn_resume5_Click(object sender, RoutedEventArgs e)
+        {
+            ResumeJob(5);
+        }
+
+        //==============================================
         // Bouton de navigation
         //==============================================
 
@@ -174,6 +298,21 @@ namespace Client_EasySave
             }
         }
 
+        private void Btn_RunAll_Click(object sender, RoutedEventArgs e)
+        {
+            serverManager.SendAction(0, ServerAction.allstart);
+        }
+
+        private void btn_PauseAll_click(object sender, RoutedEventArgs e)
+        {
+            serverManager.SendAction(0, ServerAction.allsuspend);
+        }
+
+        private void btnStopAllJob_Click(object sender, RoutedEventArgs e)
+        {
+            serverManager.SendAction(0, ServerAction.allstop);
+        }
+
         private void Btn_LeftIndexPages_Click(object sender, RoutedEventArgs e)
         {
             if (indexPage > 1)
@@ -193,17 +332,7 @@ namespace Client_EasySave
                 ReloadData();
             }
         }
-
-
-
-
-        //private void BtnConnexionServ_Click(object sender, RoutedEventArgs e)
-        //{
-        //    // Récupérez l'identifiant du job à partir du bouton ou d'un autre contrôle
-        //    int jobId = ...;
-        //    // Envoyez l'action de démarrage au serveur
-        //    serverManager.SendAction(jobId, ServerAction.start);
-        //}
+    
     }
 
 }
