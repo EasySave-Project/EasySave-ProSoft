@@ -13,7 +13,8 @@ namespace EasySave.services
 {
     public class SaveXML : IStrategieSave
     {
-        public void SaveLog(Log log)
+
+        public  void SaveLog(Log log)
         {
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\log";
