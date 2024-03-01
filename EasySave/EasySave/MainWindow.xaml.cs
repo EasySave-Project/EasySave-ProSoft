@@ -42,6 +42,10 @@ namespace EasySave
             BackUpController controller = new BackUpController(bmManager, logManager, stateManager);
             backUpController = controller;
 
+            // Démarrage du serveur
+            ServerManager serverManager = new ServerManager();
+            serverManager.StartServer();
+
             view.Home home = new view.Home();
             // Affichez la première page au démarrage de l'application
             Content = home;

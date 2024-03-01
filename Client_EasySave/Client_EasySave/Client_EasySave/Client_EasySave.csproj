@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Folder Include="/img\" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<Resource Include="img\arrow_black.png" />
+	<Resource Include="img\logo_easysave.png" />
+	<Resource Include="img\pause.png" />
+	<Resource Include="img\Play.png" />
+	<Resource Include="img\start.png" />
+	<Resource Include="img\stop.png" />
+  </ItemGroup>
+
+
+</Project>
