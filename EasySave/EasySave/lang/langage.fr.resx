@@ -183,6 +183,9 @@
   <data name="error_saveDifferential" xml:space="preserve">
     <value>Erreur : lors de la sauvegarde différentiel</value>
   </data>
+  <data name="error_setting_app_same" xml:space="preserve">
+    <value>Application métier déjà présent dans la liste</value>
+  </data>
   <data name="error_SourcePath_NotFound" xml:space="preserve">
     <value>Erreur : Le répertoire source n'existe pas ou n'a pas pu être trouvé :</value>
   </data>
@@ -214,7 +217,7 @@
     <value>Le job n'a pas été lancé.</value>
   </data>
   <data name="label_nbKo" xml:space="preserve">
-    <value>nombre de Ko max : </value>
+    <value>Nombre de Ko max : </value>
   </data>
   <data name="lang" xml:space="preserve">
     <value>Type de langue :</value>
@@ -242,6 +245,9 @@
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Selectionner un dossier</value>
+  </data>
+  <data name="setting_app" xml:space="preserve">
+    <value>Application métier</value>
   </data>
   <data name="sourceDir" xml:space="preserve">
     <value>Dossier source :</value>

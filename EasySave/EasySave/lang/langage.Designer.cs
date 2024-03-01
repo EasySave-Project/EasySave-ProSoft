@@ -259,6 +259,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Business application already in the list.
+        /// </summary>
+        public static string error_setting_app_same {
+            get {
+                return ResourceManager.GetString("error_setting_app_same", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Error : The source directory does not exist or could not be found :.
         /// </summary>
         public static string error_SourcePath_NotFound {
@@ -349,7 +358,7 @@ namespace EasySave.lang {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à number of Ko.
+        ///   Recherche une chaîne localisée semblable à Number of Ko.
         /// </summary>
         public static string label_nbKo {
             get {
@@ -435,6 +444,15 @@ namespace EasySave.lang {
         public static string select_folder {
             get {
                 return ResourceManager.GetString("select_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Business application.
+        /// </summary>
+        public static string setting_app {
+            get {
+                return ResourceManager.GetString("setting_app", resourceCulture);
             }
         }
         

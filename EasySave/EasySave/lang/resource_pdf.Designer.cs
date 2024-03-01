@@ -63,9 +63,9 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] patchNoteV2_en {
+        internal static byte[] patchNoteV3_en {
             get {
-                object obj = ResourceManager.GetObject("patchNoteV2_en", resourceCulture);
+                object obj = ResourceManager.GetObject("patchNoteV3_en", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] patchNoteV2_fr {
+        internal static byte[] patchNoteV3_fr {
             get {
-                object obj = ResourceManager.GetObject("patchNoteV2_fr", resourceCulture);
+                object obj = ResourceManager.GetObject("patchNoteV3_fr", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] userManuel_en_v2 {
+        internal static byte[] User_Manual_en {
             get {
-                object obj = ResourceManager.GetObject("userManuel_en_v2", resourceCulture);
+                object obj = ResourceManager.GetObject("User_Manual_en", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace EasySave.lang {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] userManuel_fr_v2 {
+        internal static byte[] User_Manual_fr {
             get {
-                object obj = ResourceManager.GetObject("userManuel_fr_v2", resourceCulture);
+                object obj = ResourceManager.GetObject("User_Manual_fr", resourceCulture);
                 return ((byte[])(obj));
             }
         }

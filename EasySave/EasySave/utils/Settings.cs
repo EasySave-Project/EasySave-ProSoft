@@ -31,6 +31,7 @@ namespace EasySave.utils
         private static int? _nbKo;
         private static List<string> _extensionsToCrypt = new List<string>();
         private static List<string> _extensionsToPriority = new List<string>();
+        private static List<string> _businessApplication = new List<string>();
 
         private static Settings _instance;
 
@@ -89,6 +90,18 @@ namespace EasySave.utils
                 {
                     _extensionsToPriority = value;
                     OnPropertyChanged(nameof(ExtensionsToPriority));
+                }
+            }
+        }
+        public List<string> BusinessApplication
+        {
+            get { return _businessApplication ?? new List<string>(); }
+            set
+            {
+                if (_businessApplication != value)
+                {
+                    _businessApplication = value;
+                    OnPropertyChanged(nameof(BusinessApplication));
                 }
             }
         }
@@ -162,6 +175,15 @@ namespace EasySave.utils
                 {
                     _extensionsToPriority = new List<string>();
                 }
+                // Business application
+                if (settings?.BusinessApplication != null)
+                {
+                    _businessApplication = new List<string>(settings.BusinessApplication.ToObject<string[]>());
+                }
+                else
+                {
+                    _businessApplication = new List<string>();
+                }
             }
             else
             {
@@ -171,6 +193,7 @@ namespace EasySave.utils
                 _nbKo = -1;
                 _extensionsToCrypt = new List<string>();
                 _extensionsToPriority = new List<string>();
+                _businessApplication = new List<string>();
                 var directoryPath = System.IO.Path.GetDirectoryName(_filePath);
                 if (!Directory.Exists(directoryPath))
                 {
@@ -189,7 +212,8 @@ namespace EasySave.utils
                 Lang = _lang,
                 NbKo = _nbKo,
                 ExtensionsToCrypt = _extensionsToCrypt.ToArray(),
-                ExtensionsToPriority = _extensionsToPriority.ToArray()
+                ExtensionsToPriority = _extensionsToPriority.ToArray(),
+                BusinessApplication = _businessApplication.ToArray()
             };
             var json = JsonConvert.SerializeObject(settings, Formatting.Indented);
             File.WriteAllText(_filePath, json);

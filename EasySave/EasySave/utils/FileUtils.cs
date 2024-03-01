@@ -72,11 +72,19 @@ namespace EasySave.utils
 
         public void DifferentialCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
-            // Vérifier si l'application de la calculatrice Windows est ouverte
-            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-           
+            // Récupérer la liste des processus qui doivent empêcher d'exécuter la sauvegarde
+            string[] businessApplication = settings.BusinessApplication.ToArray();
+            // Voir si un des processus est en cours d'exécution
+            bool isRunning = false;
+            foreach (string process in businessApplication)
+            {
+                if (Process.GetProcessesByName(process).Length > 0)
+                {
+                    isRunning = true;
+                }
+            }           
 
-            if (!isNotepadRunning)
+            if (!isRunning)
             {
                 // Si la calculatrice n'est pas ouverte :
                 Wait(cancellationToken);
@@ -92,21 +100,28 @@ namespace EasySave.utils
                 CopyModifierOrAddedFile(sourceDir, targetDir, name,cancellationToken);
                 DeleteObsoleteFiles(sourceDir, targetDir, cancellationToken);
                 CopySubdirectoriesRecursivelyForDifferential(name, sourceDir, targetDir, cancellationToken);
-               
                 
             }
             else
             {
-                Pause();
-               // System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                Pause();               
             }
         }
         public  void CompleteCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
-            
-            // Vérifier si le processus de la calculatrice est en cours d'exécution
-            bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-            if (!isNotepadRunning)
+            // Récupérer la liste des processus qui doivent empêcher d'exécuter la sauvegarde
+            string[] businessApplication = settings.BusinessApplication.ToArray();
+            // Voir si un des processus est en cours d'exécution
+            bool isRunning = false;
+            foreach (string process in businessApplication)
+            {
+                if (Process.GetProcessesByName(process).Length > 0)
+                {
+                    isRunning = true;
+                }
+            }
+
+            if (!isRunning)
             {
                 // Si le blocnote n'est pas ouverte :
                 cancellationToken.ThrowIfCancellationRequested();
@@ -125,8 +140,7 @@ namespace EasySave.utils
             }
             else
             {
-                Pause();
-                //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                Pause();                
             }
         }
 
