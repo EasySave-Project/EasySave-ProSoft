@@ -1,0 +1,20 @@
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST1",
+  "SourcePath": "C:\\test1",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 597062656
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST1",
+  "SourcePath": "C:\\test1",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 597062656
+}

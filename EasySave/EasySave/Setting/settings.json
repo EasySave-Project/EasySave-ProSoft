@@ -2,7 +2,7 @@
   "LogType": "Json",
   "StateType": "Json",
   "Lang": "fr",
-  "NbKo": -1,
+  "NbKo": 500000,
   "ExtensionsToCrypt": [],
   "ExtensionsToPriority": []
 }

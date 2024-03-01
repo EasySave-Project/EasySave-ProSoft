@@ -93,6 +93,13 @@ namespace EasySave.view
         {
             // EDIT
             var job = ((System.Windows.Controls.Button)sender).DataContext as JobObject;
+            if (_MainWindows.backUpController.backUpManager.jobCompleted(job.JobId))
+            {
+                // cas du lancement du thread d'execution on cherche pas à comprendre tu peux pas modifier ton job 
+                //case of launching the execution thread we do not seek to understand you can not modify your job
+                System.Windows.MessageBox.Show(ManageLang.GetString("threadErrorEdit"));
+                return;
+            }
             EditJob editjob = new EditJob(job.JobId);
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = editjob;
@@ -108,7 +115,12 @@ namespace EasySave.view
                 MessageBoxResult result = System.Windows.MessageBox.Show(sMsgBox, ManageLang.GetString("view_supp_title"), MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    // Oui
+                    if (_MainWindows.backUpController.backUpManager.jobCompleted(job.JobId))
+                    {
+                        // cas où l'on veux delete un job qui est en train d'etre lancé.
+                        System.Windows.MessageBox.Show(ManageLang.GetString("error_suppresion"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
                     _MainWindows.backUpController.InitiateRemoveBackup(job.JobName);
                 }
             }
@@ -156,7 +168,7 @@ namespace EasySave.view
 
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
-            if (!_MainWindows.backUpController.backUpManager.AreAllJobsCompleted())
+            if (_MainWindows.backUpController.backUpManager.AreAllJobsCompleted())
             {
                 System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
 

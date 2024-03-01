@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using EasySave.model;
 using EasySave.services;
 using EasySave.controller;
+using System.Threading;
 
 namespace EasySave.view
 {
@@ -70,7 +71,7 @@ namespace EasySave.view
         // Modifier le job
         //==============================================
         private void Btn_ModifyJob_Click(object sender, RoutedEventArgs e)
-        {
+        {    
             string sNameJob = TextBox_NameJob.Text;
             string sSourceFolder = TextBox_SelectedFolderA.Text;
             string sDestinationFolder = TextBox_SelectedFolderB.Text;

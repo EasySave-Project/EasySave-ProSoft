@@ -1,0 +1,1010 @@
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1643316224,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2240378880,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 99,
+  "TotalFileToCopy": 2701378560,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 22,
+  "TotalFileToCopy": 597056512,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 44,
+  "TotalFileToCopy": 1194119168,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 61,
+  "TotalFileToCopy": 1658670080,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 83,
+  "TotalFileToCopy": 2255726592,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2720277504,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test2",
+  "SourcePath": "C:\\database\\CATS_FAB",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 21,
+  "TotalFileToCopy": 591158272,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 38,
+  "TotalFileToCopy": 1052157952,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 60,
+  "TotalFileToCopy": 1649220608,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 2246277120,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "TEST2",
+  "SourcePath": "C:\\sauve",
+  "TargetPath": "C:\\sauve3",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2710828032,
+  "TotalFileSize": 2710828032
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test2",
+  "SourcePath": "C:\\test2",
+  "TargetPath": "C:\\sauve2",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 597062656
+}

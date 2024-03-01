@@ -255,6 +255,9 @@
   <data name="targetDir" xml:space="preserve">
     <value>Dossier cible :</value>
   </data>
+  <data name="threadErrorEdit" xml:space="preserve">
+    <value>Vous ne pouvez pas modifiez un job qui est en cours de lancement !</value>
+  </data>
   <data name="title_addJob" xml:space="preserve">
     <value>Ajouter un travail</value>
   </data>

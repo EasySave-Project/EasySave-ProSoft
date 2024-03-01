@@ -475,6 +475,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à You cannot edit a job that is being launched !.
+        /// </summary>
+        public static string threadErrorEdit {
+            get {
+                return ResourceManager.GetString("threadErrorEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Add a Job.
         /// </summary>
         public static string title_addJob {

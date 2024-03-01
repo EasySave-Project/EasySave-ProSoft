@@ -44,6 +44,23 @@ public class BackUpManager
     {
         return RunningThreads.All(t => !t.IsAlive);
     }
+
+    // return true if the thread is completed
+    public bool jobCompleted(int index)
+    {
+        var threadList = _runningThreads.ToList(); 
+        if (index >= 0 && index < threadList.Count)
+        {
+            Thread threadAtIndex = threadList[index];   
+            return !threadAtIndex.IsAlive;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    
     public  void SaveJobsToJson()
     {
         
