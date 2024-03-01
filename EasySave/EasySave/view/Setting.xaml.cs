@@ -31,7 +31,7 @@ namespace EasySave.view
     {
 
         private Settings settings = new Settings();
-        private BackUpController backUpController = new BackUpController();
+        private BackUpController backUpController;
         public Setting()
         {
             ManageLang.ChangeLanguage(settings.Lang);

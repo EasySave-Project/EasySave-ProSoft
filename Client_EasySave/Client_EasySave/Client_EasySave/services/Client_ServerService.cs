@@ -96,13 +96,23 @@ namespace EasySaveClient.Services
                     int bytesReceived = clientSocket.Receive(buffer);
                     string message = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
 
-                    // Utilisez Dispatcher ici pour appeler LoadJson sur le thread UI
-                    Application.Current.Dispatcher.Invoke(() =>
+                    // Trouver l'index du premier séparateur
+                    int separatorIndex = message.IndexOf("\r\n");
+
+                    // Vérifier si le séparateur a été trouvé
+                    if (separatorIndex >= 0)
                     {
-                        // Appeler la méthode LoadJson du viewModel
-                        viewModel.LoadJson(message);
-                        mainWindow.ReloadData();
-                    });
+                        // Extraire la partie de la chaîne jusqu'au premier séparateur
+                        string jsonMessage = message.Substring(0, separatorIndex);
+
+                        // Utilisez Dispatcher ici pour appeler LoadJson sur le thread UI
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            // Appeler la méthode LoadJson du viewModel
+                            viewModel.LoadJson(jsonMessage);
+                            mainWindow.ReloadData();
+                        });
+                    }
                 }
             }
             catch (SocketException)

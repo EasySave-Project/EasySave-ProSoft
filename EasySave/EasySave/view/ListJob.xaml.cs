@@ -21,7 +21,7 @@ namespace EasySave.view
     public partial class ListJob : Page
     {
         private MainWindow _MainWindows = new MainWindow();
-        public ObservableCollection<JobObject> Jobs { get; set; }
+        private ListJob_ViewModel viewModel;
 
         string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
         StateManager stateManager = new StateManager();
@@ -30,13 +30,13 @@ namespace EasySave.view
         private List<bool> jobsStopped = new List<bool>();
 
         public ListJob()
-        {
-            
+        {            
             InitializeComponent();
             initJobs();
-            DataContext = this;
-            Jobs = new ObservableCollection<JobObject>();
-            PopulateJobs();
+
+            viewModel = ListJob_ViewModel.GetInstance();
+            viewModel.ReloadJobs();
+            DataContext = viewModel;
         }
         private void initJobs()
         {
@@ -45,20 +45,6 @@ namespace EasySave.view
                 jobsPaused.Add(false);
                 jobsRunning.Add(false);
                 jobsStopped.Add(false);
-            }
-        }
-
-        //==============================================
-        // Code de la page ListJob
-        //==============================================
-        private void PopulateJobs()
-        {
-            // Création d'une instance de JobObjectFactory pour obtenir les données des jobs
-            JobObjectFactory jobFactory = new JobObjectFactory();
-            // Remplissage de la liste observable avec les données des jobs
-            foreach (JobObject job in jobFactory.CreateJobObject())
-            {
-                Jobs.Add(job);
             }
         }
 
@@ -121,6 +107,7 @@ namespace EasySave.view
             {
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_suppresion"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            viewModel.ReloadJobs();
         }
 
         //==============================================
@@ -178,7 +165,7 @@ namespace EasySave.view
                 timer.Start(); // Démarrer le timer
 
                 // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
-                Btn_Leave.IsEnabled = false;
+                Btn_Leavee.IsEnabled = false;
             }
             else
             {
@@ -251,7 +238,7 @@ namespace EasySave.view
             
             for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
             {
-                ExecuteJob(i);
+                ExecuteJob(i-1);
             }
         }
 
@@ -259,7 +246,7 @@ namespace EasySave.view
         {
             for (int i = 1;i<= BackUpManager.listBackUps.Count; i++)
             {
-                StopJob(i);
+                StopJob(i-1);
             }
         }
 
@@ -291,7 +278,7 @@ namespace EasySave.view
             
             for (int i = 1; i <= BackUpManager.listBackUps.Count; i++)
             {
-                PauseJob(i);
+                PauseJob(i - 1);
             }
             
             

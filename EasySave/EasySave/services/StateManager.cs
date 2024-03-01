@@ -59,6 +59,7 @@ namespace EasySave.services
 
             state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
             state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
+            UpdateJobProgress(state.NameJob, state.Progression);
 
             state.SourcePath = sourcePath;
             state.TargetPath = targetPath;
@@ -149,6 +150,7 @@ namespace EasySave.services
 
             state.NbFilesLeftToDo = state.NbFilesLeftToDo - 1;
             state.Progression = (int)(((float)state.TotalFileToCopy / (float)state.TotalFileSize) * 100);
+            UpdateJobProgress(state.NameJob, state.Progression);
 
             state.SourcePath = sourcePath;
             state.TargetPath = targetPath;
@@ -164,6 +166,16 @@ namespace EasySave.services
             }
 
             SaveState();
+        }
+
+        //=======================================================================================================
+        // Update Progress bar
+        //=======================================================================================================
+
+        public void UpdateJobProgress(string jobName, int progress)
+        {
+            // Accéder à l'instance unique de Jobs depuis ListJob_ViewModel
+            ListJob_ViewModel.GetInstance().UpdateJobProgressInList(jobName, progress);
         }
 
         //=======================================================================================================

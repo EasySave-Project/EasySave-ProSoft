@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\INTERFACE_EasySave\\CLIENT\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
+      "projectUniqueName": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\EasySave-ProSoft\\Client_EasySave\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
       "projectName": "Client_EasySave",
-      "projectPath": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\INTERFACE_EasySave\\CLIENT\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
+      "projectPath": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\EasySave-ProSoft\\Client_EasySave\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
       "packagesPath": "C:\\Users\\baptx\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\INTERFACE_EasySave\\CLIENT\\Client_EasySave\\Client_EasySave\\obj\\",
+      "outputPath": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\EasySave-ProSoft\\Client_EasySave\\Client_EasySave\\Client_EasySave\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

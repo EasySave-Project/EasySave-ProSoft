@@ -50,6 +50,7 @@ namespace Client_EasySave.ViewModel
         // Méthode pour charger les données JSON reçues du serveur
         public void LoadJson(string json)
         {
+
             // Désérialiser le JSON en une liste de jobs
             List<Job> jobs = JsonSerializer.Deserialize<List<Job>>(json);
             

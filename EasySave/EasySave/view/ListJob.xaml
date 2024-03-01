@@ -6,10 +6,11 @@
       xmlns:local="clr-namespace:EasySave.view"
       xmlns:rs="clr-namespace:EasySave.lang" 
       xmlns:utils="clr-namespace:EasySave.utils"
+      xmlns:system="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
 
-      Title="ListJob" Height="719" Width="1100"
-      >
+      Title="ListJob" Height="719" Width="1100">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -98,7 +99,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button  x:Name="Btn_Leave" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
+        <Button x:Name="Btn_Leavee" HorizontalAlignment="Left" Margin="976,10,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Height="77" Width="86" Click="Btn_Leave_Click" >
             <Image Source="{StaticResource start}" Height="68" Width="106" RenderTransformOrigin="0.542,0.335">
 
             </Image>

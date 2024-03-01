@@ -1,0 +1,2640 @@
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 7,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 23,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 75,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 2432280
+}
+{
+  "NbFilesLeftToDo": 101,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 100,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 1,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 99,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 4,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 98,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 14,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 97,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 14,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 96,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 19,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 95,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 40,
+  "TotalFileToCopy": 5129751,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 94,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 61,
+  "TotalFileToCopy": 7775529,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 93,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 61,
+  "TotalFileToCopy": 7775557,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 92,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 61,
+  "TotalFileToCopy": 7775584,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 91,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 61,
+  "TotalFileToCopy": 7775584,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 90,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 64,
+  "TotalFileToCopy": 8157974,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 89,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 67,
+  "TotalFileToCopy": 8475630,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 88,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 76,
+  "TotalFileToCopy": 9586879,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 87,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 79,
+  "TotalFileToCopy": 9989225,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 86,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 82,
+  "TotalFileToCopy": 10388983,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 85,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 10987221,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 84,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 11506313,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 83,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 12005936,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 82,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12493687,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 81,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12496268,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 80,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12502853,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 79,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12504533,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 78,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12504559,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 77,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12505503,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 76,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12505576,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 75,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12505694,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 74,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12505717,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 73,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12507097,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 72,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12507272,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 71,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12507750,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 70,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12508646,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 69,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12513372,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 68,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12513561,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 67,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12513985,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 66,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12515628,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 65,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12516044,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 64,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12517418,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 63,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12522316,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 62,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12522860,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 61,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12524352,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 60,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12527135,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 59,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\hooks",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12530785,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 58,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\info",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\info",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12531025,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 57,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12531541,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 56,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs\\refs\\heads",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs\\refs\\heads",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12532057,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 55,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs\\refs\\remotes\\origin",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\logs\\refs\\remotes\\origin",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12532202,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 54,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\12",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\12",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12532382,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 53,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\1f",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\1f",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12533133,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 52,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\20",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\20",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12533261,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 51,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\37",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\37",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12533484,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 50,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\4b",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\4b",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12534109,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 49,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\56",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\56",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12534259,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 48,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\58",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\58",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12535197,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 47,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\5c",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\5c",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12535408,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 46,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\60",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\60",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12536534,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 45,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\6c",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\6c",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12537106,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 44,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\71",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\71",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12537271,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 43,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\8c",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\8c",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12538136,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 42,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\94",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\94",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12541071,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 41,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a0",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a0",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12542002,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 40,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a3",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a3",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12542242,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 39,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a4",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\a4",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12542387,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 38,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\b8",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\b8",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12543115,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 37,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\c9",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\c9",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12543290,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 36,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\e5",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\e5",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12543531,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 35,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\ea",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\ea",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12544024,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 34,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\f0",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\f0",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12544113,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 33,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\f3",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\objects\\f3",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12544324,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 32,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\refs\\heads",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\refs\\heads",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12544365,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 31,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\refs\\remotes\\origin",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\.git\\refs\\remotes\\origin",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12544406,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 30,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12546227,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 29,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12546442,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 28,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12546795,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 27,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12549347,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 26,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12550784,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 25,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12551078,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 24,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12553531,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 23,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12553878,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 22,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12554068,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 21,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12555135,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 20,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12555177,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 19,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12555393,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 18,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12555404,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 17,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Console_externe\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12555597,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 16,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12557583,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 15,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12561506,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 14,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12563991,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 13,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12565229,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 12,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12567797,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 11,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12568012,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 10,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12570664,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 9,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12572101,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12572395,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12574908,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12575275,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12575465,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12576562,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12576604,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12576820,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 12576831,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\ProgSys\\Prog_sys_Etude_cas_sujet1\\Prog_sys_Etude_cas_sujet1\\obj\\Debug\\netcoreapp3.1",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 12577044,
+  "TotalFileSize": 12577044
+}
+{
+  "NbFilesLeftToDo": 98,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "INITIALISATION",
+  "Progression": 0,
+  "TotalFileToCopy": 0,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 97,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 185197,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 96,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 577819,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 95,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1832360,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 94,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 1838146,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 93,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432225,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 92,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432253,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 91,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 90,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\haha",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\haha",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2432280,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 89,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins",
+  "State_Text": "ACTIVE",
+  "Progression": 0,
+  "TotalFileToCopy": 2455615,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 88,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866682052,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 87,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 72,
+  "TotalFileToCopy": 3866684271,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 86,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-game-data",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-game-data",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4666229611,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 85,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-lol-license-agreement",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-lol-license-agreement",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4666586683,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 84,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-be-sanitizer",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-be-sanitizer",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667169386,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 83,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-audio",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-audio",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667214710,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 82,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-audio",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-audio",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667215034,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 81,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-common-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-common-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667528292,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 80,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-common-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-common-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667528588,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 79,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-ember-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-ember-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667854319,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 78,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-ember-libs",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-ember-libs",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4667854763,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 77,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4671726800,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 76,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-career-stats",
+  "State_Text": "ACTIVE",
+  "Progression": 87,
+  "TotalFileToCopy": 4671727347,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 75,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4719589886,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 74,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champ-select",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4719590590,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 73,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730789141,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 72,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-details",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730789700,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 71,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730800532,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 70,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-champion-statistics",
+  "State_Text": "ACTIVE",
+  "Progression": 88,
+  "TotalFileToCopy": 4730800840,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 69,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-clash",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-clash",
+  "State_Text": "ACTIVE",
+  "Progression": 90,
+  "TotalFileToCopy": 4824682777,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 68,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-clash",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-clash",
+  "State_Text": "ACTIVE",
+  "Progression": 90,
+  "TotalFileToCopy": 4824683411,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 67,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-collections",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-collections",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913205113,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 66,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-collections",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-collections",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913205747,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 65,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913437960,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 64,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-esports-spectate",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913438494,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 63,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913555684,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 62,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-event-shop",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913556200,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 61,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913720101,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 60,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-highlights",
+  "State_Text": "ACTIVE",
+  "Progression": 91,
+  "TotalFileToCopy": 4913720582,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 59,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-honor",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-honor",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963496752,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 58,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-honor",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-honor",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963497297,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 57,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963506678,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 56,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-kickout",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4963507063,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 55,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4964020521,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 54,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-l10n",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4964020856,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 53,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974885685,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 52,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-leagues",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974886326,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 51,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974895469,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 50,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-lock-and-load",
+  "State_Text": "ACTIVE",
+  "Progression": 92,
+  "TotalFileToCopy": 4974895805,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 49,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-loot",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-loot",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5080891490,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 48,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-loot",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-loot",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5080892006,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 47,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5082780024,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 46,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-match-history",
+  "State_Text": "ACTIVE",
+  "Progression": 94,
+  "TotalFileToCopy": 5082780585,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 45,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5111838536,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 44,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-navigation",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5111839079,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 43,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121091873,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 42,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-new-player-experience",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121092430,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 41,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121238143,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 40,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-npe-rewards",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5121238691,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 39,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-parties",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-parties",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5137934601,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 38,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-parties",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-parties",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5137935222,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 37,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-paw",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-paw",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139750998,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 36,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-paw",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-paw",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139751498,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 35,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-pft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-pft",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139779203,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 34,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-pft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-pft",
+  "State_Text": "ACTIVE",
+  "Progression": 95,
+  "TotalFileToCopy": 5139779584,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 33,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145243295,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 32,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-postgame",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145243872,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 31,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145426845,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 30,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-premade-voice",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5145427360,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 29,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147232186,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 28,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-profiles",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147232807,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 27,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-settings",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-settings",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147624677,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 26,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-settings",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-settings",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5147625191,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 25,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163201776,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 24,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-shared-components",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163202224,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 23,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163287649,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 22,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-skins-picker",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5163288098,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 21,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-social",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-social",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166001088,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 20,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-social",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-social",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166001725,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 19,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-startup",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-startup",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166009256,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 18,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-startup",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-startup",
+  "State_Text": "ACTIVE",
+  "Progression": 96,
+  "TotalFileToCopy": 5166009590,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 17,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5328439634,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 16,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-static-assets",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5328439954,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 15,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-store",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-store",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5331083255,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 14,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-store",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-store",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5331083885,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 13,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333246414,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 12,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333246973,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 11,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333418555,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 10,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-team-planner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5333419055,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 9,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351209872,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 8,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-tft-troves",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351210171,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 7,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351972990,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 6,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-typekit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5351973921,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 5,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356904426,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 4,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-uikit",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356904871,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 3,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356990200,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 2,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-lol-yourshop",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5356990681,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 1,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "State_Text": "ACTIVE",
+  "Progression": 99,
+  "TotalFileToCopy": 5357055557,
+  "TotalFileSize": 5357055869
+}
+{
+  "NbFilesLeftToDo": 0,
+  "NameJob": "test11",
+  "SourcePath": "C:\\Users\\baptx\\Desktop\\source_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "TargetPath": "C:\\Users\\baptx\\Desktop\\cible_wsh\\Plugins\\rcp-fe-plugin-runner",
+  "State_Text": "END",
+  "Progression": 100,
+  "TotalFileToCopy": 5357055869,
+  "TotalFileSize": 5357055869
+}

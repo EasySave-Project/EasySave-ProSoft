@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace EasySave.model
 {
-    public class JobObject
+    public class JobObject : INotifyPropertyChanged
     {
-        public ObservableCollection<JobObject> Jobs { get; set; }
-
         // Déclaration des propriétés du message
         public int JobId { get; set; }
         public string JobName { get; set; }
-        public int JobProgress { get; set; }
+
+        private int jobProgress;
+        public int JobProgress
+        {
+            get { return jobProgress; }
+            set
+            {
+                if (jobProgress != value)
+                {
+                    jobProgress = value;
+                    OnPropertyChanged("JobProgress");
+                }
+            }
+        }
 
         // Constructeur du message
         public JobObject(int jobId, string jobName, int jobProgress)
@@ -22,6 +28,12 @@ namespace EasySave.model
             JobId = jobId;
             JobName = jobName;
             JobProgress = jobProgress;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

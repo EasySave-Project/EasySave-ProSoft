@@ -110,57 +110,80 @@ namespace EasySave.services
                     // Vérifier si le message a le bon format
                     if (parts.Length == 2 && int.TryParse(parts[0], out int jobId) && Enum.TryParse(parts[1], out ServerAction action))
                     {
+                        MainWindow mainWindow = null;
                         // Utiliser l'ID du travail et l'action du serveur pour exécuter l'action appropriée
                         switch (action)
                         {
                             case ServerAction.start:
-                                MainWindow mainWindow = null;
+                                // START A JOB
                                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                                 {
                                     mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
                                 });
 
-                                // Exécuter du job dans un thread séparé
-                                Thread jobThread = new Thread(() =>
+                                // Calculer l'index global du job en fonction de la page actuelle
+                                BackUpManager.listBackUps[jobId].ResetJob();
+
+                                mainWindow.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[jobId]);
+                                try
                                 {
-                                    try
-                                    {
-                                        // Récupérer le MainWindow à partir du thread de l'interface utilisateur
-                                        MainWindow mainWindow = System.Windows.Application.Current.Dispatcher.Invoke(() => (MainWindow)System.Windows.Application.Current.MainWindow);
-                                        BackUpController backUpController = null;
-
-                                        // Utiliser Dispatcher.Invoke pour accéder aux éléments de l'interface utilisateur
-                                        mainWindow.Dispatcher.Invoke(() =>
-                                        {
-                                            backUpController = mainWindow.backUpController;
-                                        });
-
-                                        if (backUpController != null)
-                                        {
-                                            // Exécuter la logique du job à partir du thread de l'interface utilisateur
-                                            backUpController.InitiateBackUpJob(BackUpManager.listBackUps[jobId]);
-                                        }
-                                    }
-                                    catch
-                                    {
-                                        System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
-                                    }
-                                });
-
-                                // Faire du thread un thread d'arrière-plan
-                                jobThread.IsBackground = true;
-
-                                // Démarrer le thread
-                                jobThread.Start();
+                                    mainWindow.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[jobId]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                                }
                                 break;
+
                             case ServerAction.stop:
-                                //threadManager.StopJobThread(jobId);
+                                // STOP A JOB
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                try
+                                {
+                                    mainWindow.backUpController.backUpManager.StopBackup(BackUpManager.listBackUps[jobId]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("Error on the pause :" + ex.Message);
+                                }
                                 break;
+
                             case ServerAction.suspend:
-                                //threadManager.SuspendJobThread(jobId);
+                                // SUSPEND A JOB
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                try
+                                {
+                                    mainWindow.backUpController.backUpManager.PauseBackup(BackUpManager.listBackUps[jobId]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                                }
                                 break;
+
                             case ServerAction.resume:
-                                //threadManager.ResumeJobThread(jobId);
+                                // RESUME A JOB
+                                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                                {
+                                    mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
+                                });
+                                BackUpManager.listBackUps[jobId].ResetJob();
+
+                                mainWindow.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[jobId]);
+                                try
+                                {
+                                    mainWindow.backUpController.InitiateResumeBackUp(BackUpManager.listBackUps[jobId]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                                }
                                 break;
                         }
                     }
@@ -169,6 +192,8 @@ namespace EasySave.services
             catch (SocketException)
             {
                 //displayMessage?.Invoke("Le client a été déconnecté.");
+                //System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+
             }
         }
 
@@ -189,8 +214,11 @@ namespace EasySave.services
                             // Sérialisation de la liste d'objets Message en JSON
                             string json_message = JsonConvert.SerializeObject(send_message);
 
+                            // Ajout du séparateur clair à la fin du message JSON
+                            string messageWithSeparator = json_message + "\r\n";
+
                             // Création du buffer à partir de la chaîne JSON
-                            byte[] buffer = Encoding.UTF8.GetBytes(json_message);
+                            byte[] buffer = Encoding.UTF8.GetBytes(messageWithSeparator);
                             clientSocket.Send(buffer);
                         }
                     }
