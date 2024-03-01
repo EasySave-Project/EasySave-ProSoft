@@ -69,10 +69,10 @@ namespace EasySave
             //Time after the transfer
             long_AfterFileTransferTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - long_FileTransferTime;
 
-            // Créer un objet TimeSpan à partir des millisecondes
+            // Creating a TimeSpan object from milliseconds
             TimeSpan ts = TimeSpan.FromMilliseconds(long_AfterFileTransferTime);
 
-            // Formater le TimeSpan en HH:MM:SS:MS
+            // Format TimeSpan as HH:MM:SS:MS
             string format = @"hh\:mm\:ss\:fff";
             log.FileTransferTime = ts.ToString(format);
 
@@ -86,7 +86,7 @@ namespace EasySave
 
 
         //=======================================================================================================
-        // Sauvegarde dans le fichier JSON
+        // cSave to JSON file
         //=======================================================================================================
         private void SaveLog()
         {    

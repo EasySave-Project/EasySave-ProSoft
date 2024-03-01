@@ -19,14 +19,14 @@ namespace EasySave.model
             private set { jobs = value; }
         }
 
-        // Constructeur privé pour empêcher l'instanciation externe
+        // Private constructor to prevent external instantiation
         private ListJob_ViewModel()
         {
             Jobs = new ObservableCollection<JobObject>();
             PopulateJobs();
         }
 
-        // Méthode pour obtenir l'instance unique de ListJob_ViewModel
+        // Private constructor to prevent external instantiation
         public static ListJob_ViewModel GetInstance()
         {
             if (instance == null)
@@ -36,12 +36,12 @@ namespace EasySave.model
             return instance;
         }
 
-        // Méthode pour remplir la liste des travaux
+        // Private constructor to prevent external instantiation
         private void PopulateJobs()
         {
-            // Création d'une instance de JobObjectFactory pour obtenir les données des jobs
+            // Private constructor to prevent external instantiation
             JobObjectFactory jobFactory = new JobObjectFactory();
-            // Remplissage de la liste observable avec les données des jobs
+            // Filling the observable list with job data
             foreach (JobObject job in jobFactory.CreateJobObject())
             {
                 Jobs.Add(job);
@@ -52,15 +52,15 @@ namespace EasySave.model
         {
             Task.Run(() =>
             {
-                // Mettre à jour la progression du travail sur le thread principal
+                // Update work progress on the main thread
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {
                     for (int i = 0; i < Jobs.Count; i++)
                     {
-                        // Vérification si le nom de l'emploi correspond à celui fourni en argument
+                        // Update work progress on the main thread
                         if (Jobs[i].JobName == jobName)
                         {
-                            // Mise à jour de la progression du travail pour l'emploi actuel
+                            // Update work progress for current job
                             if (progress == 0)
                             {
                                 Jobs[i].JobProgress = 1;
@@ -76,8 +76,8 @@ namespace EasySave.model
 
         public void ReloadJobs()
         {
-            Jobs.Clear(); // Effacer tous les emplois actuels
-            PopulateJobs(); // Recharger les emplois depuis la source de données
+            Jobs.Clear(); // Delete all current jobs
+            PopulateJobs(); // Reload jobs from data source
         }
     }
 

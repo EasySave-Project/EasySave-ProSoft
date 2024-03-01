@@ -42,12 +42,12 @@ namespace EasySave
             BackUpController controller = new BackUpController(bmManager, logManager, stateManager);
             backUpController = controller;
 
-            // Démarrage du serveur
+            // Server startup
             ServerManager serverManager = new ServerManager();
             serverManager.StartServer();
 
             view.Home home = new view.Home();
-            // Affichez la première page au démarrage de l'application
+            // Display first page at application startup
             Content = home;
         }
 
@@ -58,22 +58,22 @@ namespace EasySave
 
         private void InitConfFolder()
         {
-            // Partie Save Job
-            // Vérifier la présence du dossier "conf"
+            // Save Job section
+            // Check for the presence of the "conf" folder
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\conf";
             if (!Directory.Exists(destPath))
             {
                 Directory.CreateDirectory(destPath);
             }
-            // Vérifier la présence du fichier "SaveBackUpJob.json" puis écrire rien dedans
+            // Check that the file "SaveBackUpJob.json" is present, then write nothing in it
             string filePath = destPath + "\\SaveBackUpJob.json";
             if (!File.Exists(filePath))
             {
                 File.WriteAllText(filePath, "");
             }
-            // Partie Log
-            // Vérifier la présence du dossier "log"
+            // Log section
+            // Check the presence of the "log" folder
             destPath = sCurrentDir + "\\EasySave\\log";
             if (!Directory.Exists(destPath))
             {

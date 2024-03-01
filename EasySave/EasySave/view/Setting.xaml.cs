@@ -45,36 +45,36 @@ namespace EasySave.view
 
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
-            // Récupération des valeurs actuelles des ComboBox
+            // Retrieving current ComboBox values
             settings.LogType = ComboBox_LogType.SelectedValue.ToString();
             settings.StateType = ComboBox_StateType.SelectedValue.ToString();
             settings.Lang = ComboBox_Lang.SelectedValue.ToString();
 
             if (string.IsNullOrEmpty(TextBox_nbKo.Text))
             {
-                // Si la TextBox est vide, affectez -1 à settings.NbKo
+                // If the TextBox is empty, assign -1 to settings.NbKo
                 settings.NbKo = -1;
             }
             else if (int.TryParse(TextBox_nbKo.Text, out int nbKoValue) && nbKoValue >= 0)
             {
-                // La valeur saisie est un entier valide et est supérieure ou égale à 0
+                // The value entered is a valid integer and is greater than or equal to 0
                 settings.NbKo = nbKoValue;
             }
             else
             {
-                // La valeur saisie n'est pas un entier valide ou est inférieure à 0
+                // The value entered is not a valid integer or is less than 0
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_ValueNbKo"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
 
 
-            // Appel de la méthode pour sauvegarder les paramètres
+            // Call method to save parameters
             settings.SaveSettings();
             ManageLang.ChangeLanguage(settings.Lang);
             System.Windows.MessageBox.Show(ManageLang.GetString("msgbox_save"));
 
-            // Actualiser la page
+            // Call the method to save parameters
             Setting setting = new Setting();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Content = setting;
@@ -93,25 +93,25 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Extensions à chiffrer
+        // Extensions to be costed
         //==============================================
 
         private void AddExtensionBtn_click(object sender, RoutedEventArgs e)
         {
             string extension = TextBox_cryptage.Text.Trim();
-            // on autorise seulement les extensions donc commencant par un .
+            
             string regexExtension = @"^\.\w+$";
 
             if (Regex.IsMatch(extension, regexExtension))
             {
-                // Ajouter l'extension à la liste si elle n'est pas déjà présente
+                
                 if (!settings.ExtensionsToCrypt.Contains(extension))
                 {
                     settings.ExtensionsToCrypt.Add(extension);
 
-                    // Mettre à jour l'interface utilisateur
+                
                     ListBoxExtensions.Items.Refresh();
-                    TextBox_cryptage.Clear(); // Effacer le TextBox après l'ajout
+                    TextBox_cryptage.Clear(); 
                 }
                 else
                 {
@@ -127,37 +127,37 @@ namespace EasySave.view
 
         private void DeleteBtn_click(object sender, RoutedEventArgs e)
         {
-            // Supposons que vous ayez un ListBox nommé ListBoxExtensions pour lister les extensions
+            
             var selectedExtension = ListBoxExtensions.SelectedItem as string;
             if (selectedExtension != null)
             {
                 settings.ExtensionsToCrypt.Remove(selectedExtension);
 
-                // Mettre à jour la liste des extensions affichée
+                
                 ListBoxExtensions.Items.Refresh();
             }
         }
 
         //==============================================
-        // Extensions prioritaires
+        // Extensions must be encrypted
         //==============================================
 
         private void btn_add_Priority_Click(object sender, RoutedEventArgs e)
         {
             string extension = TextBox_Priority.Text.Trim();
-            // on autorise seulement les extensions donc commencant par un .
+            
             string regexExtension = @"^\.\w+$";
 
             if (Regex.IsMatch(extension, regexExtension))
             {
-                // Ajouter l'extension à la liste si elle n'est pas déjà présente
+            
                 if (!settings.ExtensionsToPriority.Contains(extension))
                 {
                     settings.ExtensionsToPriority.Add(extension);
 
-                    // Mettre à jour l'interface utilisateur
+            
                     ListBoxExtensions_Priority.Items.Refresh();
-                    TextBox_Priority.Clear(); // Effacer le TextBox après l'ajout
+                    TextBox_Priority.Clear(); 
                 }
                 else
                 {
@@ -172,13 +172,13 @@ namespace EasySave.view
 
         private void btn_delete_Priority_Click(object sender, RoutedEventArgs e)
         {
-            // Supposons que vous ayez un ListBox nommé ListBoxExtensions pour lister les extensions
+         
             var selectedExtension = ListBoxExtensions_Priority.SelectedItem as string;
             if (selectedExtension != null)
             {
                 settings.ExtensionsToPriority.Remove(selectedExtension); 
 
-                // Mettre à jour la liste des extensions affichée
+              
                 ListBoxExtensions_Priority.Items.Refresh();
             }
         }
@@ -189,22 +189,22 @@ namespace EasySave.view
 
         private void btn_add_ApplicationBusiness_Click(object sender, RoutedEventArgs e)
         {
-            // Vérifier si le champ est pas vide
+          
             if (string.IsNullOrEmpty(TextBox_ApplicationBusiness.Text))
             {
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_Caract"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            // Vérfier si l'application est pas déjà dans la liste
+        
             if (settings.BusinessApplication.Contains(TextBox_ApplicationBusiness.Text))
             {
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_setting_app_same"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            // Ajouter l'extension à la liste si elle n'est pas déjà présente
+           
             settings.BusinessApplication.Add(TextBox_ApplicationBusiness.Text);
 
-            // Mettre à jour l'interface utilisateur
+         
             ListBoxExtensions_ApplicationBusiness.Items.Refresh();
             TextBox_ApplicationBusiness.Clear();
 
@@ -221,7 +221,7 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Bouton de navigation
+        // Navigation button
         //==============================================
 
         private void home_Click(object sender, RoutedEventArgs e)
@@ -250,25 +250,25 @@ namespace EasySave.view
             {
                 System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
 
-                // Créer un DispatcherTimer pour vérifier l'état des threads
+                
                 var timer = new System.Windows.Threading.DispatcherTimer();
-                timer.Interval = TimeSpan.FromSeconds(1); // Vérifiez toutes les secondes
+                timer.Interval = TimeSpan.FromSeconds(1); 
                 timer.Tick += (s, args) =>
                 {
                     if (backUpController.backUpManager.AreAllJobsCompleted())
                     {
-                        timer.Stop(); // Arrêter le timer
-                        System.Windows.Application.Current.Shutdown(); // Fermer l'application
+                        timer.Stop(); 
+                        System.Windows.Application.Current.Shutdown(); 
                     }
                 };
-                timer.Start(); // Démarrer le timer
+                timer.Start(); 
 
-                // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
+      
                 Btn_Leave.IsEnabled = false;
             }
             else
             {
-                System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
+                System.Windows.Application.Current.Shutdown();
             }
         }
 

@@ -4,7 +4,7 @@ namespace EasySave.model
 {
     public class JobObject : INotifyPropertyChanged
     {
-        // Déclaration des propriétés du message
+        // Declaration of message properties
         public int JobId { get; set; }
         public string JobName { get; set; }
 
@@ -22,7 +22,7 @@ namespace EasySave.model
             }
         }
 
-        // Constructeur du message
+        // Message constructor
         public JobObject(int jobId, string jobName, int jobProgress)
         {
             JobId = jobId;

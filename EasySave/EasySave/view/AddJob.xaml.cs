@@ -20,63 +20,62 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Code pour ouvrir les folders
+        // Code to open folders
         //==============================================
         private void OnSelectFolderClick(object sender, RoutedEventArgs e)
         {
-            // Créer un dialogue d'ouverture de fichier
             System.Windows.Forms.OpenFileDialog dialog = new System.Windows.Forms.OpenFileDialog();
-            // Désactiver la validation du nom et de l'existence du fichier
+            
             dialog.ValidateNames = false;
             dialog.CheckFileExists = false;
-            // Définir le nom du fichier par défaut comme "Sélection de dossier"
+            
             dialog.FileName = "Sélection de dossier";
-            // Afficher le dialogue et obtenir le résultat
+            
             DialogResult result = dialog.ShowDialog();
-            // Si le résultat est OK
+            
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                // Obtenir le chemin du fichier ou du dossier
+            
                 string path = dialog.FileName;
-                // Si le nom du fichier est "Sélection de dossier", ça veut dire qu'on sélectionne un dossier
+            
                 if (path.EndsWith("Sélection de dossier"))
                 {
-                    // Supprimer le nom du fichier du chemin
+            
                     path = path.Replace("\\Sélection de dossier", "");
                 }
-                // Stocker le chemin
+            
                 TextBox_SelectedFolderA.Text = path;
             }
         }
         private void OnSelectFolderClickB(object sender, RoutedEventArgs e)
         {
-            // Créer un dialogue d'ouverture de fichier
+           
             System.Windows.Forms.OpenFileDialog dialog = new System.Windows.Forms.OpenFileDialog();
-            // Désactiver la validation du nom et de l'existence du fichier
+           
             dialog.ValidateNames = false;
             dialog.CheckFileExists = false;
-            // Définir le nom du fichier par défaut comme "Sélection de dossier"
+           
             dialog.FileName = "Sélection de dossier";
-            // Afficher le dialogue et obtenir le résultat
+           
             DialogResult result = dialog.ShowDialog();
-            // Si le résultat est OK
+           
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                // Obtenir le chemin du fichier ou du dossier
+               
                 string path = dialog.FileName;
-                // Si le nom du fichier est "Sélection de dossier", ça veut dire qu'on sélectionne un dossier
+               
                 if (path.EndsWith("Sélection de dossier"))
                 {
-                    // Supprimer le nom du fichier du chemin
+               
                     path = path.Replace("\\Sélection de dossier", "");
                 }
-                // Stocker le chemin
+               
                 TextBox_SelectedFolderB.Text = path;
             }
         }
 
         //==============================================
-        // Ajouter le job
+        // Add a job
         //==============================================
         private void Btn_AddJob_Click(object sender, RoutedEventArgs e)
         {
@@ -104,8 +103,7 @@ namespace EasySave.view
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneCodeBackup"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-
-            // Exécution de l'ajout
+        
             BackUpType type;
             if (sType == "Complète")
             {
@@ -124,7 +122,7 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Bouton de navigation
+        // Navigation button
         //==============================================
 
         private void Btn_Home_Click(object sender, RoutedEventArgs e)

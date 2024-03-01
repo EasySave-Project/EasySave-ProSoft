@@ -46,10 +46,10 @@ namespace EasySave.services
 
         public void StartServer()
         {
-            // Vérifie si le serveur n'est pas déjà démarré
+            // Checks if the server has already been started
             if (serverSocket == null || !serverSocket.IsBound)
             {
-                // Démarrer le serveur dans un nouveau thread
+                // Start the server in a new thread
                 Thread startThread = new Thread(() =>
                 {
                     try
@@ -58,12 +58,11 @@ namespace EasySave.services
                         serverSocket.Bind(new IPEndPoint(IPAddress.Any, 8888));
                         serverSocket.Listen(10);
 
-                        // Attendez la connexion d'un client
+                        // Wait for a client connection
                         clientSocket = serverSocket.Accept();
 
                         IPEndPoint clientEndPoint = (IPEndPoint)clientSocket.RemoteEndPoint;
                         string clientInfo = $"Client connecté : {clientEndPoint.Address}:{clientEndPoint.Port}";
-                        //displayMessage?.Invoke(clientInfo);
 
                         // Lancez les threads pour la réception et l'envoi de messages
                         Thread receiveThread = new Thread(Receive);
@@ -74,7 +73,7 @@ namespace EasySave.services
                     }
                     catch (Exception ex)
                     {
-                        //displayMessage?.Invoke($"Erreur lors de la connexion au serveur : {ex.Message}");
+                        // Server connection error
                     }
                 });
                 startThread.Start();
@@ -86,7 +85,7 @@ namespace EasySave.services
             bool returnServerStarted = false;
             try
             {
-                // Savoir si le serveur est start ou non
+                // Find out if the server is start or not
                 returnServerStarted = serverSocket != null && serverSocket.IsBound;
             }
             catch
@@ -107,10 +106,10 @@ namespace EasySave.services
                     int bytesReceived = clientSocket.Receive(buffer);
                     string message = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
 
-                    // Diviser le message en parties en utilisant le point-virgule comme délimiteur
+                    // Find out if the server is start or not
                     string[] parts = message.Split(';');
 
-                    // Vérifier si le message a le bon format
+                    // Check message format
                     if (parts.Length == 2 && int.TryParse(parts[0], out int jobId) && Enum.TryParse(parts[1], out ServerAction action))
                     {
                         MainWindow mainWindow = null;
@@ -124,7 +123,7 @@ namespace EasySave.services
                                     mainWindow = System.Windows.Application.Current.MainWindow as MainWindow;
                                 });
 
-                                // Calculer l'index global du job en fonction de la page actuelle
+                                // Calculate global job index based on current page
                                 BackUpManager.listBackUps[jobId].ResetJob();
 
                                 mainWindow.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[jobId]);
@@ -251,8 +250,7 @@ namespace EasySave.services
             }
             catch (SocketException)
             {
-                //displayMessage?.Invoke("Le client a été déconnecté.");
-                //System.Windows.MessageBox.Show("error pause job :  " + ex.Message);
+                // The customer has been disconnected
 
             }
         }
@@ -267,17 +265,17 @@ namespace EasySave.services
                     {
                         if (!isPaused)
                         {
-                            // Création de la liste d'objets Message
+                            // Message object list creation
                             JobObjectFactory messageFactory = new JobObjectFactory();
                             List<model.JobObject> send_message = messageFactory.CreateJobObject();
 
-                            // Sérialisation de la liste d'objets Message en JSON
+                            // JSON serialization of the Message object list
                             string json_message = JsonConvert.SerializeObject(send_message);
 
-                            // Ajout du séparateur clair à la fin du message JSON
+                            // Add clear separator at end of JSON message
                             string messageWithSeparator = json_message + "\r\n";
 
-                            // Création du buffer à partir de la chaîne JSON
+                            // Buffer creation from JSON string
                             byte[] buffer = Encoding.UTF8.GetBytes(messageWithSeparator);
                             clientSocket.Send(buffer);
                         }
@@ -287,9 +285,8 @@ namespace EasySave.services
             }
             catch (SocketException)
             {
-                // Le client a été déconnecté
+                // The customer has been disconnected
                 clientSocket.Close();
-                //displayMessage?.Invoke("Le client a été déconnecté.");
             }
         }
 

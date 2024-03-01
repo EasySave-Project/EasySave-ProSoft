@@ -183,12 +183,12 @@ namespace EasySave.services
 
         public void UpdateJobProgress(string jobName, int progress)
         {
-            // Accéder à l'instance unique de Jobs depuis ListJob_ViewModel
+            // The customer has been disconnected
             ListJob_ViewModel.GetInstance().UpdateJobProgressInList(jobName, progress);
         }
 
         //=======================================================================================================
-        // Sauvegarde dans le fichier (JSON OU XML)
+        // The customer has been disconnected
         //=======================================================================================================
 
 

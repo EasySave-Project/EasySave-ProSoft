@@ -38,12 +38,12 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Initialisation des champs
+        // Field initialization
         //==============================================
 
         private void InitFields()
         {
-            // Récupérer les informations du job par rapport à l'index en paramètre
+            
             TextBox_NameJob.Text = BackUpManager.listBackUps[indexJob_Transfert].Name;
             TextBox_SelectedFolderA.Text = BackUpManager.listBackUps[indexJob_Transfert].SourceDirectory;
             TextBox_SelectedFolderB.Text = BackUpManager.listBackUps[indexJob_Transfert].TargetDirectory;
@@ -59,7 +59,7 @@ namespace EasySave.view
                 ComboBox_TypeSave.SelectedIndex = 1;
             }
 
-            // Stocker les valeurs initiales
+            
             sNameJob_Old = TextBox_NameJob.Text;
             sSourceFolder_Old = TextBox_SelectedFolderA.Text;
             sDestinationFolder_Old = TextBox_SelectedFolderB.Text;
@@ -68,7 +68,7 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Modifier le job
+        // Modify job
         //==============================================
         private void Btn_ModifyJob_Click(object sender, RoutedEventArgs e)
         {    
@@ -78,7 +78,7 @@ namespace EasySave.view
             ComboBoxItem selectedItem = (ComboBoxItem)ComboBox_TypeSave.SelectedItem;
             string sType = selectedItem.Content.ToString();
 
-            // Gestion des erreurs
+            // Error management
             if (string.IsNullOrWhiteSpace(sNameJob) || sNameJob.Contains(" ") || sNameJob.Contains(";"))
             {
                 System.Windows.MessageBox.Show(ManageLang.GetString("error_NoneValidJob"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -100,7 +100,7 @@ namespace EasySave.view
                 return;
             }
 
-            // Modifier si changement observé
+            // Modify if change observed
             if (sNameJob != sNameJob_Old)
             {
                 _MainWindows.backUpController.IntiateModifyJobName(indexJob_Transfert, sNameJob);
@@ -134,63 +134,63 @@ namespace EasySave.view
         }
 
         //==============================================
-        // Code pour ouvrir les folders
+        // Code to open folders
         //==============================================
         private void OnSelectFolderClick(object sender, RoutedEventArgs e)
         {
-            // Créer un dialogue d'ouverture de fichier
+            
             System.Windows.Forms.OpenFileDialog dialog = new System.Windows.Forms.OpenFileDialog();
-            // Désactiver la validation du nom et de l'existence du fichier
+            
             dialog.ValidateNames = false;
             dialog.CheckFileExists = false;
-            // Définir le nom du fichier par défaut comme "Sélection de dossier"
+            
             dialog.FileName = "Sélection de dossier";
-            // Afficher le dialogue et obtenir le résultat
+            
             DialogResult result = dialog.ShowDialog();
-            // Si le résultat est OK
+            
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                // Obtenir le chemin du fichier ou du dossier
+            
                 string path = dialog.FileName;
-                // Si le nom du fichier est "Sélection de dossier", ça veut dire qu'on sélectionne un dossier
+            
                 if (path.EndsWith("Sélection de dossier"))
                 {
-                    // Supprimer le nom du fichier du chemin
+           
                     path = path.Replace("\\Sélection de dossier", "");
                 }
-                // Stocker le chemin
+          
                 TextBox_SelectedFolderA.Text = path;
             }
         }
         private void OnSelectFolderClickB(object sender, RoutedEventArgs e)
         {
-            // Créer un dialogue d'ouverture de fichier
+            
             System.Windows.Forms.OpenFileDialog dialog = new System.Windows.Forms.OpenFileDialog();
-            // Désactiver la validation du nom et de l'existence du fichier
+            
             dialog.ValidateNames = false;
             dialog.CheckFileExists = false;
-            // Définir le nom du fichier par défaut comme "Sélection de dossier"
+            
             dialog.FileName = "Sélection de dossier";
-            // Afficher le dialogue et obtenir le résultat
+         
             DialogResult result = dialog.ShowDialog();
-            // Si le résultat est OK
+         
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                // Obtenir le chemin du fichier ou du dossier
+        
                 string path = dialog.FileName;
-                // Si le nom du fichier est "Sélection de dossier", ça veut dire qu'on sélectionne un dossier
+        
                 if (path.EndsWith("Sélection de dossier"))
                 {
-                    // Supprimer le nom du fichier du chemin
+        
                     path = path.Replace("\\Sélection de dossier", "");
                 }
-                // Stocker le chemin
+        
                 TextBox_SelectedFolderB.Text = path;
             }
         }
 
         //==============================================
-        // Bouton de navigation
+        // Navigation button
         //==============================================
 
         private void Btn_Home_Click(object sender, RoutedEventArgs e)
@@ -226,25 +226,25 @@ namespace EasySave.view
             {
                 System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
 
-                // Créer un DispatcherTimer pour vérifier l'état des threads
+                
                 var timer = new System.Windows.Threading.DispatcherTimer();
-                timer.Interval = TimeSpan.FromSeconds(1); // Vérifiez toutes les secondes
+                timer.Interval = TimeSpan.FromSeconds(1); 
                 timer.Tick += (s, args) =>
                 {
                     if (_MainWindows.backUpController.backUpManager.AreAllJobsCompleted())
                     {
-                        timer.Stop(); // Arrêter le timer
-                        System.Windows.Application.Current.Shutdown(); // Fermer l'application
+                        timer.Stop(); 
+                        System.Windows.Application.Current.Shutdown(); 
                     }
                 };
-                timer.Start(); // Démarrer le timer
+                timer.Start(); 
 
-                // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
+                
                 Btn_Leave.IsEnabled = false;
             }
             else
             {
-                System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
+                System.Windows.Application.Current.Shutdown(); 
             }
         }
     }

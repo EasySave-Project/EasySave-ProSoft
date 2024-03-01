@@ -37,70 +37,70 @@ namespace EasySave.view
 
         private void BtnUserManuel_Click(object sender, RoutedEventArgs e)
         {
-            // Obtenir le fichier PDF à partir du fichier ressource
+            // Get the PDF file from the resource file
             byte[] pdfBytes;
             if (settings.Lang == "fr")
             {
-                // Français
+                // FR
                 pdfBytes = lang.resource_pdf.User_Manual_fr;
             }
             else
             {
-                // Anglais
+                // EN
                 pdfBytes = lang.resource_pdf.User_Manual_en;
             }
 
-            // Créer un nom de fichier temporaire
+            // Create a temporary file name
             string tempFile = System.IO.Path.GetTempFileName();
 
-            // Sauvegarder le fichier PDF dans le fichier temporaire
+            // Save PDF file to temporary file
             File.WriteAllBytes(tempFile, pdfBytes);
 
-            // Créer un objet ProcessStartInfo avec la propriété UseShellExecute à true
+            // Create a ProcessStartInfo object with the UseShellExecute property set to true
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = tempFile,
                 UseShellExecute = true
             };
 
-            // Lancer le processus avec l'objet ProcessStartInfo
+            // Start the process with the ProcessStartInfo object
             Process.Start(psi);
         }
 
         private void BtnUpdateNote_Click(object sender, RoutedEventArgs e)
         {
-            // Obtenir le fichier PDF à partir du fichier ressource
+            
             byte[] pdfBytes;
             if (settings.Lang == "fr")
             {
-                // Français
+            
                 pdfBytes = lang.resource_pdf.patchNoteV3_fr;
             }
             else
             {
-                // Anglais
+            
                 pdfBytes = lang.resource_pdf.patchNoteV3_en;
             }
 
-            // Créer un nom de fichier temporaire
+            
             string tempFile = System.IO.Path.GetTempFileName();
 
-            // Sauvegarder le fichier PDF dans le fichier temporaire
+            
             File.WriteAllBytes(tempFile, pdfBytes);
 
-            // Créer un objet ProcessStartInfo avec la propriété UseShellExecute à true
+            
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = tempFile,
                 UseShellExecute = true
             };
 
-            // Lancer le processus avec l'objet ProcessStartInfo
+            
             Process.Start(psi);
         }
 
         //==============================================
-        // Bouton de navigation
+        // Navigation button
         //==============================================
 
         private void Btn_Home_Click(object sender, RoutedEventArgs e)
@@ -129,25 +129,24 @@ namespace EasySave.view
             {
                 System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
 
-                // Créer un DispatcherTimer pour vérifier l'état des threads
+                
                 var timer = new System.Windows.Threading.DispatcherTimer();
-                timer.Interval = TimeSpan.FromSeconds(1); // Vérifiez toutes les secondes
+                timer.Interval = TimeSpan.FromSeconds(1); 
                 timer.Tick += (s, args) =>
                 {
                     if (mainWindow.backUpController.backUpManager.AreAllJobsCompleted())
                     {
-                        timer.Stop(); // Arrêter le timer
-                        System.Windows.Application.Current.Shutdown(); // Fermer l'application
+                        timer.Stop(); 
+                        System.Windows.Application.Current.Shutdown();
                     }
                 };
-                timer.Start(); // Démarrer le timer
+                timer.Start(); 
 
-                // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
                 Btn_Leave.IsEnabled = false;
             }
             else
             {
-                System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
+                System.Windows.Application.Current.Shutdown();
             }
         }
     }

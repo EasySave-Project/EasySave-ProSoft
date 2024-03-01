@@ -54,7 +54,7 @@ namespace EasySave.utils
         }
         private Settings()
         {
-            LoadSettings(); // Charge ou initialise les paramètres à partir du fichier JSON.
+            LoadSettings(); // Loads or initializes parameters from JSON file.
         }
 
         public string LogType
@@ -199,7 +199,7 @@ namespace EasySave.utils
                 {
                     Directory.CreateDirectory(directoryPath);
                 }
-                SaveSettings(); // Crée le fichier JSON avec les valeurs par défaut
+                SaveSettings(); // Creates JSON file with default values
             }
         }
 

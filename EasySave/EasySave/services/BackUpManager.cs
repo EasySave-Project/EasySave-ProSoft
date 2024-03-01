@@ -80,13 +80,13 @@ public class BackUpManager
     public void PauseBackup(BackUpJob bj)
     {
         bj.FileTransfert.Pause();
-       // System.Windows.MessageBox.Show("Pause du job : " + bj.Name);
+       
     }
 
     public void ResumeBackup(BackUpJob bj)
     { 
         bj.FileTransfert.Resume();
-        //System.Windows.MessageBox.Show("Reprise du job : " + bj.Name);
+        
     }
     public void ResetStopJob(BackUpJob bj)
     {
@@ -207,7 +207,7 @@ public class BackUpManager
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
         
-        //listBackUps.Add(addBackUpJob);
+        
         listBackUps.Insert(0, addBackUpJob);
 
         SaveJobsToJson();

@@ -13,7 +13,7 @@ namespace EasySave.utils
     
     public class FileUtils
     {
-        // Instanciation des classes
+        // Class instantiation
         private StateManager stateManager = new StateManager();
 
         private LogManager logManager = new LogManager();
@@ -23,7 +23,7 @@ namespace EasySave.utils
         private bool isPaused;
 
 
-        // Variable tableau string contenant deux champs : nom du fichier et le path du fichier
+        // String array variable containing two fields: file name and file path
         private static List<string[]> tab_PriorityFiles;
 
 
@@ -72,9 +72,9 @@ namespace EasySave.utils
 
         public void DifferentialCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
-            // Récupérer la liste des processus qui doivent empêcher d'exécuter la sauvegarde
+            // Retrieve the list of processes that should prevent the backup from running
             string[] businessApplication = settings.BusinessApplication.ToArray();
-            // Voir si un des processus est en cours d'exécution
+            // See if a process is running
             bool isRunning = false;
             foreach (string process in businessApplication)
             {
@@ -86,12 +86,12 @@ namespace EasySave.utils
 
             if (!isRunning)
             {
-                // Si la calculatrice n'est pas ouverte :
+                // If the calculator is not open :
                 Wait(cancellationToken);
                
                 VerifyDirectoryAndDrive(sourceDir, targetDir);
-                // créer le répertoire target s'il n'existe pas déjà 
-                // on se permet de créer le dossier si il n'est pas déjà créer.
+                // create target directory if it doesn't already exist 
+                
 
                 cancellationToken.ThrowIfCancellationRequested();
 
@@ -109,9 +109,9 @@ namespace EasySave.utils
         }
         public  void CompleteCopyDirectory(string name, string sourceDir, string targetDir,CancellationToken cancellationToken)
         {
-            // Récupérer la liste des processus qui doivent empêcher d'exécuter la sauvegarde
+            // Retrieve the list of processes that should prevent the backup from running
             string[] businessApplication = settings.BusinessApplication.ToArray();
-            // Voir si un des processus est en cours d'exécution
+            // See if a process is running
             bool isRunning = false;
             foreach (string process in businessApplication)
             {
@@ -123,12 +123,12 @@ namespace EasySave.utils
 
             if (!isRunning)
             {
-                // Si le blocnote n'est pas ouverte :
+                // If the blocnote is not open :
                 cancellationToken.ThrowIfCancellationRequested();
                 Wait(cancellationToken);
                 VerifyDirectoryAndDrive(sourceDir, targetDir);
-                // créer le répertoire target s'il n'existe pas déjà 
-                // on se permet de créer le dossier si il n'est pas déjà créer.
+                // create target directory if it doesn't already exist 
+                // we take the liberty of creating the folder if it hasn't already been created.
                 Directory.CreateDirectory(targetDir);
                
                 CopyFilesTo(sourceDir, targetDir, name, cancellationToken);
@@ -170,22 +170,22 @@ namespace EasySave.utils
 
         private void CopyFilesTo(string sourceDir, string targetDir,string name, CancellationToken cancellationToken)
         {
-            
-            // Initilisation du stateManager et du logManager
+
+            // Initiating the stateManager and logManager
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 
                 string tempPath = Path.Combine(targetDir, file.Name);
-                // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
+                // Check whether the file corresponds to one of the files in the priority table.
                 if (CheckFilePriority(file.Name, tempPath))
                 {
                     continue;
                 }
-                // Initilisation du stateManager et du logManager
+                // Initiating the stateManager and logManager
                 stateManager.InitState_Complete(name, sourceDir, targetDir);
 
-                // Vérifier si le fichier ne dépasse pas la taille limite de Ko
+                // Check that the file does not exceed the size limit of Ko
                 if (settings.NbKo != -1 && file.Length > settings.NbKo * 1024)
                 {
                     continue;
@@ -219,7 +219,7 @@ namespace EasySave.utils
                 Wait(cancellationToken);
                 cancellationToken.ThrowIfCancellationRequested();
                 string tempPath = Path.Combine(targetDir, subdir.Name);
-                Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe 
+                Directory.CreateDirectory(tempPath); // Ensures that the target subdirectory exists 
                 CompleteCopyDirectory(name, subdir.FullName, tempPath,cancellationToken);
             }
 
@@ -234,7 +234,7 @@ namespace EasySave.utils
                 cancellationToken.ThrowIfCancellationRequested();
                 cancellationToken.ThrowIfCancellationRequested();
                 string tempPath = Path.Combine(targetDir, subdir.Name);
-                Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
+                Directory.CreateDirectory(tempPath); // Ensures that the target subdirectory exists
                 DifferentialCopyDirectory(name, subdir.FullName, tempPath, cancellationToken);
             }
 
@@ -244,7 +244,7 @@ namespace EasySave.utils
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
 
-            // initilisation du logManager
+            // logManager initialization
             logManager.InitLog(name, sourceDir, targetDir);
 
             foreach (var sourceFile in sourceFiles)
@@ -254,18 +254,18 @@ namespace EasySave.utils
 
                 if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                 {
-                    // Vérification si le fichier correspond à un des fichiers du tablea prioritaire
+                    // Check whether the file corresponds to one of the files in the priority table.
                     if (CheckFilePriority(sourceFile.Name, targetFilePath))
                     {
                         continue;
                     }
-                    
-                    // initilisation du stateManager
+
+                    // stateManager initialization
                     stateManager.InitState_Differential(name, sourceDir, targetDir);
 
                     Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
 
-                    // Vérifier si le fichier ne dépasse pas la taille limite de Ko
+                    // Check that the file does not exceed the size limit of Ko
                     if (settings.NbKo != -1 && sourceFile.Length > settings.NbKo * 1024)
                     {
                         continue;
@@ -326,24 +326,24 @@ namespace EasySave.utils
         private  void FileToCryptoSoft(string sSourcePath_File, string sTargetPath_File, string sClef)
         {
             string argument = "\"" + sSourcePath_File + "\" \"" + sTargetPath_File + "\" \"" + sClef + "\"";
-            // Obtenir le fichier ressource
+            // Get the resource file
             var resource = cryptoSoft.ressource_cryptosoft.cryptoSoft_V5;
-            // Créer un fichier temporaire avec le contenu du fichier ressource
+            // Create a temporary file with the contents of the resource file
             string tempPath_crypto = System.IO.Path.GetTempFileName();
             File.WriteAllBytes(tempPath_crypto, resource);
-            // Appeler le .EXE avec les paramètres
+            // Call .EXE with parameters
             var process = Process.Start(tempPath_crypto, argument);
-            // Attendre que le .EXE se termine
+            // Wait for .EXE to finish
             process.WaitForExit();
-            // Supprimer le fichier temporaire
+            // Delete temporary file
             File.Delete(tempPath_crypto);
         }
 
         //===============================================================
-        // Fonction pour gérer le tableau de priorité
+        // Function to manage the priority table
         //===============================================================
 
-        // Méthode d'initialisation tardive pour tab_PriorityFiles
+        // Late initialization method for tab_PriorityFiles
         private void InitializeTab_PriorityFiles()
         {
             if (tab_PriorityFiles == null)
@@ -352,47 +352,56 @@ namespace EasySave.utils
             }
         }
 
-        // Ajouter une méthode pour ajouter des éléments à tab_PriorityFiles
+        // Add a method to add items to tab_PriorityFiles
         public void AddToTab_PriorityFiles(string fileName, string filePath)
         {
-            InitializeTab_PriorityFiles(); // Assurez-vous que la liste est initialisée
+            InitializeTab_PriorityFiles(); // Make sure the list is initialized
             tab_PriorityFiles.Add(new string[] { fileName, filePath });
         }
 
-        // Méthode pour vérifier si un fichier à copier coller est prioritaire
-        public  bool CheckFilePriority(string fileName, string filePath)
+        // How to check if a file to be copied and pasted has priority
+        public bool CheckFilePriority(string fileName, string filePath)
         {
             foreach (var file in tab_PriorityFiles)
             {
                 if (file[0] == fileName && file[1] == filePath)
                 {
-                    // Le fichier et son chemin d'accès correspondent à une entrée de priorité
+                    // The file and its path correspond to a priority entry
                     return true;
                 }
             }
-            // Le fichier et son chemin d'accès ne correspondent à aucune entrée de priorité
+            // The file and its path do not correspond to any priority entry
             return false;
         }
 
 
-
         //===============================================================
-        // Fonction pour les fichiers prioritaires COMPLETE
+        // Function for priority files COMPLETE
         //===============================================================
 
-        // Fonction pour les fichiers prioritaires en mode complete
-        public  void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
+        // Function for priority files in complete mode
+        public void CompleteCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
             
             InitializeTab_PriorityFiles();
-            // Si il y a des choses dans la liste de priorité, on les copie en priorité
+            // If there are items in the priority list, we copy them first.
             if (settings.ExtensionsToPriority.Count > 0)
-            {       
-                // Vérifier si le processus de la calculatrice est en cours d'exécution
-                bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-                if (!isNotepadRunning)
+            {
+                // Retrieve the list of processes that should prevent the backup from running
+                string[] businessApplication = settings.BusinessApplication.ToArray();
+                // See if a process is running
+                bool isRunning = false;
+                foreach (string process in businessApplication)
                 {
-                    // Si le blocnote n'est pas ouverte :
+                    if (Process.GetProcessesByName(process).Length > 0)
+                    {
+                        isRunning = true;
+                    }
+                }
+
+                if (!isRunning)
+                {
+                    // If the blocnote is not open :
 
                     VerifyDirectoryAndDrive(sourceDir, targetDir);
                     Wait(cancellationToken);
@@ -408,7 +417,7 @@ namespace EasySave.utils
                 else
                 {
                     Pause();
-                    //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    
                 }
             }
         }
@@ -416,18 +425,18 @@ namespace EasySave.utils
         private  void CopyFilesTo_Priority(string sourceDir, string targetDir, string name, CancellationToken cancellationToken)
         {
 
-            // Initilisation du stateManager et du logManager
+            // Initiate stateManager and logManager
             logManager.InitLog(name, sourceDir, targetDir);
             foreach (FileInfo file in new DirectoryInfo(sourceDir).GetFiles())
             {
                 if (settings.ExtensionsToPriority.Contains(Path.GetExtension(file.Name).ToLower()))
                 {
-                   
-                    // Initilisation du stateManager et du logManager
+
+                    // Initiating the stateManager and logManager
                     stateManager.InitState_Complete(name, sourceDir, targetDir);
                     string tempPath = Path.Combine(targetDir, file.Name);
 
-                    // Vérifier si le fichier ne dépasse pas la taille limite de Ko
+                    // Check that the file does not exceed the size limit of Ko
                     if (settings.NbKo != -1 && file.Length > settings.NbKo * 1024)
                     {
                         continue;
@@ -450,7 +459,7 @@ namespace EasySave.utils
                             cancellationToken.ThrowIfCancellationRequested();
                             file.CopyTo(tempPath, true);
                         }
-                        // Mettre le fichier copier dans le tableau de priorité
+                        // Put the copy file in the priority table
                         AddToTab_PriorityFiles(file.Name, tempPath);
 
                         stateManager.UpdateState_Complete(file.Length, sourceDir, targetDir);
@@ -464,38 +473,48 @@ namespace EasySave.utils
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
-                // Copier seulement les dossiers qui contiennent des fichiers prioritaires
+                // Copy only folders containing priority files
                 if (new DirectoryInfo(subdir.FullName).GetFiles().Any(f => settings.ExtensionsToPriority.Contains(Path.GetExtension(f.Name).ToLower())))
                 {
                     string tempPath = Path.Combine(targetDir, subdir.Name);
                     cancellationToken.ThrowIfCancellationRequested();
-                    Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
+                    Directory.CreateDirectory(tempPath); // Ensures that the target subdirectory exists
                     CompleteCopyDirectory_Priority(name, subdir.FullName, tempPath, cancellationToken);
                 }
             }
         }
 
         //===============================================================
-        // Fonction pour les fichiers prioritaires DIFFERENTIAL
+        // Function for priority files DIFFERENTIAL
         //===============================================================
 
-        // Fonction pour les fichiers prioritaires en mode différentiel
-        public  void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
+        // Function for priority files in differential mode
+        public void DifferentialCopyDirectory_Priority(string name, string sourceDir, string targetDir, CancellationToken cancellationToken)
         {
 
             InitializeTab_PriorityFiles();
-            // Si il y a des choses dans la liste de priorité, on les copie en priorité
+            // If there are items in the priority list, we copy them first.
             if (settings.ExtensionsToPriority.Count > 0)
             {
-                // Vérifier si l'application de la calculatrice Windows est ouverte
-                bool isNotepadRunning = Process.GetProcessesByName("notepad").Length > 0;
-                if (!isNotepadRunning)
+                // Retrieve the list of processes that should prevent the backup from running
+                string[] businessApplication = settings.BusinessApplication.ToArray();
+                // See if a process is running
+                bool isRunning = false;
+                foreach (string process in businessApplication)
                 {
-                    // Si la calculatrice n'est pas ouverte :
+                    if (Process.GetProcessesByName(process).Length > 0)
+                    {
+                        isRunning = true;
+                    }
+                }
+
+                if (!isRunning)
+                {
+                    // If the calculator is not open :
 
                     VerifyDirectoryAndDrive(sourceDir, targetDir);
-                    // créer le répertoire target s'il n'existe pas déjà 
-                    // on se permet de créer le dossier si il n'est pas déjà créer.
+                    // create target directory if it doesn't already exist
+                    // we take the liberty of creating the folder if it hasn't already been created.
                     Wait(cancellationToken);
                     cancellationToken.ThrowIfCancellationRequested();
                     Directory.CreateDirectory(targetDir);
@@ -509,7 +528,7 @@ namespace EasySave.utils
                 else
                 {
                     Pause();
-                    //System.Windows.MessageBox.Show(ManageLang.GetString("error_notepad_open"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    
                 }
             }
         }
@@ -519,7 +538,7 @@ namespace EasySave.utils
         {
             var sourceFiles = new DirectoryInfo(sourceDir).GetFiles("*", SearchOption.AllDirectories);
 
-            // initilisation du logManager
+            // logManager initialization
             logManager.InitLog(name, sourceDir, targetDir);
 
             foreach (var sourceFile in sourceFiles)
@@ -531,12 +550,12 @@ namespace EasySave.utils
 
                     if (!targetFile.Exists || targetFile.LastWriteTime < sourceFile.LastWriteTime)
                     {
-                        // initilisation du stateManager
+                        // LogManager initialization
                         stateManager.InitState_Differential(name, sourceDir, targetDir);
 
                         Directory.CreateDirectory(Path.GetDirectoryName(targetFilePath));
 
-                        // Vérifier si le fichier ne dépasse pas la taille limite de Ko
+                        // Check that the file does not exceed the size limit of Ko
                         if (settings.NbKo != -1 && sourceFile.Length > settings.NbKo * 1024)
                         {
                             continue;
@@ -559,7 +578,7 @@ namespace EasySave.utils
                                 cancellationToken.ThrowIfCancellationRequested();
                                 sourceFile.CopyTo(targetFilePath, true);
                             }
-                            // Mettre le fichier copier dans le tableau de priorité
+                            // Put the copy file in the priority table
                             AddToTab_PriorityFiles(sourceFile.Name, targetFilePath);
 
                             stateManager.UpdateState_Differential(sourceFile.Length, sourceDir, targetDir);
@@ -575,12 +594,12 @@ namespace EasySave.utils
         {
             foreach (DirectoryInfo subdir in new DirectoryInfo(sourceDir).GetDirectories())
             {
-                // Copier seulement les dossiers qui contiennent des fichiers prioritaires
+                // Copy only folders containing priority files
                 if (new DirectoryInfo(subdir.FullName).GetFiles().Any(f => settings.ExtensionsToPriority.Contains(Path.GetExtension(f.Name).ToLower())))
                 {
                     cancellationToken.ThrowIfCancellationRequested();
                     string tempPath = Path.Combine(targetDir, subdir.Name);
-                    Directory.CreateDirectory(tempPath); // Assure que le sous-répertoire cible existe
+                    Directory.CreateDirectory(tempPath); // Ensures that the target subdirectory exists
                     DifferentialCopyDirectory_Priority(name, subdir.FullName, tempPath, cancellationToken);
                 }
             }

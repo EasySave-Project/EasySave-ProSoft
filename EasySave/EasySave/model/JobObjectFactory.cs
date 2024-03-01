@@ -12,21 +12,21 @@ namespace EasySave.model
 
         public List<JobObject> CreateJobObject()
         {
-            // Création d'une liste vide d'objets Message
+            // Message constructor
             List<JobObject> messages = new List<JobObject>();
 
-            // Parcours de la liste de jobs du client
+            // Browse the customer's job list
             int message_Index = 0;
             foreach (BackUpJob bj in BackUpManager.listBackUps)
             {
-                // Ajout de l'objet Message à la liste d'objets Message
+                // Add Message object to Message object list
                 JobObject message = new JobObject(message_Index, bj.Name, GetJobProgress(bj.Name));
                 messages.Add(message);
 
                 message_Index++;
             }
 
-            // Retour de la liste d'objets Message
+            // Add Message object to Message object list
             return messages;
         }
 
@@ -42,7 +42,7 @@ namespace EasySave.model
                 {
                     using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                     {
-                        // Lecture du contenu du fichier
+                        // Add Message object to Message object list
                         using (StreamReader sr = new StreamReader(fs))
                         {
                             string xmlContent = sr.ReadToEnd();
