@@ -15,6 +15,7 @@ using Client_EasySave;
 
 namespace EasySaveClient.Services
 {
+    // Enumeration to define possible actions that can be sent to the server
     public enum ServerAction
     {
         start = 0,
@@ -26,6 +27,7 @@ namespace EasySaveClient.Services
         allstop = 6
     }
 
+    // Class to represent a message object sent to the server
     public class ServerMessageObject
     {
         public int jobId { get; set; }
@@ -38,13 +40,11 @@ namespace EasySaveClient.Services
         }
     }
 
+    // Manages the communication with the server
     public class ServerManager
     {
-
         private Socket clientSocket;
-
         private JobViewModels viewModel;
-
         private MainWindow mainWindow;
 
         public ServerManager(MainWindow mainWindow)
@@ -53,11 +53,11 @@ namespace EasySaveClient.Services
             this.mainWindow = mainWindow;
         }
 
+        // Connects to the server
         public void ConnectToServer()
         {
             Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             clientSocket.Connect(new IPEndPoint(IPAddress.Loopback, 8888));
-            //DisplayMessage("Connecté au serveur.");
 
             Thread receiveThread = new Thread(Receive);
             receiveThread.Start();
@@ -65,6 +65,7 @@ namespace EasySaveClient.Services
             this.clientSocket = clientSocket;
         }
 
+        // Checks if the client is connected to the server
         public bool IsConnected()
         {
             bool valueReturn = false;
@@ -74,21 +75,20 @@ namespace EasySaveClient.Services
             }
             catch
             {
-                // If error : Connection could not be established
                 valueReturn = false;
             }
             return valueReturn;
         }
 
+        // Sends an action to the server
         public void SendAction(int jobId, ServerAction action)
         {
-            //ServerMessageObject messageObject = new ServerMessageObject(jobId, action);
-            //string message = JsonSerializer.Serialize(messageObject, new JsonSerializerOptions { WriteIndented = true });
             string message = jobId + ";" + (int)action;
             byte[] buffer = Encoding.UTF8.GetBytes(message);
             clientSocket.Send(buffer);
         }
 
+        // Receives messages from the server
         private void Receive()
         {
             try
@@ -99,25 +99,20 @@ namespace EasySaveClient.Services
                     int bytesReceived = clientSocket.Receive(buffer);
                     string message = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
 
-                    // Trouver l'index du premier séparateur
                     int separatorIndex = message.IndexOf("\r\n");
 
-                    // Vérifier si le séparateur a été trouvé
                     if (separatorIndex >= 0)
                     {
-                        try 
+                        try
                         {
-                            // Extraire la partie de la chaîne jusqu'au premier séparateur
                             string jsonMessage = message.Substring(0, separatorIndex);
 
-                            // Utilisez Dispatcher ici pour appeler LoadJson sur le thread UI
                             Application.Current.Dispatcher.Invoke(() =>
                             {
-                                // Appeler la méthode LoadJson du viewModel
                                 viewModel.LoadJson(jsonMessage);
                                 mainWindow.ReloadData();
                             });
-                        } 
+                        }
                         catch (Exception e)
                         {
                             MessageBox.Show("Error : " + e.Message);
@@ -128,13 +123,7 @@ namespace EasySaveClient.Services
             catch (SocketException)
             {
                 clientSocket.Close();
-                // Utilisez Dispatcher ici si vous souhaitez afficher un message d'erreur
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    //DisplayMessage("Le serveur a été déconnecté.");
-                });
             }
         }
-
     }
 }

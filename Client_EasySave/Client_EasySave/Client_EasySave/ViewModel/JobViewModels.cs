@@ -10,21 +10,18 @@ using System.Threading.Tasks;
 
 namespace Client_EasySave.ViewModel
 {
+    // Manages the view model for jobs, implementing INotifyPropertyChanged for data binding
     public class JobViewModels : INotifyPropertyChanged
     {
-        // Déclaration de l'événement PropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Méthode pour déclencher l'événement
+        // Triggers the PropertyChanged event
         protected void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        // Déclaration de la liste des jobs
+        // Holds the collection of jobs
         private ObservableCollection<Job> _jobs;
         public ObservableCollection<Job> Jobs
         {
@@ -32,11 +29,11 @@ namespace Client_EasySave.ViewModel
             set
             {
                 _jobs = value;
-                OnPropertyChanged("Jobs");
+                OnPropertyChanged(nameof(Jobs));
             }
         }
 
-        // Déclaration du singleton
+        // Singleton instance to ensure a single instance of the view model
         private static JobViewModels instance;
         public static JobViewModels GetInstance()
         {
@@ -47,19 +44,16 @@ namespace Client_EasySave.ViewModel
             return instance;
         }
 
-        // Méthode pour charger les données JSON reçues du serveur
+        // Loads jobs data from a JSON string received from the server
         public void LoadJson(string json)
         {
-
-            // Désérialiser le JSON en une liste de jobs
             List<Job> jobs = JsonSerializer.Deserialize<List<Job>>(json);
-            
-            // Mettre à jour la liste des jobs avec les données reçues            
-            // Si la liste n'existe pas, la créer
+
             if (Jobs == null)
             {
                 Jobs = new ObservableCollection<Job>();
-            } else
+            }
+            else
             {
                 Jobs.Clear();
             }
@@ -70,5 +64,4 @@ namespace Client_EasySave.ViewModel
             }
         }
     }
-
 }

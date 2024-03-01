@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3vQbMW2gI+ag/+IC84yfnYlMoRob/manwc+A2XUInQZt2ObUxtyPYDRX9U8s4F+lcfUCH0uis9Jxn54yXNyovg==",
+  "dgSpecHash": "QOB166uqkf5SUc9Kf38ptL9y1RemFnwj/or5wVgqn0fkRRpQwAQ8fD8UNh2zg5dL1bBRy1AXLdmPjyUgGAYeDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\baptx\\Desktop\\CESI\\3e année v2\\Cours Semestre 5\\ProgSys\\Fichier visual code v2\\EasySave-ProSoft\\Client_EasySave\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
+  "projectFilePath": "C:\\git\\EasySave-ProSoft\\Client_EasySave\\Client_EasySave\\Client_EasySave\\Client_EasySave.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\baptx\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\amdaamouch\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

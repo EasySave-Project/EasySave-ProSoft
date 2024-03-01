@@ -23,17 +23,18 @@ namespace Client_EasySave
         public void ReloadData()
         {
             // Récupérer la liste des noms des jobs à partir de la liste des jobs
+            // Receive the list of name job with the list of jobs
             sNameJob.Clear();
             foreach (Job job in viewModel.Jobs)
             {
                 sNameJob.Add(job.JobName);
             }
 
-            // Initialisation des pages
+            
             nbPage = (int)Math.Ceiling((double)sNameJob.Count / 5);
             Label_IndexPages.Content = indexPage + " / " + nbPage;
 
-            // Affichage des jobs
+            // show job
             int startIndex = (indexPage - 1) * 5;
             for (int i = 0; i < 5; i++)
             {
@@ -109,18 +110,16 @@ namespace Client_EasySave
         }
 
         //==============================================
-        // Exécution des jobs
+        // launch Jobs
         //==============================================
         private void ExecuteJob(int btnJob)
         {
-            // Calculer l'index global du job en fonction de la page actuelle
+            
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
 
-            // Exécuter du job
             index_SelectJob--;
 
-            // Lancer le message
             serverManager.SendAction(index_SelectJob, ServerAction.start);
         }
 
@@ -150,19 +149,17 @@ namespace Client_EasySave
         }
 
         //==============================================
-        // Pause des jobs
+        // Pause of jobs
         //==============================================
 
         private void PauseJob(int btnJob)
         {
-            // Calculer l'index global du job en fonction de la page actuelle
+            
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
 
-            // Exécuter du job
             index_SelectJob--;
 
-            // Lancer le message
             serverManager.SendAction(index_SelectJob, ServerAction.suspend);
         }
 
@@ -197,14 +194,12 @@ namespace Client_EasySave
 
         private void StopJob(int btnJob)
         {
-            // Calculer l'index global du job en fonction de la page actuelle
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
 
-            // Exécuter du job
+
             index_SelectJob--;
 
-            // Lancer le message
             serverManager.SendAction(index_SelectJob, ServerAction.stop);
         }
         private void Btnstop_Job1_Click(object sender, RoutedEventArgs e)
@@ -233,18 +228,17 @@ namespace Client_EasySave
         }
 
         //==============================================
-        // Resume des jobs
+        // Resume of jobs
         //==============================================
         private void ResumeJob(int btnJob)
         {
-            // Calculer l'index global du job en fonction de la page actuelle
+            
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
 
-            // Exécuter du job
+
             index_SelectJob--;
 
-            // Lancer le message
             serverManager.SendAction(index_SelectJob, ServerAction.resume);
         }
 
@@ -274,7 +268,7 @@ namespace Client_EasySave
         }
 
         //==============================================
-        // Bouton de navigation
+        // navigate button 
         //==============================================
 
         private void BtnConnexionServ_Click(object sender, RoutedEventArgs e)
