@@ -1,44 +1,33 @@
 [
   {
     "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test77",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test66",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test55",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test44",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test33",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test22",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
-  },
-  {
-    "$type": "EasySave.model.CompleteBackUpJob, EasySave",
-    "name": "test11",
-    "sourceDirectory": "C:\\Users\\baptx\\Desktop\\source_wsh",
-    "targetDirectory": "C:\\Users\\baptx\\Desktop\\cible_wsh"
+    "CancellationTokenSource": {
+      "$type": "System.Threading.CancellationTokenSource, System.Private.CoreLib",
+      "IsCancellationRequested": false,
+      "Token": {
+        "$type": "System.Threading.CancellationToken, System.Private.CoreLib",
+        "IsCancellationRequested": false,
+        "CanBeCanceled": true,
+        "WaitHandle": {
+          "$type": "System.Threading.ManualResetEvent, System.Private.CoreLib",
+          "Handle": {
+            "$type": "System.IntPtr, System.Private.CoreLib",
+            "value": 2188
+          },
+          "SafeWaitHandle": {
+            "$type": "Microsoft.Win32.SafeHandles.SafeWaitHandle, System.Private.CoreLib",
+            "IsInvalid": false,
+            "IsClosed": false
+          }
+        }
+      }
+    },
+    "TargetDirectory": "C:\\sauve2",
+    "Name": "test2",
+    "SourceDirectory": "C:\\database\\CATS_FAB",
+    "FileTransfert": {
+      "$type": "EasySave.utils.FileUtils, EasySave",
+      "IsPaused": false
+    }
   }
 ]

@@ -8,6 +8,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Media.Animation;
 using MessageBox = System.Windows.Forms.MessageBox;
+using System.Collections.Concurrent;
 
 namespace EasySave.services;
 
@@ -15,8 +16,20 @@ public class BackUpManager
 {
     public static List<BackUpJob> listBackUps;
 
+    private ConcurrentBag<Thread> _runningThreads = new ConcurrentBag<Thread>();
+
+
+    public ConcurrentBag<Thread> RunningThreads
+    {
+        get { return _runningThreads; }
+    }
     public BackUpManager() {
         listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);   
+    }
+
+    public bool AreAllJobsCompleted()
+    {
+        return RunningThreads.All(t => !t.IsAlive);
     }
     public  void SaveJobsToJson()
     {
@@ -43,7 +56,7 @@ public class BackUpManager
     public void ResumeBackup(BackUpJob bj)
     { 
         bj.FileTransfert.Resume();
-        System.Windows.MessageBox.Show("Reprise du job : " + bj.Name);
+        //System.Windows.MessageBox.Show("Reprise du job : " + bj.Name);
     }
     public void ResetStopJob(BackUpJob bj)
     {
@@ -79,6 +92,7 @@ public class BackUpManager
                 Console.WriteLine($"Backup {job.Name} encountered an error: {ex.Message}.");
             }
         });
+        RunningThreads.Add(jobThread);
         jobThread.Start();
     }
 
@@ -91,29 +105,6 @@ public class BackUpManager
     }
      
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     public BackUpJob FindBackupJobById(int indexJob)
     {

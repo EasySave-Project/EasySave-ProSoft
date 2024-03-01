@@ -54,7 +54,7 @@ namespace EasySave.view
 
 
 
-        private MainWindow _MainWindows = new MainWindow();
+        
 
         string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
 
@@ -145,30 +145,6 @@ namespace EasySave.view
         //==============================================
         // PLAY jobs
         //==============================================
-        private void ExecuteJob(int btnJob)
-        {
-            // Calculer l'index global du job en fonction de la page actuelle
-            int index_Start = (indexPage - 1) * 5;
-            int index_SelectJob = index_Start + btnJob;
-
-            // Exécuter du job
-            index_SelectJob--;
-
-            // Lancer le thread de la barre de progression
-            ProgressBar_Thread(btnJob);
-
-    
-            try
-            {
-                _MainWindows.backUpController.InitiateBackUpJob(BackUpManager.listBackUps[index_SelectJob]);
-            }
-            catch
-            {
-                System.Windows.MessageBox.Show(ManageLang.GetString("error_save"), ManageLang.GetString("error_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-            
-
-        }
 
         private void BtnPlay_Job1_Click(object sender, RoutedEventArgs e)
         {
@@ -492,7 +468,31 @@ namespace EasySave.view
 
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            if (!_MainWindows.backUpController.backUpManager.AreAllJobsCompleted())
+            {
+                System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
+
+                // Créer un DispatcherTimer pour vérifier l'état des threads
+                var timer = new System.Windows.Threading.DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(1); // Vérifiez toutes les secondes
+                timer.Tick += (s, args) =>
+                {
+                    if (_MainWindows.backUpController.backUpManager.AreAllJobsCompleted())
+                    {
+                        timer.Stop(); // Arrêter le timer
+                        System.Windows.Application.Current.Shutdown(); // Fermer l'application
+                    }
+                };
+                timer.Start(); // Démarrer le timer
+
+                // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
+                Btn_Leave.IsEnabled = false;
+            }
+            else
+            {
+                System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
+            }
+
         }
 
         //==============================================
@@ -504,7 +504,11 @@ namespace EasySave.view
             int index_Start = (indexPage - 1) * 5;
             int index_SelectJob = index_Start + btnJob;
             index_SelectJob--;
+            // Lancer le thread de la barre de progression
+            ProgressBar_Thread(btnJob);
+
             BackUpManager.listBackUps[index_SelectJob].ResetJob();
+            
             _MainWindows.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[index_SelectJob]);
             try
             {
@@ -611,31 +615,7 @@ namespace EasySave.view
             
             
         }
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
         private void btnPauseJob1_Click(object sender, RoutedEventArgs e)
         {
             PauseJob(1);
