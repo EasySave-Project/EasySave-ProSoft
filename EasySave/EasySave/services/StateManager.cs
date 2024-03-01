@@ -14,11 +14,12 @@ namespace EasySave.services
         private bool bSecurityIsRecursive = true;
 
         Settings settings = new Settings();
-        State state = new State();
+        State state;
         IStrategieSave typeSave;
-
+        private readonly object lockState = new object(); 
         public StateManager()
         {
+            state = new State();
             if(settings.StateType == "Json")
             {
                 typeSave = new SaveJson();
@@ -37,6 +38,7 @@ namespace EasySave.services
         //=======================================================================================================
         public void InitState_Complete(string nameJob, string sourcePath, string targetPath)
         {
+
             if(bSecurityIsRecursive == true)
             {
                 state.NameJob = nameJob;
@@ -78,14 +80,14 @@ namespace EasySave.services
             SaveState();
         }
 
-        private int GetTotalFileSize_Complete(string sourcePath)
+        private long GetTotalFileSize_Complete(string sourcePath)
         {
-            int totalFileSize = 0;
+            long totalFileSize = 0;
             string[] files = System.IO.Directory.GetFiles(sourcePath, "*.*", System.IO.SearchOption.AllDirectories);
             foreach (string file in files)
             {
                 System.IO.FileInfo fi = new System.IO.FileInfo(file);
-                totalFileSize += (int)fi.Length;
+                totalFileSize += (long)fi.Length;
             }
             return totalFileSize;
         }
@@ -105,6 +107,7 @@ namespace EasySave.services
         {
             if (bSecurityIsRecursive == true)
             {
+                
                 long[] result = GetTotalFileSize_Differential(sourcePath, targetPath);
 
                 state.NameJob = nameJob;
@@ -171,7 +174,11 @@ namespace EasySave.services
         //=======================================================================================================
         private void SaveState()
         {
-            typeSave.SaveState(state);
+            lock(lockState)
+            {
+                typeSave.SaveState(state);
+            }
+           
         }
     }
 }

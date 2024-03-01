@@ -1,24 +1,88 @@
-﻿namespace EasySave.model
+﻿using EasySave.utils;
+
+namespace EasySave.model
 {
     public abstract class BackUpJob
     {
-        public string name { get; set; }
-        public string sourceDirectory { get; set; }
+        protected string name;
 
-        public string targetDirectory { get; set; }
-
+        protected string sourceDirectory;
         
 
+        protected string targetDirectory;
+
+        protected FileUtils fileTransfer;
+        
+        protected CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+
+        
         protected BackUpJob(string name, string sourceDirectory, string targetDirectory)
         {
             this.name = name;
             this.sourceDirectory = sourceDirectory;
             this.targetDirectory = targetDirectory;
+            fileTransfer = new FileUtils();
+            
         }
 
-        public abstract void Excecute();
+        public CancellationTokenSource CancellationTokenSource
+        {
+            get { return _cancellationTokenSource; }
+        }
+        public string TargetDirectory { 
+            get { 
+                return targetDirectory; 
+            }
+            set { 
+                targetDirectory = value; 
+            }
+        }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
+        public string SourceDirectory
+        {
+            get
+            {
+                return sourceDirectory;
+            }
+            set
+            {
+                sourceDirectory = value;
+            }
+        }
+        public FileUtils FileTransfert
+        {
+            get
+            {
+                return fileTransfer;
+            }
+            set
+            {
+                fileTransfer = value;
+            }
+        }
+        public abstract void Excecute(CancellationToken cs);
 
         public abstract BackUpJob CloneToType(BackUpType type);
+
+        public void Stop()
+        {
+            _cancellationTokenSource.Cancel();
+        }
+        public void ResetJob()
+        {
+            _cancellationTokenSource = new CancellationTokenSource();
+        }
 
     }
 }

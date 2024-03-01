@@ -12,29 +12,35 @@ namespace EasySave.services
 {
     public class SaveJson : IStrategieSave
     {
-        public void SaveState(State state)
+        
+        private static object Lockobject = new object();
+
+        public  void SaveState(State state)
         {
-            string sCurrentDir = Environment.CurrentDirectory;
-            string destPath = sCurrentDir + "\\EasySave\\log";
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize<State>(state, options);
-            string filePath = destPath + "\\state_backup_" + state.NameJob + ".json";
+            
+                string sCurrentDir = Environment.CurrentDirectory;
+                string destPath = sCurrentDir + "\\EasySave\\state";
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string json = JsonSerializer.Serialize<State>(state, options);
+                string filePath = destPath + "\\state_backup_" + state.NameJob + ".json";
 
-            if (File.Exists(filePath))
-            {
-                string oldJson = File.ReadAllText(filePath);
-                string newJson = oldJson + "\n" + json;
-                File.WriteAllText(filePath, newJson);
-            }
-            else
-            {
-                File.WriteAllText(filePath, json);
-            }
-
+                if (File.Exists(filePath))
+                {
+                    string oldJson = File.ReadAllText(filePath);
+                    string newJson = oldJson + "\n" + json;
+                    File.WriteAllText(filePath, newJson);
+                }
+                else
+                {
+                    File.WriteAllText(filePath, json);
+                }
+            
+           
         }
 
         public void SaveLog(Log log)
         {
+           
             string sCurrentDir = Environment.CurrentDirectory;
             string destPath = sCurrentDir + "\\EasySave\\log";
             var options = new JsonSerializerOptions { WriteIndented = true };
@@ -51,6 +57,8 @@ namespace EasySave.services
             {
                 File.WriteAllText(filePath, json);
             }
+            
+          
         }
     }
 

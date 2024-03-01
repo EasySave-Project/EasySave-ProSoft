@@ -70,6 +70,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à All the jobs are done !.
+        /// </summary>
+        public static string allJobCompleted {
+            get {
+                return ResourceManager.GetString("allJobCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à add.
         /// </summary>
         public static string btn_add {
@@ -331,6 +340,24 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à the job has not been started.
+        /// </summary>
+        public static string jobNotRunning {
+            get {
+                return ResourceManager.GetString("jobNotRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à number of Ko.
+        /// </summary>
+        public static string label_nbKo {
+            get {
+                return ResourceManager.GetString("label_nbKo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Type of lang :.
         /// </summary>
         public static string lang {
@@ -367,6 +394,15 @@ namespace EasySave.lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Pause all.
+        /// </summary>
+        public static string pauseAll {
+            get {
+                return ResourceManager.GetString("pauseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Release Note.
         /// </summary>
         public static string release {
@@ -381,6 +417,15 @@ namespace EasySave.lang {
         public static string runAll {
             get {
                 return ResourceManager.GetString("runAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à you can’t select the same target folder as another job.
+        /// </summary>
+        public static string sameTargetDirectoryError {
+            get {
+                return ResourceManager.GetString("sameTargetDirectoryError", resourceCulture);
             }
         }
         
@@ -408,6 +453,15 @@ namespace EasySave.lang {
         public static string state_Type {
             get {
                 return ResourceManager.GetString("state_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Stop all.
+        /// </summary>
+        public static string stopAll {
+            get {
+                return ResourceManager.GetString("stopAll", resourceCulture);
             }
         }
         

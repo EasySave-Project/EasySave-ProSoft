@@ -30,20 +30,22 @@ namespace EasySave
         DateTime dateHeure = DateTime.Now;
         private long long_FileTransferTime;
         private long long_AfterFileTransferTime;
+        private readonly object lockLog = new object();
         IStrategieSave typeSave;
-
         public LogManager() {
-            if(settings.LogType == "Json")
+            if (settings.LogType == "Json")
             {
                 typeSave = new SaveJson();
-            }else if (settings.LogType == "Xml")
+            }
+            else if (settings.LogType == "Xml")
             {
                 typeSave = new SaveXML();
-            }else
+            }
+            else
             {
                 throw new Exception("Log type invalid");
             }
-        
+
         }
 
 
@@ -60,7 +62,7 @@ namespace EasySave
         }
 
 
-        public void PushLog(long NbOctetFile, string name)
+        public void PushLog(long NbOctetFile)
         {
             log.FileSize = NbOctetFile;
 
@@ -87,9 +89,12 @@ namespace EasySave
         // Sauvegarde dans le fichier JSON
         //=======================================================================================================
         private void SaveLog()
-        {
-            typeSave.SaveLog(log);
-            
+        {    
+            lock(lockLog)
+            {
+                typeSave.SaveLog(log);
+            }
+             
         }
 
 

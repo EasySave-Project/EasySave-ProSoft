@@ -6,6 +6,8 @@ using EasySave.view;
 using EasySave.services;
 using System.IO;
 using System.Windows;
+using System.Windows.Media.Animation;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace EasySave.services;
 
@@ -14,11 +16,11 @@ public class BackUpManager
     public static List<BackUpJob> listBackUps;
 
     public BackUpManager() {
-        listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);
+        listBackUps = JsonUtils.LoadJobsFromJson(JsonUtils.filePath);   
     }
-    
-    public void SaveJobsToJson()
+    public  void SaveJobsToJson()
     {
+        
         try
         {
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
@@ -29,27 +31,90 @@ public class BackUpManager
         {
             Console.WriteLine(ManageLang.GetString("error_save") + ex.Message);
         }
+    
     }
 
+    public void PauseBackup(BackUpJob bj)
+    {
+        bj.FileTransfert.Pause();
+       // System.Windows.MessageBox.Show("Pause du job : " + bj.Name);
+    }
+
+    public void ResumeBackup(BackUpJob bj)
+    { 
+        bj.FileTransfert.Resume();
+        System.Windows.MessageBox.Show("Reprise du job : " + bj.Name);
+    }
+    public void ResetStopJob(BackUpJob bj)
+    {
+        bj.FileTransfert.Reset();
+    }
+
+    public void StopBackup(BackUpJob bj)
+    {
+        bj.Stop();
+    }
+    public void StopAll()
+    {
+        foreach (BackUpJob bj in listBackUps)
+        {
+            bj.Stop();
+        }
+    }
     public void ExecuteBackup(BackUpJob job)
     {
-        job.Excecute();
-    }
-    public void ExcecuteAllBackUps()
-    {
-        foreach (BackUpJob job in listBackUps)
+        job.ResetJob();
+        Thread jobThread = new Thread(() =>
         {
-            job.Excecute();
-        }
-    }
-    public void ExecuteMultipleBackup(List<BackUpJob> listOfJobs)
-    {
-        foreach (BackUpJob job in listOfJobs)
-        {
-            job.Excecute();
-        }
+            try
+            {
+                job.Excecute(job.CancellationTokenSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                Console.WriteLine($"Backup {job.Name} cancelled and cannot be resumed.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Backup {job.Name} encountered an error: {ex.Message}.");
+            }
+        });
+        jobThread.Start();
     }
 
+    public void PauseAll()
+    {
+        foreach(BackUpJob bj in listBackUps)
+        {
+            PauseBackup(bj);
+        }
+    }
+     
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public BackUpJob FindBackupJobById(int indexJob)
     {
         if (indexJob < 0)
@@ -68,24 +133,29 @@ public class BackUpManager
     
     public void UpdateBackUpJobName(int index, string newName)
     {
-        if (listBackUps.Any(j => j.name == newName))
+        if (listBackUps.Any(j => j.Name == newName))
         {
             System.Windows.MessageBox.Show(ManageLang.GetString("view_add_sameNameJob"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
-        listBackUps[index].name = newName;
+        listBackUps[index].Name = newName;
         SaveJobsToJson();
     }
     
     public void UpdateBackUpJobSourceDir(int index, string sourceDir)
     {
-        listBackUps[index].sourceDirectory = sourceDir;
+        listBackUps[index].SourceDirectory = sourceDir;
         SaveJobsToJson();
     }
 
     public void UpdateBackUpJobTargetDir(int index, string targetDir)
     {
-        listBackUps[index].targetDirectory = targetDir;
+        if(listBackUps.Any(j => j.TargetDirectory == targetDir))
+        {
+            System.Windows.MessageBox.Show(ManageLang.GetString("sameTargetDirectoryError"));
+            return;
+        }
+        listBackUps[index].TargetDirectory = targetDir;
         
         SaveJobsToJson();
         
@@ -97,18 +167,22 @@ public class BackUpManager
         {
             listBackUps[index] = listBackUps[index].CloneToType(type);
             SaveJobsToJson();
-        }
-        
+        }   
     }    
     public void AddBackUpJob(BackUpType type, String jobName, String sourceDir, String targetDir)
     {
-        if (listBackUps.Any(j => j.name == jobName))
+        if (listBackUps.Any(j => j.Name == jobName))
         {
             System.Windows.MessageBox.Show(ManageLang.GetString("view_add_sameNameJob"), "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
-            //throw new InvalidOperationException("Un job avec le même nom existe déjà.");
-
         }
+
+        if(listBackUps.Any(j => j.TargetDirectory == targetDir))
+        {
+            System.Windows.MessageBox.Show(ManageLang.GetString("sameTargetDirectoryError"));
+            return;
+        }
+
 
         BackUpJob addBackUpJob = BackUpJobFactory.CreateBackupJob(type, jobName, sourceDir, targetDir);
         
@@ -124,8 +198,8 @@ public class BackUpManager
     {
         foreach (BackUpJob job in listBackUps)
         {
-            if (job.name == sJobName)
-            {
+            if (job.Name == sJobName)
+            { 
                 return job;
             }
         }

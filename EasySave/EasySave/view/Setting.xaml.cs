@@ -105,7 +105,6 @@ namespace EasySave.view
                 if (!settings.ExtensionsToCrypt.Contains(extension))
                 {
                     settings.ExtensionsToCrypt.Add(extension);
-                    settings.SaveSettings(); // Sauvegarder les changements dans le fichier JSON
 
                     // Mettre à jour l'interface utilisateur
                     ListBoxExtensions.Items.Refresh();
@@ -130,7 +129,6 @@ namespace EasySave.view
             if (selectedExtension != null)
             {
                 settings.ExtensionsToCrypt.Remove(selectedExtension);
-                settings.SaveSettings();
 
                 // Mettre à jour la liste des extensions affichée
                 ListBoxExtensions.Items.Refresh();
@@ -153,7 +151,6 @@ namespace EasySave.view
                 if (!settings.ExtensionsToPriority.Contains(extension))
                 {
                     settings.ExtensionsToPriority.Add(extension);
-                    settings.SaveSettings(); // Sauvegarder les changements dans le fichier JSON
 
                     // Mettre à jour l'interface utilisateur
                     ListBoxExtensions_Priority.Items.Refresh();
@@ -176,8 +173,7 @@ namespace EasySave.view
             var selectedExtension = ListBoxExtensions_Priority.SelectedItem as string;
             if (selectedExtension != null)
             {
-                settings.ExtensionsToPriority.Remove(selectedExtension);
-                settings.SaveSettings();
+                settings.ExtensionsToPriority.Remove(selectedExtension); 
 
                 // Mettre à jour la liste des extensions affichée
                 ListBoxExtensions_Priority.Items.Refresh();
