@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace Client_EasySave.services
 {
+    // Represents a job with properties that notify when they change
     public class Job : INotifyPropertyChanged
     {
-        // Déclaration des champs privés
+        // Private fields
         private int _id;
         private string _name;
         private int _progress;
 
-        // Déclaration des propriétés publiques
+        // Public properties
         [JsonProperty("JobId")]
         public int JobId
         {
@@ -23,7 +20,7 @@ namespace Client_EasySave.services
             set
             {
                 _id = value;
-                OnPropertyChanged("Id");
+                OnPropertyChanged(nameof(JobId)); // Updated to use nameof for better refactoring support
             }
         }
 
@@ -34,7 +31,7 @@ namespace Client_EasySave.services
             set
             {
                 _name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged(nameof(JobName)); // Updated to use nameof for better refactoring support
             }
         }
 
@@ -45,21 +42,17 @@ namespace Client_EasySave.services
             set
             {
                 _progress = value;
-                OnPropertyChanged("Progress");
+                OnPropertyChanged(nameof(JobProgress)); // Updated to use nameof for better refactoring support
             }
         }
 
-        // Déclaration de l'événement PropertyChanged
+        // Event declared for property changes
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Méthode pour déclencher l'événement
+        // Method to invoke the PropertyChanged event
         protected void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
 }

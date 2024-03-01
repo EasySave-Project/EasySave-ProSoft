@@ -11,6 +11,8 @@ EasySave/EasySave/log/
 Client_EasySave/Client_EasySave/Client_EasySave/bin/
 Client_EasySave/Client_EasySave/Client_EasySave/obj/
 Client_EasySave/Client_EasySave/Client_EasySave/Properties/
+Client_EasySave/Client_EasySave/Client_EasySave/obj/
+Client_EasySave/Client_EasySave/Client_EasySave/bin/Debug
 # Ignorer les fichiers de configuration utilisateur de Visual Studio
 *.suo
 *.user
