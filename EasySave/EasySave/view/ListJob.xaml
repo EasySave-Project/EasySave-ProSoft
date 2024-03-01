@@ -86,9 +86,6 @@
                 <Button x:Name="BtnStop_Job1" Canvas.Left="528" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtnStop_Job1_Click">
                     <Image Source="{StaticResource stop}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnStart_Job1" Canvas.Left="487" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="32" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource start}" Height="26" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
                 <ProgressBar x:Name="ProgressBar_Job1" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9" Minimum="0"  Maximum="100"/>
 
             </Canvas>
@@ -118,9 +115,6 @@
                 <Button x:Name="BtnStop_Job2" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job2_Click">
                     <Image Source="{StaticResource stop}" Height="27" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnStart_Job2" Canvas.Left="489" Canvas.Top="2"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource start}" Height="28" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
                 <ProgressBar x:Name="ProgressBar_Job2" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
 
             </Canvas>
@@ -145,9 +139,7 @@
                 <Button x:Name="BtnStop_Job3" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job3_Click">
                     <Image Source="{StaticResource stop}" Height="27" Width="29" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnStart_Job3" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
+                
                 <ProgressBar x:Name="ProgressBar_Job3" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
         </Grid>
@@ -171,9 +163,7 @@
                 <Button x:Name="BtnStop_Job4" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job4_Click">
                     <Image Source="{StaticResource stop}" Height="27" Width="31" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnStart_Job4" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
+               
                 <ProgressBar x:Name="ProgressBar_Job4" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
 
             </Canvas>
@@ -198,9 +188,7 @@
                 <Button x:Name="BtnStop_Job5" Canvas.Left="529" Canvas.Top="5"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnStop_Job5_Click">
                     <Image Source="{StaticResource stop}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
                 </Button>
-                <Button x:Name="BtnStart_Job5" Canvas.Left="489" Canvas.Top="3"  BorderBrush="Transparent" RenderTransformOrigin="0.969,0.215" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image Source="{StaticResource start}" Height="27" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.335"/>
-                </Button>
+                
                 <ProgressBar x:Name="ProgressBar_Job5" Visibility="Hidden" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="220" Canvas.Left="242" Canvas.Top="9"/>
             </Canvas>
 

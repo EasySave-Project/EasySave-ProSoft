@@ -19,6 +19,7 @@ using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Windows.Forms;
 using EasySave.utils;
+using EasySave.controller;
 
 namespace EasySave.view
 {
@@ -124,7 +125,30 @@ namespace EasySave.view
         }
         private void Btn_Leave_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            if (!mainWindow.backUpController.backUpManager.AreAllJobsCompleted())
+            {
+                System.Windows.MessageBox.Show("Des sauvegardes sont encore en cours. L'application se fermera automatiquement une fois les sauvegardes terminées.");
+
+                // Créer un DispatcherTimer pour vérifier l'état des threads
+                var timer = new System.Windows.Threading.DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(1); // Vérifiez toutes les secondes
+                timer.Tick += (s, args) =>
+                {
+                    if (mainWindow.backUpController.backUpManager.AreAllJobsCompleted())
+                    {
+                        timer.Stop(); // Arrêter le timer
+                        System.Windows.Application.Current.Shutdown(); // Fermer l'application
+                    }
+                };
+                timer.Start(); // Démarrer le timer
+
+                // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
+                Btn_Leave.IsEnabled = false;
+            }
+            else
+            {
+                System.Windows.Application.Current.Shutdown(); // Fermer l'application directement si aucun job n'est en cours
+            }
         }
     }
 }
