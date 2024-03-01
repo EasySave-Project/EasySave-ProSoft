@@ -28,7 +28,7 @@ namespace EasySave.view
     /// </summary>
     public partial class Home : Page
     {
-        private Settings settings = new Settings();
+        private Settings settings = Settings.Instance;
         private MainWindow mainWindow;
         public Home()
         {

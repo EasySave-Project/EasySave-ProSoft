@@ -4,8 +4,9 @@ namespace EasySave.model
 {
     public abstract class BackUpJob
     {
+        /** Name of the job */
         protected string name;
-
+        
         protected string sourceDirectory;
         
 
@@ -71,7 +72,7 @@ namespace EasySave.model
                 fileTransfer = value;
             }
         }
-        public abstract void Excecute(CancellationToken cs);
+        public abstract void Execute(CancellationToken cs);
 
         public abstract BackUpJob CloneToType(BackUpType type);
 
@@ -79,6 +80,7 @@ namespace EasySave.model
         {
             _cancellationTokenSource.Cancel();
         }
+        
         public void ResetJob()
         {
             _cancellationTokenSource = new CancellationTokenSource();

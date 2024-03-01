@@ -21,7 +21,7 @@ namespace EasySave.model
             }
             return null;
         }
-        public override void Excecute(CancellationToken cs)
+        public override void Execute(CancellationToken cs)
         {
             try
             {

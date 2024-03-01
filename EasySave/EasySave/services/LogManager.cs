@@ -26,7 +26,7 @@ namespace EasySave
         //=======================================================================================================
 
         Log log = new Log();
-        Settings settings = new Settings();
+        Settings settings = Settings.Instance;
         DateTime dateHeure = DateTime.Now;
         private long long_FileTransferTime;
         private long long_AfterFileTransferTime;

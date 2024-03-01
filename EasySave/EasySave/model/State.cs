@@ -9,14 +9,14 @@ namespace EasySave.model
     public class State
     {
         // Déclaration des variables objet
-        private string nameJob;
-        private string sourcePath;
-        private string targetPath;
-        private string state_Text;
-        private long totalFileToCopy;
-        private long totalFileSize;
-        private int nbFilesLeftToDo;
-        private int progression;
+        private string _nameJob;
+        private string _sourcePath;
+        private string _targetPath;
+        private string _state_Text;
+        private long _totalFileToCopy;
+        private long _totalFileSize;
+        private int _nbFilesLeftToDo;
+        private int _progression;
 
         public State()
         {
@@ -25,26 +25,26 @@ namespace EasySave.model
 
         public int NbFilesLeftToDo
         {  
-            get { return nbFilesLeftToDo; } 
-            set { nbFilesLeftToDo = value;} 
+            get { return _nbFilesLeftToDo; } 
+            set { _nbFilesLeftToDo = value;} 
         }
         public string NameJob
         {
             get 
             {
-                return nameJob; 
+                return _nameJob; 
             }
-            set { nameJob = value; }
+            set { _nameJob = value; }
         }
         public string SourcePath
         {
             get
             {
-                return sourcePath;
+                return _sourcePath;
             }
             set
             {
-                sourcePath = value;
+                _sourcePath = value;
             }
         }
         
@@ -52,52 +52,52 @@ namespace EasySave.model
         {
             get
             {
-                return targetPath;
+                return _targetPath;
             }
             set
             {
-                targetPath = value;
+                _targetPath = value;
             }
         }
         public string State_Text
         {
             get { 
-                return state_Text;
+                return _state_Text;
             }
             set
             {
-                state_Text = value;
+                _state_Text = value;
             }
         }
         public int Progression
         {
             get {
-                return progression;  
+                return _progression;  
             }
             set { 
-                progression = value;
+                _progression = value;
             }
         }
         public long TotalFileToCopy
         {
             get
             {
-                return totalFileToCopy;
+                return _totalFileToCopy;
             }
             set
             {
-                totalFileToCopy = value;
+                _totalFileToCopy = value;
             }
         }
         public long TotalFileSize
         {
             get 
             { 
-                return totalFileSize;
+                return _totalFileSize;
             }
             set
             {
-                totalFileSize = value;
+                _totalFileSize = value;
             }
         }
         

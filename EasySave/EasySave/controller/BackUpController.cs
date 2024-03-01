@@ -11,6 +11,7 @@ namespace EasySave.controller
         public LogManager logManager { get; set; }
         public StateManager stateManager { get; set; }
 
+       
 
         public BackUpController(BackUpManager backUpManager, LogManager logManager, StateManager stateManager)
         {
@@ -18,6 +19,7 @@ namespace EasySave.controller
             this.logManager = logManager;
             this.stateManager = stateManager;
         }
+        
 
         public void InitiateBackUpJob(BackUpJob bj)
         {

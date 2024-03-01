@@ -7,6 +7,7 @@ using System.Windows;
 
 namespace EasySave.model
 {
+
     public class CompleteBackUpJob : BackUpJob
 
     {
@@ -28,9 +29,8 @@ namespace EasySave.model
             return null; 
         }
 
-       
 
-        public override void Excecute(CancellationToken cs)
+        public override void Execute(CancellationToken cs)
         {
            
             try

@@ -21,7 +21,16 @@ namespace EasySave.view
     public partial class ListJob : Page
     {
         private MainWindow _MainWindows = new MainWindow();
+
         private ListJob_ViewModel viewModel;
+
+        private int indexPage = 1;
+        private int nbPage = 0;
+        private List<String> sNameJob = new List<string>();
+        private static Thread thread_ProgressBar;
+        private Settings settings_state = Settings.Instance;
+
+
 
         string sCurrentDir = Environment.CurrentDirectory + "\\EasySave\\conf";
         StateManager stateManager = new StateManager();
@@ -165,7 +174,7 @@ namespace EasySave.view
                 timer.Start(); // Démarrer le timer
 
                 // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
-                Btn_Leavee.IsEnabled = false;
+                Btn_Leave.IsEnabled = false;
             }
             else
             {
@@ -182,9 +191,12 @@ namespace EasySave.view
             // Calculer l'index global du job en fonction de la page actuelle
             int index_SelectJob = jobID;
 
+
             BackUpManager.listBackUps[index_SelectJob].ResetJob();
             
             _MainWindows.backUpController.backUpManager.ResetStopJob(BackUpManager.listBackUps[index_SelectJob]);
+
+
             try
             {
                 if (jobsPaused[index_SelectJob] == true )

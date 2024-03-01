@@ -18,7 +18,7 @@ namespace EasySave.utils
 
         private LogManager logManager = new LogManager();
 
-        private static Settings settings = new Settings();
+        private static Settings settings = Settings.Instance;
 
         private bool isPaused;
 
