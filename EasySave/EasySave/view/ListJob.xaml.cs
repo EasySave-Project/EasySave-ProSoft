@@ -174,7 +174,7 @@ namespace EasySave.view
                 timer.Start(); // Démarrer le timer
 
                 // Optionnel : Désactiver le bouton de sortie pour éviter des clics multiples
-                Btn_Leave.IsEnabled = false;
+                Btn_Leavee.IsEnabled = false;
             }
             else
             {

@@ -8,7 +8,7 @@ namespace EasySave.model
 {
     public class JobObjectFactory
     {
-        private Settings settings_state = new Settings();
+        private Settings settings_state = Settings.Instance;
 
         public List<JobObject> CreateJobObject()
         {
