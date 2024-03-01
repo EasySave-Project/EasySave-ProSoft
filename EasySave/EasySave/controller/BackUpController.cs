@@ -23,10 +23,6 @@ namespace EasySave.controller
         {
             backUpManager.ExecuteBackup(bj);
         }
-        public void InitiateAllBackUpJobs()
-        {
-            backUpManager.ExcecuteAllBackUps();
-        }
         public void InitiateRemoveBackup(string jobName)
         {
             backUpManager.RemoveBackUpJob(jobName); 
@@ -52,8 +48,10 @@ namespace EasySave.controller
         {
             backUpManager.UpdateBackUpJobTargetDir(index, targetDir);
         }
-        
-
+        public void InitiateResumeBackUp(BackUpJob bj)
+        {
+            backUpManager.ResumeBackup(bj);
+        }
 
     }
 }

@@ -11,8 +11,6 @@ namespace EasySave.utils
     public static class JsonUtils
     {
 
-
-
         public static string sCurrentDir = Environment.CurrentDirectory;
 
         public static string filePath = sCurrentDir + "\\EasySave\\conf\\SaveBackUpJob.json";
